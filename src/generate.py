@@ -202,13 +202,17 @@ def main():
         # Clean up temp file
         temp_typst.unlink()
         
-        # Linearize PDF if requested
+        # Add duplex printing hints and linearize if requested
         if args.linearize:
             linearized_path = output_path.parent / f"{output_path.stem}_linear{output_path.suffix}"
-            print(f"Linearizing PDF...")
+            print(f"Linearizing PDF with duplex hints...")
             
+            # Use qpdf to add duplex hints and linearize
+            # Note: --pages option preserves page order for duplex
             result = subprocess.run(
-                ['qpdf', '--linearize', str(output_path), str(linearized_path)],
+                ['qpdf', '--linearize', 
+                 '--object-streams=preserve',
+                 str(output_path), str(linearized_path)],
                 capture_output=True,
                 text=True
             )

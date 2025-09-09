@@ -204,7 +204,12 @@
   hide-inactive-beads: false
 ) = {
   // Set document properties
-  set document(title: "Soroban Flashcards", author: "Soroban Flashcard Generator")
+  set document(
+    title: "Soroban Flashcards", 
+    author: "Soroban Flashcard Generator",
+    keywords: ("soroban", "abacus", "flashcards", "education", "math"),
+    date: auto
+  )
   set page(
     paper: paper-size,
     margin: margins,
@@ -248,16 +253,18 @@
     )
   })
   
-  // Layout pages
+  // Layout pages - alternating front and back for duplex printing
   let total-cards = cards.len()
   let total-pages = calc.ceil(total-cards / cards-per-page)
   
+  // Generate all pages in front/back pairs for proper duplex printing
   for page-idx in range(total-pages) {
     let start-idx = page-idx * cards-per-page
     let end-idx = calc.min(start-idx + cards-per-page, total-cards)
     let page-cards = cards.slice(start-idx, end-idx)
     
-    // Front side
+    // FRONT SIDE (odd page numbers: 1, 3, 5...)
+    // This will be the soroban bead side
     grid(
       columns: (card-width,) * cols,
       rows: (card-height,) * rows,
@@ -266,28 +273,32 @@
       ..page-cards.map(c => c.front)
     )
     
-    if page-idx < total-pages - 1 or end-idx == total-cards {
-      pagebreak()
-    }
+    // Always add page break after front side
+    pagebreak()
     
-    // Back side (mirrored for duplex printing)
+    // BACK SIDE (even page numbers: 2, 4, 6...)
+    // This will be the numeral side
+    // Mirrored horizontally for long-edge duplex binding
     grid(
       columns: (card-width,) * cols,
       rows: (card-height,) * rows,
       column-gutter: gutter,
       row-gutter: gutter,
       ..range(rows).map(r => {
+        // Reverse columns for proper back-side alignment
         range(cols).rev().map(c => {
           let idx = r * cols + c
           if idx < page-cards.len() {
             page-cards.at(idx).back
           } else {
+            // Empty space for incomplete grids
             rect(width: card-width, height: card-height, stroke: none)[]
           }
         })
       }).flatten()
     )
     
+    // Add page break except after the last page
     if page-idx < total-pages - 1 {
       pagebreak()
     }

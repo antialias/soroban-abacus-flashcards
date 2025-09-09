@@ -128,6 +128,19 @@ The soroban is rendered with:
 4. **Cut marks**: Enable with `--cut-marks` for easier cutting
 5. **Registration**: Enable with `--registration` for alignment verification
 
+### Duplex Printing
+
+The PDFs are specifically formatted for double-sided printing:
+- **Odd pages (1, 3, 5...)**: Soroban bead diagrams (front of cards)
+- **Even pages (2, 4, 6...)**: Arabic numerals (back of cards)
+- Pages are properly ordered for **long-edge binding** (standard duplex)
+- Back sides are horizontally mirrored to align correctly when flipped
+
+To print double-sided:
+1. Open the PDF in your viewer
+2. Select Print → Two-Sided → Long-Edge Binding
+3. The printer will automatically place numerals on the back of each soroban diagram
+
 ### Sample Configurations
 
 - `config/default.yaml` - Basic 0-9 set
