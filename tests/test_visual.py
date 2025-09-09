@@ -186,45 +186,4 @@ class TestVisualRegression:
         except FileNotFoundError:
             pytest.skip("Typst not available for PDF compilation")
     
-    def test_reference_image_update_utility(self, request, temp_dir, sample_config, reference_images_dir):
-        """Utility to regenerate reference images when needed."""
-        # This test can be run manually to update references
-        # Skip in normal test runs
-        if not request.config.getoption("--update-references", default=False):
-            pytest.skip("Reference update not requested")
-        
-        # Generate fresh reference images
-        test_cases = [
-            (7, 'basic'),
-            (23, 'multidigit'),
-            (0, 'zero')
-        ]
-        
-        for number, name in test_cases:
-            config = {
-                **sample_config,
-                'card_width': '2in',
-                'card_height': '1.4in',
-                'transparent': False
-            }
-            
-            output_dir = temp_dir / f'ref_{name}'
-            generate_cards_direct(
-                [number], config, output_dir,
-                format='png', dpi=150,
-                separate_fronts_backs=True
-            )
-            
-            # Copy to references
-            front_src = output_dir / 'fronts' / 'card_000.png'
-            back_src = output_dir / 'backs' / 'card_000.png'
-            front_dst = reference_images_dir / f'card_{number}_front.png'
-            back_dst = reference_images_dir / f'card_{number}_back.png'
-            
-            if front_src.exists():
-                front_src.replace(front_dst)
-                print(f"Updated reference: {front_dst}")
-            if back_src.exists():
-                back_src.replace(back_dst)
-                print(f"Updated reference: {back_dst}")
 

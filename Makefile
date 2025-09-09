@@ -87,10 +87,6 @@ pytest-cov:
 	@pip3 show pytest-cov >/dev/null 2>&1 || { echo "Installing test dependencies..."; pip3 install -r requirements.txt; }
 	python3 -m pytest tests/ -v --cov=src --cov-report=html --cov-report=term
 
-# Update visual test reference images
-update-references:
-	@echo "Updating visual test references..."
-	python3 -m pytest tests/test_visual.py::TestVisualRegression::test_reference_image_update_utility --update-references -v
 
 # Show help
 help:
@@ -108,7 +104,6 @@ help:
 	@echo "  make pytest-fast  Run fast tests only (skip slow ones)"
 	@echo "  make pytest-visual  Run visual regression tests only"
 	@echo "  make pytest-cov   Run tests with coverage report"
-	@echo "  make update-references  Update visual test reference images"
 	@echo ""
 	@echo "Setup targets:"
 	@echo "  make install      Install dependencies (macOS)"

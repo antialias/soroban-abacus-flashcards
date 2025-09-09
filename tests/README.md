@@ -41,13 +41,7 @@ The visual tests generate flashcard images and compare them against reference im
 
 ### Updating References
 
-When you make intentional visual changes:
-
-```bash
-make update-references
-```
-
-This regenerates the reference images in `tests/references/`.
+When you make intentional visual changes, manually delete the old reference images in `tests/references/` and run the visual tests. They will automatically create new reference images on first run.
 
 ### How Visual Tests Work
 

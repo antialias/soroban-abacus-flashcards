@@ -50,9 +50,3 @@ def reference_images_dir(project_root):
     ref_dir.mkdir(exist_ok=True)
     return ref_dir
 
-def pytest_addoption(parser):
-    """Add custom pytest options."""
-    parser.addoption(
-        "--update-references", action="store_true", default=False,
-        help="Update reference images for visual tests"
-    )
