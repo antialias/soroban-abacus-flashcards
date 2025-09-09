@@ -202,7 +202,10 @@ def generate_typst_file(numbers, config, output_path):
     """Generate a Typst file with the specified configuration."""
     
     # Convert Python list to Typst array syntax
-    numbers_str = '(' + ', '.join(str(n) for n in numbers) + ',)'
+    if numbers:
+        numbers_str = '(' + ', '.join(str(n) for n in numbers) + ',)'
+    else:
+        numbers_str = '()'
     
     # Build the Typst document
     # Use relative path from project root where temp file is created
