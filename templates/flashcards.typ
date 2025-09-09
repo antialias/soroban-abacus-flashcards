@@ -1,4 +1,4 @@
-#let draw-soroban(value, columns: auto, show-empty: false, hide-inactive: false, bead-shape: "diamond", color-scheme: "monochrome") = {
+#let draw-soroban(value, columns: auto, show-empty: false, hide-inactive: false, bead-shape: "diamond", color-scheme: "monochrome", base-size: 1.0) = {
   // Parse the value into digits
   let digits = if type(value) == int {
     str(value).clusters().map(d => int(d))
@@ -29,13 +29,13 @@
   let display-digits = padded-digits.slice(start-idx)
   if display-digits.len() == 0 { display-digits = (0,) }
   
-  // Drawing parameters
-  let rod-width = 3pt
-  let bead-size = 12pt
-  let bead-spacing = 4pt
-  let column-spacing = 25pt
-  let heaven-earth-gap = 20pt
-  let bar-thickness = 2pt
+  // Drawing parameters scaled by base-size
+  let rod-width = 3pt * base-size
+  let bead-size = 12pt * base-size
+  let bead-spacing = 4pt * base-size
+  let column-spacing = 25pt * base-size
+  let heaven-earth-gap = 20pt * base-size
+  let bar-thickness = 2pt * base-size
   
   // Color schemes
   let place-value-colors = (
@@ -209,6 +209,26 @@
   ]
 }
 
+#let scale-to-fit(content, max-width, max-height, manual-scale: 1.0) = {
+  context {
+    // Measure the content
+    let measured = measure(content)
+    
+    // Calculate scale factors
+    let scale-x = max-width / measured.width
+    let scale-y = max-height / measured.height
+    
+    // Use the smaller scale to maintain aspect ratio
+    let auto-scale = calc.min(scale-x, scale-y)
+    
+    // Apply manual scale adjustment
+    let final-scale = auto-scale * manual-scale
+    
+    // Return scaled content
+    scale(x: final-scale * 100%, y: final-scale * 100%)[#content]
+  }
+}
+
 #let flashcard(
   front-content,
   back-content,
@@ -216,22 +236,20 @@
   card-height: 2.5in,
   safe-margin: 5mm,
   show-cut-marks: false,
-  show-registration: false
+  show-registration: false,
+  scale-factor: 0.9
 ) = {
+  let usable-width = card-width - 2 * safe-margin
+  let usable-height = card-height - 2 * safe-margin
+  
   let card = rect(
     width: card-width,
     height: card-height,
     stroke: if show-cut-marks { 0.25pt + gray } else { none },
     radius: 0pt
   )[
-    #box(
-      width: card-width - 2 * safe-margin,
-      height: card-height - 2 * safe-margin,
-      inset: safe-margin
-    )[
-      #align(center + horizon)[
-        #front-content
-      ]
+    #align(center + horizon)[
+      #scale-to-fit(front-content, usable-width, usable-height, manual-scale: scale-factor)
     ]
     
     // Registration mark
@@ -253,14 +271,8 @@
       stroke: if show-cut-marks { 0.25pt + gray } else { none },
       radius: 0pt
     )[
-      #box(
-        width: card-width - 2 * safe-margin,
-        height: card-height - 2 * safe-margin,
-        inset: safe-margin
-      )[
-        #align(center + horizon)[
-          #back-content
-        ]
+      #align(center + horizon)[
+        #scale-to-fit(back-content, usable-width, usable-height, manual-scale: scale-factor)
       ]
       
       // Registration mark
@@ -291,7 +303,9 @@
   show-empty-columns: false,
   hide-inactive-beads: false,
   bead-shape: "diamond",
-  color-scheme: "monochrome"
+  color-scheme: "monochrome",
+  colored-numerals: false,
+  scale-factor: 0.9  // Manual scale adjustment (0.1 to 1.0)
 ) = {
   // Set document properties
   set document(
@@ -359,15 +373,79 @@
   let card-width = (usable-width - gutter * (cols - 1)) / cols
   let card-height = (usable-height - gutter * (rows - 1)) / rows
   
+  // Adaptive sizing based on card dimensions
+  // Calculate a base scale factor based on card size compared to default
+  let default-card-width = 3.5in
+  let default-card-height = 2.5in
+  let width-scale = card-width / default-card-width
+  let height-scale = card-height / default-card-height
+  let base-scale = calc.min(width-scale, height-scale)
+  
+  // Adaptive font size based on card dimensions
+  let base-font-size = if font-size == 48pt {
+    // Auto-scale default font size based on card height
+    48pt * base-scale
+  } else {
+    font-size
+  }
+  
+  // Function to create colored numeral based on color scheme
+  let create-colored-numeral(num, scheme, use-colors, font-size) = {
+    // Use the exact same colors as the beads
+    let place-value-colors = (
+      rgb("#2E86AB"),  // ones - blue (same as beads)
+      rgb("#A23B72"),  // tens - magenta (same as beads)
+      rgb("#F18F01"),  // hundreds - orange (same as beads)
+      rgb("#6A994E"),  // thousands - green (same as beads)
+      rgb("#BC4B51"),  // ten-thousands - red (same as beads)
+    )
+    
+    if not use-colors or scheme == "monochrome" {
+      // Plain black text
+      text(size: font-size)[#num]
+    } else if scheme == "place-value" {
+      // Color each digit according to its place value
+      let digits = str(num).clusters()
+      let num-digits = digits.len()
+      let colored-digits = ()
+      
+      for (idx, digit) in digits.enumerate() {
+        let place-idx = num-digits - idx - 1  // 0 = ones, 1 = tens, etc.
+        let color-idx = calc.rem(place-idx, place-value-colors.len())
+        let digit-color = place-value-colors.at(color-idx)
+        colored-digits += (text(fill: digit-color, size: font-size)[#digit],)
+      }
+      
+      colored-digits.join()
+    } else if scheme == "heaven-earth" {
+      // For heaven-earth, use orange (heaven bead color)
+      text(size: font-size, fill: rgb("#F18F01"))[#num]
+    } else if scheme == "alternating" {
+      // For alternating, we could alternate digit colors
+      let digits = str(num).clusters()
+      let colored-digits = ()
+      
+      for (idx, digit) in digits.enumerate() {
+        let digit-color = if calc.rem(idx, 2) == 0 { rgb("#1E88E5") } else { rgb("#43A047") }
+        colored-digits += (text(fill: digit-color, size: font-size)[#digit],)
+      }
+      
+      colored-digits.join()
+    } else {
+      text(size: font-size)[#num]
+    }
+  }
+  
   // Generate cards
   let cards = numbers.map(num => {
     flashcard(
-      draw-soroban(num, columns: columns, show-empty: show-empty-columns, hide-inactive: hide-inactive-beads, bead-shape: bead-shape, color-scheme: color-scheme),
-      text(size: font-size)[#num],
+      draw-soroban(num, columns: columns, show-empty: show-empty-columns, hide-inactive: hide-inactive-beads, bead-shape: bead-shape, color-scheme: color-scheme, base-size: base-scale),
+      create-colored-numeral(num, color-scheme, colored-numerals, base-font-size),
       card-width: card-width,
       card-height: card-height,
       show-cut-marks: show-cut-marks,
-      show-registration: show-registration
+      show-registration: show-registration,
+      scale-factor: scale-factor
     )
   })
   
