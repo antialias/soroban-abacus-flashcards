@@ -1,4 +1,4 @@
-.PHONY: all clean install test samples help check-deps examples verify-examples
+.PHONY: all clean install test samples help check-deps examples verify-examples pytest pytest-fast pytest-visual pytest-cov
 
 # Default target
 all: out/flashcards.pdf out/flashcards_linear.pdf
@@ -14,7 +14,7 @@ install:
 	@echo "Installing dependencies..."
 	@command -v brew >/dev/null 2>&1 || { echo "Error: Homebrew is not installed. Visit https://brew.sh" >&2; exit 1; }
 	brew install typst qpdf
-	pip3 install pyyaml
+	pip3 install -r requirements.txt
 
 # Generate default flashcards
 out/flashcards.pdf: check-deps
@@ -63,20 +63,60 @@ verify-examples: examples
 clean:
 	rm -rf out/
 
+# Run pytest tests
+pytest:
+	@echo "Running pytest tests..."
+	@pip3 show pytest >/dev/null 2>&1 || { echo "Installing test dependencies..."; pip3 install -r requirements.txt; }
+	python3 -m pytest tests/ -v
+
+# Run fast tests only (exclude slow tests)
+pytest-fast:
+	@echo "Running fast tests..."
+	@pip3 show pytest >/dev/null 2>&1 || { echo "Installing test dependencies..."; pip3 install -r requirements.txt; }
+	python3 -m pytest tests/ -v -m "not slow"
+
+# Run visual tests only
+pytest-visual:
+	@echo "Running visual regression tests..."
+	@pip3 show pytest >/dev/null 2>&1 || { echo "Installing test dependencies..."; pip3 install -r requirements.txt; }
+	python3 -m pytest tests/test_visual.py -v
+
+# Run tests with coverage
+pytest-cov:
+	@echo "Running tests with coverage..."
+	@pip3 show pytest-cov >/dev/null 2>&1 || { echo "Installing test dependencies..."; pip3 install -r requirements.txt; }
+	python3 -m pytest tests/ -v --cov=src --cov-report=html --cov-report=term
+
+# Update visual test reference images
+update-references:
+	@echo "Updating visual test references..."
+	python3 -m pytest tests/test_visual.py::TestVisualRegression::test_reference_image_update_utility --update-references -v
+
 # Show help
 help:
 	@echo "Soroban Flashcard Generator - Make targets:"
 	@echo ""
+	@echo "Build targets:"
 	@echo "  make              Generate default flashcards (0-9)"
 	@echo "  make samples      Generate all sample configurations"
 	@echo "  make test         Run a quick test build"
 	@echo "  make examples     Generate README example images"
 	@echo "  make verify-examples  Verify examples are up to date (CI)"
+	@echo ""
+	@echo "Test targets:"
+	@echo "  make pytest       Run all pytest tests"
+	@echo "  make pytest-fast  Run fast tests only (skip slow ones)"
+	@echo "  make pytest-visual  Run visual regression tests only"
+	@echo "  make pytest-cov   Run tests with coverage report"
+	@echo "  make update-references  Update visual test reference images"
+	@echo ""
+	@echo "Setup targets:"
 	@echo "  make install      Install dependencies (macOS)"
 	@echo "  make clean        Remove all generated files"
 	@echo "  make help         Show this help message"
 	@echo ""
 	@echo "Examples:"
 	@echo "  make                                    # Generate default flashcards"
+	@echo "  make pytest-fast                       # Run unit tests quickly"
 	@echo "  python3 src/generate.py --range 0-99    # Custom range"
 	@echo "  python3 src/generate.py --config config/0-99.yaml  # Use config file"
