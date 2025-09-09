@@ -40,7 +40,7 @@
   let bar-thickness = 2pt
   
   // Function to draw a bead based on shape
-  // Note: y parameter represents the TOP edge of the bead for consistency
+  // Note: y parameter represents the TOP edge of the bead for all shapes
   let draw-bead(x, y, shape, fill-color) = {
     if shape == "diamond" {
       // Horizontally elongated diamond (rhombus)
@@ -71,10 +71,10 @@
       )
     } else {
       // Circle (traditional option)
-      // For circles, adjust y to position by top edge instead of center
+      // For circles, y already represents where the center should be
       place(
         dx: x - bead-size / 2,
-        dy: y + bead-size / 2,
+        dy: y,
         circle(
           radius: bead-size / 2,
           fill: fill-color,
@@ -116,10 +116,17 @@
           5pt  // Inactive (at top)
         }
         
+        // Adjust y for circles (which use center positioning)
+        #let adjusted-y = if bead-shape == "circle" {
+          heaven-y + bead-size / 2
+        } else {
+          heaven-y
+        }
+        
         #if heaven-active == 1 or not hide-inactive [
           #draw-bead(
             x-offset,
-            heaven-y,
+            adjusted-y,
             bead-shape,
             if heaven-active == 1 { active-color } else { inactive-color }
           )
@@ -134,10 +141,17 @@
             total-height - (4 - i) * (bead-size + bead-spacing) - 5pt
           }
           
+          // Adjust y for circles (which use center positioning)
+          #let adjusted-earth-y = if bead-shape == "circle" {
+            earth-y + bead-size / 2
+          } else {
+            earth-y
+          }
+          
           #if is-active or not hide-inactive [
             #draw-bead(
               x-offset,
-              earth-y,
+              adjusted-earth-y,
               bead-shape,
               if is-active { active-color } else { inactive-color }
             )
