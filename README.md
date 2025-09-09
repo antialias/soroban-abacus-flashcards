@@ -4,12 +4,18 @@ A vector-based PDF flashcard generator for learning soroban (Japanese abacus) nu
 
 ## Features
 
-- **Pure vector graphics** - All soroban diagrams and text are rendered as vectors
-- **Configurable layouts** - Default 6 cards per US Letter page, customizable
-- **Duplex printing ready** - Automatic front/back alignment for double-sided printing
-- **Embedded fonts** - Bundled DejaVu Sans for consistent output
-- **Flexible number ranges** - Generate cards for any range or custom list
-- **macOS optimized** - Minimal dependencies, works great on Mac
+- 🎯 **Pure vector graphics** - All soroban diagrams and text are rendered as vectors
+- 📏 **Configurable layouts** - 1 to 30+ cards per page with automatic scaling
+- 🖨️ **Duplex printing ready** - Automatic front/back alignment for double-sided printing
+- 🔤 **Embedded fonts** - Bundled DejaVu Sans for consistent output
+- 🔢 **Flexible number ranges** - Generate cards for any range or custom list
+- 🎨 **Color schemes** - Educational colors for place-value, heaven-earth, alternating
+- 🌈 **Colored numerals** - Match numeral colors to bead colors
+- ✂️ **Cutting guides** - Full-page guides for accurate card separation
+- 🔷 **Customizable beads** - Diamond (realistic), circle, or square shapes
+- 📈 **Skip counting** - Count by 2s, 5s, 10s, or any increment
+- 🔀 **Hide inactive beads** - Cleaner display for beginners
+- 📦 **Node.js/TypeScript integration** - Clean function interface for web apps
 
 ## Quick Start
 
@@ -85,7 +91,8 @@ python3 src/generate.py [OPTIONS]
 Options:
   --config, -c FILE           Configuration file (JSON or YAML)
   --range, -r RANGE          Number range (e.g., "0-99") or list (e.g., "1,2,5")
-  --cards-per-page N         Cards per page (default: 6, options: 4,6,8,9)
+  --step, -s N               Step/increment for ranges (e.g., 2 for even numbers)
+  --cards-per-page N         Cards per page (default: 6, supports 1-30+)
   --paper-size SIZE          Paper size (default: us-letter)
   --orientation ORIENT       Page orientation (portrait/landscape)
   --margins T,R,B,L          Margins (e.g., "0.5in,0.5in,0.5in,0.5in")
@@ -95,9 +102,14 @@ Options:
   --cut-marks                Show cut marks
   --registration             Show registration marks for alignment
   --font-family FONT         Font family (default: DejaVu Sans)
-  --font-size SIZE           Font size (default: 48pt)
+  --font-size SIZE           Font size (default: 48pt, auto-scales)
   --columns N                Soroban columns (auto or number)
   --show-empty-columns       Show leading empty columns
+  --hide-inactive-beads      Hide inactive beads (show only active)
+  --bead-shape SHAPE         Bead shape (diamond/circle/square)
+  --color-scheme SCHEME      Color scheme (monochrome/place-value/heaven-earth/alternating)
+  --colored-numerals         Color numerals to match bead colors
+  --scale-factor N           Manual scale adjustment (0.1-1.0, default: 0.9)
   --output, -o FILE          Output PDF path (default: out/flashcards.pdf)
   --linearize                Create linearized PDF (default: true)
 ```
@@ -146,19 +158,31 @@ To print double-sided:
 - `config/default.yaml` - Basic 0-9 set
 - `config/0-99.yaml` - Two-digit numbers with cut marks
 - `config/3-column-fixed.yaml` - Three-digit numbers, fixed width
+- `config/minimal-beads.yaml` - Hide inactive beads for clarity
+- `config/circle-beads.yaml` - Traditional circular beads
+- `config/place-value-colors.yaml` - Place value color coding
+- `config/colored-numerals.yaml` - Colored numerals matching beads
+- `config/count-by-5s.yaml` - Skip counting by 5s
 
 ## Project Structure
 
 ```
 soroban-abacus-flashcards/
 ├── src/
-│   └── generate.py         # Main CLI tool
+│   ├── generate.py         # Main CLI tool
+│   ├── bridge.py          # Node.js integration bridge
+│   └── api.py             # FastAPI server (optional)
 ├── templates/
 │   └── flashcards.typ      # Typst template with soroban rendering
-├── config/
-│   ├── default.yaml        # Default configuration
-│   ├── 0-99.yaml          # 0-99 range config
-│   └── 3-column-fixed.yaml # 3-column fixed width config
+├── config/                 # Preset configurations
+│   ├── default.yaml
+│   ├── 0-99.yaml
+│   ├── place-value-colors.yaml
+│   └── ...
+├── client/                 # Integration libraries
+│   ├── node/              # Node.js/TypeScript wrapper
+│   ├── typescript/        # Browser TypeScript client
+│   └── browser/           # Browser-based implementation
 ├── fonts/
 │   ├── DejaVuSans.ttf     # Bundled font
 │   └── DejaVuSans-Bold.ttf # Bold variant
@@ -222,6 +246,72 @@ make clean
 make help
 ```
 
+## Node.js/TypeScript Integration
+
+### Installation
+
+```bash
+cd client/node
+npm install
+```
+
+### Usage Example
+
+```typescript
+import { SorobanGenerator } from './soroban-generator-bridge';
+
+async function generateFlashcards() {
+  const generator = new SorobanGenerator();
+  
+  // Generate with clean function interface - no CLI args!
+  const result = await generator.generate({
+    range: '0-99',
+    cardsPerPage: 6,
+    colorScheme: 'place-value',
+    coloredNumerals: true,
+    showCutMarks: true
+  });
+  
+  // Get PDF as Buffer
+  const pdfBuffer = Buffer.from(result.pdf, 'base64');
+  
+  // Save to file or send to client
+  await fs.writeFile('flashcards.pdf', pdfBuffer);
+}
+```
+
+### Express.js Integration
+
+```typescript
+import express from 'express';
+import { SorobanGenerator } from './soroban-generator-bridge';
+
+const app = express();
+const generator = new SorobanGenerator();
+
+app.post('/api/flashcards', async (req, res) => {
+  // Direct function call - no shell commands!
+  const result = await generator.generate(req.body);
+  const pdfBuffer = Buffer.from(result.pdf, 'base64');
+  
+  res.contentType('application/pdf');
+  res.send(pdfBuffer);
+});
+```
+
+### API Reference
+
+The `SorobanGenerator` class provides:
+
+- `generate(config)` - Returns `{ pdf: string, count: number, numbers: number[] }`
+- `generateBuffer(config)` - Returns PDF as Node.js Buffer
+- `initialize()` - Start persistent Python process for better performance
+- `close()` - Clean up Python process
+
+All methods use clean TypeScript interfaces with proper types - no shell command building required!
+
 ## License
 
-This project uses DejaVu Sans font (included), which is released under a free license. The generator code is provided as-is for educational use.
+MIT License - see LICENSE file for details.
+
+This project uses DejaVu Sans font (included), which is released under a free license.
