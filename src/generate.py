@@ -17,22 +17,29 @@ def load_config(config_path):
         else:
             return json.load(f)
 
-def parse_range(range_str):
-    """Parse a range string like '0-99' or a comma-separated list."""
+def parse_range(range_str, step=1):
+    """Parse a range string like '0-99' or a comma-separated list.
+    
+    Examples:
+        '0-10' with step=1 -> [0, 1, 2, ..., 10]
+        '0-10' with step=2 -> [0, 2, 4, 6, 8, 10]
+        '0-20' with step=5 -> [0, 5, 10, 15, 20]
+        '1,2,5,10' -> [1, 2, 5, 10] (step ignored for lists)
+    """
     numbers = []
     if ',' in range_str:
-        # Comma-separated list
+        # Comma-separated list (step is ignored)
         for part in range_str.split(','):
             part = part.strip()
             if '-' in part:
                 start, end = map(int, part.split('-'))
-                numbers.extend(range(start, end + 1))
+                numbers.extend(range(start, end + 1, step))
             else:
                 numbers.append(int(part))
     elif '-' in range_str:
-        # Range
+        # Range with optional step
         start, end = map(int, range_str.split('-'))
-        numbers = list(range(start, end + 1))
+        numbers = list(range(start, end + 1, step))
     else:
         # Single number
         numbers = [int(range_str)]
@@ -69,7 +76,9 @@ def generate_typst_file(numbers, config, output_path):
   show-empty-columns: {str(config.get('show_empty_columns', False)).lower()},
   hide-inactive-beads: {str(config.get('hide_inactive_beads', False)).lower()},
   bead-shape: "{config.get('bead_shape', 'diamond')}",
-  color-scheme: "{config.get('color_scheme', 'monochrome')}"
+  color-scheme: "{config.get('color_scheme', 'monochrome')}",
+  colored-numerals: {str(config.get('colored_numerals', False)).lower()},
+  scale-factor: {config.get('scale_factor', 0.9)}
 )
 '''
     
@@ -80,6 +89,7 @@ def main():
     parser = argparse.ArgumentParser(description='Generate Soroban flashcards PDF')
     parser.add_argument('--config', '-c', type=str, help='Configuration file (JSON or YAML)')
     parser.add_argument('--range', '-r', type=str, help='Number range (e.g., "0-99") or list (e.g., "1,2,5,10")')
+    parser.add_argument('--step', '-s', type=int, default=1, help='Step/increment for ranges (e.g., 2 for counting by 2s)')
     parser.add_argument('--cards-per-page', type=int, default=6, help='Cards per page (default: 6)')
     parser.add_argument('--paper-size', type=str, default='us-letter', help='Paper size (default: us-letter)')
     parser.add_argument('--orientation', type=str, choices=['portrait', 'landscape'], default='portrait', help='Page orientation')
@@ -96,6 +106,8 @@ def main():
     parser.add_argument('--hide-inactive-beads', action='store_true', help='Hide inactive beads (only show active ones)')
     parser.add_argument('--bead-shape', type=str, choices=['diamond', 'circle', 'square'], default='diamond', help='Bead shape (default: diamond)')
     parser.add_argument('--color-scheme', type=str, choices=['monochrome', 'place-value', 'heaven-earth', 'alternating'], default='monochrome', help='Color scheme (default: monochrome)')
+    parser.add_argument('--colored-numerals', action='store_true', help='Color the numerals to match the bead color scheme')
+    parser.add_argument('--scale-factor', type=float, default=0.9, help='Manual scale adjustment (0.1 to 1.0, default: 0.9)')
     parser.add_argument('--output', '-o', type=str, default='out/flashcards.pdf', help='Output PDF path')
     parser.add_argument('--linearize', action='store_true', default=True, help='Create linearized PDF (default: True)')
     parser.add_argument('--font-path', type=str, help='Path to fonts directory')
@@ -108,15 +120,16 @@ def main():
         config = load_config(args.config)
     
     # Override config with command-line arguments
+    step = args.step or config.get('step', 1)
     if args.range:
-        numbers = parse_range(args.range)
+        numbers = parse_range(args.range, step)
     elif 'range' in config:
-        numbers = parse_range(config['range'])
+        numbers = parse_range(config['range'], step)
     elif 'numbers' in config:
         numbers = config['numbers']
     else:
         # Default to 0-9
-        numbers = list(range(10))
+        numbers = list(range(0, 10, step))
     
     # Apply shuffle if requested
     if args.shuffle or config.get('shuffle', False):
@@ -139,6 +152,8 @@ def main():
         'hide_inactive_beads': args.hide_inactive_beads or config.get('hide_inactive_beads', False),
         'bead_shape': args.bead_shape if args.bead_shape != 'diamond' else config.get('bead_shape', 'diamond'),
         'color_scheme': args.color_scheme if args.color_scheme != 'monochrome' else config.get('color_scheme', 'monochrome'),
+        'colored_numerals': args.colored_numerals or config.get('colored_numerals', False),
+        'scale_factor': args.scale_factor if args.scale_factor != 0.9 else config.get('scale_factor', 0.9),
     }
     
     # Handle margins
