@@ -40,13 +40,13 @@
   let bar-thickness = 2pt
   
   // Function to draw a bead based on shape
-  // Note: y parameter represents the TOP edge of the bead for all shapes
+  // y parameter represents the CENTER of where the bead should be
   let draw-bead(x, y, shape, fill-color) = {
     if shape == "diamond" {
       // Horizontally elongated diamond (rhombus)
       place(
         dx: x - bead-size * 0.7,
-        dy: y,
+        dy: y - bead-size / 2,
         polygon(
           (bead-size * 0.7, 0pt),           // left point
           (bead-size * 1.4, bead-size / 2), // top point
@@ -60,7 +60,7 @@
       // Square bead
       place(
         dx: x - bead-size / 2,
-        dy: y,
+        dy: y - bead-size / 2,
         rect(
           width: bead-size,
           height: bead-size,
@@ -71,7 +71,6 @@
       )
     } else {
       // Circle (traditional option)
-      // For circles, y already represents where the center should be
       place(
         dx: x - bead-size / 2,
         dy: y,
@@ -111,22 +110,15 @@
         
         // Draw heaven bead
         #let heaven-y = if heaven-active == 1 {
-          heaven-earth-gap - bead-size - 2pt  // Active (touching bar)
+          heaven-earth-gap - bead-size / 2 - 2pt  // Active (center just above bar)
         } else {
-          5pt  // Inactive (at top)
-        }
-        
-        // Adjust y for circles (which use center positioning)
-        #let adjusted-y = if bead-shape == "circle" {
-          heaven-y + bead-size / 2
-        } else {
-          heaven-y
+          5pt + bead-size / 2  // Inactive (center near top)
         }
         
         #if heaven-active == 1 or not hide-inactive [
           #draw-bead(
             x-offset,
-            adjusted-y,
+            heaven-y,
             bead-shape,
             if heaven-active == 1 { active-color } else { inactive-color }
           )
@@ -136,22 +128,15 @@
         #for i in range(4) [
           #let is-active = i < earth-active
           #let earth-y = if is-active {
-            heaven-earth-gap + bar-thickness + 2pt + i * (bead-size + bead-spacing)
+            heaven-earth-gap + bar-thickness + 2pt + bead-size / 2 + i * (bead-size + bead-spacing)
           } else {
-            total-height - (4 - i) * (bead-size + bead-spacing) - 5pt
-          }
-          
-          // Adjust y for circles (which use center positioning)
-          #let adjusted-earth-y = if bead-shape == "circle" {
-            earth-y + bead-size / 2
-          } else {
-            earth-y
+            total-height - (4 - i) * (bead-size + bead-spacing) - 5pt + bead-size / 2
           }
           
           #if is-active or not hide-inactive [
             #draw-bead(
               x-offset,
-              adjusted-earth-y,
+              earth-y,
               bead-shape,
               if is-active { active-color } else { inactive-color }
             )
