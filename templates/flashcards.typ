@@ -1,4 +1,4 @@
-#let draw-soroban(value, columns: auto, show-empty: false, hide-inactive: false) = {
+#let draw-soroban(value, columns: auto, show-empty: false, hide-inactive: false, bead-shape: "diamond") = {
   // Parse the value into digits
   let digits = if type(value) == int {
     str(value).clusters().map(d => int(d))
@@ -39,6 +39,49 @@
   let active-color = black
   let bar-thickness = 2pt
   
+  // Function to draw a bead based on shape
+  let draw-bead(x, y, shape, fill-color) = {
+    if shape == "diamond" {
+      // Horizontally elongated diamond (rhombus)
+      place(
+        dx: x - bead-size * 0.7,
+        dy: y - bead-size / 2,
+        polygon(
+          (bead-size * 0.7, 0pt),           // left point
+          (bead-size * 1.4, bead-size / 2), // top point
+          (bead-size * 0.7, bead-size),      // right point
+          (0pt, bead-size / 2),              // bottom point
+          fill: fill-color,
+          stroke: 0.5pt + black
+        )
+      )
+    } else if shape == "square" {
+      // Square bead
+      place(
+        dx: x - bead-size / 2,
+        dy: y - bead-size / 2,
+        rect(
+          width: bead-size,
+          height: bead-size,
+          fill: fill-color,
+          stroke: 0.5pt + black,
+          radius: 1pt  // Slight rounding
+        )
+      )
+    } else {
+      // Circle (traditional option)
+      place(
+        dx: x - bead-size / 2,
+        dy: y,
+        circle(
+          radius: bead-size / 2,
+          fill: fill-color,
+          stroke: 0.5pt + black
+        )
+      )
+    }
+  }
+  
   // Calculate total width and height
   let total-width = display-digits.len() * column-spacing
   let total-height = heaven-earth-gap + 5 * (bead-size + bead-spacing) + 10pt
@@ -72,14 +115,11 @@
         }
         
         #if heaven-active == 1 or not hide-inactive [
-          #place(
-            dx: x-offset - bead-size / 2,
-            dy: heaven-y,
-            circle(
-              radius: bead-size / 2,
-              fill: if heaven-active == 1 { active-color } else { inactive-color },
-              stroke: 0.5pt + black
-            )
+          #draw-bead(
+            x-offset,
+            heaven-y,
+            bead-shape,
+            if heaven-active == 1 { active-color } else { inactive-color }
           )
         ]
         
@@ -93,14 +133,11 @@
           }
           
           #if is-active or not hide-inactive [
-            #place(
-              dx: x-offset - bead-size / 2,
-              dy: earth-y,
-              circle(
-                radius: bead-size / 2,
-                fill: if is-active { active-color } else { inactive-color },
-                stroke: 0.5pt + black
-              )
+            #draw-bead(
+              x-offset,
+              earth-y,
+              bead-shape,
+              if is-active { active-color } else { inactive-color }
             )
           ]
         ]
@@ -201,7 +238,8 @@
   font-size: 48pt,
   columns: auto,
   show-empty-columns: false,
-  hide-inactive-beads: false
+  hide-inactive-beads: false,
+  bead-shape: "diamond"
 ) = {
   // Set document properties
   set document(
@@ -244,7 +282,7 @@
   // Generate cards
   let cards = numbers.map(num => {
     flashcard(
-      draw-soroban(num, columns: columns, show-empty: show-empty-columns, hide-inactive: hide-inactive-beads),
+      draw-soroban(num, columns: columns, show-empty: show-empty-columns, hide-inactive: hide-inactive-beads, bead-shape: bead-shape),
       text(size: font-size)[#num],
       card-width: card-width,
       card-height: card-height,
