@@ -7,19 +7,19 @@ A vector-based PDF flashcard generator for learning soroban (Japanese abacus) nu
 <table>
 <tr>
 <td align="center">
-<img src="docs/images/basic-123-front.png" width="200" alt="Soroban showing 123"><br>
+<img src="docs/images/svg/basic-123_front.svg" width="200" alt="Soroban showing 123"><br>
 <b>Soroban (Front)</b>
 </td>
 <td align="center">
-<img src="docs/images/basic-123-back.png" width="200" alt="Numeral 123"><br>
+<img src="docs/images/svg/basic-123_back.svg" width="200" alt="Numeral 123"><br>
 <b>Numeral (Back)</b>
 </td>
 <td align="center">
-<img src="docs/images/place-value-456-front.png" width="200" alt="Place-value colored 456"><br>
+<img src="docs/images/svg/place-value-456_front.svg" width="200" alt="Place-value colored 456"><br>
 <b>Place-Value Colors</b>
 </td>
 <td align="center">
-<img src="docs/images/place-value-456-back.png" width="200" alt="Colored numeral 456"><br>
+<img src="docs/images/svg/place-value-456_back.svg" width="200" alt="Colored numeral 456"><br>
 <b>Colored Numerals</b>
 </td>
 </tr>
@@ -30,15 +30,15 @@ A vector-based PDF flashcard generator for learning soroban (Japanese abacus) nu
 <table>
 <tr>
 <td align="center">
-<img src="docs/images/diamond-25-front.png" width="200" alt="Diamond beads"><br>
+<img src="docs/images/svg/diamond-25_front.svg" width="200" alt="Diamond beads"><br>
 <b>Diamond (Realistic)</b>
 </td>
 <td align="center">
-<img src="docs/images/circle-25-front.png" width="200" alt="Circle beads"><br>
+<img src="docs/images/svg/circle-25_front.svg" width="200" alt="Circle beads"><br>
 <b>Circle (Traditional)</b>
 </td>
 <td align="center">
-<img src="docs/images/square-25-front.png" width="200" alt="Square beads"><br>
+<img src="docs/images/svg/square-25_front.svg" width="200" alt="Square beads"><br>
 <b>Square</b>
 </td>
 </tr>
@@ -63,7 +63,7 @@ A vector-based PDF flashcard generator for learning soroban (Japanese abacus) nu
 <b>Skip Counting by 5s</b>
 </td>
 <td align="center">
-<img src="docs/images/minimal-42-front.png" width="300" alt="Hidden inactive beads"><br>
+<img src="docs/images/svg/minimal-42_front.svg" width="300" alt="Hidden inactive beads"><br>
 <b>Hidden Inactive Beads</b>
 </td>
 </tr>

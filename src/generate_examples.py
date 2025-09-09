@@ -9,81 +9,101 @@ import os
 from pathlib import Path
 import tempfile
 
-def generate_example_pdfs():
-    """Generate various example PDFs to convert to PNG"""
+def generate_examples():
+    """Generate various example images (SVG for single cards, PNG for grids)"""
     examples = [
-        # Basic examples
+        # Single card examples - use SVG
         {
             'name': 'basic-7',
-            'args': ['--range', '7-7', '--cards-per-page', '1'],
+            'format': 'svg',
+            'args': ['--range', '7-7', '--format', 'svg', '--no-separate'],
             'desc': 'Number 7 on soroban'
         },
         {
             'name': 'basic-123',
-            'args': ['--range', '123-123', '--cards-per-page', '1'],
+            'format': 'svg', 
+            'args': ['--range', '123-123', '--format', 'svg', '--no-separate'],
             'desc': 'Number 123 on soroban'
         },
         
-        # Color schemes
+        # Color schemes - use SVG
         {
             'name': 'place-value-456',
-            'args': ['--range', '456-456', '--cards-per-page', '1', '--color-scheme', 'place-value', '--colored-numerals'],
+            'format': 'svg',
+            'args': ['--range', '456-456', '--format', 'svg', '--color-scheme', 'place-value', '--colored-numerals', '--no-separate'],
             'desc': 'Place-value coloring'
         },
         {
             'name': 'heaven-earth-78',
-            'args': ['--range', '78-78', '--cards-per-page', '1', '--color-scheme', 'heaven-earth', '--colored-numerals'],
+            'format': 'svg',
+            'args': ['--range', '78-78', '--format', 'svg', '--color-scheme', 'heaven-earth', '--colored-numerals', '--no-separate'],
             'desc': 'Heaven-earth coloring'
         },
         
-        # Bead shapes
+        # Bead shapes - use SVG
         {
             'name': 'diamond-25',
-            'args': ['--range', '25-25', '--cards-per-page', '1', '--bead-shape', 'diamond'],
+            'format': 'svg',
+            'args': ['--range', '25-25', '--format', 'svg', '--bead-shape', 'diamond', '--no-separate'],
             'desc': 'Diamond beads (realistic)'
         },
         {
             'name': 'circle-25',
-            'args': ['--range', '25-25', '--cards-per-page', '1', '--bead-shape', 'circle'],
+            'format': 'svg',
+            'args': ['--range', '25-25', '--format', 'svg', '--bead-shape', 'circle', '--no-separate'],
             'desc': 'Circle beads'
         },
         {
             'name': 'square-25',
-            'args': ['--range', '25-25', '--cards-per-page', '1', '--bead-shape', 'square'],
+            'format': 'svg',
+            'args': ['--range', '25-25', '--format', 'svg', '--bead-shape', 'square', '--no-separate'],
             'desc': 'Square beads'
         },
         
-        # Grid layouts
+        # Hide inactive - use SVG
+        {
+            'name': 'minimal-42',
+            'format': 'svg',
+            'args': ['--range', '42-42', '--format', 'svg', '--hide-inactive-beads', '--no-separate'],
+            'desc': 'Hidden inactive beads'
+        },
+        
+        # Grid layouts - use PDF→PNG
         {
             'name': 'grid-6',
+            'format': 'pdf',
             'args': ['--range', '0-5', '--cards-per-page', '6'],
             'desc': '6 cards per page'
         },
         {
             'name': 'grid-12',
+            'format': 'pdf',
             'args': ['--range', '0-11', '--cards-per-page', '12'],
             'desc': '12 cards per page'
         },
         
-        # Skip counting
+        # Skip counting - use PDF→PNG
         {
             'name': 'skip-5s',
+            'format': 'pdf',
             'args': ['--range', '0-30', '--step', '5', '--cards-per-page', '6'],
             'desc': 'Counting by 5s'
         },
         
-        # Hide inactive
-        {
-            'name': 'minimal-42',
-            'args': ['--range', '42-42', '--cards-per-page', '1', '--hide-inactive-beads'],
-            'desc': 'Hidden inactive beads'
-        },
-        
-        # Cutting guides
+        # Cutting guides - use PDF→PNG
         {
             'name': 'cutting-guides',
+            'format': 'pdf',
             'args': ['--range', '10-15', '--cards-per-page', '6', '--cut-marks'],
             'desc': 'With cutting guides'
+        },
+        
+        # Additional cutting example
+        {
+            'name': 'cutting-registration',
+            'format': 'pdf', 
+            'args': ['--range', '10-15', '--cards-per-page', '6', '--cut-marks', '--registration'],
+            'desc': 'With cutting guides and registration marks'
         },
     ]
     
@@ -170,6 +190,36 @@ def pdf_to_png(pdf_path, png_path, dpi=150, page=1):
     
     return False
 
+
+def copy_svg_files(svg_dir, output_dir, example_name):
+    """Copy SVG files from the generated directory to examples"""
+    svg_dir = Path(svg_dir)
+    output_dir = Path(output_dir)
+    output_dir.mkdir(parents=True, exist_ok=True)
+    
+    copied_files = []
+    
+    # Look for front and back SVG files
+    front_file = svg_dir / f'card_000_front.svg'
+    back_file = svg_dir / f'card_000_back.svg'
+    
+    if front_file.exists():
+        dest = output_dir / f'{example_name}_front.svg'
+        import shutil
+        shutil.copy2(front_file, dest)
+        copied_files.append(dest)
+        print(f"    ✓ Generated {dest.name}")
+    
+    if back_file.exists():
+        dest = output_dir / f'{example_name}_back.svg'
+        import shutil
+        shutil.copy2(back_file, dest)
+        copied_files.append(dest)
+        print(f"    ✓ Generated {dest.name}")
+    
+    return copied_files
+
+
 def main():
     """Generate example images for README"""
     
@@ -181,7 +231,11 @@ def main():
     temp_dir = project_root / 'out' / 'examples'
     temp_dir.mkdir(parents=True, exist_ok=True)
     
-    examples = generate_example_pdfs()
+    # Create SVG output directory
+    svg_dir = images_dir / 'svg'
+    svg_dir.mkdir(parents=True, exist_ok=True)
+    
+    examples = generate_examples()
     
     # Check if we have a PDF to PNG converter available
     converters = []
@@ -205,33 +259,56 @@ def main():
     for example in examples:
         print(f"  - {example['name']}: {example['desc']}")
         
-        # Generate PDF
-        pdf_path = temp_dir / f"{example['name']}.pdf"
-        cmd = [
-            'python3',
-            str(project_root / 'src' / 'generate.py'),
-            '--output', str(pdf_path)
-        ] + example['args']
-        
-        result = subprocess.run(cmd, capture_output=True, text=True, cwd=str(project_root))
-        
-        if result.returncode != 0:
-            print(f"    ERROR generating PDF: {result.stderr}")
-            continue
-        
-        # Convert front page to PNG
-        front_png = images_dir / f"{example['name']}-front.png"
-        if pdf_to_png(str(pdf_path), str(front_png), dpi=150, page=1):
-            print(f"    ✓ Generated {front_png.name}")
+        if example['format'] == 'svg':
+            # Generate SVG directly
+            svg_temp_dir = temp_dir / f"{example['name']}_svg"
+            cmd = [
+                'python3',
+                str(project_root / 'src' / 'generate.py'),
+                '--output', str(svg_temp_dir)
+            ] + example['args']
+            
+            result = subprocess.run(cmd, capture_output=True, text=True, cwd=str(project_root))
+            
+            if result.returncode != 0:
+                print(f"    ERROR generating SVG: {result.stderr}")
+                failed.append(example['name'])
+                continue
+                
+            # Copy SVG files to final destination
+            copied = copy_svg_files(svg_temp_dir, svg_dir, example['name'])
+            if not copied:
+                print(f"    ✗ No SVG files found")
+                failed.append(example['name'])
+                
         else:
-            print(f"    ✗ Failed to convert {front_png.name}")
-            failed.append(example['name'])
-        
-        # For single cards, also generate back page
-        if '--cards-per-page' in example['args'] and example['args'][example['args'].index('--cards-per-page') + 1] == '1':
-            back_png = images_dir / f"{example['name']}-back.png"
-            if pdf_to_png(str(pdf_path), str(back_png), dpi=150, page=2):
-                print(f"    ✓ Generated {back_png.name}")
+            # Generate PDF and convert to PNG
+            pdf_path = temp_dir / f"{example['name']}.pdf"
+            cmd = [
+                'python3',
+                str(project_root / 'src' / 'generate.py'),
+                '--output', str(pdf_path)
+            ] + example['args']
+            
+            result = subprocess.run(cmd, capture_output=True, text=True, cwd=str(project_root))
+            
+            if result.returncode != 0:
+                print(f"    ERROR generating PDF: {result.stderr}")
+                continue
+            
+            # Convert front page to PNG
+            front_png = images_dir / f"{example['name']}-front.png"
+            if pdf_to_png(str(pdf_path), str(front_png), dpi=150, page=1):
+                print(f"    ✓ Generated {front_png.name}")
+            else:
+                print(f"    ✗ Failed to convert {front_png.name}")
+                failed.append(example['name'])
+            
+            # For single cards, also generate back page
+            if '--cards-per-page' in example['args'] and example['args'][example['args'].index('--cards-per-page') + 1] == '1':
+                back_png = images_dir / f"{example['name']}-back.png"
+                if pdf_to_png(str(pdf_path), str(back_png), dpi=150, page=2):
+                    print(f"    ✓ Generated {back_png.name}")
     
     if failed:
         print(f"\n✗ Failed to generate {len(failed)} images: {', '.join(failed)}")

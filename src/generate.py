@@ -7,6 +7,8 @@ import random
 import subprocess
 import sys
 import os
+import tempfile
+import shutil
 from pathlib import Path
 
 def load_config(config_path):
@@ -44,6 +46,157 @@ def parse_range(range_str, step=1):
         # Single number
         numbers = [int(range_str)]
     return numbers
+
+def generate_single_card_typst(number, side, config, output_path, project_root):
+    """Generate Typst file for a single card"""
+    
+    # Use relative path to single-card.typ (we'll copy templates to temp dir)
+    typst_content = f'''
+#import "single-card.typ": generate-single-card
+
+#generate-single-card(
+  {number},
+  side: "{side}",
+  bead-shape: "{config.get('bead_shape', 'diamond')}",
+  color-scheme: "{config.get('color_scheme', 'monochrome')}",
+  colored-numerals: {str(config.get('colored_numerals', False)).lower()},
+  hide-inactive-beads: {str(config.get('hide_inactive_beads', False)).lower()},
+  show-empty-columns: {str(config.get('show_empty_columns', False)).lower()},
+  columns: {config.get('columns', 'auto')},
+  transparent: {str(config.get('transparent', False)).lower()},
+  width: {config.get('card_width', '3.5in')},
+  height: {config.get('card_height', '2.5in')},
+  font-size: {config.get('font_size', '48pt')},
+  font-family: "{config.get('font_family', 'DejaVu Sans')}",
+  scale-factor: {config.get('scale_factor', 1.0)}
+)
+'''
+    
+    with open(output_path, 'w') as f:
+        f.write(typst_content)
+
+def typst_to_image(typst_file, output_file, format='png', dpi=300, tmpdir_path=None):
+    """Convert Typst file directly to PNG or SVG"""
+    
+    # Use relative paths from tmpdir
+    if tmpdir_path:
+        rel_input = typst_file.name  # Just filename since we're running from tmpdir
+        abs_output = output_file.resolve()  # Absolute path for output
+    else:
+        rel_input = str(typst_file)
+        abs_output = str(output_file)
+    
+    # Typst can export directly to PNG or SVG
+    cmd = [
+        'typst', 'compile',
+        '--format', format,
+        rel_input,
+        str(abs_output)
+    ]
+    
+    # Add DPI for PNG only
+    if format == 'png':
+        cmd.insert(-2, '--ppi')
+        cmd.insert(-2, str(dpi))
+    
+    # Add font path from tmpdir if fonts were copied there
+    if tmpdir_path:
+        fonts_path = tmpdir_path / 'fonts'
+        if fonts_path.exists():
+            cmd.extend(['--font-path', str(fonts_path)])
+    
+    # Run from tmpdir where templates are copied
+    cwd = tmpdir_path if tmpdir_path else None
+    result = subprocess.run(cmd, capture_output=True, text=True, cwd=cwd)
+    
+    if result.returncode != 0:
+        print(f"Error generating {format.upper()}: {result.stderr}")
+        return False
+    
+    return True
+
+def generate_cards_direct(numbers, config, output_dir, format='png', dpi=300, separate_fronts_backs=True):
+    """Generate PNG/SVG cards directly from Typst without PDF intermediate"""
+    
+    # Create output directory
+    output_dir = Path(output_dir)
+    output_dir.mkdir(parents=True, exist_ok=True)
+    
+    # Get project root
+    project_root = Path(__file__).parent.parent
+    
+    # Apply shuffle if configured
+    if config.get('shuffle', False):
+        if 'seed' in config:
+            random.seed(config['seed'])
+        random.shuffle(numbers)
+    
+    if format == 'png':
+        print(f"Generating {len(numbers)} cards directly to PNG at {dpi} DPI...")
+    else:
+        print(f"Generating {len(numbers)} cards directly to SVG...")
+    
+    # Create subdirectories if separating
+    if separate_fronts_backs:
+        fronts_dir = output_dir / 'fronts'
+        backs_dir = output_dir / 'backs'
+        fronts_dir.mkdir(exist_ok=True)
+        backs_dir.mkdir(exist_ok=True)
+    
+    generated_files = []
+    
+    # Use temp directory for Typst files
+    with tempfile.TemporaryDirectory() as tmpdir:
+        tmpdir_path = Path(tmpdir)
+        
+        # Copy template files to temp directory so imports work
+        templates_dir = project_root / 'templates'
+        shutil.copy2(templates_dir / 'single-card.typ', tmpdir_path)
+        shutil.copy2(templates_dir / 'flashcards.typ', tmpdir_path)
+        
+        # Copy fonts directory if it exists
+        fonts_dir = project_root / 'fonts'
+        if fonts_dir.exists():
+            shutil.copytree(fonts_dir, tmpdir_path / 'fonts')
+        
+        for i, num in enumerate(numbers):
+            # Generate front (soroban)
+            front_typst = tmpdir_path / f'card_{i}_front.typ'
+            generate_single_card_typst(num, 'front', config, front_typst, project_root)
+            
+            if separate_fronts_backs:
+                front_file = fronts_dir / f'card_{i:03d}.{format}'
+            else:
+                front_file = output_dir / f'card_{i:03d}_front.{format}'
+            
+            # Ensure parent directory exists
+            front_file.parent.mkdir(parents=True, exist_ok=True)
+            
+            if typst_to_image(front_typst, front_file, format, dpi, tmpdir_path):
+                generated_files.append(front_file)
+                print(f"  ✓ Card {i:03d} front: {num}")
+            else:
+                print(f"  ✗ Failed card {i:03d} front: {num}")
+            
+            # Generate back (numeral)
+            back_typst = tmpdir_path / f'card_{i}_back.typ'
+            generate_single_card_typst(num, 'back', config, back_typst, project_root)
+            
+            if separate_fronts_backs:
+                back_file = backs_dir / f'card_{i:03d}.{format}'
+            else:
+                back_file = output_dir / f'card_{i:03d}_back.{format}'
+            
+            # Ensure parent directory exists
+            back_file.parent.mkdir(parents=True, exist_ok=True)
+            
+            if typst_to_image(back_typst, back_file, format, dpi, tmpdir_path):
+                generated_files.append(back_file)
+                print(f"  ✓ Card {i:03d} back: {num}")
+            else:
+                print(f"  ✗ Failed card {i:03d} back: {num}")
+    
+    return generated_files
 
 def generate_typst_file(numbers, config, output_path):
     """Generate a Typst file with the specified configuration."""
@@ -108,8 +261,22 @@ def main():
     parser.add_argument('--color-scheme', type=str, choices=['monochrome', 'place-value', 'heaven-earth', 'alternating'], default='monochrome', help='Color scheme (default: monochrome)')
     parser.add_argument('--colored-numerals', action='store_true', help='Color the numerals to match the bead color scheme')
     parser.add_argument('--scale-factor', type=float, default=0.9, help='Manual scale adjustment (0.1 to 1.0, default: 0.9)')
-    parser.add_argument('--output', '-o', type=str, default='out/flashcards.pdf', help='Output PDF path')
+    
+    # Output format options
+    parser.add_argument('--format', '-f', choices=['pdf', 'png', 'svg'], default='pdf', help='Output format (default: pdf)')
+    parser.add_argument('--output', '-o', type=str, help='Output path (default: out/flashcards.FORMAT or out/FORMAT)')
+    
+    # PDF-specific options
     parser.add_argument('--linearize', action='store_true', default=True, help='Create linearized PDF (default: True)')
+    
+    # PNG/SVG-specific options  
+    parser.add_argument('--dpi', type=int, default=300, help='DPI for PNG output (default: 300)')
+    parser.add_argument('--transparent', action='store_true', help='Use transparent background for PNG/SVG')
+    parser.add_argument('--separate', action='store_true', default=True, help='Separate fronts and backs into subdirectories (PNG/SVG only)')
+    parser.add_argument('--no-separate', dest='separate', action='store_false', help='Keep fronts and backs in same directory (PNG/SVG only)')
+    parser.add_argument('--card-width', type=str, default='3.5in', help='Card width for PNG/SVG (default: 3.5in)')
+    parser.add_argument('--card-height', type=str, default='2.5in', help='Card height for PNG/SVG (default: 2.5in)')
+    
     parser.add_argument('--font-path', type=str, help='Path to fonts directory')
     
     args = parser.parse_args()
@@ -154,6 +321,12 @@ def main():
         'color_scheme': args.color_scheme if args.color_scheme != 'monochrome' else config.get('color_scheme', 'monochrome'),
         'colored_numerals': args.colored_numerals or config.get('colored_numerals', False),
         'scale_factor': args.scale_factor if args.scale_factor != 0.9 else config.get('scale_factor', 0.9),
+        # PNG/SVG specific options
+        'transparent': args.transparent or config.get('transparent', False),
+        'card_width': args.card_width or config.get('card_width', '3.5in'),
+        'card_height': args.card_height or config.get('card_height', '2.5in'),
+        'shuffle': args.shuffle or config.get('shuffle', False),
+        'seed': args.seed or config.get('seed'),
     }
     
     # Handle margins
@@ -185,87 +358,127 @@ def main():
     else:
         final_config['columns'] = config.get('columns', 'auto')
     
+    # Determine output path based on format
+    if args.output:
+        output_path = Path(args.output)
+    elif args.format == 'pdf':
+        output_path = Path('out/flashcards.pdf')
+    else:
+        # For PNG/SVG, use directory instead of file
+        output_path = Path(f'out/{args.format}')
+    
     # Create output directory
-    output_path = Path(args.output)
-    output_path.parent.mkdir(parents=True, exist_ok=True)
+    if args.format == 'pdf':
+        output_path.parent.mkdir(parents=True, exist_ok=True)
+    else:
+        output_path.mkdir(parents=True, exist_ok=True)
     
-    # Generate temporary Typst file in project root
-    project_root = Path(__file__).parent.parent
-    temp_typst = project_root / 'temp_flashcards.typ'
-    generate_typst_file(numbers, final_config, temp_typst)
-    
-    # Set up font path if provided
-    font_args = []
-    if args.font_path:
-        font_args = ['--font-path', args.font_path]
-    elif os.path.exists('fonts'):
-        font_args = ['--font-path', 'fonts']
-    
-    # Compile with Typst
-    print(f"Generating flashcards for {len(numbers)} numbers...")
-    try:
-        # Run typst from project root directory
+    # Generate based on format
+    if args.format == 'pdf':
+        # Generate PDF (original functionality)
         project_root = Path(__file__).parent.parent
-        result = subprocess.run(
-            ['typst', 'compile'] + font_args + [str(temp_typst), str(output_path)],
-            capture_output=True,
-            text=True,
-            cwd=str(project_root)
-        )
+        temp_typst = project_root / 'temp_flashcards.typ'
+        generate_typst_file(numbers, final_config, temp_typst)
         
-        if result.returncode != 0:
-            print(f"Error compiling Typst document:", file=sys.stderr)
-            print(result.stderr, file=sys.stderr)
-            sys.exit(1)
+        # Set up font path if provided
+        font_args = []
+        if args.font_path:
+            font_args = ['--font-path', args.font_path]
+        elif os.path.exists('fonts'):
+            font_args = ['--font-path', 'fonts']
         
-        print(f"Generated: {output_path}")
-        
-        # Clean up temp file
-        temp_typst.unlink()
-        
-        # Add duplex printing hints and linearize if requested
-        if args.linearize:
-            linearized_path = output_path.parent / f"{output_path.stem}_linear{output_path.suffix}"
-            print(f"Linearizing PDF with duplex hints...")
-            
-            # Use qpdf to add duplex hints and linearize
-            # Note: --pages option preserves page order for duplex
+        # Compile with Typst
+        print(f"Generating PDF flashcards for {len(numbers)} numbers...")
+        try:
+            # Run typst from project root directory
             result = subprocess.run(
-                ['qpdf', '--linearize', 
-                 '--object-streams=preserve',
-                 str(output_path), str(linearized_path)],
+                ['typst', 'compile'] + font_args + [str(temp_typst), str(output_path)],
+                capture_output=True,
+                text=True,
+                cwd=str(project_root)
+            )
+            
+            if result.returncode != 0:
+                print(f"Error compiling Typst document:", file=sys.stderr)
+                print(result.stderr, file=sys.stderr)
+                sys.exit(1)
+            
+            print(f"Generated: {output_path}")
+            
+            # Clean up temp file
+            temp_typst.unlink()
+            
+            # Add duplex printing hints and linearize if requested
+            if args.linearize:
+                linearized_path = output_path.parent / f"{output_path.stem}_linear{output_path.suffix}"
+                print(f"Linearizing PDF with duplex hints...")
+                
+                # Use qpdf to add duplex hints and linearize
+                result = subprocess.run(
+                    ['qpdf', '--linearize', 
+                     '--object-streams=preserve',
+                     str(output_path), str(linearized_path)],
+                    capture_output=True,
+                    text=True
+                )
+                
+                if result.returncode == 0:
+                    print(f"Linearized: {linearized_path}")
+                else:
+                    print(f"Warning: Failed to linearize PDF: {result.stderr}", file=sys.stderr)
+            
+            # Run basic PDF validation
+            print("Validating PDF...")
+            result = subprocess.run(
+                ['qpdf', '--check', str(output_path)],
                 capture_output=True,
                 text=True
             )
             
             if result.returncode == 0:
-                print(f"Linearized: {linearized_path}")
+                print("PDF validation passed")
             else:
-                print(f"Warning: Failed to linearize PDF: {result.stderr}", file=sys.stderr)
-        
-        # Run basic PDF validation
-        print("Validating PDF...")
-        result = subprocess.run(
-            ['qpdf', '--check', str(output_path)],
-            capture_output=True,
-            text=True
-        )
-        
-        if result.returncode == 0:
-            print("PDF validation passed")
-        else:
-            print(f"Warning: PDF validation issues: {result.stderr}", file=sys.stderr)
+                print(f"Warning: PDF validation issues: {result.stderr}", file=sys.stderr)
+                
+        except FileNotFoundError as e:
+            if 'typst' in str(e):
+                print("Error: typst command not found. Please install Typst first.", file=sys.stderr)
+                print("Visit: https://github.com/typst/typst", file=sys.stderr)
+            elif 'qpdf' in str(e):
+                print("Warning: qpdf command not found. Skipping linearization and validation.", file=sys.stderr)
+                print("Install with: brew install qpdf", file=sys.stderr)
+            else:
+                raise
+            sys.exit(1)
+    
+    else:
+        # Generate PNG/SVG (individual cards)
+        try:
+            generated_files = generate_cards_direct(
+                numbers, 
+                final_config, 
+                output_path, 
+                format=args.format,
+                dpi=args.dpi,
+                separate_fronts_backs=args.separate
+            )
             
-    except FileNotFoundError as e:
-        if 'typst' in str(e):
-            print("Error: typst command not found. Please install Typst first.", file=sys.stderr)
-            print("Visit: https://github.com/typst/typst", file=sys.stderr)
-        elif 'qpdf' in str(e):
-            print("Warning: qpdf command not found. Skipping linearization and validation.", file=sys.stderr)
-            print("Install with: brew install qpdf", file=sys.stderr)
-        else:
-            raise
-        sys.exit(1)
+            if generated_files:
+                print(f"\n✓ Generated {len(generated_files)} {args.format.upper()} files in {output_path}")
+                if args.separate:
+                    print(f"  - Fronts in: {output_path}/fronts/")
+                    print(f"  - Backs in: {output_path}/backs/")
+            else:
+                print(f"\n✗ Failed to generate {args.format.upper()} cards")
+                sys.exit(1)
+                
+        except FileNotFoundError as e:
+            if 'typst' in str(e):
+                print("Error: typst command not found. Please install Typst first.", file=sys.stderr)
+                print("Visit: https://github.com/typst/typst", file=sys.stderr)
+            else:
+                raise
+            sys.exit(1)
 
 if __name__ == '__main__':
     main()
