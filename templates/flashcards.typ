@@ -40,12 +40,13 @@
   let bar-thickness = 2pt
   
   // Function to draw a bead based on shape
+  // Note: y parameter represents the TOP edge of the bead for consistency
   let draw-bead(x, y, shape, fill-color) = {
     if shape == "diamond" {
       // Horizontally elongated diamond (rhombus)
       place(
         dx: x - bead-size * 0.7,
-        dy: y - bead-size / 2,
+        dy: y,
         polygon(
           (bead-size * 0.7, 0pt),           // left point
           (bead-size * 1.4, bead-size / 2), // top point
@@ -59,7 +60,7 @@
       // Square bead
       place(
         dx: x - bead-size / 2,
-        dy: y - bead-size / 2,
+        dy: y,
         rect(
           width: bead-size,
           height: bead-size,
@@ -70,9 +71,10 @@
       )
     } else {
       // Circle (traditional option)
+      // For circles, adjust y to position by top edge instead of center
       place(
         dx: x - bead-size / 2,
-        dy: y,
+        dy: y + bead-size / 2,
         circle(
           radius: bead-size / 2,
           fill: fill-color,
