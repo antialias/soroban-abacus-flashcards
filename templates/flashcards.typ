@@ -1,4 +1,4 @@
-#let draw-soroban(value, columns: auto, show-empty: false) = {
+#let draw-soroban(value, columns: auto, show-empty: false, hide-inactive: false) = {
   // Parse the value into digits
   let digits = if type(value) == int {
     str(value).clusters().map(d => int(d))
@@ -71,15 +71,17 @@
           5pt  // Inactive (at top)
         }
         
-        #place(
-          dx: x-offset - bead-size / 2,
-          dy: heaven-y,
-          circle(
-            radius: bead-size / 2,
-            fill: if heaven-active == 1 { active-color } else { inactive-color },
-            stroke: 0.5pt + black
+        #if heaven-active == 1 or not hide-inactive [
+          #place(
+            dx: x-offset - bead-size / 2,
+            dy: heaven-y,
+            circle(
+              radius: bead-size / 2,
+              fill: if heaven-active == 1 { active-color } else { inactive-color },
+              stroke: 0.5pt + black
+            )
           )
-        )
+        ]
         
         // Draw earth beads
         #for i in range(4) [
@@ -90,15 +92,17 @@
             total-height - (4 - i) * (bead-size + bead-spacing) - 5pt
           }
           
-          #place(
-            dx: x-offset - bead-size / 2,
-            dy: earth-y,
-            circle(
-              radius: bead-size / 2,
-              fill: if is-active { active-color } else { inactive-color },
-              stroke: 0.5pt + black
+          #if is-active or not hide-inactive [
+            #place(
+              dx: x-offset - bead-size / 2,
+              dy: earth-y,
+              circle(
+                radius: bead-size / 2,
+                fill: if is-active { active-color } else { inactive-color },
+                stroke: 0.5pt + black
+              )
             )
-          )
+          ]
         ]
       ]
       
@@ -196,7 +200,8 @@
   font-family: "DejaVu Sans",
   font-size: 48pt,
   columns: auto,
-  show-empty-columns: false
+  show-empty-columns: false,
+  hide-inactive-beads: false
 ) = {
   // Set document properties
   set document(title: "Soroban Flashcards", author: "Soroban Flashcard Generator")
@@ -234,7 +239,7 @@
   // Generate cards
   let cards = numbers.map(num => {
     flashcard(
-      draw-soroban(num, columns: columns, show-empty: show-empty-columns),
+      draw-soroban(num, columns: columns, show-empty: show-empty-columns, hide-inactive: hide-inactive-beads),
       text(size: font-size)[#num],
       card-width: card-width,
       card-height: card-height,
