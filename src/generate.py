@@ -68,7 +68,8 @@ def generate_typst_file(numbers, config, output_path):
   columns: {config.get('columns', 'auto')},
   show-empty-columns: {str(config.get('show_empty_columns', False)).lower()},
   hide-inactive-beads: {str(config.get('hide_inactive_beads', False)).lower()},
-  bead-shape: "{config.get('bead_shape', 'diamond')}"
+  bead-shape: "{config.get('bead_shape', 'diamond')}",
+  color-scheme: "{config.get('color_scheme', 'monochrome')}"
 )
 '''
     
@@ -94,6 +95,7 @@ def main():
     parser.add_argument('--show-empty-columns', action='store_true', help='Show leading empty columns')
     parser.add_argument('--hide-inactive-beads', action='store_true', help='Hide inactive beads (only show active ones)')
     parser.add_argument('--bead-shape', type=str, choices=['diamond', 'circle', 'square'], default='diamond', help='Bead shape (default: diamond)')
+    parser.add_argument('--color-scheme', type=str, choices=['monochrome', 'place-value', 'heaven-earth', 'alternating'], default='monochrome', help='Color scheme (default: monochrome)')
     parser.add_argument('--output', '-o', type=str, default='out/flashcards.pdf', help='Output PDF path')
     parser.add_argument('--linearize', action='store_true', default=True, help='Create linearized PDF (default: True)')
     parser.add_argument('--font-path', type=str, help='Path to fonts directory')
@@ -136,6 +138,7 @@ def main():
         'show_empty_columns': args.show_empty_columns or config.get('show_empty_columns', False),
         'hide_inactive_beads': args.hide_inactive_beads or config.get('hide_inactive_beads', False),
         'bead_shape': args.bead_shape if args.bead_shape != 'diamond' else config.get('bead_shape', 'diamond'),
+        'color_scheme': args.color_scheme if args.color_scheme != 'monochrome' else config.get('color_scheme', 'monochrome'),
     }
     
     # Handle margins

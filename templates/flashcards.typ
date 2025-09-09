@@ -1,4 +1,4 @@
-#let draw-soroban(value, columns: auto, show-empty: false, hide-inactive: false, bead-shape: "diamond") = {
+#let draw-soroban(value, columns: auto, show-empty: false, hide-inactive: false, bead-shape: "diamond", color-scheme: "monochrome") = {
   // Parse the value into digits
   let digits = if type(value) == int {
     str(value).clusters().map(d => int(d))
@@ -35,9 +35,34 @@
   let bead-spacing = 4pt
   let column-spacing = 25pt
   let heaven-earth-gap = 20pt
+  let bar-thickness = 2pt
+  
+  // Color schemes
+  let place-value-colors = (
+    rgb("#2E86AB"),  // ones - blue
+    rgb("#A23B72"),  // tens - magenta
+    rgb("#F18F01"),  // hundreds - orange
+    rgb("#6A994E"),  // thousands - green
+    rgb("#BC4B51"),  // ten-thousands - red
+  )
+  
+  let get-column-color(col-idx, total-cols, scheme) = {
+    if scheme == "place-value" {
+      // Right-to-left: rightmost is ones
+      let place-idx = total-cols - col-idx - 1
+      let color-idx = calc.rem(place-idx, place-value-colors.len())
+      place-value-colors.at(color-idx)
+    } else if scheme == "alternating" {
+      if calc.rem(col-idx, 2) == 0 { rgb("#1E88E5") } else { rgb("#43A047") }
+    } else if scheme == "heaven-earth" {
+      black  // Will be overridden per bead type
+    } else {
+      black  // monochrome
+    }
+  }
+  
   let inactive-color = gray.lighten(70%)
   let active-color = black
-  let bar-thickness = 2pt
   
   // Function to draw a bead based on shape
   // y parameter represents the CENTER of where the bead should be
@@ -120,12 +145,22 @@
           5pt + bead-size / 2  // Inactive (center near top)
         }
         
+        #let bead-color = if heaven-active == 1 {
+          if color-scheme == "heaven-earth" {
+            rgb("#F18F01")  // Orange for heaven beads
+          } else {
+            get-column-color(idx, display-digits.len(), color-scheme)
+          }
+        } else {
+          inactive-color
+        }
+        
         #if heaven-active == 1 or not hide-inactive [
           #draw-bead(
             x-offset,
             heaven-y,
             bead-shape,
-            if heaven-active == 1 { active-color } else { inactive-color }
+            bead-color
           )
         ]
         
@@ -138,12 +173,22 @@
             total-height - (4 - i) * (bead-size + bead-spacing) - 5pt + bead-size / 2
           }
           
+          #let earth-bead-color = if is-active {
+            if color-scheme == "heaven-earth" {
+              rgb("#2E86AB")  // Blue for earth beads
+            } else {
+              get-column-color(idx, display-digits.len(), color-scheme)
+            }
+          } else {
+            inactive-color
+          }
+          
           #if is-active or not hide-inactive [
             #draw-bead(
               x-offset,
               earth-y,
               bead-shape,
-              if is-active { active-color } else { inactive-color }
+              earth-bead-color
             )
           ]
         ]
@@ -245,7 +290,8 @@
   columns: auto,
   show-empty-columns: false,
   hide-inactive-beads: false,
-  bead-shape: "diamond"
+  bead-shape: "diamond",
+  color-scheme: "monochrome"
 ) = {
   // Set document properties
   set document(
@@ -316,7 +362,7 @@
   // Generate cards
   let cards = numbers.map(num => {
     flashcard(
-      draw-soroban(num, columns: columns, show-empty: show-empty-columns, hide-inactive: hide-inactive-beads, bead-shape: bead-shape),
+      draw-soroban(num, columns: columns, show-empty: show-empty-columns, hide-inactive: hide-inactive-beads, bead-shape: bead-shape, color-scheme: color-scheme),
       text(size: font-size)[#num],
       card-width: card-width,
       card-height: card-height,
