@@ -2,6 +2,73 @@
 
 A vector-based PDF flashcard generator for learning soroban (Japanese abacus) numbers. Creates double-sided flashcards with soroban bead representations on the front and Arabic numerals on the back.
 
+## Examples
+
+<table>
+<tr>
+<td align="center">
+<img src="docs/images/basic-123-front.png" width="200" alt="Soroban showing 123"><br>
+<b>Soroban (Front)</b>
+</td>
+<td align="center">
+<img src="docs/images/basic-123-back.png" width="200" alt="Numeral 123"><br>
+<b>Numeral (Back)</b>
+</td>
+<td align="center">
+<img src="docs/images/place-value-456-front.png" width="200" alt="Place-value colored 456"><br>
+<b>Place-Value Colors</b>
+</td>
+<td align="center">
+<img src="docs/images/place-value-456-back.png" width="200" alt="Colored numeral 456"><br>
+<b>Colored Numerals</b>
+</td>
+</tr>
+</table>
+
+### Bead Shapes
+
+<table>
+<tr>
+<td align="center">
+<img src="docs/images/diamond-25-front.png" width="200" alt="Diamond beads"><br>
+<b>Diamond (Realistic)</b>
+</td>
+<td align="center">
+<img src="docs/images/circle-25-front.png" width="200" alt="Circle beads"><br>
+<b>Circle (Traditional)</b>
+</td>
+<td align="center">
+<img src="docs/images/square-25-front.png" width="200" alt="Square beads"><br>
+<b>Square</b>
+</td>
+</tr>
+</table>
+
+### Layouts and Options
+
+<table>
+<tr>
+<td align="center">
+<img src="docs/images/grid-6-front.png" width="300" alt="6 cards per page"><br>
+<b>6 Cards Per Page</b>
+</td>
+<td align="center">
+<img src="docs/images/grid-12-front.png" width="300" alt="12 cards per page"><br>
+<b>12 Cards Per Page</b>
+</td>
+</tr>
+<tr>
+<td align="center">
+<img src="docs/images/skip-5s-front.png" width="300" alt="Counting by 5s"><br>
+<b>Skip Counting by 5s</b>
+</td>
+<td align="center">
+<img src="docs/images/minimal-42-front.png" width="300" alt="Hidden inactive beads"><br>
+<b>Hidden Inactive Beads</b>
+</td>
+</tr>
+</table>
+
 ## Features
 
 - 🎯 **Pure vector graphics** - All soroban diagrams and text are rendered as vectors
