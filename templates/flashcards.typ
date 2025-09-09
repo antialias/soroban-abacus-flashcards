@@ -270,16 +270,44 @@
   let usable-height = page-height - margins.top - margins.bottom
   
   // Determine grid layout
-  let (cols, rows) = if cards-per-page == 6 {
-    (2, 3)
+  let (cols, rows) = if cards-per-page == 1 {
+    (1, 1)
+  } else if cards-per-page == 2 {
+    (1, 2)
+  } else if cards-per-page == 3 {
+    (1, 3)
   } else if cards-per-page == 4 {
     (2, 2)
+  } else if cards-per-page == 6 {
+    (2, 3)
   } else if cards-per-page == 8 {
     (2, 4)
   } else if cards-per-page == 9 {
     (3, 3)
+  } else if cards-per-page == 10 {
+    (2, 5)
+  } else if cards-per-page == 12 {
+    (3, 4)
+  } else if cards-per-page == 15 {
+    (3, 5)
+  } else if cards-per-page == 16 {
+    (4, 4)
+  } else if cards-per-page == 18 {
+    (3, 6)
+  } else if cards-per-page == 20 {
+    (4, 5)
+  } else if cards-per-page == 24 {
+    (4, 6)
+  } else if cards-per-page == 25 {
+    (5, 5)
+  } else if cards-per-page == 30 {
+    (5, 6)
   } else {
-    panic("Unsupported cards-per-page value")
+    // Try to find a reasonable grid for other values
+    let sqrt-cards = calc.sqrt(cards-per-page)
+    let cols-guess = calc.ceil(sqrt-cards)
+    let rows-guess = calc.ceil(cards-per-page / cols-guess)
+    (cols-guess, rows-guess)
   }
   
   let card-width = (usable-width - gutter * (cols - 1)) / cols
