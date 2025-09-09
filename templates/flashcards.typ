@@ -371,6 +371,41 @@
     )
   })
   
+  // Function to draw cutting guides
+  let draw-cutting-guides(cols, rows, card-width, card-height, gutter, usable-width, usable-height) = {
+    // Use subtle gray lines that won't be too distracting if cut is slightly off
+    let guide-color = gray.lighten(50%)
+    let guide-stroke = 0.25pt + guide-color
+    
+    // Draw horizontal cutting guides
+    for row in range(rows - 1) {
+      let y-pos = (row + 1) * card-height + row * gutter + gutter / 2
+      place(
+        dx: -margins.left,  // Extend to page edge
+        dy: y-pos,
+        line(
+          start: (0pt, 0pt),
+          end: (usable-width + margins.left + margins.right, 0pt),
+          stroke: guide-stroke
+        )
+      )
+    }
+    
+    // Draw vertical cutting guides
+    for col in range(cols - 1) {
+      let x-pos = (col + 1) * card-width + col * gutter + gutter / 2
+      place(
+        dx: x-pos,
+        dy: -margins.top,  // Extend to page edge
+        line(
+          start: (0pt, 0pt),
+          end: (0pt, usable-height + margins.top + margins.bottom),
+          stroke: guide-stroke
+        )
+      )
+    }
+  }
+  
   // Layout pages - alternating front and back for duplex printing
   let total-cards = cards.len()
   let total-pages = calc.ceil(total-cards / cards-per-page)
@@ -383,13 +418,20 @@
     
     // FRONT SIDE (odd page numbers: 1, 3, 5...)
     // This will be the soroban bead side
-    grid(
-      columns: (card-width,) * cols,
-      rows: (card-height,) * rows,
-      column-gutter: gutter,
-      row-gutter: gutter,
-      ..page-cards.map(c => c.front)
+    place(
+      grid(
+        columns: (card-width,) * cols,
+        rows: (card-height,) * rows,
+        column-gutter: gutter,
+        row-gutter: gutter,
+        ..page-cards.map(c => c.front)
+      )
     )
+    
+    // Draw cutting guides on top if enabled
+    if show-cut-marks {
+      draw-cutting-guides(cols, rows, card-width, card-height, gutter, usable-width, usable-height)
+    }
     
     // Always add page break after front side
     pagebreak()
@@ -397,24 +439,31 @@
     // BACK SIDE (even page numbers: 2, 4, 6...)
     // This will be the numeral side
     // Mirrored horizontally for long-edge duplex binding
-    grid(
-      columns: (card-width,) * cols,
-      rows: (card-height,) * rows,
-      column-gutter: gutter,
-      row-gutter: gutter,
-      ..range(rows).map(r => {
-        // Reverse columns for proper back-side alignment
-        range(cols).rev().map(c => {
-          let idx = r * cols + c
-          if idx < page-cards.len() {
-            page-cards.at(idx).back
-          } else {
-            // Empty space for incomplete grids
-            rect(width: card-width, height: card-height, stroke: none)[]
-          }
-        })
-      }).flatten()
+    place(
+      grid(
+        columns: (card-width,) * cols,
+        rows: (card-height,) * rows,
+        column-gutter: gutter,
+        row-gutter: gutter,
+        ..range(rows).map(r => {
+          // Reverse columns for proper back-side alignment
+          range(cols).rev().map(c => {
+            let idx = r * cols + c
+            if idx < page-cards.len() {
+              page-cards.at(idx).back
+            } else {
+              // Empty space for incomplete grids
+              rect(width: card-width, height: card-height, stroke: none)[]
+            }
+          })
+        }).flatten()
+      )
     )
+    
+    // Draw cutting guides on back side too
+    if show-cut-marks {
+      draw-cutting-guides(cols, rows, card-width, card-height, gutter, usable-width, usable-height)
+    }
     
     // Add page break except after the last page
     if page-idx < total-pages - 1 {
