@@ -266,7 +266,7 @@ def main():
     parser.add_argument('--scale-factor', type=float, default=0.9, help='Manual scale adjustment (0.1 to 1.0, default: 0.9)')
     
     # Output format options
-    parser.add_argument('--format', '-f', choices=['pdf', 'png', 'svg'], default='pdf', help='Output format (default: pdf)')
+    parser.add_argument('--format', '-f', choices=['pdf', 'png', 'svg', 'web'], default='pdf', help='Output format (default: pdf)')
     parser.add_argument('--output', '-o', type=str, help='Output path (default: out/flashcards.FORMAT or out/FORMAT)')
     
     # PDF-specific options
@@ -366,12 +366,14 @@ def main():
         output_path = Path(args.output)
     elif args.format == 'pdf':
         output_path = Path('out/flashcards.pdf')
+    elif args.format == 'web':
+        output_path = Path('out/flashcards.html')
     else:
         # For PNG/SVG, use directory instead of file
         output_path = Path(f'out/{args.format}')
     
     # Create output directory
-    if args.format == 'pdf':
+    if args.format in ['pdf', 'web']:
         output_path.parent.mkdir(parents=True, exist_ok=True)
     else:
         output_path.mkdir(parents=True, exist_ok=True)
@@ -450,6 +452,23 @@ def main():
             elif 'qpdf' in str(e):
                 print("Warning: qpdf command not found. Skipping linearization and validation.", file=sys.stderr)
                 print("Install with: brew install qpdf", file=sys.stderr)
+            else:
+                raise
+            sys.exit(1)
+    
+    elif args.format == 'web':
+        # Generate web flashcards (HTML with inline SVG)
+        try:
+            from web_generator import generate_web_flashcards
+            
+            result_path = generate_web_flashcards(numbers, final_config, output_path)
+            print(f"\n✓ Generated web flashcards: {result_path}")
+            print(f"  Open in browser to view interactive flashcards")
+                
+        except FileNotFoundError as e:
+            if 'typst' in str(e):
+                print("Error: typst command not found. Please install Typst first.", file=sys.stderr)
+                print("Visit: https://github.com/typst/typst", file=sys.stderr)
             else:
                 raise
             sys.exit(1)
