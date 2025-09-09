@@ -69,6 +69,23 @@ A vector-based PDF flashcard generator for learning soroban (Japanese abacus) nu
 </tr>
 </table>
 
+### Printing Features
+
+<table>
+<tr>
+<td align="center">
+<img src="docs/images/cutting-guides-front.png" width="400" alt="Cutting guides"><br>
+<b>Cutting Guides</b><br>
+<i>Full-page guides for accurate card separation</i>
+</td>
+<td align="center">
+<img src="docs/images/cutting-registration-front.png" width="400" alt="Cutting and registration marks"><br>
+<b>With Registration Marks</b><br>
+<i>Alignment marks for duplex printing verification</i>
+</td>
+</tr>
+</table>
+
 ## Features
 
 - 🎯 **Pure vector graphics** - All soroban diagrams and text are rendered as vectors

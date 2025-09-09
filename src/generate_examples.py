@@ -78,6 +78,13 @@ def generate_example_pdfs():
             'args': ['--range', '42-42', '--cards-per-page', '1', '--hide-inactive-beads'],
             'desc': 'Hidden inactive beads'
         },
+        
+        # Cutting guides
+        {
+            'name': 'cutting-guides',
+            'args': ['--range', '10-15', '--cards-per-page', '6', '--cut-marks'],
+            'desc': 'With cutting guides'
+        },
     ]
     
     return examples
