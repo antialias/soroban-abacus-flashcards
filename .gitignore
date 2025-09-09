@@ -1,0 +1,29 @@
+# Generated output
+out/
+*.pdf
+
+# Temporary files
+*.typ.tmp
+temp_*.typ
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
