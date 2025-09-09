@@ -71,13 +71,18 @@
       )
     } else {
       // Circle (traditional option)
+      // Use a box to position the circle from top-left like other shapes
       place(
         dx: x - bead-size / 2,
-        dy: y,
-        circle(
-          radius: bead-size / 2,
-          fill: fill-color,
-          stroke: 0.5pt + black
+        dy: y - bead-size / 2,
+        box(
+          width: bead-size,
+          height: bead-size,
+          align(center + horizon, circle(
+            radius: bead-size / 2,
+            fill: fill-color,
+            stroke: 0.5pt + black
+          ))
         )
       )
     }
