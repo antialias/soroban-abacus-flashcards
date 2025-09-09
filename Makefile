@@ -1,4 +1,4 @@
-.PHONY: all clean install test samples help check-deps
+.PHONY: all clean install test samples help check-deps examples verify-examples
 
 # Default target
 all: out/flashcards.pdf out/flashcards_linear.pdf
@@ -42,6 +42,23 @@ test: check-deps
 	@command -v qpdf >/dev/null 2>&1 && qpdf --check out/test.pdf || echo "PDF generated (validation skipped)"
 	@echo "Test completed successfully"
 
+# Generate README example images
+examples: check-deps
+	@echo "Generating example images for README..."
+	@python3 src/generate_examples.py
+	@echo "✓ Example images generated in docs/images/"
+
+# Verify examples are up to date (for CI)
+verify-examples: examples
+	@echo "Verifying example images are up to date..."
+	@if git diff --quiet docs/images/; then \
+		echo "✓ Example images are up to date"; \
+	else \
+		echo "✗ Example images have changed - please run 'make examples' and commit the changes"; \
+		git diff --stat docs/images/; \
+		exit 1; \
+	fi
+
 # Clean output files
 clean:
 	rm -rf out/
@@ -53,6 +70,8 @@ help:
 	@echo "  make              Generate default flashcards (0-9)"
 	@echo "  make samples      Generate all sample configurations"
 	@echo "  make test         Run a quick test build"
+	@echo "  make examples     Generate README example images"
+	@echo "  make verify-examples  Verify examples are up to date (CI)"
 	@echo "  make install      Install dependencies (macOS)"
 	@echo "  make clean        Remove all generated files"
 	@echo "  make help         Show this help message"

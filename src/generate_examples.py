@@ -183,8 +183,25 @@ def main():
     
     examples = generate_example_pdfs()
     
+    # Check if we have a PDF to PNG converter available
+    converters = []
+    for cmd in ['pdftoppm', 'convert', 'gs']:
+        if subprocess.run(['which', cmd], capture_output=True).returncode == 0:
+            converters.append(cmd)
+    
+    if not converters:
+        print("ERROR: No PDF to PNG converter found. Please install one of:")
+        print("  - poppler-utils (for pdftoppm)")
+        print("  - imagemagick (for convert)")
+        print("  - ghostscript (for gs)")
+        print("\nOn Ubuntu/Debian: sudo apt-get install poppler-utils")
+        print("On macOS: brew install poppler")
+        return 1
+    
+    print(f"Using PDF converters: {', '.join(converters)}")
     print("Generating example images...")
     
+    failed = []
     for example in examples:
         print(f"  - {example['name']}: {example['desc']}")
         
@@ -207,7 +224,8 @@ def main():
         if pdf_to_png(str(pdf_path), str(front_png), dpi=150, page=1):
             print(f"    ✓ Generated {front_png.name}")
         else:
-            print(f"    WARNING: Could not convert to PNG (install pdftoppm, ImageMagick, or Ghostscript)")
+            print(f"    ✗ Failed to convert {front_png.name}")
+            failed.append(example['name'])
         
         # For single cards, also generate back page
         if '--cards-per-page' in example['args'] and example['args'][example['args'].index('--cards-per-page') + 1] == '1':
@@ -215,9 +233,13 @@ def main():
             if pdf_to_png(str(pdf_path), str(back_png), dpi=150, page=2):
                 print(f"    ✓ Generated {back_png.name}")
     
-    print("\nExample images generated in docs/images/")
-    print("\nTo use in README:")
-    print("![Description](docs/images/example-name-front.png)")
+    if failed:
+        print(f"\n✗ Failed to generate {len(failed)} images: {', '.join(failed)}")
+        return 1
+    else:
+        print(f"\n✓ Successfully generated all {len(examples)} examples in docs/images/")
+        return 0
 
 if __name__ == '__main__':
-    main()
+    import sys
+    sys.exit(main())

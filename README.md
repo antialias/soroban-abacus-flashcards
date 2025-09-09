@@ -394,6 +394,38 @@ The `SorobanGenerator` class provides:
 
 All methods use clean TypeScript interfaces with proper types - no shell command building required!
 
+## Development
+
+### Updating Example Images
+
+If you make changes that affect the visual output, please update the example images:
+
+```bash
+# Regenerate all example images
+make examples
+
+# Or use the update script
+./scripts/update-examples.sh
+
+# Verify examples are up to date (CI will also check this)
+make verify-examples
+```
+
+The CI pipeline will automatically verify that example images are up to date with the code.
+
+### Running Tests
+
+```bash
+# Quick test build
+make test
+
+# Generate all samples
+make samples
+
+# Full CI verification
+make verify-examples
+```
+
 ## License
 
 MIT License - see LICENSE file for details.
