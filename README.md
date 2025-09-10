@@ -1,6 +1,6 @@
 # Soroban Flashcard Generator
 
-A vector-based PDF flashcard generator for learning soroban (Japanese abacus) numbers. Creates double-sided flashcards with soroban bead representations on the front and Arabic numerals on the back.
+A comprehensive flashcard generator for learning soroban (Japanese abacus) numbers. Creates high-quality outputs in multiple formats including interactive web flashcards, vector PDFs, PNG/SVG images, with built-in quiz modes and sorting challenges.
 
 ## Examples
 
@@ -86,20 +86,97 @@ A vector-based PDF flashcard generator for learning soroban (Japanese abacus) nu
 </tr>
 </table>
 
+## Output Formats
+
+### 📱 Interactive Web Flashcards (`--format web`)
+
+Generate self-contained HTML files with advanced interactive features:
+
+```bash
+# Generate interactive web flashcards
+python3 src/generate.py --format web --range 0-99 --output flashcards.html
+
+# Try the quiz mode
+python3 src/generate.py --format web --range 0-50 --shuffle
+```
+
+**Web Features:**
+- **🃏 Digital Flashcards**: Hover to reveal numbers, click to flip cards
+- **🧠 Timed Quiz Mode**: Configurable display times (0.5-10 seconds), multiple card counts (5, 10, 15, 25, All)
+- **📊 Smart Scoring**: Fair scoring algorithm, progress tracking, detailed results
+- **🎯 Sorting Challenge**: Drag-and-drop number sorting with gap-filling logic
+- **📱 Responsive Design**: Works on desktop, tablet, and mobile
+- **🖨️ Print Support**: CSS optimized for printing physical cards
+- **♿ Accessible**: Keyboard navigation, semantic HTML, ARIA labels
+- **🎨 Full Customization**: All color schemes, bead shapes, and display options supported
+
+### 📄 Vector PDF (`--format pdf`)
+
+High-quality vector PDFs optimized for duplex printing:
+
+```bash
+# Standard PDF with cut marks
+python3 src/generate.py --format pdf --range 0-99 --cut-marks --registration
+```
+
+**PDF Features:**
+- Pure vector graphics for crisp output at any scale
+- Duplex printing alignment with registration marks
+- Cutting guides for precise card separation
+- Embedded fonts ensure consistent output
+
+### 🖼️ PNG/SVG Images (`--format png`, `--format svg`)
+
+Individual card images for digital use or custom layouts:
+
+```bash
+# Generate PNG cards at high resolution
+python3 src/generate.py --format png --range 1-10 --dpi 300 --transparent
+
+# Generate SVG cards for web use
+python3 src/generate.py --format svg --range 0-99 --separate
+```
+
+**Image Features:**
+- High-resolution PNG (configurable DPI)
+- Scalable SVG with embedded CSS
+- Transparent backgrounds supported
+- Separate front/back organization
+
 ## Features
 
-- 🎯 **Pure vector graphics** - All soroban diagrams and text are rendered as vectors
-- 📏 **Configurable layouts** - 1 to 30+ cards per page with automatic scaling
-- 🖨️ **Duplex printing ready** - Automatic front/back alignment for double-sided printing
-- 🔤 **Embedded fonts** - Bundled DejaVu Sans for consistent output
-- 🔢 **Flexible number ranges** - Generate cards for any range or custom list
-- 🎨 **Color schemes** - Educational colors for place-value, heaven-earth, alternating
-- 🌈 **Colored numerals** - Match numeral colors to bead colors
-- ✂️ **Cutting guides** - Full-page guides for accurate card separation
-- 🔷 **Customizable beads** - Diamond (realistic), circle, or square shapes
-- 📈 **Skip counting** - Count by 2s, 5s, 10s, or any increment
-- 🔀 **Hide inactive beads** - Cleaner display for beginners
-- 📦 **Node.js/TypeScript integration** - Clean function interface for web apps
+### 🎓 Learning & Teaching Tools
+- **🧠 Interactive Quiz Mode**: Timed flashcard quizzes with configurable display times and scoring
+- **🎯 Sorting Challenges**: Drag-and-drop number sorting games with intelligent gap-filling
+- **📊 Progress Tracking**: Real-time feedback, scoring, and performance analytics
+- **📱 Multi-Device Support**: Responsive design works on desktop, tablet, and mobile
+
+### 🎨 Visual Customization
+- **🎯 Pure vector graphics** - Crisp output at any scale, all formats
+- **🎨 Color schemes** - Educational colors for place-value, heaven-earth, alternating
+- **🌈 Colored numerals** - Match numeral colors to bead colors for reinforcement
+- **🔷 Customizable beads** - Diamond (realistic), circle, or square shapes
+- **🔀 Minimalist mode** - Hide inactive beads for cleaner displays
+
+### 📋 Flexible Content
+- **🔢 Flexible ranges** - Any range (0-9999+) or custom lists (1,2,5,10,20,50,100)
+- **📈 Skip counting** - Count by 2s, 5s, 10s, or any increment
+- **🎲 Shuffling** - Randomize with optional seeds for reproducible builds
+- **📊 Smart scaling** - Automatic column management and font sizing
+
+### 🖨️ Print & Production
+- **📏 Configurable layouts** - 1 to 30+ cards per page with automatic scaling
+- **🖨️ Duplex printing ready** - Automatic front/back alignment for double-sided printing
+- **✂️ Cutting guides** - Full-page guides and registration marks for accurate separation
+- **🔤 Embedded fonts** - Bundled DejaVu Sans for consistent cross-platform output
+
+### 🔧 Integration & Formats
+- **📱 Web HTML** - Self-contained interactive flashcards with quiz modes
+- **📄 Vector PDF** - High-quality print-ready documents
+- **🖼️ PNG/SVG** - Individual card images for digital use
+- **📦 Node.js/TypeScript** - Clean API for web applications
+- **🌐 REST API** - FastAPI server for web services
+- **⚙️ CLI Interface** - Powerful command-line tool with extensive options
 
 ## Quick Start
 
@@ -253,26 +330,44 @@ To print double-sided:
 ```
 soroban-abacus-flashcards/
 ├── src/
-│   ├── generate.py         # Main CLI tool
-│   ├── bridge.py          # Node.js integration bridge
-│   └── api.py             # FastAPI server (optional)
+│   ├── generate.py            # Main CLI tool (all formats)
+│   ├── web_generator.py       # Interactive web flashcards with quiz modes
+│   ├── bridge.py              # Node.js integration bridge
+│   ├── api.py                 # FastAPI REST server
+│   └── generate_examples.py   # Example generation utilities
 ├── templates/
-│   └── flashcards.typ      # Typst template with soroban rendering
-├── config/                 # Preset configurations
-│   ├── default.yaml
-│   ├── 0-99.yaml
-│   ├── place-value-colors.yaml
-│   └── ...
-├── client/                 # Integration libraries
-│   ├── node/              # Node.js/TypeScript wrapper
-│   ├── typescript/        # Browser TypeScript client
-│   └── browser/           # Browser-based implementation
+│   └── flashcards.typ         # Typst template with soroban rendering
+├── config/                    # Preset configurations
+│   ├── default.yaml           # Basic 0-9 set
+│   ├── 0-99.yaml             # Two-digit numbers with cut marks
+│   ├── place-value-colors.yaml # Educational color coding
+│   ├── colored-numerals.yaml  # Matching numeral colors
+│   ├── minimal-beads.yaml     # Hide inactive beads
+│   ├── circle-beads.yaml      # Traditional circular beads
+│   ├── count-by-5s.yaml       # Skip counting by 5s
+│   └── 3-column-fixed.yaml    # Fixed-width three-digit display
+├── tests/
+│   ├── test_generation.py     # Core generation tests
+│   ├── test_web_generation.py # Web format tests
+│   ├── test_quiz_functionality.py # Interactive quiz tests
+│   ├── test_config.py         # Configuration parsing tests
+│   └── test_visual.py         # Visual output validation
+├── client/                    # Integration libraries
+│   ├── node/                  # Node.js/TypeScript wrapper
+│   ├── typescript/            # Browser TypeScript client
+│   └── browser/               # Browser-based implementation
 ├── fonts/
-│   ├── DejaVuSans.ttf     # Bundled font
-│   └── DejaVuSans-Bold.ttf # Bold variant
-├── out/                    # Generated PDFs (created on first run)
-├── Makefile               # Build automation
-└── README.md              # This file
+│   ├── DejaVuSans.ttf        # Bundled font
+│   └── DejaVuSans-Bold.ttf   # Bold variant
+├── docs/
+│   └── images/               # Example images for README
+├── out/                      # Generated outputs (created on first run)
+│   ├── *.pdf                # PDF flashcards
+│   ├── *.html               # Interactive web flashcards
+│   ├── png/                 # PNG card images
+│   └── svg/                 # SVG card images
+├── Makefile                  # Build automation
+└── README.md                # This file
 ```
 
 ## Design Notes
@@ -315,6 +410,31 @@ Ensure the `fonts/` directory contains the DejaVu TTF files
 - Verify margins match your printer's capabilities
 
 ## Examples
+
+### Quick Start Examples
+
+```bash
+# Generate interactive web flashcards (try the quiz!)
+python3 src/generate.py --format web --range 0-20 --shuffle
+
+# Generate print-ready PDF with cutting guides
+python3 src/generate.py --format pdf --range 0-99 --cut-marks --registration
+
+# Generate high-res PNG cards for digital use
+python3 src/generate.py --format png --range 1-10 --dpi 300 --transparent
+
+# Generate place-value colored cards for teaching
+python3 src/generate.py --format web --range 0-50 \
+  --color-scheme place-value --colored-numerals
+
+# Generate minimal-style cards (hide inactive beads)
+python3 src/generate.py --format web --range 0-25 --hide-inactive-beads
+
+# Generate skip-counting practice (count by 5s)
+python3 src/generate.py --format web --range 0-100 --step 5
+```
+
+### Development & Testing
 
 ```bash
 # Generate samples
@@ -394,6 +514,51 @@ The `SorobanGenerator` class provides:
 
 All methods use clean TypeScript interfaces with proper types - no shell command building required!
 
+## REST API Server
+
+For web services and remote generation:
+
+### Start the API Server
+
+```bash
+# Install FastAPI dependencies
+pip3 install fastapi uvicorn
+
+# Start the development server
+python3 src/api.py
+# or
+uvicorn src.api:app --reload --host 0.0.0.0 --port 8000
+```
+
+### API Endpoints
+
+```bash
+# Generate flashcards via POST
+curl -X POST "http://localhost:8000/generate" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "range": "0-99",
+    "format": "web",
+    "color_scheme": "place-value",
+    "cards_per_page": 6
+  }'
+
+# Health check
+curl http://localhost:8000/health
+
+# OpenAPI documentation available at:
+# http://localhost:8000/docs (Swagger UI)
+# http://localhost:8000/redoc (ReDoc)
+```
+
+### API Features
+
+- **🔄 All formats supported**: PDF, PNG, SVG, and interactive web HTML
+- **📊 JSON responses**: Base64-encoded files with metadata
+- **🛡️ CORS enabled**: Ready for web app integration
+- **📚 Auto documentation**: OpenAPI/Swagger specs included
+- **⚡ High performance**: Optimized for production workloads
+
 ## Development
 
 ### Updating Example Images
@@ -415,16 +580,38 @@ The CI pipeline will automatically verify that example images are up to date wit
 
 ### Running Tests
 
+The project includes comprehensive test coverage for all functionality:
+
 ```bash
+# Run all tests
+python3 -m pytest tests/ -v
+
+# Test specific functionality
+python3 -m pytest tests/test_quiz_functionality.py -v  # Interactive quiz features
+python3 -m pytest tests/test_web_generation.py -v     # Web format generation
+python3 -m pytest tests/test_generation.py -v         # Core generation logic
+python3 -m pytest tests/test_config.py -v             # Configuration parsing
+python3 -m pytest tests/test_visual.py -v             # Visual output validation
+
 # Quick test build
 make test
 
 # Generate all samples
 make samples
 
-# Full CI verification
+# Full CI verification (ensures examples are up to date)
 make verify-examples
 ```
+
+### Test Coverage
+
+- **🧠 Quiz Functionality**: Interactive quiz modes, scoring algorithms, progress tracking
+- **🎯 Sorting Challenges**: Drag-and-drop mechanics, gap-filling logic, user interactions
+- **🌐 Web Generation**: HTML output, CSS styling, JavaScript functionality
+- **📄 PDF Generation**: Vector rendering, duplex alignment, cutting guides
+- **🖼️ Image Output**: PNG/SVG generation, transparency, resolution scaling
+- **⚙️ Configuration**: YAML/JSON parsing, validation, command-line interface
+- **🎨 Visual Output**: Color schemes, bead shapes, layout consistency
 
 ## License
 
