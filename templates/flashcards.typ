@@ -126,28 +126,64 @@
         #let heaven-active = if digit >= 5 { 1 } else { 0 }
         #let earth-active = calc.rem(digit, 5)
         
-        // Draw rod
+        // Calculate bead positions and rod bounds
+        #let active-gap = 1pt  // Gap between active beads and reckoning bar (keep original)
+        #let inactive-gap = 8pt  // Gap between inactive beads and active beads/bar (increased)
+        
+        // Calculate heaven bead position
+        #let heaven-y = if heaven-active == 1 {
+          // Active heaven bead: positioned close to reckoning bar (original spacing)
+          heaven-earth-gap - bead-size / 2 - active-gap
+        } else {
+          // Inactive heaven bead: positioned away from reckoning bar with larger gap
+          heaven-earth-gap - inactive-gap - bead-size / 2
+        }
+        
+        // Calculate furthest earth bead position
+        #let furthest-earth-y = if earth-active > 0 {
+          // Position of the last inactive earth bead (or last active if all are active)
+          if earth-active == 4 {
+            // All earth beads are active - furthest is the 4th active bead
+            heaven-earth-gap + bar-thickness + active-gap + bead-size / 2 + 3 * (bead-size + bead-spacing)
+          } else {
+            // Some inactive beads - furthest is the last inactive bead
+            heaven-earth-gap + bar-thickness + active-gap + bead-size / 2 + earth-active * (bead-size + bead-spacing) + inactive-gap + (4 - 1 - earth-active) * (bead-size + bead-spacing)
+          }
+        } else {
+          // No active beads: furthest is the last inactive bead
+          heaven-earth-gap + bar-thickness + inactive-gap + bead-size / 2 + 3 * (bead-size + bead-spacing)
+        }
+        
+        // Calculate rod bounds (from outermost visible bead to outermost visible bead)
+        #let rod-start-y = if heaven-active == 1 or not hide-inactive {
+          heaven-y - bead-size / 2
+        } else {
+          // No heaven bead visible - start at reckoning bar
+          heaven-earth-gap - bar-thickness / 2
+        }
+        
+        #let rod-end-y = if not hide-inactive or earth-active > 0 {
+          furthest-earth-y + bead-size / 2
+        } else {
+          // No earth beads visible - end at reckoning bar
+          heaven-earth-gap + bar-thickness / 2
+        }
+        
+        #let rod-height = rod-end-y - rod-start-y
+        
+        // Draw rod with calculated bounds
         #place(
           dx: x-offset - rod-width / 2,
-          dy: 0pt,
+          dy: rod-start-y,
           rect(
             width: rod-width,
-            height: total-height,
+            height: rod-height,
             fill: gray.lighten(80%),
             stroke: none
           )
         )
         
         // Draw heaven bead
-        #let heaven-gap = 5pt  // Gap between active/inactive beads or bar/inactive beads
-        #let heaven-y = if heaven-active == 1 {
-          // Active heaven bead: positioned close to reckoning bar
-          heaven-earth-gap - bead-size / 2 - 1pt
-        } else {
-          // Inactive heaven bead: positioned away from reckoning bar with gap
-          heaven-earth-gap - heaven-gap - bead-size / 2
-        }
-        
         #let bead-color = if heaven-active == 1 {
           if color-scheme == "heaven-earth" {
             rgb("#F18F01")  // Orange for heaven beads
@@ -171,16 +207,16 @@
         #for i in range(4) [
           #let is-active = i < earth-active
           #let earth-y = if is-active {
-            // Active beads: positioned close to reckoning bar, in sequence
-            heaven-earth-gap + bar-thickness + 1pt + bead-size / 2 + i * (bead-size + bead-spacing)
+            // Active beads: positioned near reckoning bar with better spacing, in sequence
+            heaven-earth-gap + bar-thickness + active-gap + bead-size / 2 + i * (bead-size + bead-spacing)
           } else {
             // Inactive beads: positioned after the active beads + gap, or after reckoning bar + gap if no active beads
             if earth-active > 0 {
               // Position after the last active bead + gap
-              heaven-earth-gap + bar-thickness + 1pt + bead-size / 2 + earth-active * (bead-size + bead-spacing) + heaven-gap + (i - earth-active) * (bead-size + bead-spacing)
+              heaven-earth-gap + bar-thickness + active-gap + bead-size / 2 + earth-active * (bead-size + bead-spacing) + inactive-gap + (i - earth-active) * (bead-size + bead-spacing)
             } else {
               // No active beads: position after reckoning bar + gap
-              heaven-earth-gap + bar-thickness + heaven-gap + bead-size / 2 + i * (bead-size + bead-spacing)
+              heaven-earth-gap + bar-thickness + inactive-gap + bead-size / 2 + i * (bead-size + bead-spacing)
             }
           }
           
