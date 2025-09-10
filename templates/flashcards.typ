@@ -140,9 +140,9 @@
         
         // Draw heaven bead
         #let heaven-y = if heaven-active == 1 {
-          heaven-earth-gap - bead-size / 2 - 2pt  // Active (center just above bar)
+          heaven-earth-gap - bead-size / 2 - 1pt  // Active (center just above bar)
         } else {
-          5pt + bead-size / 2  // Inactive (center near top)
+          bead-size / 2 + 5pt  // Inactive (center at top, with same 5pt gap as earth beads)
         }
         
         #let bead-color = if heaven-active == 1 {
