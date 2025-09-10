@@ -142,7 +142,7 @@
         #let heaven-y = if heaven-active == 1 {
           heaven-earth-gap - bead-size / 2 - 1pt  // Active (center just above bar)
         } else {
-          bead-size / 2 + 1pt  // Inactive (positioned very close to top with maximum gap from bar)
+          bead-size / 2  // Inactive (positioned at top with maximum gap in available space)
         }
         
         #let bead-color = if heaven-active == 1 {
