@@ -459,7 +459,7 @@ def main():
     elif args.format == 'web':
         # Generate web flashcards (HTML with inline SVG)
         try:
-            from web_generator import generate_web_flashcards
+            from .web_generator import generate_web_flashcards
             
             result_path = generate_web_flashcards(numbers, final_config, output_path)
             print(f"\n✓ Generated web flashcards: {result_path}")
