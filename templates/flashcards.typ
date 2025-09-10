@@ -171,7 +171,7 @@
         #for i in range(4) [
           #let is-active = i < earth-active
           #let earth-y = if is-active {
-            heaven-earth-gap + bar-thickness + 2pt + bead-size / 2 + i * (bead-size + bead-spacing)
+            heaven-earth-gap + bar-thickness + 1pt + bead-size / 2 + i * (bead-size + bead-spacing)
           } else {
             total-height - (4 - i) * (bead-size + bead-spacing) - 5pt + bead-size / 2
           }
