@@ -36,6 +36,7 @@
   let column-spacing = 25pt * base-size
   let heaven-earth-gap = 20pt * base-size
   let bar-thickness = 2pt * base-size
+  let inactive-bead-gap = (bead-size + bead-spacing) + 5pt  // Same gap for both heaven and earth inactive beads
   
   // Color schemes
   let place-value-colors = (
@@ -142,7 +143,7 @@
         #let heaven-y = if heaven-active == 1 {
           heaven-earth-gap - bead-size / 2 - 1pt  // Active (center just above bar)
         } else {
-          bead-size / 2 + 5pt  // Inactive (center at top, with same 5pt gap as earth beads)
+          bead-size / 2 + inactive-bead-gap  // Inactive (same gap from edge as earth beads)
         }
         
         #let bead-color = if heaven-active == 1 {
