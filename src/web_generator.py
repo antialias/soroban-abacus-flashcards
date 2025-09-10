@@ -763,6 +763,13 @@ def generate_web_flashcards(numbers, config, output_path):
             margin-top: 20px;
         }}
         
+        .sorting-game-actions {{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px 0;
+        }}
+        
         .sort-start-btn, .sort-check-btn, .sort-reveal-btn, .sort-new-btn {{
             background: #2c5f76;
             color: white;
@@ -1474,11 +1481,15 @@ def generate_web_flashcards(numbers, config, output_path):
                 
                 <div class="sorting-actions">
                     <button id="start-sorting" class="sort-start-btn">Start Sorting Challenge</button>
-                    <button id="check-sorting" class="sort-check-btn" style="display: none;">Check My Solution</button>
-                    <button id="reveal-numbers" class="sort-reveal-btn" style="display: none;">Reveal Numbers</button>
-                    <button id="new-sorting" class="sort-new-btn" style="display: none;">New Challenge</button>
-                    <button id="end-sorting" class="end-game-btn" style="display: none;">End Sorting</button>
                 </div>
+            </div>
+            
+            <!-- Game Action Buttons (outside controls so they remain visible during gameplay) -->
+            <div class="sorting-game-actions" style="display: none;">
+                <button id="check-sorting" class="sort-check-btn">Check My Solution</button>
+                <button id="reveal-numbers" class="sort-reveal-btn">Reveal Numbers</button>
+                <button id="new-sorting" class="sort-new-btn">New Challenge</button>
+                <button id="end-sorting" class="end-game-btn">End Sorting</button>
             </div>
             
             <!-- Sorting Game Area -->
@@ -2000,10 +2011,7 @@ def generate_web_flashcards(numbers, config, output_path):
             
             // Update buttons - show game controls
             document.getElementById('start-sorting').style.display = 'none';
-            document.getElementById('check-sorting').style.display = 'inline-block';
-            document.getElementById('reveal-numbers').style.display = 'inline-block';
-            document.getElementById('new-sorting').style.display = 'inline-block';
-            document.getElementById('end-sorting').style.display = 'inline-block';
+            document.querySelector('.sorting-game-actions').style.display = 'block';
         }}
         
         renderSortingCards() {{
@@ -2818,10 +2826,7 @@ def generate_web_flashcards(numbers, config, output_path):
             
             // Reset buttons
             document.getElementById('start-sorting').style.display = 'inline-block';
-            document.getElementById('check-sorting').style.display = 'none';
-            document.getElementById('reveal-numbers').style.display = 'none';
-            document.getElementById('new-sorting').style.display = 'none';
-            document.getElementById('end-sorting').style.display = 'none';
+            document.querySelector('.sorting-game-actions').style.display = 'none';
         }}
         
         newChallenge() {{
