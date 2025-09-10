@@ -32,7 +32,8 @@
   // Drawing parameters scaled by base-size
   let rod-width = 3pt * base-size
   let bead-size = 12pt * base-size
-  let bead-spacing = 4pt * base-size
+  let bead-spacing = 4pt * base-size  // Original spacing (will be overridden for adjacent same-type beads)
+  let adjacent-spacing = 0.5pt * base-size  // Minimal spacing for adjacent beads of same type
   let column-spacing = 25pt * base-size
   let heaven-earth-gap = 30pt * base-size
   let bar-thickness = 2pt * base-size
@@ -143,15 +144,15 @@
         #let furthest-earth-y = if earth-active > 0 {
           // Position of the last inactive earth bead (or last active if all are active)
           if earth-active == 4 {
-            // All earth beads are active - furthest is the 4th active bead
-            heaven-earth-gap + bar-thickness + active-gap + bead-size / 2 + 3 * (bead-size + bead-spacing)
+            // All earth beads are active - furthest is the 4th active bead (using adjacent spacing)
+            heaven-earth-gap + bar-thickness + active-gap + bead-size / 2 + 3 * (bead-size + adjacent-spacing)
           } else {
             // Some inactive beads - furthest is the last inactive bead
-            heaven-earth-gap + bar-thickness + active-gap + bead-size / 2 + earth-active * (bead-size + bead-spacing) + inactive-gap + (4 - 1 - earth-active) * (bead-size + bead-spacing)
+            heaven-earth-gap + bar-thickness + active-gap + bead-size / 2 + (earth-active - 1) * (bead-size + adjacent-spacing) + bead-size / 2 + inactive-gap + bead-size / 2 + (4 - 1 - earth-active) * (bead-size + adjacent-spacing)
           }
         } else {
-          // No active beads: furthest is the last inactive bead
-          heaven-earth-gap + bar-thickness + inactive-gap + bead-size / 2 + 3 * (bead-size + bead-spacing)
+          // No active beads: furthest is the last inactive bead (using adjacent spacing)
+          heaven-earth-gap + bar-thickness + inactive-gap + bead-size / 2 + 3 * (bead-size + adjacent-spacing)
         }
         
         // Calculate rod bounds (from outermost visible bead to outermost visible bead)
@@ -207,16 +208,16 @@
         #for i in range(4) [
           #let is-active = i < earth-active
           #let earth-y = if is-active {
-            // Active beads: positioned near reckoning bar with better spacing, in sequence
-            heaven-earth-gap + bar-thickness + active-gap + bead-size / 2 + i * (bead-size + bead-spacing)
+            // Active beads: positioned near reckoning bar, adjacent beads touch
+            heaven-earth-gap + bar-thickness + active-gap + bead-size / 2 + i * (bead-size + adjacent-spacing)
           } else {
             // Inactive beads: positioned after the active beads + gap, or after reckoning bar + gap if no active beads
             if earth-active > 0 {
-              // Position after the last active bead + gap
-              heaven-earth-gap + bar-thickness + active-gap + bead-size / 2 + earth-active * (bead-size + bead-spacing) + inactive-gap + (i - earth-active) * (bead-size + bead-spacing)
+              // Position after the last active bead + gap, then adjacent inactive beads touch
+              heaven-earth-gap + bar-thickness + active-gap + bead-size / 2 + (earth-active - 1) * (bead-size + adjacent-spacing) + bead-size / 2 + inactive-gap + bead-size / 2 + (i - earth-active) * (bead-size + adjacent-spacing)
             } else {
-              // No active beads: position after reckoning bar + gap
-              heaven-earth-gap + bar-thickness + inactive-gap + bead-size / 2 + i * (bead-size + bead-spacing)
+              // No active beads: position after reckoning bar + gap, adjacent inactive beads touch
+              heaven-earth-gap + bar-thickness + inactive-gap + bead-size / 2 + i * (bead-size + adjacent-spacing)
             }
           }
           
