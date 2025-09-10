@@ -59,6 +59,7 @@ def generate_single_card_typst(number, side, config, output_path, project_root):
   side: "{side}",
   bead-shape: "{config.get('bead_shape', 'diamond')}",
   color-scheme: "{config.get('color_scheme', 'monochrome')}",
+  color-palette: "{config.get('color_palette', 'default')}",
   colored-numerals: {str(config.get('colored_numerals', False)).lower()},
   hide-inactive-beads: {str(config.get('hide_inactive_beads', False)).lower()},
   show-empty-columns: {str(config.get('show_empty_columns', False)).lower()},
@@ -233,6 +234,7 @@ def generate_typst_file(numbers, config, output_path):
   hide-inactive-beads: {str(config.get('hide_inactive_beads', False)).lower()},
   bead-shape: "{config.get('bead_shape', 'diamond')}",
   color-scheme: "{config.get('color_scheme', 'monochrome')}",
+  color-palette: "{config.get('color_palette', 'default')}",
   colored-numerals: {str(config.get('colored_numerals', False)).lower()},
   scale-factor: {config.get('scale_factor', 0.9)}
 )
@@ -262,6 +264,7 @@ def main():
     parser.add_argument('--hide-inactive-beads', action='store_true', help='Hide inactive beads (only show active ones)')
     parser.add_argument('--bead-shape', type=str, choices=['diamond', 'circle', 'square'], default='diamond', help='Bead shape (default: diamond)')
     parser.add_argument('--color-scheme', type=str, choices=['monochrome', 'place-value', 'heaven-earth', 'alternating'], default='monochrome', help='Color scheme (default: monochrome)')
+    parser.add_argument('--color-palette', type=str, choices=['default', 'colorblind', 'mnemonic', 'grayscale', 'nature'], default='default', help='Color palette for place values (default: default)')
     parser.add_argument('--colored-numerals', action='store_true', help='Color the numerals to match the bead color scheme')
     parser.add_argument('--scale-factor', type=float, default=0.9, help='Manual scale adjustment (0.1 to 1.0, default: 0.9)')
     
@@ -322,6 +325,7 @@ def main():
         'hide_inactive_beads': args.hide_inactive_beads or config.get('hide_inactive_beads', False),
         'bead_shape': args.bead_shape if args.bead_shape != 'diamond' else config.get('bead_shape', 'diamond'),
         'color_scheme': args.color_scheme if args.color_scheme != 'monochrome' else config.get('color_scheme', 'monochrome'),
+        'color_palette': args.color_palette if args.color_palette != 'default' else config.get('color_palette', 'default'),
         'colored_numerals': args.colored_numerals or config.get('colored_numerals', False),
         'scale_factor': args.scale_factor if args.scale_factor != 0.9 else config.get('scale_factor', 0.9),
         # PNG/SVG specific options

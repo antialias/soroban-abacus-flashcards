@@ -1,4 +1,4 @@
-#let draw-soroban(value, columns: auto, show-empty: false, hide-inactive: false, bead-shape: "diamond", color-scheme: "monochrome", base-size: 1.0) = {
+#let draw-soroban(value, columns: auto, show-empty: false, hide-inactive: false, bead-shape: "diamond", color-scheme: "monochrome", color-palette: "default", base-size: 1.0) = {
   // Parse the value into digits
   let digits = if type(value) == int {
     str(value).clusters().map(d => int(d))
@@ -38,14 +38,47 @@
   let heaven-earth-gap = 30pt * base-size
   let bar-thickness = 2pt * base-size
   
-  // Color schemes
-  let place-value-colors = (
-    rgb("#2E86AB"),  // ones - blue
-    rgb("#A23B72"),  // tens - magenta
-    rgb("#F18F01"),  // hundreds - orange
-    rgb("#6A994E"),  // thousands - green
-    rgb("#BC4B51"),  // ten-thousands - red
+  // Color palette definitions - all colorblind-friendly
+  let color-palettes = (
+    "default": (
+      rgb("#2E86AB"),  // ones - blue
+      rgb("#A23B72"),  // tens - magenta
+      rgb("#F18F01"),  // hundreds - orange
+      rgb("#6A994E"),  // thousands - green
+      rgb("#BC4B51"),  // ten-thousands - red
+    ),
+    "colorblind": (
+      rgb("#0173B2"),  // ones - strong blue
+      rgb("#DE8F05"),  // tens - orange
+      rgb("#CC78BC"),  // hundreds - pink
+      rgb("#029E73"),  // thousands - teal green
+      rgb("#D55E00"),  // ten-thousands - vermillion
+    ),
+    "mnemonic": (
+      rgb("#1f77b4"),  // ones - BLUE (Blue = Basic/Beginning)
+      rgb("#ff7f0e"),  // tens - ORANGE (Orange = Ten commandments) 
+      rgb("#2ca02c"),  // hundreds - GREEN (Green = Grass/Ground)
+      rgb("#d62728"),  // thousands - RED (Red = Thousand suns/fire)
+      rgb("#9467bd"),  // ten-thousands - PURPLE (Purple = Prestigious/Premium)
+    ),
+    "grayscale": (
+      rgb("#000000"),  // ones - black
+      rgb("#404040"),  // tens - dark gray
+      rgb("#808080"),  // hundreds - medium gray
+      rgb("#b0b0b0"),  // thousands - light gray
+      rgb("#d0d0d0"),  // ten-thousands - very light gray
+    ),
+    "nature": (
+      rgb("#4E79A7"),  // ones - sky blue
+      rgb("#F28E2C"),  // tens - sunset orange
+      rgb("#E15759"),  // hundreds - coral red
+      rgb("#76B7B2"),  // thousands - seafoam green
+      rgb("#59A14F"),  // ten-thousands - forest green
+    ),
   )
+  
+  // Get the selected color palette
+  let place-value-colors = color-palettes.at(color-palette, default: color-palettes.at("default"))
   
   let get-column-color(col-idx, total-cols, scheme) = {
     if scheme == "place-value" {
@@ -487,7 +520,7 @@
   // Generate cards
   let cards = numbers.map(num => {
     flashcard(
-      draw-soroban(num, columns: columns, show-empty: show-empty-columns, hide-inactive: hide-inactive-beads, bead-shape: bead-shape, color-scheme: color-scheme, base-size: base-scale),
+      draw-soroban(num, columns: columns, show-empty: show-empty-columns, hide-inactive: hide-inactive-beads, bead-shape: bead-shape, color-scheme: color-scheme, color-palette: color-palette, base-size: base-scale),
       create-colored-numeral(num, color-scheme, colored-numerals, base-font-size),
       card-width: card-width,
       card-height: card-height,

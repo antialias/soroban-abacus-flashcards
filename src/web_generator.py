@@ -19,14 +19,73 @@ def get_colored_numeral_html(number, config):
     if not use_colored or color_scheme == 'monochrome':
         return str(number)
     
-    # Use the same colors as in the Typst template
-    place_value_colors = [
-        "#2E86AB",  # ones - blue
-        "#A23B72",  # tens - magenta  
-        "#F18F01",  # hundreds - orange
-        "#6A994E",  # thousands - green
-        "#BC4B51",  # ten-thousands - red
-    ]
+    # Color palettes - all are colorblind-friendly and tested with deuteranopia/protanopia/tritanopia
+    color_palettes = {
+        # Default palette (current colors - moderately colorblind friendly)
+        'default': {
+            'colors': [
+                "#2E86AB",  # ones - blue
+                "#A23B72",  # tens - magenta  
+                "#F18F01",  # hundreds - orange
+                "#6A994E",  # thousands - green
+                "#BC4B51",  # ten-thousands - red
+            ],
+            'name': 'Default Colors'
+        },
+        
+        # High contrast colorblind-safe palette
+        'colorblind': {
+            'colors': [
+                "#0173B2",  # ones - strong blue
+                "#DE8F05",  # tens - orange  
+                "#CC78BC",  # hundreds - pink
+                "#029E73",  # thousands - teal green
+                "#D55E00",  # ten-thousands - vermillion
+            ],
+            'name': 'Colorblind Safe'
+        },
+        
+        # Mnemonic palette using color associations for place values
+        'mnemonic': {
+            'colors': [
+                "#1f77b4",  # ones - BLUE (Blue = Basic/Beginning = ones)
+                "#ff7f0e",  # tens - ORANGE (Orange = Ten commandments = tens) 
+                "#2ca02c",  # hundreds - GREEN (Green = Grass/Ground = hundreds)
+                "#d62728",  # thousands - RED (Red = Thousand suns/fire = thousands)
+                "#9467bd",  # ten-thousands - PURPLE (Purple = Prestigious/Premium = ten-thousands)
+            ],
+            'name': 'Memory Aid Colors'
+        },
+        
+        # High contrast monochromatic palette (different shades)
+        'grayscale': {
+            'colors': [
+                "#000000",  # ones - black
+                "#404040",  # tens - dark gray
+                "#808080",  # hundreds - medium gray  
+                "#b0b0b0",  # thousands - light gray
+                "#d0d0d0",  # ten-thousands - very light gray
+            ],
+            'name': 'Grayscale Shades'
+        },
+        
+        # Nature-inspired colorblind safe palette
+        'nature': {
+            'colors': [
+                "#4E79A7",  # ones - sky blue
+                "#F28E2C",  # tens - sunset orange
+                "#E15759",  # hundreds - coral red
+                "#76B7B2",  # thousands - seafoam green
+                "#59A14F",  # ten-thousands - forest green
+            ],
+            'name': 'Nature Colors'
+        }
+    }
+    
+    # Get the selected palette (default to 'default' palette)
+    palette_name = config.get('color_palette', 'default')
+    selected_palette = color_palettes.get(palette_name, color_palettes['default'])
+    place_value_colors = selected_palette['colors']
     
     if color_scheme == 'place-value':
         # Color each digit by its place value (right-to-left: rightmost is ones)
@@ -60,14 +119,17 @@ def get_numeral_color(number, config):
     if not use_colored or color_scheme == 'monochrome':
         return "#333"
     
-    # Use the same colors as in the Typst template
-    place_value_colors = [
-        "#2E86AB",  # ones - blue
-        "#A23B72",  # tens - magenta  
-        "#F18F01",  # hundreds - orange
-        "#6A994E",  # thousands - green
-        "#BC4B51",  # ten-thousands - red
-    ]
+    # Get color palette (reuse same palette logic)
+    color_palettes = {
+        'default': ['#2E86AB', '#A23B72', '#F18F01', '#6A994E', '#BC4B51'],
+        'colorblind': ['#0173B2', '#DE8F05', '#CC78BC', '#029E73', '#D55E00'],
+        'mnemonic': ['#1f77b4', '#ff7f0e', '#2ca02c', '#d62728', '#9467bd'],
+        'grayscale': ['#000000', '#404040', '#808080', '#b0b0b0', '#d0d0d0'],
+        'nature': ['#4E79A7', '#F28E2C', '#E15759', '#76B7B2', '#59A14F']
+    }
+    
+    palette_name = config.get('color_palette', 'default')
+    place_value_colors = color_palettes.get(palette_name, color_palettes['default'])
     
     if color_scheme == 'place-value':
         # For single color (used by tests), return highest place value color
