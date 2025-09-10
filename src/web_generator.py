@@ -2334,7 +2334,7 @@ def generate_web_flashcards(numbers, config, output_path):
                         <div class="slot-card">
                             <div class="card-svg">${{card.svg}}</div>
                         </div>
-                        <div class="slot-label">Click to move back</div>
+                        <div class="slot-label">← Click to move back</div>
                     `;
                 }} else {{
                     slot.classList.remove('filled');
@@ -2382,8 +2382,26 @@ def generate_web_flashcards(numbers, config, output_path):
                 this.updatePositionSlots();
                 this.renderAvailableCards();
                 
+                // Auto-select the moved card so user can immediately place it elsewhere
+                this.selectedCard = cardToMove;
+                this.selectedCardElement = document.querySelector(`[data-number="${{cardToMove.number}}"]`);
+                if (this.selectedCardElement) {{
+                    this.selectedCardElement.classList.add('selected');
+                    
+                    // Highlight available positions
+                    document.querySelectorAll('.position-slot').forEach(slot => {{
+                        if (!slot.classList.contains('filled')) {{
+                            slot.classList.add('active');
+                        }}
+                    }});
+                    document.querySelectorAll('.insert-button').forEach(btn => {{
+                        btn.classList.add('active');
+                        btn.classList.remove('disabled');
+                    }});
+                }}
+                
                 const placedCount = this.placedCards.filter(c => c !== null).length;
-                this.updateSortingStatus(`Moved card ${{cardToMove.number}} back to available cards. ${{placedCount}}/${{this.selectedCount}} cards placed.`);
+                this.updateSortingStatus(`Moved card ${{cardToMove.number}} back and selected it. ${{placedCount}}/${{this.selectedCount}} cards placed.`);
                 return;
             }}
             
@@ -2414,7 +2432,7 @@ def generate_web_flashcards(numbers, config, output_path):
                 <div class="slot-card">
                     <div class="card-svg">${{this.selectedCard.svg}}</div>
                 </div>
-                <div class="slot-label">Click to move back</div>
+                <div class="slot-label">← Click to move back</div>
             `;
             
             // Clear selection and re-render
