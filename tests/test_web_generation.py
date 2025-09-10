@@ -29,13 +29,21 @@ class TestWebGeneration:
     def test_get_numeral_color_place_value(self, sample_config):
         """Test numeral color for place-value scheme."""
         config = {**sample_config, 'color_scheme': 'place-value', 'colored_numerals': True}
-        color = get_numeral_color(42, config)
-        assert color == "#222"  # Darker color for visibility
         
-        # Without colored numerals, should return default
-        config['colored_numerals'] = False
+        # Test different place values
+        color = get_numeral_color(7, config)      # ones place
+        assert color == "#2E86AB"  # blue
+        
+        color = get_numeral_color(42, config)     # tens place  
+        assert color == "#A23B72"  # magenta
+        
+        color = get_numeral_color(456, config)    # hundreds place
+        assert color == "#F18F01"  # orange
+        
+        # For place-value scheme, colored numerals are automatically enabled
+        config['colored_numerals'] = False  
         color = get_numeral_color(42, config)
-        assert color == "#333"
+        assert color == "#A23B72"  # Still colored because place-value auto-enables coloring
     
     @patch('generate.generate_cards_direct')
     def test_generate_card_svgs_success(self, mock_generate_cards_direct, sample_config, temp_dir):

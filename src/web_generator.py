@@ -8,17 +8,80 @@ import tempfile
 from pathlib import Path
 
 
-def get_numeral_color(number, config):
-    """Get color for numeral based on configuration.""" 
-    if not config.get('colored_numerals', False):
-        return "#333"
-        
+def get_colored_numeral_html(number, config):
+    """Generate HTML for numeral with appropriate coloring based on configuration."""
     color_scheme = config.get('color_scheme', 'monochrome')
-    if color_scheme == 'monochrome':
-        return "#333"
+    
+    # For web display, automatically use colored numerals for non-monochrome schemes
+    use_colored = config.get('colored_numerals', False) or color_scheme != 'monochrome'
+    
+    if not use_colored or color_scheme == 'monochrome':
+        return str(number)
+    
+    # Use the same colors as in the Typst template
+    place_value_colors = [
+        "#2E86AB",  # ones - blue
+        "#A23B72",  # tens - magenta  
+        "#F18F01",  # hundreds - orange
+        "#6A994E",  # thousands - green
+        "#BC4B51",  # ten-thousands - red
+    ]
+    
+    if color_scheme == 'place-value':
+        # Color each digit by its place value (right-to-left: rightmost is ones)
+        digits = str(number)
+        colored_spans = []
+        
+        for i, digit in enumerate(digits):
+            place_idx = len(digits) - 1 - i  # rightmost digit is place 0 (ones)
+            color_idx = place_idx % len(place_value_colors)
+            color = place_value_colors[color_idx]
+            colored_spans.append(f'<span style="color: {color};">{digit}</span>')
+        
+        return ''.join(colored_spans)
+    elif color_scheme == 'heaven-earth':
+        # Use orange (heaven bead color)
+        return f'<span style="color: #F18F01;">{number}</span>'
+    elif color_scheme == 'alternating':
+        # For alternating, use blue for simplicity in web display
+        return f'<span style="color: #1E88E5;">{number}</span>'
     else:
-        # For colored schemes, use a darker color for visibility
-        return "#222"
+        return str(number)
+
+
+def get_numeral_color(number, config):
+    """Get single color for numeral (kept for backwards compatibility with tests).""" 
+    color_scheme = config.get('color_scheme', 'monochrome')
+    
+    # For web display, automatically use colored numerals for non-monochrome schemes
+    use_colored = config.get('colored_numerals', False) or color_scheme != 'monochrome'
+    
+    if not use_colored or color_scheme == 'monochrome':
+        return "#333"
+    
+    # Use the same colors as in the Typst template
+    place_value_colors = [
+        "#2E86AB",  # ones - blue
+        "#A23B72",  # tens - magenta  
+        "#F18F01",  # hundreds - orange
+        "#6A994E",  # thousands - green
+        "#BC4B51",  # ten-thousands - red
+    ]
+    
+    if color_scheme == 'place-value':
+        # For single color (used by tests), return highest place value color
+        digits = str(number)
+        place_idx = len(digits) - 1  # Most significant digit place
+        color_idx = place_idx % len(place_value_colors)
+        return place_value_colors[color_idx]
+    elif color_scheme == 'heaven-earth':
+        # Use orange (heaven bead color)
+        return "#F18F01"
+    elif color_scheme == 'alternating':
+        # For alternating, use blue for simplicity in web display
+        return "#1E88E5"
+    else:
+        return "#333"
 
 
 def generate_card_svgs(numbers, config):
@@ -80,7 +143,7 @@ def generate_web_flashcards(numbers, config, output_path):
     cards_html = []
     for i, number in enumerate(numbers):
         svg_content = card_svgs.get(number, f'<svg width="300" height="200"><text x="150" y="100" text-anchor="middle" font-size="48">Error</text></svg>')
-        numeral_color = get_numeral_color(number, config)
+        colored_numeral = get_colored_numeral_html(number, config)
         
         card_html = f'''
         <div class="flashcard" data-number="{number}">
@@ -88,7 +151,7 @@ def generate_web_flashcards(numbers, config, output_path):
             <div class="abacus-container">
                 {svg_content}
             </div>
-            <div class="numeral" style="color: {numeral_color};">{number}</div>
+            <div class="numeral">{colored_numeral}</div>
         </div>'''
         
         cards_html.append(card_html)

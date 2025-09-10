@@ -139,13 +139,13 @@
         )
         
         // Draw heaven bead
-        // Position inactive earth bead gap from reckoning bar: 19px you measured
-        // Convert to same gap for heaven: heaven-earth-gap - gap - bead-size/2
-        #let earth-gap = 19pt  // Exact same gap as earth beads
+        #let heaven-gap = 5pt  // Gap between active/inactive beads or bar/inactive beads
         #let heaven-y = if heaven-active == 1 {
-          heaven-earth-gap - bead-size / 2 - 1pt  // Active (center just above bar)
+          // Active heaven bead: positioned close to reckoning bar
+          heaven-earth-gap - bead-size / 2 - 1pt
         } else {
-          heaven-earth-gap - earth-gap - bead-size / 2  // Inactive (same gap as earth, measured from reckoning bar)
+          // Inactive heaven bead: positioned away from reckoning bar with gap
+          heaven-earth-gap - heaven-gap - bead-size / 2
         }
         
         #let bead-color = if heaven-active == 1 {
@@ -171,9 +171,17 @@
         #for i in range(4) [
           #let is-active = i < earth-active
           #let earth-y = if is-active {
+            // Active beads: positioned close to reckoning bar, in sequence
             heaven-earth-gap + bar-thickness + 1pt + bead-size / 2 + i * (bead-size + bead-spacing)
           } else {
-            total-height - (4 - i) * (bead-size + bead-spacing) - 5pt + bead-size / 2
+            // Inactive beads: positioned after the active beads + gap, or after reckoning bar + gap if no active beads
+            if earth-active > 0 {
+              // Position after the last active bead + gap
+              heaven-earth-gap + bar-thickness + 1pt + bead-size / 2 + earth-active * (bead-size + bead-spacing) + heaven-gap + (i - earth-active) * (bead-size + bead-spacing)
+            } else {
+              // No active beads: position after reckoning bar + gap
+              heaven-earth-gap + bar-thickness + heaven-gap + bead-size / 2 + i * (bead-size + bead-spacing)
+            }
           }
           
           #let earth-bead-color = if is-active {
