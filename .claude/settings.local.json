@@ -17,7 +17,9 @@
       "Bash(qpdf:*)",
       "Bash(git remote add:*)",
       "Bash(git push:*)",
-      "Bash(pdftoppm:*)"
+      "Bash(pdftoppm:*)",
+      "Bash(python -m pytest tests/test_quiz_functionality.py -v)",
+      "Bash(python:*)"
     ],
     "deny": [],
     "ask": []
