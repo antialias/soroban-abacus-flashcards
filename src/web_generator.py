@@ -5,6 +5,7 @@ Generates static HTML with inline SVG abacus representations using existing Typs
 """
 
 import tempfile
+import json
 from pathlib import Path
 
 
@@ -100,10 +101,10 @@ def generate_card_svgs(numbers, config):
         # Configure for web-optimized SVGs
         web_config = {
             **config,
-            'card_width': '4in',  # Fixed size for web (Typst needs units)
-            'card_height': '2.5in',
+            'card_width': '1.5in',  # Much smaller card = larger abacus relative to viewBox
+            'card_height': '1.5in',
             'transparent': True,  # Transparent background for web
-            'scale_factor': 0.8   # Slightly smaller for web
+            'scale_factor': 1.0   # Full size for web (was 0.8 - too small)
         }
         
         # Generate SVG files using existing pipeline
@@ -981,10 +982,34 @@ def generate_web_flashcards(numbers, config, output_path):
             margin-bottom: 5px;
         }}
         
+        .position-slot.filled .slot-number {{
+            display: none;
+        }}
+        
         .position-slot .slot-label {{
             font-size: 12px;
             color: #666;
             text-align: center;
+        }}
+        
+        .position-slot.filled .slot-label {{
+            position: absolute;
+            bottom: 8px;
+            left: 8px;
+            right: 8px;
+            color: white;
+            background: rgba(0,0,0,0.8);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            border-radius: 6px;
+            padding: 4px 8px;
+            font-size: 11px;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+            backdrop-filter: blur(2px);
+        }}
+        
+        .position-slot.filled:hover .slot-label {{
+            opacity: 1;
         }}
         
         .position-slot.filled {{
@@ -997,10 +1022,7 @@ def generate_web_flashcards(numbers, config, output_path):
             top: 5px;
             left: 5px;
             right: 5px;
-            bottom: 25px;
-            background: white;
-            border-radius: 4px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            bottom: 5px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -1044,6 +1066,11 @@ def generate_web_flashcards(numbers, config, output_path):
             flex-direction: column;
             align-items: center;
             justify-content: center;
+        }}
+        
+        .sort-card .card-svg svg {{
+            max-width: 100%;
+            height: auto;
         }}
         
         .sort-card:hover {{
