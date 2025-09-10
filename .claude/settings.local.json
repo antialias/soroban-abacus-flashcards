@@ -20,7 +20,8 @@
       "Bash(pdftoppm:*)",
       "Bash(python -m pytest tests/test_quiz_functionality.py -v)",
       "Bash(python:*)",
-      "Bash(git restore:*)"
+      "Bash(git restore:*)",
+      "Bash(open test_heaven_beads.html)"
     ],
     "deny": [],
     "ask": []

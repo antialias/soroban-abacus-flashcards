@@ -4,9 +4,9 @@
         <g transform="translate(12.600000000000005 12.600000000000005)">
             <g class="typst-group">
                 <g>
-                    <g transform="translate(75.89999999999999 22.399999999999995)">
+                    <g transform="translate(75.89999999999999 17.399999999999995)">
                         <g class="typst-group">
-                            <g transform="matrix(0.9 0 0 0.9 3.75 5.5)">
+                            <g transform="matrix(0.9 0 0 0.9 3.75 6)">
                                 <g transform="translate(0 0)">
                                     <g class="typst-group">
                                         <g>
@@ -14,9 +14,9 @@
                                                 <g class="typst-group">
                                                     <g>
                                                         <g transform="translate(11 0)">
-                                                            <path class="typst-shape" fill="#eeeeee" fill-rule="nonzero" d="M 0 0 L 0 110 L 3 110 L 3 0 Z "/>
+                                                            <path class="typst-shape" fill="#eeeeee" fill-rule="nonzero" d="M 0 0 L 0 120 L 3 120 L 3 0 Z "/>
                                                         </g>
-                                                        <g transform="translate(4.1000000000000005 0)">
+                                                        <g transform="translate(4.1000000000000005 -1)">
                                                             <g class="typst-group">
                                                                 <g>
                                                                     <g transform="translate(0 0)">
@@ -25,7 +25,7 @@
                                                                 </g>
                                                             </g>
                                                         </g>
-                                                        <g transform="translate(4.1000000000000005 24)">
+                                                        <g transform="translate(4.1000000000000005 34)">
                                                             <g class="typst-group">
                                                                 <g>
                                                                     <g transform="translate(0 0)">
@@ -34,7 +34,7 @@
                                                                 </g>
                                                             </g>
                                                         </g>
-                                                        <g transform="translate(4.1000000000000005 40)">
+                                                        <g transform="translate(4.1000000000000005 50)">
                                                             <g class="typst-group">
                                                                 <g>
                                                                     <g transform="translate(0 0)">
@@ -43,7 +43,7 @@
                                                                 </g>
                                                             </g>
                                                         </g>
-                                                        <g transform="translate(4.1000000000000005 56)">
+                                                        <g transform="translate(4.1000000000000005 66)">
                                                             <g class="typst-group">
                                                                 <g>
                                                                     <g transform="translate(0 0)">
@@ -52,7 +52,7 @@
                                                                 </g>
                                                             </g>
                                                         </g>
-                                                        <g transform="translate(4.1000000000000005 72)">
+                                                        <g transform="translate(4.1000000000000005 82)">
                                                             <g class="typst-group">
                                                                 <g>
                                                                     <g transform="translate(0 0)">
@@ -62,9 +62,9 @@
                                                             </g>
                                                         </g>
                                                         <g transform="translate(36 0)">
-                                                            <path class="typst-shape" fill="#eeeeee" fill-rule="nonzero" d="M 0 0 L 0 110 L 3 110 L 3 0 Z "/>
+                                                            <path class="typst-shape" fill="#eeeeee" fill-rule="nonzero" d="M 0 0 L 0 120 L 3 120 L 3 0 Z "/>
                                                         </g>
-                                                        <g transform="translate(29.099999999999998 7)">
+                                                        <g transform="translate(29.099999999999998 17)">
                                                             <g class="typst-group">
                                                                 <g>
                                                                     <g transform="translate(0 0)">
@@ -73,7 +73,7 @@
                                                                 </g>
                                                             </g>
                                                         </g>
-                                                        <g transform="translate(29.099999999999998 41)">
+                                                        <g transform="translate(29.099999999999998 51)">
                                                             <g class="typst-group">
                                                                 <g>
                                                                     <g transform="translate(0 0)">
@@ -82,7 +82,7 @@
                                                                 </g>
                                                             </g>
                                                         </g>
-                                                        <g transform="translate(29.099999999999998 57)">
+                                                        <g transform="translate(29.099999999999998 67)">
                                                             <g class="typst-group">
                                                                 <g>
                                                                     <g transform="translate(0 0)">
@@ -91,7 +91,7 @@
                                                                 </g>
                                                             </g>
                                                         </g>
-                                                        <g transform="translate(29.099999999999998 73)">
+                                                        <g transform="translate(29.099999999999998 83)">
                                                             <g class="typst-group">
                                                                 <g>
                                                                     <g transform="translate(0 0)">
@@ -100,7 +100,7 @@
                                                                 </g>
                                                             </g>
                                                         </g>
-                                                        <g transform="translate(29.099999999999998 89)">
+                                                        <g transform="translate(29.099999999999998 99)">
                                                             <g class="typst-group">
                                                                 <g>
                                                                     <g transform="translate(0 0)">
@@ -110,9 +110,9 @@
                                                             </g>
                                                         </g>
                                                         <g transform="translate(61 0)">
-                                                            <path class="typst-shape" fill="#eeeeee" fill-rule="nonzero" d="M 0 0 L 0 110 L 3 110 L 3 0 Z "/>
+                                                            <path class="typst-shape" fill="#eeeeee" fill-rule="nonzero" d="M 0 0 L 0 120 L 3 120 L 3 0 Z "/>
                                                         </g>
-                                                        <g transform="translate(54.1 7)">
+                                                        <g transform="translate(54.1 17)">
                                                             <g class="typst-group">
                                                                 <g>
                                                                     <g transform="translate(0 0)">
@@ -121,7 +121,7 @@
                                                                 </g>
                                                             </g>
                                                         </g>
-                                                        <g transform="translate(54.1 24)">
+                                                        <g transform="translate(54.1 34)">
                                                             <g class="typst-group">
                                                                 <g>
                                                                     <g transform="translate(0 0)">
@@ -130,7 +130,7 @@
                                                                 </g>
                                                             </g>
                                                         </g>
-                                                        <g transform="translate(54.1 57)">
+                                                        <g transform="translate(54.1 67)">
                                                             <g class="typst-group">
                                                                 <g>
                                                                     <g transform="translate(0 0)">
@@ -139,7 +139,7 @@
                                                                 </g>
                                                             </g>
                                                         </g>
-                                                        <g transform="translate(54.1 73)">
+                                                        <g transform="translate(54.1 83)">
                                                             <g class="typst-group">
                                                                 <g>
                                                                     <g transform="translate(0 0)">
@@ -148,7 +148,7 @@
                                                                 </g>
                                                             </g>
                                                         </g>
-                                                        <g transform="translate(54.1 89)">
+                                                        <g transform="translate(54.1 99)">
                                                             <g class="typst-group">
                                                                 <g>
                                                                     <g transform="translate(0 0)">
@@ -157,7 +157,7 @@
                                                                 </g>
                                                             </g>
                                                         </g>
-                                                        <g transform="translate(0 20)">
+                                                        <g transform="translate(0 30)">
                                                             <path class="typst-shape" fill="#000000" fill-rule="nonzero" d="M 0 0 L 0 2 L 75 2 L 75 0 Z "/>
                                                         </g>
                                                     </g>
