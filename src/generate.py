@@ -459,8 +459,12 @@ def main():
     elif args.format == 'web':
         # Generate web flashcards (HTML with inline SVG)
         try:
-            from .web_generator import generate_web_flashcards
-            
+            try:
+                from .web_generator import generate_web_flashcards
+            except ImportError:
+                # Fallback for when running script directly
+                from web_generator import generate_web_flashcards
+                
             result_path = generate_web_flashcards(numbers, final_config, output_path)
             print(f"\n✓ Generated web flashcards: {result_path}")
             print(f"  Open in browser to view interactive flashcards")
