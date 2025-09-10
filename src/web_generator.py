@@ -603,6 +603,37 @@ def generate_web_flashcards(numbers, config, output_path):
             background: #545b62;
         }}
         
+        /* End Game Button */
+        .end-game-btn {{
+            background: #dc3545;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 8px 16px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }}
+        
+        .end-game-btn:hover {{
+            background: #c82333;
+        }}
+        
+        /* Quiz Header for Game Mode */
+        .quiz-header {{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 15px 20px;
+            background: rgba(74, 144, 226, 0.1);
+            border-radius: 8px;
+        }}
+        
+        .quiz-header .quiz-progress {{
+            flex: 1;
+        }}
+        
         @media (max-width: 768px) {{
             .quiz-section {{
                 padding: 20px;
@@ -1360,11 +1391,14 @@ def generate_web_flashcards(numbers, config, output_path):
 
             <!-- Quiz Game Area (hidden initially) -->
             <div id="quiz-game" class="quiz-game" style="display: none;">
-                <div class="quiz-progress">
-                    <div class="progress-bar">
-                        <div class="progress-fill"></div>
+                <div class="quiz-header">
+                    <div class="quiz-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill"></div>
+                        </div>
+                        <span class="progress-text">Card <span id="current-card">1</span> of <span id="total-cards">10</span></span>
                     </div>
-                    <span class="progress-text">Card <span id="current-card">1</span> of <span id="total-cards">10</span></span>
+                    <button id="end-quiz" class="end-game-btn">End Quiz</button>
                 </div>
                 
                 <div class="quiz-display">
@@ -1443,6 +1477,7 @@ def generate_web_flashcards(numbers, config, output_path):
                     <button id="check-sorting" class="sort-check-btn" style="display: none;">Check My Solution</button>
                     <button id="reveal-numbers" class="sort-reveal-btn" style="display: none;">Reveal Numbers</button>
                     <button id="new-sorting" class="sort-new-btn" style="display: none;">New Challenge</button>
+                    <button id="end-sorting" class="end-game-btn" style="display: none;">End Sorting</button>
                 </div>
             </div>
             
@@ -1674,6 +1709,11 @@ def generate_web_flashcards(numbers, config, output_path):
                 this.submitAnswers();
             }});
             
+            // End quiz button
+            document.getElementById('end-quiz').addEventListener('click', () => {{
+                this.endQuiz();
+            }});
+            
             // Retry and back buttons
             document.getElementById('retry-quiz').addEventListener('click', () => {{
                 this.resetQuiz();
@@ -1690,6 +1730,9 @@ def generate_web_flashcards(numbers, config, output_path):
             this.quizCards = this.getRandomCards(this.selectedCount);
             this.correctAnswers = this.quizCards.map(card => card.number);
             this.currentCardIndex = 0;
+            
+            // Hide configuration controls, show only game
+            document.querySelector('.quiz-controls').style.display = 'none';
             
             // Show quiz game section within modal
             this.hideQuizSections();
@@ -1858,6 +1901,11 @@ def generate_web_flashcards(numbers, config, output_path):
             resultsEl.innerHTML = html;
         }}
         
+        endQuiz() {{
+            // Stop the current quiz and return to configuration
+            this.resetQuiz();
+        }}
+        
         resetQuiz() {{
             // Reset state
             this.currentCardIndex = 0;
@@ -1870,6 +1918,7 @@ def generate_web_flashcards(numbers, config, output_path):
             
             // Reset to initial quiz state (hide all sections, show controls)
             this.hideQuizSections();
+            document.querySelector('.quiz-controls').style.display = 'block';
         }}
         
         hideQuizSections() {{
@@ -1929,6 +1978,7 @@ def generate_web_flashcards(numbers, config, output_path):
             document.getElementById('check-sorting').addEventListener('click', () => this.checkSolution());
             document.getElementById('reveal-numbers').addEventListener('click', () => this.revealNumbers());
             document.getElementById('new-sorting').addEventListener('click', () => this.newChallenge());
+            document.getElementById('end-sorting').addEventListener('click', () => this.endSorting());
         }}
         
         startSorting() {{
@@ -1940,19 +1990,20 @@ def generate_web_flashcards(numbers, config, output_path):
             // Shuffle the display order
             this.currentOrder = [...this.sortingCards].sort(() => Math.random() - 0.5);
             
+            // Hide configuration controls, show only game
+            document.querySelector('.sorting-controls').style.display = 'none';
+            
             // Show sorting game
             document.getElementById('sorting-game').style.display = 'block';
             this.renderSortingCards();
             this.updateSortingStatus(`Arrange the ${{this.selectedCount}} cards in ascending order (smallest to largest)`);
             
-            // Update buttons
+            // Update buttons - show game controls
             document.getElementById('start-sorting').style.display = 'none';
             document.getElementById('check-sorting').style.display = 'inline-block';
             document.getElementById('reveal-numbers').style.display = 'inline-block';
             document.getElementById('new-sorting').style.display = 'inline-block';
-            
-            // Scroll to sorting area
-            document.getElementById('sorting-game').scrollIntoView({{ behavior: 'smooth' }});
+            document.getElementById('end-sorting').style.display = 'inline-block';
         }}
         
         renderSortingCards() {{
@@ -2072,30 +2123,72 @@ def generate_web_flashcards(numbers, config, output_path):
                 return;
             }}
             
-            // Create a new array for placed cards
-            const newPlacedCards = new Array(this.selectedCount).fill(null);
-            
-            // Copy existing cards, shifting them as needed
-            for (let i = 0; i < this.placedCards.length; i++) {{
-                if (this.placedCards[i] !== null) {{
-                    if (i < insertPosition) {{
-                        // Cards before insert position stay in same place
-                        newPlacedCards[i] = this.placedCards[i];
-                    }} else {{
-                        // Cards at or after insert position shift right by 1
-                        if (i + 1 < this.selectedCount) {{
-                            newPlacedCards[i + 1] = this.placedCards[i];
+            // Handle insertion at the rightmost position (beyond current array bounds)
+            if (insertPosition >= this.selectedCount) {{
+                // Find the rightmost empty position
+                let rightmostEmptyPos = -1;
+                for (let i = this.selectedCount - 1; i >= 0; i--) {{
+                    if (this.placedCards[i] === null) {{
+                        rightmostEmptyPos = i;
+                        break;
+                    }}
+                }}
+                
+                if (rightmostEmptyPos === -1) {{
+                    this.updateSortingStatus('All positions are filled. Move a card first to make room.');
+                    return;
+                }}
+                
+                // Place card in the rightmost empty position
+                this.placedCards[rightmostEmptyPos] = this.selectedCard;
+            }} else {{
+                // Create a new array for placed cards
+                const newPlacedCards = new Array(this.selectedCount).fill(null);
+                
+                // Copy existing cards, shifting them as needed
+                for (let i = 0; i < this.placedCards.length; i++) {{
+                    if (this.placedCards[i] !== null) {{
+                        if (i < insertPosition) {{
+                            // Cards before insert position stay in same place
+                            newPlacedCards[i] = this.placedCards[i];
                         }} else {{
-                            // Card falls off the end, put it back in available
-                            this.currentOrder.push(this.placedCards[i]);
+                            // Cards at or after insert position shift right by 1
+                            if (i + 1 < this.selectedCount) {{
+                                newPlacedCards[i + 1] = this.placedCards[i];
+                            }} else {{
+                                // Card would fall off - store temporarily, will handle below
+                                newPlacedCards[i + 1] = this.placedCards[i];
+                            }}
                         }}
                     }}
                 }}
+                
+                // Place the selected card at the insert position
+                newPlacedCards[insertPosition] = this.selectedCard;
+                
+                // Now apply gap-filling logic: shift cards left to compress and eliminate gaps
+                const compactedCards = [];
+                for (let i = 0; i < newPlacedCards.length; i++) {{
+                    if (newPlacedCards[i] !== null) {{
+                        compactedCards.push(newPlacedCards[i]);
+                    }}
+                }}
+                
+                // If we have more cards than positions, put excess back in available
+                if (compactedCards.length > this.selectedCount) {{
+                    const excessCards = compactedCards.slice(this.selectedCount);
+                    this.currentOrder.push(...excessCards);
+                    compactedCards.splice(this.selectedCount);
+                }}
+                
+                // Fill the final array with compacted cards (no gaps)
+                const finalPlacedCards = new Array(this.selectedCount).fill(null);
+                for (let i = 0; i < compactedCards.length; i++) {{
+                    finalPlacedCards[i] = compactedCards[i];
+                }}
+                
+                this.placedCards = finalPlacedCards;
             }}
-            
-            // Place the selected card at the insert position
-            newPlacedCards[insertPosition] = this.selectedCard;
-            this.placedCards = newPlacedCards;
             
             // Remove card from available cards
             this.currentOrder = this.currentOrder.filter(c => c.number !== this.selectedCard.number);
@@ -2703,10 +2796,41 @@ def generate_web_flashcards(numbers, config, output_path):
             this.updateSortingStatus('Numbers revealed - now you can see the correct order!');
         }}
         
-        newChallenge() {{
+        endSorting() {{
+            // End the current sorting and return to configuration
+            this.resetSorting();
+        }}
+        
+        resetSorting() {{
             // Reset state
             this.currentOrder = [];
             this.correctOrder = [];
+            this.placedCards = [];
+            this.selectedCard = null;
+            this.selectedCardElement = null;
+            
+            // Clear feedback
+            document.getElementById('sorting-feedback').style.display = 'none';
+            
+            // Hide game, show configuration controls
+            document.getElementById('sorting-game').style.display = 'none';
+            document.querySelector('.sorting-controls').style.display = 'block';
+            
+            // Reset buttons
+            document.getElementById('start-sorting').style.display = 'inline-block';
+            document.getElementById('check-sorting').style.display = 'none';
+            document.getElementById('reveal-numbers').style.display = 'none';
+            document.getElementById('new-sorting').style.display = 'none';
+            document.getElementById('end-sorting').style.display = 'none';
+        }}
+        
+        newChallenge() {{
+            // Reset state but stay in game mode
+            this.currentOrder = [];
+            this.correctOrder = [];
+            this.placedCards = [];
+            this.selectedCard = null;
+            this.selectedCardElement = null;
             
             // Clear feedback
             document.getElementById('sorting-feedback').style.display = 'none';
@@ -2716,7 +2840,7 @@ def generate_web_flashcards(numbers, config, output_path):
                 card.classList.remove('correct', 'incorrect', 'revealed');
             }});
             
-            // Restart
+            // Start a new challenge (keeping game mode active)
             this.startSorting();
         }}
         
