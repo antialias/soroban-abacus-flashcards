@@ -23,7 +23,11 @@ def get_numeral_color(number, config):
 
 def generate_card_svgs(numbers, config):
     """Generate SVG content for each flashcard using existing Typst pipeline."""
-    from .generate import generate_cards_direct
+    try:
+        from .generate import generate_cards_direct
+    except ImportError:
+        # Fallback for when running tests directly
+        from generate import generate_cards_direct
     
     # Create temporary directory for SVG generation
     with tempfile.TemporaryDirectory() as tmpdir:
@@ -657,6 +661,29 @@ def generate_web_flashcards(numbers, config, output_path):
                 flex-wrap: wrap;
                 justify-content: center;
             }}
+            
+            .challenge-buttons {{
+                grid-template-columns: 1fr;
+                gap: 15px;
+                margin: 20px 0;
+            }}
+            
+            .modal-content {{
+                width: 95%;
+                max-height: 95vh;
+            }}
+            
+            .modal-header {{
+                padding: 15px 20px;
+            }}
+            
+            .modal-body {{
+                padding: 20px;
+            }}
+            
+            .modal-header h2 {{
+                font-size: 18px;
+            }}
         }}
         
         /* Card Sorting Styling */
@@ -1084,6 +1111,163 @@ def generate_web_flashcards(numbers, config, output_path):
             animation: success-pulse 0.6s ease-in-out;
         }}
         
+        /* Challenge Buttons */
+        .challenge-buttons {{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }}
+        
+        .challenge-btn {{
+            background: linear-gradient(135deg, #4a90e2, #357abd);
+            color: white;
+            border: none;
+            border-radius: 16px;
+            padding: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: left;
+            box-shadow: 0 6px 20px rgba(74, 144, 226, 0.3);
+        }}
+        
+        .challenge-btn:hover {{
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(74, 144, 226, 0.4);
+        }}
+        
+        .challenge-btn h3 {{
+            margin: 0 0 10px 0;
+            font-size: 20px;
+            font-weight: bold;
+        }}
+        
+        .challenge-btn p {{
+            margin: 0;
+            opacity: 0.9;
+            font-size: 14px;
+            line-height: 1.4;
+        }}
+        
+        .sorting-btn {{
+            background: linear-gradient(135deg, #2c5f76, #1e4a61);
+            box-shadow: 0 6px 20px rgba(44, 95, 118, 0.3);
+        }}
+        
+        .sorting-btn:hover {{
+            box-shadow: 0 8px 25px rgba(44, 95, 118, 0.4);
+        }}
+        
+        /* Modal Styling */
+        .modal {{
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            animation: fadeIn 0.3s ease-out;
+        }}
+        
+        .modal.show {{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }}
+        
+        .modal-content {{
+            background: white;
+            border-radius: 12px;
+            width: 90%;
+            max-width: 900px;
+            max-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            animation: slideIn 0.3s ease-out;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }}
+        
+        .modal-header {{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 30px;
+            border-bottom: 1px solid #eee;
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            border-radius: 12px 12px 0 0;
+        }}
+        
+        .modal-header h2 {{
+            margin: 0;
+            color: #333;
+        }}
+        
+        .modal-controls {{
+            display: flex;
+            gap: 10px;
+        }}
+        
+        .fullscreen-btn, .close-btn {{
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            padding: 5px 10px;
+            border-radius: 6px;
+            transition: background 0.2s ease;
+        }}
+        
+        .fullscreen-btn:hover, .close-btn:hover {{
+            background: rgba(0, 0, 0, 0.1);
+        }}
+        
+        .close-btn {{
+            color: #666;
+        }}
+        
+        .close-btn:hover {{
+            color: #333;
+        }}
+        
+        .modal-body {{
+            padding: 30px;
+            flex: 1;
+            overflow-y: auto;
+        }}
+        
+        /* Fullscreen modal styling */
+        .modal.fullscreen {{
+            background: rgba(0, 0, 0, 0.95);
+        }}
+        
+        .modal.fullscreen .modal-content {{
+            width: 100%;
+            height: 100%;
+            max-width: none;
+            max-height: none;
+            border-radius: 0;
+        }}
+        
+        .modal.fullscreen .modal-header {{
+            border-radius: 0;
+        }}
+        
+        /* Animations */
+        @keyframes fadeIn {{
+            from {{ opacity: 0; }}
+            to {{ opacity: 1; }}
+        }}
+        
+        @keyframes slideIn {{
+            from {{ transform: scale(0.9) translateY(-20px); opacity: 0; }}
+            to {{ transform: scale(1) translateY(0); opacity: 1; }}
+        }}
+        
         @media print {{
             body {{
                 background-color: white;
@@ -1126,10 +1310,30 @@ def generate_web_flashcards(numbers, config, output_path):
             </div>
         </div>
         
-        <!-- Speed Memory Quiz Section -->
-        <div class="quiz-section">
-            <h2>Speed Memory Quiz</h2>
-            <p>Test your soroban reading skills! Cards will be shown briefly, then you'll enter the numbers you remember.</p>
+        <!-- Challenge Buttons -->
+        <div class="challenge-buttons">
+            <button id="open-quiz-modal" class="challenge-btn quiz-btn">
+                <h3>Speed Memory Quiz</h3>
+                <p>Test your soroban reading skills with timed card displays</p>
+            </button>
+            <button id="open-sorting-modal" class="challenge-btn sorting-btn">
+                <h3>Card Sorting Challenge</h3>
+                <p>Arrange cards in order using only the abacus representations</p>
+            </button>
+        </div>
+
+        <!-- Quiz Modal -->
+        <div id="quiz-modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Speed Memory Quiz</h2>
+                    <div class="modal-controls">
+                        <button id="quiz-fullscreen-btn" class="fullscreen-btn" title="Toggle Fullscreen">⛶</button>
+                        <button id="close-quiz-modal" class="close-btn">&times;</button>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <p>Test your soroban reading skills! Cards will be shown briefly, then you'll enter the numbers you remember.</p>
             
             <div class="quiz-controls">
                 <div class="control-group">
@@ -1153,12 +1357,75 @@ def generate_web_flashcards(numbers, config, output_path):
                 
                 <button id="start-quiz" class="quiz-start-btn">Start Quiz</button>
             </div>
+
+            <!-- Quiz Game Area (hidden initially) -->
+            <div id="quiz-game" class="quiz-game" style="display: none;">
+                <div class="quiz-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                    </div>
+                    <span class="progress-text">Card <span id="current-card">1</span> of <span id="total-cards">10</span></span>
+                </div>
+                
+                <div class="quiz-display">
+                    <div id="quiz-card" class="quiz-flashcard">
+                        <!-- Card content will be inserted here -->
+                    </div>
+                    <div id="quiz-countdown" class="countdown">Get Ready...</div>
+                </div>
+            </div>
+
+            <!-- Quiz Input Phase (hidden initially) -->
+            <div id="quiz-input" class="quiz-input" style="display: none;">
+                <h3>Enter the Numbers You Remember</h3>
+                <p>Type the numbers you saw, separated by commas or spaces:</p>
+                <div class="input-container">
+                    <textarea id="answer-input" placeholder="e.g., 23, 45, 67 or 23 45 67"></textarea>
+                    <button id="submit-answers">Submit Answers</button>
+                </div>
+            </div>
+
+            <!-- Quiz Results (hidden initially) -->
+            <div id="quiz-results" class="quiz-results" style="display: none;">
+                <h3>Quiz Results</h3>
+                <div class="score-display">
+                    <div class="score-circle">
+                        <span id="score-percentage">0%</span>
+                    </div>
+                    <div class="score-details">
+                        <p><strong>Score:</strong> <span id="score-correct">0</span> / <span id="score-total">0</span> correct</p>
+                        <p><strong>Time per card:</strong> <span id="result-timing">2.0s</span></p>
+                    </div>
+                </div>
+                
+                <div class="results-breakdown">
+                    <h4>Detailed Results:</h4>
+                    <div id="results-list">
+                        <!-- Results will be inserted here -->
+                    </div>
+                </div>
+                
+                <div class="quiz-actions">
+                    <button id="retry-quiz">Try Again</button>
+                    <button id="back-to-cards">Back to Cards</button>
+                </div>
+            </div>
+                </div>
+            </div>
         </div>
         
-        <!-- Card Sorting Challenge Section -->
-        <div class="sorting-section">
-            <h2>Card Sorting Challenge</h2>
-            <p>Drag and drop the cards to arrange them in ascending order (smallest to largest). No numerals shown - rely on reading the abacus!</p>
+        <!-- Sorting Modal -->
+        <div id="sorting-modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Card Sorting Challenge</h2>
+                    <div class="modal-controls">
+                        <button id="sorting-fullscreen-btn" class="fullscreen-btn" title="Toggle Fullscreen">⛶</button>
+                        <button id="close-sorting-modal" class="close-btn">&times;</button>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <p>Click cards and positions to arrange them in ascending order (smallest to largest). No numerals shown - rely on reading the abacus!</p>
             
             <div class="sorting-controls">
                 <div class="control-group">
@@ -1201,58 +1468,7 @@ def generate_web_flashcards(numbers, config, output_path):
                     <!-- Feedback will be shown here -->
                 </div>
             </div>
-        </div>
-
-        <!-- Quiz Game Area (hidden initially) -->
-        <div id="quiz-game" class="quiz-game" style="display: none;">
-            <div class="quiz-progress">
-                <div class="progress-bar">
-                    <div class="progress-fill"></div>
                 </div>
-                <span class="progress-text">Card <span id="current-card">1</span> of <span id="total-cards">10</span></span>
-            </div>
-            
-            <div class="quiz-display">
-                <div id="quiz-card" class="quiz-flashcard">
-                    <!-- Card content will be inserted here -->
-                </div>
-                <div id="quiz-countdown" class="countdown">Get Ready...</div>
-            </div>
-        </div>
-
-        <!-- Quiz Input Phase (hidden initially) -->
-        <div id="quiz-input" class="quiz-input" style="display: none;">
-            <h3>Enter the Numbers You Remember</h3>
-            <p>Type the numbers you saw, separated by commas or spaces:</p>
-            <div class="input-container">
-                <textarea id="answer-input" placeholder="e.g., 23, 45, 67 or 23 45 67"></textarea>
-                <button id="submit-answers">Submit Answers</button>
-            </div>
-        </div>
-
-        <!-- Quiz Results (hidden initially) -->
-        <div id="quiz-results" class="quiz-results" style="display: none;">
-            <h3>Quiz Results</h3>
-            <div class="score-display">
-                <div class="score-circle">
-                    <span id="score-percentage">0%</span>
-                </div>
-                <div class="score-details">
-                    <p><strong>Score:</strong> <span id="score-correct">0</span> / <span id="score-total">0</span> correct</p>
-                    <p><strong>Time per card:</strong> <span id="result-timing">2.0s</span></p>
-                </div>
-            </div>
-            
-            <div class="results-breakdown">
-                <h4>Detailed Results:</h4>
-                <div id="results-list">
-                    <!-- Results will be inserted here -->
-                </div>
-            </div>
-            
-            <div class="quiz-actions">
-                <button id="retry-quiz">Try Again</button>
-                <button id="back-to-cards">Back to Cards</button>
             </div>
         </div>
 
@@ -1266,6 +1482,145 @@ def generate_web_flashcards(numbers, config, output_path):
     </div>
 
     <script>
+    // Modal Manager - Handles modal dialogs and fullscreen functionality
+    class ModalManager {{
+        constructor() {{
+            this.isFullscreen = false;
+            this.bindEvents();
+        }}
+        
+        bindEvents() {{
+            // Challenge button events
+            document.getElementById('open-quiz-modal').addEventListener('click', () => {{
+                this.openModal('quiz-modal');
+            }});
+            
+            document.getElementById('open-sorting-modal').addEventListener('click', () => {{
+                this.openModal('sorting-modal');
+            }});
+            
+            // Close button events
+            document.getElementById('close-quiz-modal').addEventListener('click', () => {{
+                this.closeModal('quiz-modal');
+            }});
+            
+            document.getElementById('close-sorting-modal').addEventListener('click', () => {{
+                this.closeModal('sorting-modal');
+            }});
+            
+            // Fullscreen button events
+            document.getElementById('quiz-fullscreen-btn').addEventListener('click', () => {{
+                this.toggleFullscreen('quiz-modal');
+            }});
+            
+            document.getElementById('sorting-fullscreen-btn').addEventListener('click', () => {{
+                this.toggleFullscreen('sorting-modal');
+            }});
+            
+            // Close modal when clicking outside
+            document.addEventListener('click', (e) => {{
+                if (e.target.classList.contains('modal') && e.target.classList.contains('show')) {{
+                    this.closeModal(e.target.id);
+                }}
+            }});
+            
+            // ESC key to close modal
+            document.addEventListener('keydown', (e) => {{
+                if (e.key === 'Escape') {{
+                    const openModal = document.querySelector('.modal.show');
+                    if (openModal) {{
+                        this.closeModal(openModal.id);
+                    }}
+                }}
+            }});
+            
+            // Fullscreen change events
+            document.addEventListener('fullscreenchange', () => {{
+                this.handleFullscreenChange();
+            }});
+            
+            document.addEventListener('webkitfullscreenchange', () => {{
+                this.handleFullscreenChange();
+            }});
+            
+            document.addEventListener('mozfullscreenchange', () => {{
+                this.handleFullscreenChange();
+            }});
+            
+            document.addEventListener('MSFullscreenChange', () => {{
+                this.handleFullscreenChange();
+            }});
+        }}
+        
+        openModal(modalId) {{
+            const modal = document.getElementById(modalId);
+            modal.classList.add('show');
+            document.body.style.overflow = 'hidden';
+        }}
+        
+        closeModal(modalId) {{
+            const modal = document.getElementById(modalId);
+            if (this.isFullscreen) {{
+                this.exitFullscreen();
+            }}
+            modal.classList.remove('show', 'fullscreen');
+            document.body.style.overflow = '';
+        }}
+        
+        async toggleFullscreen(modalId) {{
+            const modal = document.getElementById(modalId);
+            
+            if (!this.isFullscreen) {{
+                try {{
+                    if (modal.requestFullscreen) {{
+                        await modal.requestFullscreen();
+                    }} else if (modal.webkitRequestFullscreen) {{
+                        await modal.webkitRequestFullscreen();
+                    }} else if (modal.mozRequestFullScreen) {{
+                        await modal.mozRequestFullScreen();
+                    }} else if (modal.msRequestFullscreen) {{
+                        await modal.msRequestFullscreen();
+                    }}
+                    modal.classList.add('fullscreen');
+                }} catch (error) {{
+                    console.warn('Fullscreen not supported or failed:', error);
+                    // Fallback to CSS fullscreen
+                    modal.classList.add('fullscreen');
+                }}
+            }} else {{
+                this.exitFullscreen();
+            }}
+        }}
+        
+        exitFullscreen() {{
+            if (document.exitFullscreen) {{
+                document.exitFullscreen();
+            }} else if (document.webkitExitFullscreen) {{
+                document.webkitExitFullscreen();
+            }} else if (document.mozCancelFullScreen) {{
+                document.mozCancelFullScreen();
+            }} else if (document.msExitFullscreen) {{
+                document.msExitFullscreen();
+            }}
+        }}
+        
+        handleFullscreenChange() {{
+            const isFullscreen = !!(document.fullscreenElement || 
+                                   document.webkitFullscreenElement || 
+                                   document.mozFullScreenElement || 
+                                   document.msFullscreenElement);
+            
+            this.isFullscreen = isFullscreen;
+            
+            if (!isFullscreen) {{
+                // Remove fullscreen class from all modals when exiting fullscreen
+                document.querySelectorAll('.modal').forEach(modal => {{
+                    modal.classList.remove('fullscreen');
+                }});
+            }}
+        }}
+    }}
+    
     // Quiz functionality - No dependencies, pure JavaScript
     class SorobanQuiz {{
         constructor() {{
@@ -1330,21 +1685,18 @@ def generate_web_flashcards(numbers, config, output_path):
             }});
         }}
         
-        startQuiz() {{
+        async startQuiz() {{
             // Select random cards
             this.quizCards = this.getRandomCards(this.selectedCount);
             this.correctAnswers = this.quizCards.map(card => card.number);
             this.currentCardIndex = 0;
             
-            // Hide other sections, show quiz
-            this.hideAllSections();
+            // Show quiz game section within modal
+            this.hideQuizSections();
             document.getElementById('quiz-game').style.display = 'block';
             document.getElementById('total-cards').textContent = this.quizCards.length;
             
-            // Scroll to quiz area
-            document.getElementById('quiz-game').scrollIntoView({{ behavior: 'smooth' }});
-            
-            // Start the card sequence
+            // Start with the first card
             this.showNextCard();
         }}
         
@@ -1423,12 +1775,9 @@ def generate_web_flashcards(numbers, config, output_path):
             document.querySelector('.progress-fill').style.width = '100%';
             
             // Hide quiz game, show input
-            document.getElementById('quiz-game').style.display = 'none';
+            this.hideQuizSections();
             document.getElementById('quiz-input').style.display = 'block';
             document.getElementById('answer-input').focus();
-            
-            // Scroll to input area
-            document.getElementById('quiz-input').scrollIntoView({{ behavior: 'smooth' }});
         }}
         
         submitAnswers() {{
@@ -1460,11 +1809,8 @@ def generate_web_flashcards(numbers, config, output_path):
             this.showDetailedResults(correct);
             
             // Hide input, show results
-            document.getElementById('quiz-input').style.display = 'none';
+            this.hideQuizSections();
             document.getElementById('quiz-results').style.display = 'block';
-            
-            // Scroll to results
-            document.getElementById('quiz-results').scrollIntoView({{ behavior: 'smooth' }});
         }}
         
         calculateScore() {{
@@ -1522,21 +1868,14 @@ def generate_web_flashcards(numbers, config, output_path):
             // Clear input
             document.getElementById('answer-input').value = '';
             
-            // Hide all quiz sections, show main cards
-            this.hideAllSections();
-            document.getElementById('cards-grid').style.display = 'grid';
-            document.querySelector('.quiz-section').style.display = 'block';
-            
-            // Scroll back to top
-            document.querySelector('.header').scrollIntoView({{ behavior: 'smooth' }});
+            // Reset to initial quiz state (hide all sections, show controls)
+            this.hideQuizSections();
         }}
         
-        hideAllSections() {{
+        hideQuizSections() {{
             document.getElementById('quiz-game').style.display = 'none';
             document.getElementById('quiz-input').style.display = 'none';
             document.getElementById('quiz-results').style.display = 'none';
-            document.getElementById('cards-grid').style.display = 'none';
-            document.querySelector('.quiz-section').style.display = 'none';
         }}
         
         delay(ms) {{
@@ -2388,6 +2727,7 @@ def generate_web_flashcards(numbers, config, output_path):
     
     // Initialize quiz and sorting when DOM is loaded
     document.addEventListener('DOMContentLoaded', () => {{
+        new ModalManager();
         new SorobanQuiz();
         new SortingChallenge();
     }});
