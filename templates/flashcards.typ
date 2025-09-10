@@ -139,10 +139,13 @@
         )
         
         // Draw heaven bead
+        // Position inactive earth bead gap from reckoning bar: 19px you measured
+        // Convert to same gap for heaven: heaven-earth-gap - gap - bead-size/2
+        #let earth-gap = 19pt  // The gap you measured for earth beads
         #let heaven-y = if heaven-active == 1 {
           heaven-earth-gap - bead-size / 2 - 1pt  // Active (center just above bar)
         } else {
-          2pt  // Inactive (way up at the top)
+          heaven-earth-gap - earth-gap - bead-size / 2  // Inactive (same gap as earth, measured from reckoning bar)
         }
         
         #let bead-color = if heaven-active == 1 {
