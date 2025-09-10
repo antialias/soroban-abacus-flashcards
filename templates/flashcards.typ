@@ -139,10 +139,11 @@
         )
         
         // Draw heaven bead
+        // To match earth bead gap more closely, use larger gap from top
         #let heaven-y = if heaven-active == 1 {
           heaven-earth-gap - bead-size / 2 - 1pt  // Active (center just above bar)
         } else {
-          bead-size / 2  // Inactive (positioned at top with maximum gap in available space)
+          3pt + bead-size / 2  // Inactive (closer to top for larger gap from bar)
         }
         
         #let bead-color = if heaven-active == 1 {
