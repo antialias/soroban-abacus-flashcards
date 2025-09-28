@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v1.2.0...v1.2.1) (2025-09-28)
+
+
+### Bug Fixes
+
+* update GitHub Pages actions to v4 for better deployment reliability ([be76c23](https://github.com/antialias/soroban-abacus-flashcards/commit/be76c2355fbefd924890baad50b6e873a4e435f2))
+
 # [1.2.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v1.1.3...v1.2.0) (2025-09-28)
 
 
