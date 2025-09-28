@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v1.0.0...v1.1.0) (2025-09-28)
+
+
+### Features
+
+* add GitHub Pages Storybook deployment with dual documentation sites ([439707b](https://github.com/antialias/soroban-abacus-flashcards/commit/439707b1188e9750fb2c62aac05d54fede196417))
+
 # 1.0.0 (2025-09-28)
 
 
