@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v1.1.0...v1.1.1) (2025-09-28)
+
+
+### Bug Fixes
+
+* update GitHub Actions to use latest action versions for Storybook deployment ([f0bb411](https://github.com/antialias/soroban-abacus-flashcards/commit/f0bb411573c8496d11d560fa7efe9324015412b2))
+
 # [1.1.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v1.0.0...v1.1.0) (2025-09-28)
 
 
