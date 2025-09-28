@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/antialias/soroban-abacus-flashcards/compare/abacus-react-v1.1.1...abacus-react-v1.1.2) (2025-09-28)
+
+
+### Bug Fixes
+
+* **abacus-react:** improve workspace dependency cleanup and add validation ([11fd6f9](https://github.com/antialias/soroban-abacus-flashcards/commit/11fd6f9b3deb1122d3788a7e0698de891eeb0f3a))
+
 ## [1.1.1](https://github.com/antialias/soroban-abacus-flashcards/compare/abacus-react-v1.1.0...abacus-react-v1.1.1) (2025-09-28)
 
 
