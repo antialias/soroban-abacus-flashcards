@@ -1,3 +1,21 @@
+# [1.1.0](https://github.com/antialias/soroban-abacus-flashcards/compare/abacus-react-v1.0.0...abacus-react-v1.1.0) (2025-09-28)
+
+
+### Bug Fixes
+
+* **abacus-react:** improve publishing workflow with better version sync ([7a4ecd2](https://github.com/antialias/soroban-abacus-flashcards/commit/7a4ecd2b5970ed8b6bfde8938b36917f8e7a7176))
+* add testing mode for on-screen keyboard and fix toggle functionality ([904074c](https://github.com/antialias/soroban-abacus-flashcards/commit/904074ca821b62cd6b1e129354eb36c5dd4b5e7f))
+* redesign matching game setup page for StandardGameLayout ([cc1f27f](https://github.com/antialias/soroban-abacus-flashcards/commit/cc1f27f0f82256f9344531814e8b965fa547d555))
+* update memory pairs game to use StandardGameLayout ([8df76c0](https://github.com/antialias/soroban-abacus-flashcards/commit/8df76c08fdf4108b88ce95de252cb8bd559fc5e4))
+* update memory quiz to use StandardGameLayout ([3f86163](https://github.com/antialias/soroban-abacus-flashcards/commit/3f86163c142e577a64adfb3bf262656d2e100ced))
+
+
+### Features
+
+* create StandardGameLayout for perfect viewport sizing ([728a920](https://github.com/antialias/soroban-abacus-flashcards/commit/728a92076a6ac9ef71f0c75d2e9503575881130a))
+* implement innovative dynamic two-panel layout for on-screen keyboard ([4bb8f6d](https://github.com/antialias/soroban-abacus-flashcards/commit/4bb8f6daf1f3eecb5cbaf31bf4057f43e43aeb07))
+* implement simple fixed bottom keyboard bar ([9ef72d7](https://github.com/antialias/soroban-abacus-flashcards/commit/9ef72d7e88a6a9b30cfd7a7d3944197cc1e0037a))
+
 # 1.0.0 (2025-09-28)
 
 
