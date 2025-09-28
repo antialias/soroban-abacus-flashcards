@@ -1,3 +1,10 @@
+## [1.1.3](https://github.com/antialias/soroban-abacus-flashcards/compare/abacus-react-v1.1.2...abacus-react-v1.1.3) (2025-09-28)
+
+
+### Bug Fixes
+
+* **abacus-react:** force npm to use GitHub Packages registry ([5e6c901](https://github.com/antialias/soroban-abacus-flashcards/commit/5e6c901f73a68b60ec05f19c4a991ca8affc1589))
+
 ## [1.1.2](https://github.com/antialias/soroban-abacus-flashcards/compare/abacus-react-v1.1.1...abacus-react-v1.1.2) (2025-09-28)
 
 
