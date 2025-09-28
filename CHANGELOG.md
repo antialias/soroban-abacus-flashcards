@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v1.1.3...v1.2.0) (2025-09-28)
+
+
+### Features
+
+* trigger storybook deployment after enabling GitHub Pages ([64dc94e](https://github.com/antialias/soroban-abacus-flashcards/commit/64dc94e91e089fadbdb75fbbf3a6164a2d224ef4))
+
 ## [1.1.3](https://github.com/antialias/soroban-abacus-flashcards/compare/v1.1.2...v1.1.3) (2025-09-28)
 
 
