@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/antialias/soroban-abacus-flashcards/compare/v1.1.1...v1.1.2) (2025-09-28)
+
+
+### Bug Fixes
+
+* upgrade Node.js to version 20 for Storybook compatibility ([4c33872](https://github.com/antialias/soroban-abacus-flashcards/commit/4c338726c13af623b1536f75fe6a18e0ab529377))
+
 ## [1.1.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v1.1.0...v1.1.1) (2025-09-28)
 
 
