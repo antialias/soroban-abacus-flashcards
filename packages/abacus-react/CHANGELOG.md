@@ -1,3 +1,17 @@
+# [1.2.0](https://github.com/antialias/soroban-abacus-flashcards/compare/abacus-react-v1.1.3...abacus-react-v1.2.0) (2025-09-28)
+
+
+### Bug Fixes
+
+* **abacus-react:** add debugging and explicit authentication for npm publish ([b82e9bb](https://github.com/antialias/soroban-abacus-flashcards/commit/b82e9bb9d6adf3793065067f96c6fbbfd1a78bca))
+* **abacus-react:** add packages: write permission for GitHub Packages publishing ([8e16487](https://github.com/antialias/soroban-abacus-flashcards/commit/8e1648737de9305f82872cb9b86b98b5045f77a7))
+* add missing GameThemeContext file for themed navigation ([d4fbdd1](https://github.com/antialias/soroban-abacus-flashcards/commit/d4fbdd14630e2f2fcdbc0de23ccc4ccd9eb74b48))
+
+
+### Features
+
+* implement game theming system with context-based navigation chrome ([3fa11c4](https://github.com/antialias/soroban-abacus-flashcards/commit/3fa11c4fbcbeabeb3bdd0db38374fb9a13cbb754))
+
 ## [1.1.3](https://github.com/antialias/soroban-abacus-flashcards/compare/abacus-react-v1.1.2...abacus-react-v1.1.3) (2025-09-28)
 
 
