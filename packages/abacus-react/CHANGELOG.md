@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/antialias/soroban-abacus-flashcards/compare/abacus-react-v1.1.0...abacus-react-v1.1.1) (2025-09-28)
+
+
+### Bug Fixes
+
+* **abacus-react:** resolve workspace dependencies before npm publish ([834b062](https://github.com/antialias/soroban-abacus-flashcards/commit/834b062b2d22356b9d96bb9c3c444eccaa51d793))
+
 # [1.1.0](https://github.com/antialias/soroban-abacus-flashcards/compare/abacus-react-v1.0.0...abacus-react-v1.1.0) (2025-09-28)
 
 
