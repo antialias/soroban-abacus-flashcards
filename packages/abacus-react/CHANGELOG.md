@@ -1,3 +1,25 @@
+# [1.5.0](https://github.com/antialias/soroban-abacus-flashcards/compare/abacus-react-v1.4.0...abacus-react-v1.5.0) (2025-09-29)
+
+
+### Bug Fixes
+
+* remove frozen lockfile flag from publishing workflow to resolve dependency installation issues ([18af973](https://github.com/antialias/soroban-abacus-flashcards/commit/18af9730ffbcd822da292161815ffd09ad97f66c))
+* resolve mini navigation game name persistence across all routes ([3fa314a](https://github.com/antialias/soroban-abacus-flashcards/commit/3fa314aaa5de7b9c26a5390a52996c7d5ef9ea51))
+* update pnpm version to 8.15.6 to resolve ERR_INVALID_THIS error in workflow ([0b9bfed](https://github.com/antialias/soroban-abacus-flashcards/commit/0b9bfed12dfd48d9eacae69b378e28e188d3f2b1))
+* update tutorial tests to use consolidated AbacusDisplayProvider ([899fc69](https://github.com/antialias/soroban-abacus-flashcards/commit/899fc6975f1fa14ddb42b2ead03524c9389e7c38))
+
+
+### Features
+
+* **abacus-react:** update description to mention GitHub Packages support ([af77256](https://github.com/antialias/soroban-abacus-flashcards/commit/af7725622e15801f9e56af12930c4e14c5e67c53))
+* add comprehensive E2E testing with Playwright ([d58053f](https://github.com/antialias/soroban-abacus-flashcards/commit/d58053fad3ab06b9884b46dbb6807e938426dbb5))
+* add comprehensive Storybook stories for PlayerStatusBar ([8973241](https://github.com/antialias/soroban-abacus-flashcards/commit/8973241297d50604028bde95b9ebbf033688db89))
+* add consecutive match tracking system for escalating celebrations ([111c0ce](https://github.com/antialias/soroban-abacus-flashcards/commit/111c0ced715be7cade006387d01f4e2f52c59be9))
+* add PlayerStatusBar with escalating celebration animations ([7f8c90a](https://github.com/antialias/soroban-abacus-flashcards/commit/7f8c90acea84b208df0e3e23e80a02cf425c0950))
+* add sound settings support to AbacusReact component ([90b9ffa](https://github.com/antialias/soroban-abacus-flashcards/commit/90b9ffa0d8659891bfe8062217e45245bbff5d5a))
+* implement cozy sound effects for abacus with variable intensity ([c95be1d](https://github.com/antialias/soroban-abacus-flashcards/commit/c95be1df6dbe74aad08b9a1feb1f33688212be0b))
+* integrate user profiles with PlayerStatusBar and game results ([beff646](https://github.com/antialias/soroban-abacus-flashcards/commit/beff64652c72a5cd0c008891b6dc2f5167e28b62))
+
 # [1.4.0](https://github.com/antialias/soroban-abacus-flashcards/compare/abacus-react-v1.3.0...abacus-react-v1.4.0) (2025-09-29)
 
 
