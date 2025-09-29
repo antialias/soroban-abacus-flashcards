@@ -1,3 +1,19 @@
+# [1.3.0](https://github.com/antialias/soroban-abacus-flashcards/compare/abacus-react-v1.2.0...abacus-react-v1.3.0) (2025-09-29)
+
+
+### Bug Fixes
+
+* ensure game names persist in navigation on page reload ([9191b12](https://github.com/antialias/soroban-abacus-flashcards/commit/9191b124934b9a5577a91f67e8fb6f83b173cc4f))
+* implement route-based theme detection for page reload persistence ([3dcff2f](https://github.com/antialias/soroban-abacus-flashcards/commit/3dcff2ff888558d7b746a732cfd53a1897c2b1df))
+* improve navigation chrome background color extraction from gradients ([00bfcbc](https://github.com/antialias/soroban-abacus-flashcards/commit/00bfcbcdee28d63094c09a4ae0359789ebcf4a22))
+* resolve SSR/client hydration mismatch for themed navigation ([301e65d](https://github.com/antialias/soroban-abacus-flashcards/commit/301e65dfa66d0de6b6efbbfbd09b717308ab57f1))
+
+
+### Features
+
+* complete themed navigation system with game-specific chrome ([0a4bf17](https://github.com/antialias/soroban-abacus-flashcards/commit/0a4bf1765cbd86bf6f67fb3b99c577cfe3cce075))
+* implement cozy sound effects for abacus with variable intensity ([cea5fad](https://github.com/antialias/soroban-abacus-flashcards/commit/cea5fadbe4b4d5ae9e0ee988e9b1c4db09f21ba6))
+
 # [1.2.0](https://github.com/antialias/soroban-abacus-flashcards/compare/abacus-react-v1.1.3...abacus-react-v1.2.0) (2025-09-28)
 
 
