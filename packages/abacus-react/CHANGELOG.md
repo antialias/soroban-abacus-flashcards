@@ -1,3 +1,13 @@
+## [1.5.1](https://github.com/antialias/soroban-abacus-flashcards/compare/abacus-react-v1.5.0...abacus-react-v1.5.1) (2025-09-29)
+
+
+### Bug Fixes
+
+* resolve JSX parsing error with emoji in guide page ([bf046c9](https://github.com/antialias/soroban-abacus-flashcards/commit/bf046c999b51ba422284a139ebadde2c35187ac7))
+* resolve TypeScript errors in PlayerStatusBar component ([a935e5a](https://github.com/antialias/soroban-abacus-flashcards/commit/a935e5aed8c4584d21c8fc4359453b7dec494464))
+* restore navigation to all pages using PageWithNav ([183706d](https://github.com/antialias/soroban-abacus-flashcards/commit/183706dade12080a748b0c074d0bd71fb0471d7e))
+* update workflow to support Personal Access Token for GitHub Packages publishing auth ([ae4b71b](https://github.com/antialias/soroban-abacus-flashcards/commit/ae4b71b98655364887a729ef9d2b67b6a753d6e9))
+
 # [1.5.0](https://github.com/antialias/soroban-abacus-flashcards/compare/abacus-react-v1.4.0...abacus-react-v1.5.0) (2025-09-29)
 
 
