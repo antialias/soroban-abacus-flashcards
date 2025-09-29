@@ -1,3 +1,17 @@
+# [1.4.0](https://github.com/antialias/soroban-abacus-flashcards/compare/abacus-react-v1.3.0...abacus-react-v1.4.0) (2025-09-29)
+
+
+### Bug Fixes
+
+* export missing hooks and types from @soroban/abacus-react package ([423ba55](https://github.com/antialias/soroban-abacus-flashcards/commit/423ba5535023928f1e0198b2bd01c3c6cf7ee848))
+* migrate viewport from metadata to separate viewport export ([1fe12c4](https://github.com/antialias/soroban-abacus-flashcards/commit/1fe12c4837b1229d0f0ab93c55d0ffb504eb8721))
+
+
+### Features
+
+* add middleware for pathname header support in [@nav](https://github.com/nav) fallback ([b7e7c4b](https://github.com/antialias/soroban-abacus-flashcards/commit/b7e7c4beff1e37e90e9e20a890c5af7a134a7fca))
+* implement [@nav](https://github.com/nav) parallel routes for game name display in mini navigation ([885fc72](https://github.com/antialias/soroban-abacus-flashcards/commit/885fc725dc0bb41bbb5e500c2c907c6182192854))
+
 # [1.3.0](https://github.com/antialias/soroban-abacus-flashcards/compare/abacus-react-v1.2.0...abacus-react-v1.3.0) (2025-09-29)
 
 
