@@ -1,3 +1,16 @@
+# [1.7.0](https://github.com/antialias/soroban-abacus-flashcards/compare/abacus-react-v1.6.0...abacus-react-v1.7.0) (2025-10-01)
+
+
+### Bug Fixes
+
+* **abacus-react:** apply global columnPosts styling and fix reckoning bar width ([bb9959f](https://github.com/antialias/soroban-abacus-flashcards/commit/bb9959f7fb8985e0c6496247306838d97e7121f7))
+* **complement-race:** improve abacus display in equations ([491b299](https://github.com/antialias/soroban-abacus-flashcards/commit/491b299e28ee82c49069cf892609b1b2b3c0aee3))
+
+
+### Features
+
+* **complement-race:** add abacus displays to pressure gauge ([c5ebc63](https://github.com/antialias/soroban-abacus-flashcards/commit/c5ebc635afb6e78f9f4b1192ff39dcec53879a60))
+
 # [1.6.0](https://github.com/antialias/soroban-abacus-flashcards/compare/abacus-react-v1.5.1...abacus-react-v1.6.0) (2025-10-01)
 
 
