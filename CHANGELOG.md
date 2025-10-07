@@ -1,3 +1,15 @@
+## [2.3.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.2.1...v2.3.0) (2025-10-07)
+
+
+### Features
+
+* add Biome + ESLint linting setup ([fc1838f](https://github.com/antialias/soroban-abacus-flashcards/commit/fc1838f4f53a4f8d8f1c5303de3a63f12d9c9303))
+
+
+### Styles
+
+* apply Biome formatting to entire codebase ([60d70cd](https://github.com/antialias/soroban-abacus-flashcards/commit/60d70cd2f2f2b1d250c4c645889af4334968cb7e))
+
 ## [2.2.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.2.0...v2.2.1) (2025-10-07)
 
 
