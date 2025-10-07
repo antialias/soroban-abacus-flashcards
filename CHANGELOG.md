@@ -1,3 +1,10 @@
+## [2.0.6](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.0.5...v2.0.6) (2025-10-07)
+
+
+### Bug Fixes
+
+* ignore nested node_modules in Docker ([f554592](https://github.com/antialias/soroban-abacus-flashcards/commit/f554592272c2e92d7f1ec6550211518de9c3242f))
+
 ## [2.0.5](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.0.4...v2.0.5) (2025-10-07)
 
 
