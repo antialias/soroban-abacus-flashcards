@@ -1,3 +1,10 @@
+## [2.0.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.0.0...v2.0.1) (2025-10-07)
+
+
+### Bug Fixes
+
+* add @types/minimatch to abacus-react devDependencies ([fa45475](https://github.com/antialias/soroban-abacus-flashcards/commit/fa4547543dcd0cddc7cc9ff9da62f60a4717fb1f))
+
 ## [2.0.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v1.2.1...v2.0.0) (2025-10-07)
 
 
