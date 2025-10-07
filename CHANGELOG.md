@@ -1,3 +1,10 @@
+## [2.0.3](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.0.2...v2.0.3) (2025-10-07)
+
+
+### Bug Fixes
+
+* remove duplicate PlayerStatusBar story file from arcade ([4e721f7](https://github.com/antialias/soroban-abacus-flashcards/commit/4e721f765a29fe8628d4e34ef94cdf5728eea3dc))
+
 ## [2.0.2](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.0.1...v2.0.2) (2025-10-07)
 
 
