@@ -1,3 +1,10 @@
+## [2.1.3](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.1.2...v2.1.3) (2025-10-07)
+
+
+### Bug Fixes
+
+* remove .npmrc from Dockerfile COPY ([e71c2b4](https://github.com/antialias/soroban-abacus-flashcards/commit/e71c2b4da85076dfc97401fc170cd88cb0aa4375))
+
 ## [2.1.2](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.1.1...v2.1.2) (2025-10-07)
 
 
