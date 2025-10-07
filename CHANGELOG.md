@@ -1,3 +1,10 @@
+## [2.1.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.1.0...v2.1.1) (2025-10-07)
+
+
+### Bug Fixes
+
+* ignore all node_modules in Docker ([4792dde](https://github.com/antialias/soroban-abacus-flashcards/commit/4792dde1beef9c6cb84a27bc6bb6acfa43919a72))
+
 ## [2.1.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.0.7...v2.1.0) (2025-10-07)
 
 
