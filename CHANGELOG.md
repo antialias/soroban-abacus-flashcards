@@ -1,3 +1,10 @@
+## [2.0.5](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.0.4...v2.0.5) (2025-10-07)
+
+
+### Bug Fixes
+
+* use .npmrc in Docker for hoisted mode consistency ([2df8cdc](https://github.com/antialias/soroban-abacus-flashcards/commit/2df8cdc88ed03b6b04642a3441e17c6fda11d2a5))
+
 ## [2.0.4](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.0.3...v2.0.4) (2025-10-07)
 
 
