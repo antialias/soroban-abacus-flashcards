@@ -1,3 +1,10 @@
+## [2.0.2](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.0.1...v2.0.2) (2025-10-07)
+
+
+### Bug Fixes
+
+* update Dockerfile pnpm version and fix TypeScript config ([43077a8](https://github.com/antialias/soroban-abacus-flashcards/commit/43077a80e271a793c88f100874914ae6f3c515b5))
+
 ## [2.0.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.0.0...v2.0.1) (2025-10-07)
 
 
