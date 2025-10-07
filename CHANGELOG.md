@@ -1,3 +1,10 @@
+## [2.2.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.2.0...v2.2.1) (2025-10-07)
+
+
+### Bug Fixes
+
+* remove remaining typst-dependent files ([d1b9b72](https://github.com/antialias/soroban-abacus-flashcards/commit/d1b9b72cfc2f2ba36c40d7ae54bc6fdfcc5f34da))
+
 ## [2.2.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.1.3...v2.2.0) (2025-10-07)
 
 
