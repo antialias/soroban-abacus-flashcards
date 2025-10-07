@@ -1,3 +1,29 @@
+## [2.3.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.3.0...v2.3.1) (2025-10-07)
+
+
+### Bug Fixes
+
+* add missing DOMPoint properties to getPointAtLength mock ([1e17278](https://github.com/antialias/soroban-abacus-flashcards/commit/1e17278f942b3fbcc5d05be746178f2e780f0bd9))
+* add missing name property to Passenger test mocks ([f8ca248](https://github.com/antialias/soroban-abacus-flashcards/commit/f8ca2488447e89151085942f708f6acf350a2747))
+* add non-null assertions to skillConfiguration utilities ([9c71092](https://github.com/antialias/soroban-abacus-flashcards/commit/9c7109227822884d25f8546739c80c6e7491e28d))
+* add optional chaining to stepBeadHighlights access ([a5fac5c](https://github.com/antialias/soroban-abacus-flashcards/commit/a5fac5c75c8cd67b218a5fd5ad98818dad74ab67))
+* add showAsAbacus property to ComplementQuestion type ([4adcc09](https://github.com/antialias/soroban-abacus-flashcards/commit/4adcc096430fbb03f0a8b2f0aef4be239aff9cd0))
+* add userId to optimistic player in useCreatePlayer ([5310463](https://github.com/antialias/soroban-abacus-flashcards/commit/5310463becd0974291cff49522ae5669a575410d))
+* change TypeScript moduleResolution from bundler to node ([327aee0](https://github.com/antialias/soroban-abacus-flashcards/commit/327aee0b4b5c0b0b2bf3eeb48d861bb3068f6127))
+* convert Jest mocks to Vitest in useSteamJourney tests ([e067271](https://github.com/antialias/soroban-abacus-flashcards/commit/e06727160c70a1ab38a003104d1fef8fb83ff92d))
+* convert player IDs from number to string in arcade tests ([72db1f4](https://github.com/antialias/soroban-abacus-flashcards/commit/72db1f4a2c3f930025cd5ced3fcf7c810dcc569d))
+* rewrite layout.nav.test to match actual RootLayout props ([a085de8](https://github.com/antialias/soroban-abacus-flashcards/commit/a085de816fcdeb055addabb8aec391b111cb5f94))
+* update useArcadeGuard tests with proper useViewerId mock ([4eb49d1](https://github.com/antialias/soroban-abacus-flashcards/commit/4eb49d1d44e1d85526ef6564f88a8fbcebffb4d2))
+* use Object.defineProperty for NODE_ENV in middleware tests ([e73191a](https://github.com/antialias/soroban-abacus-flashcards/commit/e73191a7298dbb6dd15da594267ea6221062c36b))
+* wrap Buffer in Uint8Array for Next.js Response API ([98384d2](https://github.com/antialias/soroban-abacus-flashcards/commit/98384d264e4a10d1836aa9f2e69151b122ffa7b0))
+
+
+### Documentation
+
+* add explicit package.json script references to regime docs ([3353bca](https://github.com/antialias/soroban-abacus-flashcards/commit/3353bcadc2849104248c624973274ed90b86722a))
+* establish mandatory code quality regime for Claude Code ([dd11043](https://github.com/antialias/soroban-abacus-flashcards/commit/dd1104310f4e0e85640730ea0e96e4adda4bc505))
+* expand quality regime to define "done" for all work ([f92f7b5](https://github.com/antialias/soroban-abacus-flashcards/commit/f92f7b592af38ba9d0f5b1db3a061d63d92a5093))
+
 ## [2.3.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.2.1...v2.3.0) (2025-10-07)
 
 
