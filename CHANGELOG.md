@@ -1,3 +1,10 @@
+## [2.1.2](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.1.1...v2.1.2) (2025-10-07)
+
+
+### Bug Fixes
+
+* revert to default pnpm mode for Docker compatibility ([bd0092e](https://github.com/antialias/soroban-abacus-flashcards/commit/bd0092e69ac4f74ea89b8d31399cf72f57484cbb))
+
 ## [2.1.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.1.0...v2.1.1) (2025-10-07)
 
 
