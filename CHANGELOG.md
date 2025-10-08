@@ -1,3 +1,10 @@
+## [2.8.3](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.8.2...v2.8.3) (2025-10-08)
+
+
+### Bug Fixes
+
+* remove ArcadeGuardedPage from room page to prevent redirect loop ([4686f59](https://github.com/antialias/soroban-abacus-flashcards/commit/4686f59d245b2b502dc0764c223a5ce84bf1af44))
+
 ## [2.8.2](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.8.1...v2.8.2) (2025-10-08)
 
 
