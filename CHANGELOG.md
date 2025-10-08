@@ -1,3 +1,10 @@
+## [2.4.4](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.4.3...v2.4.4) (2025-10-08)
+
+
+### Bug Fixes
+
+* correctly access getSocketIO from dynamic import ([30abf33](https://github.com/antialias/soroban-abacus-flashcards/commit/30abf33ee86b36f2a98014e5b017fa8e466a2107))
+
 ## [2.4.3](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.4.2...v2.4.3) (2025-10-08)
 
 
