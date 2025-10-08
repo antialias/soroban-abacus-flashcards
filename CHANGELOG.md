@@ -1,3 +1,10 @@
+## [2.8.2](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.8.1...v2.8.2) (2025-10-08)
+
+
+### Bug Fixes
+
+* revert to showing only active players in room games ([87cc0b6](https://github.com/antialias/soroban-abacus-flashcards/commit/87cc0b64fb5f3debaf1d2f122aecfefc62922fed))
+
 ## [2.8.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.8.0...v2.8.1) (2025-10-08)
 
 
