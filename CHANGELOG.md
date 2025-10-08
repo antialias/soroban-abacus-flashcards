@@ -1,3 +1,19 @@
+## [2.4.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.3.1...v2.4.0) (2025-10-08)
+
+
+### Features
+
+* add arcade room/session info and network players to nav ([6800747](https://github.com/antialias/soroban-abacus-flashcards/commit/6800747f80a29c91ba0311a8330d594c1074097d))
+* add real-time WebSocket updates for room membership ([7ebb2be](https://github.com/antialias/soroban-abacus-flashcards/commit/7ebb2be3927762a5fe9b6fb7fb15d6b88abb7b6a))
+* implement modal room enforcement (one room per user) ([f005fbb](https://github.com/antialias/soroban-abacus-flashcards/commit/f005fbbb773f4d250b80d71593490976af82d5a5))
+* improve room navigation and membership UI ([bc219c2](https://github.com/antialias/soroban-abacus-flashcards/commit/bc219c2ad66707f03e7a6cf587b9d190c736e26d))
+
+
+### Bug Fixes
+
+* auto-cleanup orphaned arcade sessions without valid rooms ([3c002ab](https://github.com/antialias/soroban-abacus-flashcards/commit/3c002ab29d1b72a0e1ffb70bb0744dc560e7bdc2))
+* show correct join/leave button based on room membership ([5751dfe](https://github.com/antialias/soroban-abacus-flashcards/commit/5751dfef5c81981937cd5300c4256e5b74bb7488))
+
 ## [2.3.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.3.0...v2.3.1) (2025-10-07)
 
 
