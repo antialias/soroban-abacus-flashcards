@@ -1,3 +1,10 @@
+## [2.4.6](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.4.5...v2.4.6) (2025-10-08)
+
+
+### Bug Fixes
+
+* real-time room member updates via globalThis socket.io sharing ([94a1d9b](https://github.com/antialias/soroban-abacus-flashcards/commit/94a1d9b11058bfb4b54a4753e143cf85f215e913))
+
 ## [2.4.5](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.4.4...v2.4.5) (2025-10-08)
 
 
