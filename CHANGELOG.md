@@ -1,3 +1,15 @@
+## [2.7.4](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.7.3...v2.7.4) (2025-10-08)
+
+
+### Bug Fixes
+
+* respect enabled flag in useArcadeGuard WebSocket redirects ([01ff114](https://github.com/antialias/soroban-abacus-flashcards/commit/01ff114258ff7ab43ef2bd79b41c7035fe02ac70))
+
+
+### Code Refactoring
+
+* move room management pages to /arcade-rooms ([4316687](https://github.com/antialias/soroban-abacus-flashcards/commit/431668729cfb145d6e0c13947de2a82f27fa400d))
+
 ## [2.7.3](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.7.2...v2.7.3) (2025-10-08)
 
 
