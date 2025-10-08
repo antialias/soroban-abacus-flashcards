@@ -1,3 +1,10 @@
+## [2.4.3](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.4.2...v2.4.3) (2025-10-08)
+
+
+### Bug Fixes
+
+* resolve socket-server import path for Next.js build ([12c3c37](https://github.com/antialias/soroban-abacus-flashcards/commit/12c3c37ff8e1d3df71d72e527c08fa975043c504))
+
 ## [2.4.2](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.4.1...v2.4.2) (2025-10-08)
 
 
