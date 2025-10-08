@@ -1,3 +1,10 @@
+## [2.5.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.4.6...v2.5.0) (2025-10-08)
+
+
+### Features
+
+* display room info and network players in mini app nav ([5e3261f](https://github.com/antialias/soroban-abacus-flashcards/commit/5e3261f3bec8c19ec88c9a35a7e6ef8eda88a55e))
+
 ## [2.4.6](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.4.5...v2.4.6) (2025-10-08)
 
 
