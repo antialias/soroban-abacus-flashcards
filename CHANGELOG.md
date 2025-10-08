@@ -1,3 +1,15 @@
+## [2.8.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.7.4...v2.8.0) (2025-10-08)
+
+
+### Features
+
+* implement room-wide multi-user game state synchronization ([8175c43](https://github.com/antialias/soroban-abacus-flashcards/commit/8175c43533c474fff48eb128c97747033bfb434a))
+
+
+### Tests
+
+* add comprehensive tests for arcade guard and room navigation ([b49630f](https://github.com/antialias/soroban-abacus-flashcards/commit/b49630f3cb02ebbac75b4680948bbface314dccb))
+
 ## [2.7.4](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.7.3...v2.7.4) (2025-10-08)
 
 
