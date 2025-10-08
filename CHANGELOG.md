@@ -1,3 +1,10 @@
+## [2.7.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.6.0...v2.7.0) (2025-10-08)
+
+
+### Features
+
+* extend GameModeContext to support room-based multiplayer ([ee6094d](https://github.com/antialias/soroban-abacus-flashcards/commit/ee6094d59d26a9e80ba5d023ca6dc13143bea308))
+
 ## [2.6.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.5.0...v2.6.0) (2025-10-08)
 
 
