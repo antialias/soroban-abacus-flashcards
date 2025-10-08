@@ -1,3 +1,10 @@
+## [2.4.2](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.4.1...v2.4.2) (2025-10-08)
+
+
+### Bug Fixes
+
+* broadcast member join/leave events immediately via API ([ebfc88c](https://github.com/antialias/soroban-abacus-flashcards/commit/ebfc88c5ea0a8a0fdda039fa129e1054b9c42e65))
+
 ## [2.4.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.4.0...v2.4.1) (2025-10-08)
 
 
