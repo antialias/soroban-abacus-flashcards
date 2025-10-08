@@ -1,3 +1,10 @@
+## [2.7.3](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.7.2...v2.7.3) (2025-10-08)
+
+
+### Bug Fixes
+
+* set room sessions to use /arcade/room URL ([9dac431](https://github.com/antialias/soroban-abacus-flashcards/commit/9dac431c1f91c246f67a059cda3cff6cbef40a43))
+
 ## [2.7.2](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.7.1...v2.7.2) (2025-10-08)
 
 
