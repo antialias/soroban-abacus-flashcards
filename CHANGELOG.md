@@ -1,3 +1,10 @@
+## [2.4.5](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.4.4...v2.4.5) (2025-10-08)
+
+
+### Bug Fixes
+
+* send all members (not just online) in socket broadcasts ([3fa6cce](https://github.com/antialias/soroban-abacus-flashcards/commit/3fa6cce17a7acd940cf5a9e6433bf6c4b497540c))
+
 ## [2.4.4](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.4.3...v2.4.4) (2025-10-08)
 
 
