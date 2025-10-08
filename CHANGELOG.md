@@ -1,3 +1,10 @@
+## [2.4.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.4.0...v2.4.1) (2025-10-08)
+
+
+### Bug Fixes
+
+* make leave room button actually remove user from room ([49f12f8](https://github.com/antialias/soroban-abacus-flashcards/commit/49f12f8cab631fedd33f1bc09febfdc95e444625))
+
 ## [2.4.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.3.1...v2.4.0) (2025-10-08)
 
 
