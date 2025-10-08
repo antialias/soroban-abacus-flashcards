@@ -1,3 +1,10 @@
+## [2.7.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.7.0...v2.7.1) (2025-10-08)
+
+
+### Bug Fixes
+
+* resolve race condition in /arcade/room redirect ([5ed2ab2](https://github.com/antialias/soroban-abacus-flashcards/commit/5ed2ab21cab408147081a493c8dd6b1de48b2d01))
+
 ## [2.7.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.6.0...v2.7.0) (2025-10-08)
 
 
