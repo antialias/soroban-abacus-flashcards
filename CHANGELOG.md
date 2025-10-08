@@ -1,3 +1,10 @@
+## [2.7.2](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.7.1...v2.7.2) (2025-10-08)
+
+
+### Bug Fixes
+
+* add hasAttemptedFetch flag to prevent premature redirect ([c30f585](https://github.com/antialias/soroban-abacus-flashcards/commit/c30f58581028878350282cad5231d614590d9f2b))
+
 ## [2.7.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.7.0...v2.7.1) (2025-10-08)
 
 
