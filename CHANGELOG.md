@@ -1,3 +1,10 @@
+## [2.6.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.5.0...v2.6.0) (2025-10-08)
+
+
+### Features
+
+* refactor room addressing to /arcade/room ([e7d2a73](https://github.com/antialias/soroban-abacus-flashcards/commit/e7d2a73ddf2048691325a18e3d71a7ece444c131))
+
 ## [2.5.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.4.6...v2.5.0) (2025-10-08)
 
 
