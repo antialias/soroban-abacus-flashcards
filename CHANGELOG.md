@@ -1,3 +1,11 @@
+## [2.10.2](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.10.1...v2.10.2) (2025-10-09)
+
+
+### Bug Fixes
+
+* convert guestId to internal userId for player ownership check ([3a01f46](https://github.com/antialias/soroban-abacus-flashcards/commit/3a01f4637d2081c66fe37c7f8cfee229442ec744))
+* implement shared session architecture for room-based multiplayer ([2856f4b](https://github.com/antialias/soroban-abacus-flashcards/commit/2856f4b83fbcc6483d96cc6e7da2fe5bc911625d))
+
 ## [2.10.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.10.0...v2.10.1) (2025-10-09)
 
 
