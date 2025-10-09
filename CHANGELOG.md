@@ -1,3 +1,10 @@
+## [2.16.5](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.16.4...v2.16.5) (2025-10-09)
+
+
+### Bug Fixes
+
+* correct node_modules path for pnpm symlinks in Docker ([c12351f](https://github.com/antialias/soroban-abacus-flashcards/commit/c12351f2c99daaed710a1136eb13f6ccc54cbcff))
+
 ## [2.16.4](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.16.3...v2.16.4) (2025-10-09)
 
 
