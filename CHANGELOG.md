@@ -1,3 +1,10 @@
+## [2.14.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.13.0...v2.14.0) (2025-10-09)
+
+
+### Features
+
+* improve hover avatars with smooth animation and 3D elevation ([71b11f4](https://github.com/antialias/soroban-abacus-flashcards/commit/71b11f4ef08a5f9c3f1c1aaabca21ef023d5c0ce))
+
 ## [2.13.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.12.3...v2.13.0) (2025-10-09)
 
 
