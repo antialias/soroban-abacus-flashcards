@@ -1,3 +1,10 @@
+## [2.12.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.12.0...v2.12.1) (2025-10-09)
+
+
+### Bug Fixes
+
+* export MemoryPairsContext to fix provider hook error ([80ad33e](https://github.com/antialias/soroban-abacus-flashcards/commit/80ad33eec0b6946702eaa9cf1b1c246852864b00))
+
 ## [2.12.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.11.0...v2.12.0) (2025-10-09)
 
 
