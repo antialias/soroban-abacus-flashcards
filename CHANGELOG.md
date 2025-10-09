@@ -1,3 +1,10 @@
+## [2.16.2](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.16.1...v2.16.2) (2025-10-09)
+
+
+### Bug Fixes
+
+* use only local user's players in LocalMemoryPairsProvider ([c26138f](https://github.com/antialias/soroban-abacus-flashcards/commit/c26138ffb55a237a99cb6ff399c8a2ac54a22b51))
+
 ## [2.16.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.16.0...v2.16.1) (2025-10-09)
 
 
