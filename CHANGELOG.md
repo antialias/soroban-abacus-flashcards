@@ -1,3 +1,10 @@
+## [2.14.2](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.14.1...v2.14.2) (2025-10-09)
+
+
+### Bug Fixes
+
+* correct avatar positioning to prevent fly-in animation ([573d0df](https://github.com/antialias/soroban-abacus-flashcards/commit/573d0df20dcdac41021c46feb423dbf3782728f6))
+
 ## [2.14.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.14.0...v2.14.1) (2025-10-09)
 
 
