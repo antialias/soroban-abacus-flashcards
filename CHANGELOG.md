@@ -1,3 +1,10 @@
+## [2.12.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.11.0...v2.12.0) (2025-10-09)
+
+
+### Features
+
+* add networked hover state infrastructure for multiplayer presence ([d149799](https://github.com/antialias/soroban-abacus-flashcards/commit/d14979907c5df9b793a1c110028fc5b54457f507))
+
 ## [2.11.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.10.1...v2.11.0) (2025-10-09)
 
 
