@@ -1,3 +1,10 @@
+## [2.10.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.9.0...v2.10.0) (2025-10-09)
+
+
+### Features
+
+* implement rich Radix UI tooltips for player avatars ([d03c789](https://github.com/antialias/soroban-abacus-flashcards/commit/d03c7898799b378f912f47d7267a00bc7ce3d580))
+
 ## [2.9.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.8.7...v2.9.0) (2025-10-09)
 
 
