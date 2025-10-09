@@ -1,3 +1,10 @@
+## [2.10.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.10.0...v2.10.1) (2025-10-09)
+
+
+### Bug Fixes
+
+* enforce player ownership authorization for multiplayer games ([71b0aac](https://github.com/antialias/soroban-abacus-flashcards/commit/71b0aac13c970c03fe8d296d41e9472ad72a00fa))
+
 ## [2.10.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.9.0...v2.10.0) (2025-10-09)
 
 
