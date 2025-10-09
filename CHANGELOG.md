@@ -1,3 +1,10 @@
+## [2.14.3](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.14.2...v2.14.3) (2025-10-09)
+
+
+### Bug Fixes
+
+* enable smooth spring animations between card hovers ([8d53b58](https://github.com/antialias/soroban-abacus-flashcards/commit/8d53b589aa17ebc6d0a9251b3006fd8a90f90a61))
+
 ## [2.14.2](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.14.1...v2.14.2) (2025-10-09)
 
 
