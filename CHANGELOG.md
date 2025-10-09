@@ -1,3 +1,10 @@
+## [2.16.3](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.16.2...v2.16.3) (2025-10-09)
+
+
+### Bug Fixes
+
+* use game state playerMetadata instead of GameModeContext in UI components ([388c254](https://github.com/antialias/soroban-abacus-flashcards/commit/388c25451d11b85236c1f7682fe2f7a62a15d5eb))
+
 ## [2.16.2](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.16.1...v2.16.2) (2025-10-09)
 
 
