@@ -1,3 +1,10 @@
+## [2.16.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.16.0...v2.16.1) (2025-10-09)
+
+
+### Bug Fixes
+
+* convert LocalMemoryPairsProvider to pure client-side with useReducer ([b128db1](https://github.com/antialias/soroban-abacus-flashcards/commit/b128db1783a8dcffe7879745c3342add2f9ffe29))
+
 ## [2.16.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.15.0...v2.16.0) (2025-10-09)
 
 
