@@ -1,3 +1,10 @@
+## [2.16.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.15.0...v2.16.0) (2025-10-09)
+
+
+### Features
+
+* fade out hover avatar when player stops hovering ([820eeb4](https://github.com/antialias/soroban-abacus-flashcards/commit/820eeb4fb03ad8be6a86dd0a26e089052224f427))
+
 ## [2.15.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.14.3...v2.15.0) (2025-10-09)
 
 
