@@ -1,3 +1,10 @@
+## [2.9.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.8.7...v2.9.0) (2025-10-09)
+
+
+### Features
+
+* implement auto-save for player settings modal ([a83dc09](https://github.com/antialias/soroban-abacus-flashcards/commit/a83dc097e43c265a297281da54754f58ac831754))
+
 ## [2.8.7](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.8.6...v2.8.7) (2025-10-09)
 
 
