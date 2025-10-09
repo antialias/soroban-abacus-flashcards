@@ -1,3 +1,16 @@
+## [2.13.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.12.3...v2.13.0) (2025-10-09)
+
+
+### Features
+
+* implement networked hover presence for multiplayer gameplay ([62f3730](https://github.com/antialias/soroban-abacus-flashcards/commit/62f3730542334a0580f5dad1c73adc333614ee58))
+
+
+### Code Refactoring
+
+* move canModifyPlayers logic into provider layer ([db9f909](https://github.com/antialias/soroban-abacus-flashcards/commit/db9f9096b446b078e1b4dfe970723bef54a6f4ae))
+* properly separate LocalMemoryPairsProvider and RoomMemoryPairsProvider ([98822ec](https://github.com/antialias/soroban-abacus-flashcards/commit/98822ecda52bf004d9950e3f4c92c834fd820e49))
+
 ## [2.12.3](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.12.2...v2.12.3) (2025-10-09)
 
 
