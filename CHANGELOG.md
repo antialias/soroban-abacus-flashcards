@@ -1,3 +1,10 @@
+## [2.14.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.14.0...v2.14.1) (2025-10-09)
+
+
+### Bug Fixes
+
+* prevent avatar fly-in and hide local player's own hover ([7f65a67](https://github.com/antialias/soroban-abacus-flashcards/commit/7f65a67cef3d7f0ebce1bd7417972a6138acfc46))
+
 ## [2.14.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.13.0...v2.14.0) (2025-10-09)
 
 
