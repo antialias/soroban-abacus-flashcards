@@ -1,3 +1,10 @@
+## [2.8.4](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.8.3...v2.8.4) (2025-10-09)
+
+
+### Bug Fixes
+
+* prevent redirect loops by checking if already at target URL ([c5268b7](https://github.com/antialias/soroban-abacus-flashcards/commit/c5268b79dee66aa02e14e2024fe1c6242a172ed3))
+
 ## [2.8.3](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.8.2...v2.8.3) (2025-10-08)
 
 
