@@ -1,3 +1,10 @@
+## [2.12.2](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.12.1...v2.12.2) (2025-10-09)
+
+
+### Bug Fixes
+
+* use RoomMemoryPairsProvider in room page ([c279731](https://github.com/antialias/soroban-abacus-flashcards/commit/c27973191f0144604e17a8a14adf0a88df476e27))
+
 ## [2.12.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.12.0...v2.12.1) (2025-10-09)
 
 
