@@ -1,3 +1,10 @@
+## [2.16.4](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.16.3...v2.16.4) (2025-10-09)
+
+
+### Bug Fixes
+
+* correct Docker CMD to use root-level server.js ([48b47e9](https://github.com/antialias/soroban-abacus-flashcards/commit/48b47e9bdb0da44746282cd7cf7599a69bf5130d))
+
 ## [2.16.3](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.16.2...v2.16.3) (2025-10-09)
 
 
