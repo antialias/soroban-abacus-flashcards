@@ -1,3 +1,18 @@
+## [2.11.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.10.1...v2.11.0) (2025-10-09)
+
+
+### Features
+
+* add pause/resume game state architecture ([05eacac](https://github.com/antialias/soroban-abacus-flashcards/commit/05eacac438dbaf405ce91e188c53dbbe2e9f9507))
+* add Resume button and config change warning to setup UI ([b5ee04f](https://github.com/antialias/soroban-abacus-flashcards/commit/b5ee04f57651f53517468fcc4c456f0ccb65a8e2))
+* implement pause/resume in game providers with optimistic updates ([ce30fca](https://github.com/antialias/soroban-abacus-flashcards/commit/ce30fcaf55270f9089249bd13ba73a25fbfa5ab4))
+
+
+### Bug Fixes
+
+* convert guestId to internal userId for player ownership check ([3a01f46](https://github.com/antialias/soroban-abacus-flashcards/commit/3a01f4637d2081c66fe37c7f8cfee229442ec744))
+* implement shared session architecture for room-based multiplayer ([2856f4b](https://github.com/antialias/soroban-abacus-flashcards/commit/2856f4b83fbcc6483d96cc6e7da2fe5bc911625d))
+
 ## [2.10.2](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.10.1...v2.10.2) (2025-10-09)
 
 
