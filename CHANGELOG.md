@@ -1,3 +1,10 @@
+## [2.8.5](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.8.4...v2.8.5) (2025-10-09)
+
+
+### Bug Fixes
+
+* remove redirect loop by not redirecting from room page ([10cf715](https://github.com/antialias/soroban-abacus-flashcards/commit/10cf71527f7cede7fd93e502dbfc59df99b5a524))
+
 ## [2.8.4](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.8.3...v2.8.4) (2025-10-09)
 
 
