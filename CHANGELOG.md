@@ -1,3 +1,10 @@
+## [2.8.7](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.8.6...v2.8.7) (2025-10-09)
+
+
+### Bug Fixes
+
+* enable real-time player name updates across room members ([5171be3](https://github.com/antialias/soroban-abacus-flashcards/commit/5171be3d37980eb1c98aa0d1e1d6e06f589763d1))
+
 ## [2.8.6](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.8.5...v2.8.6) (2025-10-09)
 
 
