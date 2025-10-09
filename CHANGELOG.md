@@ -1,3 +1,10 @@
+## [2.8.6](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.8.5...v2.8.6) (2025-10-09)
+
+
+### Bug Fixes
+
+* prevent duplicate display of network avatars in nav ([d474ef0](https://github.com/antialias/soroban-abacus-flashcards/commit/d474ef07d69cf0b4f5dedd404616e3bbee7289fe))
+
 ## [2.8.5](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.8.4...v2.8.5) (2025-10-09)
 
 
