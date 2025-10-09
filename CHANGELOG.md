@@ -1,3 +1,10 @@
+## [2.15.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.14.3...v2.15.0) (2025-10-09)
+
+
+### Features
+
+* implement smooth hover avatar animations with react-spring ([442c6b4](https://github.com/antialias/soroban-abacus-flashcards/commit/442c6b4529ba5c820b1fe8a64805a3d85489a8ea))
+
 ## [2.14.3](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.14.2...v2.14.3) (2025-10-09)
 
 
