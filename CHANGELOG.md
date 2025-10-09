@@ -1,3 +1,10 @@
+## [2.12.3](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.12.2...v2.12.3) (2025-10-09)
+
+
+### Bug Fixes
+
+* always show game control buttons in room-based sessions ([14ba422](https://github.com/antialias/soroban-abacus-flashcards/commit/14ba422919abd648e2a134ce167a5e6fd9f84e73))
+
 ## [2.12.2](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.12.1...v2.12.2) (2025-10-09)
 
 
