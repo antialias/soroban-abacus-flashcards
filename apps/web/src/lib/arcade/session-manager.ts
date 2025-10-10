@@ -5,6 +5,11 @@
 
 import { eq } from 'drizzle-orm'
 import { db, schema } from '@/db'
+import {
+  buildPlayerOwnershipMap,
+  getUserIdFromGuestId,
+  type PlayerOwnershipMap,
+} from './player-ownership'
 import { type GameMove, type GameName, getValidator } from './validation'
 
 export interface CreateSessionOptions {
@@ -24,18 +29,6 @@ export interface SessionUpdateResult {
 }
 
 const TTL_HOURS = 24
-
-/**
- * Helper: Get database user ID from guest ID
- * The API uses guestId (from cookies) but database FKs use the internal user.id
- */
-async function getUserIdFromGuestId(guestId: string): Promise<string | undefined> {
-  const user = await db.query.users.findFirst({
-    where: eq(schema.users.guestId, guestId),
-    columns: { id: true },
-  })
-  return user?.id
-}
 
 /**
  * Get arcade session by room ID (for room-based multiplayer games)
@@ -215,7 +208,7 @@ export async function applyGameMove(
   })
 
   // Fetch player ownership for authorization checks (room-based games)
-  let playerOwnership: Record<string, string> | undefined
+  let playerOwnership: PlayerOwnershipMap | undefined
   let internalUserId: string | undefined
   if (session.roomId) {
     try {
@@ -229,13 +222,8 @@ export async function applyGameMove(
         }
       }
 
-      const players = await db.query.players.findMany({
-        columns: {
-          id: true,
-          userId: true,
-        },
-      })
-      playerOwnership = Object.fromEntries(players.map((p) => [p.id, p.userId]))
+      // Use centralized player ownership utility
+      playerOwnership = await buildPlayerOwnershipMap(session.roomId)
       console.log('[SessionManager] Player ownership map:', playerOwnership)
       console.log('[SessionManager] Internal userId for authorization:', internalUserId)
     } catch (error) {
