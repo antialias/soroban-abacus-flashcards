@@ -1,5 +1,6 @@
 'use client'
 
+import { useEffect, useState } from 'react'
 import { useRoomData } from '@/hooks/useRoomData'
 import { MemoryPairsGame } from '../matching/components/MemoryPairsGame'
 import { RoomMemoryPairsProvider } from '../matching/context/RoomMemoryPairsProvider'
@@ -13,7 +14,30 @@ import { RoomMemoryPairsProvider } from '../matching/context/RoomMemoryPairsProv
  * - useArcadeRedirect on /arcade page handles redirecting to active sessions
  */
 export default function RoomPage() {
+  const [mounted, setMounted] = useState(false)
   const { roomData, isLoading } = useRoomData()
+
+  // Prevent SSR hydration mismatch
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (!mounted) {
+    return (
+      <div
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          height: '100vh',
+          fontSize: '18px',
+          color: '#666',
+        }}
+      >
+        Loading...
+      </div>
+    )
+  }
 
   // Show loading state
   if (isLoading) {
