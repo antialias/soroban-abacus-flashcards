@@ -1,3 +1,15 @@
+## [2.19.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.19.0...v2.19.1) (2025-10-10)
+
+
+### Bug Fixes
+
+* prevent SSR hydration error in /arcade/room page ([cd38f42](https://github.com/antialias/soroban-abacus-flashcards/commit/cd38f42e9c90ff8bab28f7a677c1f9307406d013))
+
+
+### Code Refactoring
+
+* migrate RoomMemoryPairsProvider to centralized ownership utilities ([10f4288](https://github.com/antialias/soroban-abacus-flashcards/commit/10f42887a323a755e2741ee1b927a0bc16eb69fc))
+
 ## [2.19.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.18.0...v2.19.0) (2025-10-10)
 
 
