@@ -1,3 +1,35 @@
+## [2.18.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.17.2...v2.18.0) (2025-10-10)
+
+
+### Features
+
+* add centralized player ownership utilities ([1019a48](https://github.com/antialias/soroban-abacus-flashcards/commit/1019a487f893bcf8555ff1d0d87cce9f9cc5e048))
+
+
+### Bug Fixes
+
+* correct TypeScript build configuration to prevent .js pollution in src/ ([2b7ff23](https://github.com/antialias/soroban-abacus-flashcards/commit/2b7ff237cce7685f4f317d0bb4d1c993e6084a65))
+* remove build artifacts from source control ([29f5adc](https://github.com/antialias/soroban-abacus-flashcards/commit/29f5adcfbcac97fb696355813dbf29e24c267d61))
+* remove rootDir from tsconfig.server.json ([431e4a6](https://github.com/antialias/soroban-abacus-flashcards/commit/431e4a61deab5ef8cf4d99659c41e6bc5495cc9d))
+* update Dockerfile to copy dist/ instead of socket-server.js and src/ ([e56517b](https://github.com/antialias/soroban-abacus-flashcards/commit/e56517b12996240157cd12b4c3e2272493f9745f))
+
+
+### Code Refactoring
+
+* re-export ownership utilities from player-manager ([e85f800](https://github.com/antialias/soroban-abacus-flashcards/commit/e85f800c3e77f3bcdb87eb3ceabdced098edd924))
+* use centralized ownership in RoomMemoryPairsProvider ([6c66bb2](https://github.com/antialias/soroban-abacus-flashcards/commit/6c66bb27b75d98a460242da03124de9ad9298ce7))
+* use centralized player ownership in session-manager ([a362e5e](https://github.com/antialias/soroban-abacus-flashcards/commit/a362e5e34a7e11638ae0f8cf08990e9579451ad5))
+
+
+### Documentation
+
+* add plan for centralizing player ownership logic ([d3ff89a](https://github.com/antialias/soroban-abacus-flashcards/commit/d3ff89a0ee53c32cc68ed01bf460919aa889d6a0))
+
+
+### Tests
+
+* add comprehensive integration tests for player ownership ([76a6390](https://github.com/antialias/soroban-abacus-flashcards/commit/76a63901c4844675bb8895381531178c25f36b7b))
+
 ## [2.17.2](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.17.1...v2.17.2) (2025-10-10)
 
 
