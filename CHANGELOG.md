@@ -1,3 +1,15 @@
+## [2.19.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.18.0...v2.19.0) (2025-10-10)
+
+
+### Features
+
+* add player ownership helper to player-manager API ([6b59a82](https://github.com/antialias/soroban-abacus-flashcards/commit/6b59a828aabe687abb797c1f1d69d8a4d0abe49b))
+
+
+### Code Refactoring
+
+* migrate session-manager.ts to use centralized player ownership ([d3b7cc2](https://github.com/antialias/soroban-abacus-flashcards/commit/d3b7cc25caee7e005de046792202aa474edbc90f))
+
 ## [2.18.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.17.3...v2.18.0) (2025-10-10)
 
 
