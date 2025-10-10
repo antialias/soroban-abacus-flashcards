@@ -1,3 +1,12 @@
+## [2.16.7](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.16.6...v2.16.7) (2025-10-10)
+
+
+### Bug Fixes
+
+* compile TypeScript server files to JavaScript for production ([83b9a4d](https://github.com/antialias/soroban-abacus-flashcards/commit/83b9a4d976fa540782826afa13a35c92e706bf1e))
+* remove standalone output mode incompatible with custom server ([c8da5a8](https://github.com/antialias/soroban-abacus-flashcards/commit/c8da5a8340c8798bba452b43244bc0e04ce8b0c5))
+* update Dockerfile for non-standalone production builds ([14746c5](https://github.com/antialias/soroban-abacus-flashcards/commit/14746c568e58f4a847e0da2d866dbaeabf5a0e8b))
+
 ## [2.16.6](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.16.5...v2.16.6) (2025-10-10)
 
 
