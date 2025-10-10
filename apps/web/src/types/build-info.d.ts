@@ -1,4 +1,4 @@
-declare module '@/generated/build-info.json' {
+declare module '../generated/build-info.json' {
   interface BuildInfo {
     version: string
     buildTime: string
