@@ -68,7 +68,10 @@ function localMemoryPairsReducer(state: MemoryPairsState, action: LocalAction): 
         matchedPairs: 0,
         moves: 0,
         scores: action.activePlayers.reduce((acc: any, p: string) => ({ ...acc, [p]: 0 }), {}),
-        consecutiveMatches: action.activePlayers.reduce((acc: any, p: string) => ({ ...acc, [p]: 0 }), {}),
+        consecutiveMatches: action.activePlayers.reduce(
+          (acc: any, p: string) => ({ ...acc, [p]: 0 }),
+          {}
+        ),
         activePlayers: action.activePlayers,
         playerMetadata: action.playerMetadata,
         currentPlayer: action.activePlayers[0] || '',
@@ -97,7 +100,8 @@ function localMemoryPairsReducer(state: MemoryPairsState, action: LocalAction): 
       return {
         ...state,
         flippedCards: newFlippedCards,
-        currentMoveStartTime: state.flippedCards.length === 0 ? Date.now() : state.currentMoveStartTime,
+        currentMoveStartTime:
+          state.flippedCards.length === 0 ? Date.now() : state.currentMoveStartTime,
         isProcessingMove: newFlippedCards.length === 2,
         showMismatchFeedback: false,
       }
@@ -386,7 +390,14 @@ export function LocalMemoryPairsProvider({ children }: { children: ReactNode }) 
 
       return true
     },
-    [isGameActive, state.isProcessingMove, state.gameCards, state.flippedCards, state.currentPlayer, players]
+    [
+      isGameActive,
+      state.isProcessingMove,
+      state.gameCards,
+      state.flippedCards,
+      state.currentPlayer,
+      players,
+    ]
   )
 
   const currentGameStatistics: GameStatistics = useMemo(
