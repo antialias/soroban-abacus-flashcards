@@ -1,3 +1,10 @@
+## [2.17.2](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.17.1...v2.17.2) (2025-10-10)
+
+
+### Bug Fixes
+
+* correct playerMetadata userId assignment for room-based multiplayer ([53797db](https://github.com/antialias/soroban-abacus-flashcards/commit/53797dbb2d5ccb80e61cbc186ca0a344fe1fbd96))
+
 ## [2.17.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.17.0...v2.17.1) (2025-10-10)
 
 
