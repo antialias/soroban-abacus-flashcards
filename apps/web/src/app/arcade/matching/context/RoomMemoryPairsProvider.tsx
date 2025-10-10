@@ -1,10 +1,13 @@
 'use client'
 
 import { type ReactNode, useCallback, useEffect, useMemo } from 'react'
-import { useArcadeRedirect } from '@/hooks/useArcadeRedirect'
 import { useArcadeSession } from '@/hooks/useArcadeSession'
 import { useRoomData } from '@/hooks/useRoomData'
 import { useViewerId } from '@/hooks/useViewerId'
+import {
+  buildPlayerMetadata,
+  buildPlayerOwnershipFromRoomData,
+} from '@/lib/arcade/player-ownership'
 import type { GameMove } from '@/lib/arcade/validation'
 import { useGameMode } from '../../../../contexts/GameModeContext'
 import { generateGameCards } from '../utils/cardGeneration'
@@ -366,38 +369,14 @@ export function RoomMemoryPairsProvider({ children }: { children: ReactNode }) {
   }, [state.pausedGamePhase, state.pausedGameState, hasConfigChanged])
 
   // Helper to build player metadata with correct userId ownership
-  // This uses roomData.memberPlayers to determine which user owns which player
-  const buildPlayerMetadata = useCallback(
+  // Uses centralized utilities from player-ownership module
+  const buildPlayerMetadataCallback = useCallback(
     (playerIds: string[]) => {
-      const playerMetadata: { [playerId: string]: any } = {}
+      // Build ownership map from roomData
+      const ownershipMap = buildPlayerOwnershipFromRoomData(roomData)
 
-      // Build reverse mapping: playerId -> userId from roomData.memberPlayers
-      const playerOwnership = new Map<string, string>()
-      if (roomData?.memberPlayers) {
-        for (const [userId, userPlayers] of Object.entries(roomData.memberPlayers)) {
-          for (const player of userPlayers) {
-            playerOwnership.set(player.id, userId)
-          }
-        }
-      }
-
-      for (const playerId of playerIds) {
-        const playerData = players.get(playerId)
-        if (playerData) {
-          // Get the actual owner userId from roomData, or use local viewerId as fallback
-          const ownerUserId = playerOwnership.get(playerId) || viewerId || ''
-
-          playerMetadata[playerId] = {
-            id: playerId,
-            name: playerData.name,
-            emoji: playerData.emoji,
-            userId: ownerUserId, // CORRECT: Use actual owner's userId
-            color: playerData.color,
-          }
-        }
-      }
-
-      return playerMetadata
+      // Build player metadata with correct ownership
+      return buildPlayerMetadata(playerIds, ownershipMap, players, viewerId)
     },
     [players, roomData, viewerId]
   )
@@ -412,7 +391,7 @@ export function RoomMemoryPairsProvider({ children }: { children: ReactNode }) {
 
     // Capture player metadata from local players map
     // This ensures all room members can display player info even if they don't own the players
-    const playerMetadata = buildPlayerMetadata(activePlayers)
+    const playerMetadata = buildPlayerMetadataCallback(activePlayers)
 
     // Use current session state configuration (no local state!)
     const cards = generateGameCards(state.gameType, state.difficulty)
@@ -427,7 +406,7 @@ export function RoomMemoryPairsProvider({ children }: { children: ReactNode }) {
         playerMetadata,
       },
     })
-  }, [state.gameType, state.difficulty, activePlayers, buildPlayerMetadata, sendMove])
+  }, [state.gameType, state.difficulty, activePlayers, buildPlayerMetadataCallback, sendMove])
 
   const flipCard = useCallback(
     (cardId: string) => {
@@ -464,7 +443,7 @@ export function RoomMemoryPairsProvider({ children }: { children: ReactNode }) {
     }
 
     // Capture player metadata with correct userId ownership
-    const playerMetadata = buildPlayerMetadata(activePlayers)
+    const playerMetadata = buildPlayerMetadataCallback(activePlayers)
 
     // Use current session state configuration (no local state!)
     const cards = generateGameCards(state.gameType, state.difficulty)
@@ -479,7 +458,7 @@ export function RoomMemoryPairsProvider({ children }: { children: ReactNode }) {
         playerMetadata,
       },
     })
-  }, [state.gameType, state.difficulty, activePlayers, buildPlayerMetadata, sendMove])
+  }, [state.gameType, state.difficulty, activePlayers, buildPlayerMetadataCallback, sendMove])
 
   const setGameType = useCallback(
     (gameType: typeof state.gameType) => {
