@@ -1,3 +1,15 @@
+## [2.17.3](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.17.2...v2.17.3) (2025-10-10)
+
+
+### Bug Fixes
+
+* correct build-info.json import path in type declaration ([22f0be4](https://github.com/antialias/soroban-abacus-flashcards/commit/22f0be4d045c6afdcb98b876f709d63a904f9449))
+
+
+### Documentation
+
+* add plan for centralizing player ownership logic ([d3ff89a](https://github.com/antialias/soroban-abacus-flashcards/commit/d3ff89a0ee53c32cc68ed01bf460919aa889d6a0))
+
 ## [2.17.2](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.17.1...v2.17.2) (2025-10-10)
 
 
