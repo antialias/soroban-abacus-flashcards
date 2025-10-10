@@ -6,6 +6,7 @@
 import { and, eq } from 'drizzle-orm'
 import { db, schema } from '@/db'
 import type { Player } from '@/db/schema/players'
+import { type PlayerOwnershipMap, buildPlayerOwnershipMap } from './player-ownership'
 
 /**
  * Get all players for a user (regardless of isActive status)
@@ -127,4 +128,22 @@ export async function getPlayers(playerIds: string[]): Promise<Player[]> {
   }
 
   return players
+}
+
+/**
+ * Get player ownership map for a room
+ *
+ * Convenience re-export of the centralized player ownership utility.
+ * This allows other modules to get player ownership data through
+ * the player-manager API.
+ *
+ * @param roomId - Optional room ID (currently unused by underlying utility)
+ * @returns Promise resolving to playerOwnership map (playerId -> userId)
+ *
+ * @example
+ * const ownership = await getPlayerOwnershipMap()
+ * const isOwned = ownership[playerId] === userId
+ */
+export async function getPlayerOwnershipMap(roomId?: string): Promise<PlayerOwnershipMap> {
+  return buildPlayerOwnershipMap(roomId)
 }
