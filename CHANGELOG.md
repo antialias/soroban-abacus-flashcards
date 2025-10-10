@@ -1,3 +1,10 @@
+## [2.16.6](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.16.5...v2.16.6) (2025-10-10)
+
+
+### Bug Fixes
+
+* correct static files and public path in Docker image ([c287b19](https://github.com/antialias/soroban-abacus-flashcards/commit/c287b19a39e1506033db6de39aa4d3761cb65d62))
+
 ## [2.16.5](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.16.4...v2.16.5) (2025-10-09)
 
 
