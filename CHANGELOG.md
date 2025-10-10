@@ -1,3 +1,10 @@
+## [2.17.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.17.0...v2.17.1) (2025-10-10)
+
+
+### Bug Fixes
+
+* correct hover avatar and turn indicator to show only current player ([0596ef6](https://github.com/antialias/soroban-abacus-flashcards/commit/0596ef65879a303f1f71863ef307af69bf270c70))
+
 ## [2.17.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.16.7...v2.17.0) (2025-10-10)
 
 
