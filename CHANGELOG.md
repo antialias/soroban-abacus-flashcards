@@ -8,6 +8,43 @@
 
 ### Bug Fixes
 
+* clear hover state in CLEAR_MISMATCH for clean turn transitions ([43f7c92](https://github.com/antialias/soroban-abacus-flashcards/commit/43f7c92f6d61616e18439c995dc4a4848e233520))
+* clear hover state on turn changes and game transitions ([6fd425c](https://github.com/antialias/soroban-abacus-flashcards/commit/6fd425ce85ddbf5e0125f757dc9886915fb6f749))
+* correct TypeScript build configuration to prevent .js pollution in src/ ([2b7ff23](https://github.com/antialias/soroban-abacus-flashcards/commit/2b7ff237cce7685f4f317d0bb4d1c993e6084a65))
+* exclude dist from TypeScript compilation and add missing type import ([b7f1d5a](https://github.com/antialias/soroban-abacus-flashcards/commit/b7f1d5a5696888bb4fbf6d5da14ca333de0f0167))
+* hide hover avatar for current user's own player ([dba42b5](https://github.com/antialias/soroban-abacus-flashcards/commit/dba42b59257f2422ec8f31a46c222393fcc157d4))
+* prevent database imports from being bundled into client code ([bda5bc6](https://github.com/antialias/soroban-abacus-flashcards/commit/bda5bc6c0e1043ee53aab8799c670d1072f70cc9))
+* remove build artifacts from source control ([29f5adc](https://github.com/antialias/soroban-abacus-flashcards/commit/29f5adcfbcac97fb696355813dbf29e24c267d61))
+* remove rootDir from tsconfig.server.json ([431e4a6](https://github.com/antialias/soroban-abacus-flashcards/commit/431e4a61deab5ef8cf4d99659c41e6bc5495cc9d))
+* update Dockerfile to copy dist/ instead of socket-server.js and src/ ([e56517b](https://github.com/antialias/soroban-abacus-flashcards/commit/e56517b12996240157cd12b4c3e2272493f9745f))
+
+
+### Code Refactoring
+
+* re-export ownership utilities from player-manager ([e85f800](https://github.com/antialias/soroban-abacus-flashcards/commit/e85f800c3e77f3bcdb87eb3ceabdced098edd924))
+* use centralized ownership in RoomMemoryPairsProvider ([6c66bb2](https://github.com/antialias/soroban-abacus-flashcards/commit/6c66bb27b75d98a460242da03124de9ad9298ce7))
+* use centralized player ownership in session-manager ([a362e5e](https://github.com/antialias/soroban-abacus-flashcards/commit/a362e5e34a7e11638ae0f8cf08990e9579451ad5))
+
+
+### Documentation
+
+* add plan for centralizing player ownership logic ([d3ff89a](https://github.com/antialias/soroban-abacus-flashcards/commit/d3ff89a0ee53c32cc68ed01bf460919aa889d6a0))
+
+
+### Tests
+
+* add comprehensive integration tests for player ownership ([76a6390](https://github.com/antialias/soroban-abacus-flashcards/commit/76a63901c4844675bb8895381531178c25f36b7b))
+
+## [2.18.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.17.2...v2.18.0) (2025-10-10)
+
+
+### Features
+
+* add centralized player ownership utilities ([1019a48](https://github.com/antialias/soroban-abacus-flashcards/commit/1019a487f893bcf8555ff1d0d87cce9f9cc5e048))
+
+
+### Bug Fixes
+
 * clear hover state on turn changes and game transitions ([6fd425c](https://github.com/antialias/soroban-abacus-flashcards/commit/6fd425ce85ddbf5e0125f757dc9886915fb6f749))
 * correct TypeScript build configuration to prevent .js pollution in src/ ([2b7ff23](https://github.com/antialias/soroban-abacus-flashcards/commit/2b7ff237cce7685f4f317d0bb4d1c993e6084a65))
 * exclude dist from TypeScript compilation and add missing type import ([b7f1d5a](https://github.com/antialias/soroban-abacus-flashcards/commit/b7f1d5a5696888bb4fbf6d5da14ca333de0f0167))
