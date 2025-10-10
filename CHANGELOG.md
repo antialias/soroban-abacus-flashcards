@@ -1,3 +1,10 @@
+## [2.17.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.16.7...v2.17.0) (2025-10-10)
+
+
+### Features
+
+* hide hover avatar when card is flipped to reveal value ([a2aada2](https://github.com/antialias/soroban-abacus-flashcards/commit/a2aada2e6922fb3af363e0d191275e06b8f8f040))
+
 ## [2.16.7](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.16.6...v2.16.7) (2025-10-10)
 
 
