@@ -9,6 +9,72 @@
 * **matching:** use nav avatars as turn indicators ([7263828](https://github.com/antialias/soroban-abacus-flashcards/commit/7263828ed494a6487999c8436af53618715b3864))
 * **nav:** add prominent turn indicator arrow badge ([f574558](https://github.com/antialias/soroban-abacus-flashcards/commit/f574558dffe22a1ecf06ee44d37b5eb1a20011b9))
 * **nav:** add pulsing indicator for offline network players ([64fb30e](https://github.com/antialias/soroban-abacus-flashcards/commit/64fb30e7eca7b485687329b9dd3d9e90ac507e2d))
+* **nav:** add turn indicators to network players ([623314b](https://github.com/antialias/soroban-abacus-flashcards/commit/623314bd383a54c57ca93ad9f2d8620cf89412e9))
+* **nav:** combine room info and network players in single pane ([d5473ab](https://github.com/antialias/soroban-abacus-flashcards/commit/d5473ab66a7c8c78f10cef9bb7084fc311520b2c))
+* **nav:** unify room dropdown with join code and game menu ([f7b83f8](https://github.com/antialias/soroban-abacus-flashcards/commit/f7b83f8c149b532321251abed98a94874196b2f5))
+* redesign room info as compact inline badge with click-to-copy ([6b3a440](https://github.com/antialias/soroban-abacus-flashcards/commit/6b3a4403695cc2f32df684005784a11f054827ff))
+
+
+### Bug Fixes
+
+* clear hover state in CLEAR_MISMATCH for clean turn transitions ([43f7c92](https://github.com/antialias/soroban-abacus-flashcards/commit/43f7c92f6d61616e18439c995dc4a4848e233520))
+* clear hover state on turn changes and game transitions ([6fd425c](https://github.com/antialias/soroban-abacus-flashcards/commit/6fd425ce85ddbf5e0125f757dc9886915fb6f749))
+* correct TypeScript build configuration to prevent .js pollution in src/ ([2b7ff23](https://github.com/antialias/soroban-abacus-flashcards/commit/2b7ff237cce7685f4f317d0bb4d1c993e6084a65))
+* create arcade sessions on room join to enable config changes ([c29501f](https://github.com/antialias/soroban-abacus-flashcards/commit/c29501f6663cb6063f2ddef8b3fdb14c31927639))
+* exclude dist from TypeScript compilation and add missing type import ([b7f1d5a](https://github.com/antialias/soroban-abacus-flashcards/commit/b7f1d5a5696888bb4fbf6d5da14ca333de0f0167))
+* hide hover avatar for current user's own player ([dba42b5](https://github.com/antialias/soroban-abacus-flashcards/commit/dba42b59257f2422ec8f31a46c222393fcc157d4))
+* **matching:** apply turn indicators to arcade version too ([e6f96a8](https://github.com/antialias/soroban-abacus-flashcards/commit/e6f96a8b992c15f868ac5b1c1ac36b32caf433ed))
+* **matching:** only apply turn indicator when game is active ([cb4c061](https://github.com/antialias/soroban-abacus-flashcards/commit/cb4c061d11433799a0091f4a958371ff7cef7a00))
+* **matching:** use UUID instead of numeric index for scores ([5036cb0](https://github.com/antialias/soroban-abacus-flashcards/commit/5036cb00b6eff91cfa52b5babb7e5a91ff7e18b3))
+* **nav:** improve text contrast in room info pane ([3e691cb](https://github.com/antialias/soroban-abacus-flashcards/commit/3e691cb06d64e32f65146ffd690fa1c25e9b487d))
+* **nav:** remove opacity reduction from local players ([5215af8](https://github.com/antialias/soroban-abacus-flashcards/commit/5215af801fc7e7412dc1c84e6abf1231f7670bfb))
+* pixel-perfect alignment across all nav elements ([fa78a2c](https://github.com/antialias/soroban-abacus-flashcards/commit/fa78a2c001f3530b0a0929411e6e0addbc0abda0))
+* populate session activePlayers from room members on join ([2d00939](https://github.com/antialias/soroban-abacus-flashcards/commit/2d00939f1b59a10d271f82098c1b88acb2245ce1))
+* prevent database imports from being bundled into client code ([bda5bc6](https://github.com/antialias/soroban-abacus-flashcards/commit/bda5bc6c0e1043ee53aab8799c670d1072f70cc9))
+* prevent duplicate arcade sessions per room ([4cc3de5](https://github.com/antialias/soroban-abacus-flashcards/commit/4cc3de5f43711bb2ffe9b10052108b27bba6889c))
+* remove build artifacts from source control ([29f5adc](https://github.com/antialias/soroban-abacus-flashcards/commit/29f5adcfbcac97fb696355813dbf29e24c267d61))
+* remove rootDir from tsconfig.server.json ([431e4a6](https://github.com/antialias/soroban-abacus-flashcards/commit/431e4a61deab5ef8cf4d99659c41e6bc5495cc9d))
+* stack game title dropdown ABOVE room pane, not inside it ([7bc815f](https://github.com/antialias/soroban-abacus-flashcards/commit/7bc815fd7dbbb1489a17782b2df0c3fe508dd574))
+* update Dockerfile to copy dist/ instead of socket-server.js and src/ ([e56517b](https://github.com/antialias/soroban-abacus-flashcards/commit/e56517b12996240157cd12b4c3e2272493f9745f))
+
+
+### Code Refactoring
+
+* combine mode and room into single unified pane ([7a6f2ac](https://github.com/antialias/soroban-abacus-flashcards/commit/7a6f2ac6ebf7d750bf6d859d0161d7325fb5048e))
+* compact room info display with join code in tooltip ([a6b1610](https://github.com/antialias/soroban-abacus-flashcards/commit/a6b1610993ce6ab9556cd40ae5b0528e3a22f991))
+* comprehensive navigation polish - prominence, contrast, cohesion ([1ba58b9](https://github.com/antialias/soroban-abacus-flashcards/commit/1ba58b9547bf5a6b6c06f94740fedd730481171d))
+* implement Option A - balanced alignment and visual hierarchy ([6ad7170](https://github.com/antialias/soroban-abacus-flashcards/commit/6ad71702f94c7f1d26bea12deb234578d86dda98))
+* move game controls into title dropdown menu ([e39a031](https://github.com/antialias/soroban-abacus-flashcards/commit/e39a0313cb0886595756ffcca262d8e57fda3c06))
+* move game name into room pane, remove player count ([eeb8d52](https://github.com/antialias/soroban-abacus-flashcards/commit/eeb8d52d03301038aadd69153becad3498ee427b))
+* re-export ownership utilities from player-manager ([e85f800](https://github.com/antialias/soroban-abacus-flashcards/commit/e85f800c3e77f3bcdb87eb3ceabdced098edd924))
+* redesign GameControlButtons with translucent aesthetic ([5720c7d](https://github.com/antialias/soroban-abacus-flashcards/commit/5720c7dca329a008d6c9ac0995106783bc4653fa))
+* restructure GameContextNav to 2x2 grid layout ([9c9270f](https://github.com/antialias/soroban-abacus-flashcards/commit/9c9270f931c9f18d581baa00e8d832409225efb7))
+* restructure nav so player avatars truly span both rows ([e0fd793](https://github.com/antialias/soroban-abacus-flashcards/commit/e0fd7938128df7fa64df43b946da2a8b176be7dd))
+* stack mode indicator above room info ([d1aa567](https://github.com/antialias/soroban-abacus-flashcards/commit/d1aa567c1e3b4e6408adef241923c32b6a7b7597))
+* use centralized ownership in RoomMemoryPairsProvider ([6c66bb2](https://github.com/antialias/soroban-abacus-flashcards/commit/6c66bb27b75d98a460242da03124de9ad9298ce7))
+* use centralized player ownership in session-manager ([a362e5e](https://github.com/antialias/soroban-abacus-flashcards/commit/a362e5e34a7e11638ae0f8cf08990e9579451ad5))
+
+
+### Documentation
+
+* add plan for centralizing player ownership logic ([d3ff89a](https://github.com/antialias/soroban-abacus-flashcards/commit/d3ff89a0ee53c32cc68ed01bf460919aa889d6a0))
+
+
+### Tests
+
+* add comprehensive integration tests for player ownership ([76a6390](https://github.com/antialias/soroban-abacus-flashcards/commit/76a63901c4844675bb8895381531178c25f36b7b))
+
+## [2.18.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.17.2...v2.18.0) (2025-10-11)
+
+
+### Features
+
+* add centralized player ownership utilities ([1019a48](https://github.com/antialias/soroban-abacus-flashcards/commit/1019a487f893bcf8555ff1d0d87cce9f9cc5e048))
+* add player count to stacked room info ([540f6b7](https://github.com/antialias/soroban-abacus-flashcards/commit/540f6b76d05f561baa581d67070ab43134d8b5f6))
+* improve arcade nav player grouping and add room join code display ([8e9980d](https://github.com/antialias/soroban-abacus-flashcards/commit/8e9980dc82ba2ab4ce973fc2c7ed259a20af9b19))
+* **matching:** use nav avatars as turn indicators ([7263828](https://github.com/antialias/soroban-abacus-flashcards/commit/7263828ed494a6487999c8436af53618715b3864))
+* **nav:** add prominent turn indicator arrow badge ([f574558](https://github.com/antialias/soroban-abacus-flashcards/commit/f574558dffe22a1ecf06ee44d37b5eb1a20011b9))
+* **nav:** add pulsing indicator for offline network players ([64fb30e](https://github.com/antialias/soroban-abacus-flashcards/commit/64fb30e7eca7b485687329b9dd3d9e90ac507e2d))
 * **nav:** combine room info and network players in single pane ([d5473ab](https://github.com/antialias/soroban-abacus-flashcards/commit/d5473ab66a7c8c78f10cef9bb7084fc311520b2c))
 * **nav:** unify room dropdown with join code and game menu ([f7b83f8](https://github.com/antialias/soroban-abacus-flashcards/commit/f7b83f8c149b532321251abed98a94874196b2f5))
 * redesign room info as compact inline badge with click-to-copy ([6b3a440](https://github.com/antialias/soroban-abacus-flashcards/commit/6b3a4403695cc2f32df684005784a11f054827ff))
