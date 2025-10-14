@@ -1,3 +1,10 @@
+## [3.13.2](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.13.1...v3.13.2) (2025-10-14)
+
+
+### Bug Fixes
+
+* **arcade:** only notify room creator of join requests ([bc571e3](https://github.com/antialias/soroban-abacus-flashcards/commit/bc571e3d0d11fe4142680132d551e25ca626d950))
+
 ## [3.13.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.13.0...v3.13.1) (2025-10-14)
 
 
