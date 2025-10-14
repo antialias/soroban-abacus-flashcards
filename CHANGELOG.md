@@ -1,3 +1,10 @@
+## [3.8.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.8.0...v3.8.1) (2025-10-14)
+
+
+### Bug Fixes
+
+* improve kicked modal message for retired room ejections ([f865ce1](https://github.com/antialias/soroban-abacus-flashcards/commit/f865ce16ecf7648e41549795c8137f4fc33e34ac))
+
 ## [3.8.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.7.1...v3.8.0) (2025-10-14)
 
 
