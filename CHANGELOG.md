@@ -1,3 +1,15 @@
+## [3.13.5](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.13.4...v3.13.5) (2025-10-14)
+
+
+### Bug Fixes
+
+* **nav:** navigate to room after creation from (+) menu ([21e6e33](https://github.com/antialias/soroban-abacus-flashcards/commit/21e6e33173e7939102a7e6d6a7bd5168a97a49d6))
+
+
+### Documentation
+
+* add production deployment guide ([6d16436](https://github.com/antialias/soroban-abacus-flashcards/commit/6d164361331fae2135afd84ab6e6f38a241b9170))
+
 ## [3.13.4](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.13.3...v3.13.4) (2025-10-14)
 
 
