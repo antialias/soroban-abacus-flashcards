@@ -1,3 +1,10 @@
+## [3.12.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.11.1...v3.12.0) (2025-10-14)
+
+
+### Features
+
+* **moderation:** improve password input with copy button ([2580e47](https://github.com/antialias/soroban-abacus-flashcards/commit/2580e474d08bf91477339e998b2c70962a633f41))
+
 ## [3.11.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.11.0...v3.11.1) (2025-10-14)
 
 
