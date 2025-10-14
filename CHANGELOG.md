@@ -1,3 +1,15 @@
+## [3.6.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.6.0...v3.6.1) (2025-10-14)
+
+
+### Bug Fixes
+
+* join user socket channel to receive approval notifications ([7d08fdd](https://github.com/antialias/soroban-abacus-flashcards/commit/7d08fdd90643920857eda09998ac01afbae74154))
+
+
+### Code Refactoring
+
+* remove redundant polling from approval notifications ([0d4f400](https://github.com/antialias/soroban-abacus-flashcards/commit/0d4f400dca02ad9497522c24fded8b6d07d85fd2))
+
 ## [3.6.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.5.0...v3.6.0) (2025-10-14)
 
 
