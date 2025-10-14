@@ -1,3 +1,10 @@
+## [3.3.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.3.0...v3.3.1) (2025-10-14)
+
+
+### Bug Fixes
+
+* add POST handler for join requests API endpoint ([d3e5cdf](https://github.com/antialias/soroban-abacus-flashcards/commit/d3e5cdfc54f2749f27c6f8b8db854a8d0b6029f8))
+
 ## [3.3.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.2.1...v3.3.0) (2025-10-14)
 
 
