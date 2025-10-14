@@ -1,3 +1,10 @@
+## [3.13.7](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.13.6...v3.13.7) (2025-10-14)
+
+
+### Bug Fixes
+
+* **toast:** scope animations to prevent affecting other UI elements ([245ed8a](https://github.com/antialias/soroban-abacus-flashcards/commit/245ed8a625ba848f8cd79d51bfd88600cd77f0b9))
+
 ## [3.13.6](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.13.5...v3.13.6) (2025-10-14)
 
 
