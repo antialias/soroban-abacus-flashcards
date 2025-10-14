@@ -1,3 +1,10 @@
+## [3.6.3](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.6.2...v3.6.3) (2025-10-14)
+
+
+### Bug Fixes
+
+* update locked room terminology and allow existing members ([1ddf985](https://github.com/antialias/soroban-abacus-flashcards/commit/1ddf985938d9542fe26e44da58234f3d4e3c9543))
+
 ## [3.6.2](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.6.1...v3.6.2) (2025-10-14)
 
 
