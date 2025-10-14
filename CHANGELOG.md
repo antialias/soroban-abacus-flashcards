@@ -1,3 +1,10 @@
+## [3.2.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.2.0...v3.2.1) (2025-10-14)
+
+
+### Bug Fixes
+
+* allow password retry when joining via share link ([e469363](https://github.com/antialias/soroban-abacus-flashcards/commit/e469363699071610a35e0b5c507d0e15e29daa44))
+
 ## [3.2.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.1.2...v3.2.0) (2025-10-14)
 
 
