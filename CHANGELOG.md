@@ -1,3 +1,15 @@
+## [3.13.3](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.13.2...v3.13.3) (2025-10-14)
+
+
+### Bug Fixes
+
+* **migrations:** add migration 0009 for display_password column ([040d749](https://github.com/antialias/soroban-abacus-flashcards/commit/040d7495a0801076b252d2574023f5323540db1a))
+
+
+### Code Refactoring
+
+* replace browser alert() calls with toast notifications ([87ef356](https://github.com/antialias/soroban-abacus-flashcards/commit/87ef35682e5c129033f21b91987fc84a45f43ad3))
+
 ## [3.13.2](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.13.1...v3.13.2) (2025-10-14)
 
 
