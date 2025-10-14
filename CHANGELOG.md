@@ -1,3 +1,10 @@
+## [3.6.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.5.0...v3.6.0) (2025-10-14)
+
+
+### Features
+
+* add socket listener and polling for approval notifications ([35b4a72](https://github.com/antialias/soroban-abacus-flashcards/commit/35b4a72c8b2f80a74b5d2fe02b048d4ec4d1d6f2))
+
 ## [3.5.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.4.0...v3.5.0) (2025-10-14)
 
 
