@@ -1,3 +1,10 @@
+## [3.7.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.6.3...v3.7.0) (2025-10-14)
+
+
+### Features
+
+* add prominent join request approval notifications for room moderators ([036da6d](https://github.com/antialias/soroban-abacus-flashcards/commit/036da6de66ca7d3f459c55df657b04a9e88d9cd3))
+
 ## [3.6.3](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.6.2...v3.6.3) (2025-10-14)
 
 
