@@ -1,3 +1,10 @@
+## [3.8.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.7.1...v3.8.0) (2025-10-14)
+
+
+### Features
+
+* implement proper retired room behavior with member expulsion ([a2d5368](https://github.com/antialias/soroban-abacus-flashcards/commit/a2d53680f27db04b2cd09973e62a76c5a7d4ce06))
+
 ## [3.7.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.7.0...v3.7.1) (2025-10-14)
 
 
