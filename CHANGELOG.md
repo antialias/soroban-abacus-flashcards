@@ -1,3 +1,10 @@
+## [3.7.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.7.0...v3.7.1) (2025-10-14)
+
+
+### Bug Fixes
+
+* improve join request approval error handling with actionable messages ([57bf846](https://github.com/antialias/soroban-abacus-flashcards/commit/57bf8460c8ecff374355bfb93f4b06dfbb148273))
+
 ## [3.7.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.6.3...v3.7.0) (2025-10-14)
 
 
