@@ -1,3 +1,10 @@
+## [3.9.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.9.0...v3.9.1) (2025-10-14)
+
+
+### Bug Fixes
+
+* reset join request toast state when moderation event cleared ([6beb58a](https://github.com/antialias/soroban-abacus-flashcards/commit/6beb58a7b8f8e1841c71729a3517ab459e924aa9))
+
 ## [3.9.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.8.1...v3.9.0) (2025-10-14)
 
 
