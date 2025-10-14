@@ -1,3 +1,10 @@
+## [3.3.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.2.1...v3.3.0) (2025-10-14)
+
+
+### Features
+
+* implement approval request flow for share links ([4a6b3ca](https://github.com/antialias/soroban-abacus-flashcards/commit/4a6b3cabe5c6aa42f4fa00ed09f9b3713f097539))
+
 ## [3.2.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.2.0...v3.2.1) (2025-10-14)
 
 
