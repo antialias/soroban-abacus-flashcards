@@ -1,3 +1,10 @@
+## [3.1.2](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.1.1...v3.1.2) (2025-10-14)
+
+
+### Bug Fixes
+
+* replace last remaining isLoading with isPending in CreateRoomModal ([85d13cc](https://github.com/antialias/soroban-abacus-flashcards/commit/85d13cc552cfe2e825f8ea20c7db00d666599134))
+
 ## [3.1.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.1.0...v3.1.1) (2025-10-14)
 
 
