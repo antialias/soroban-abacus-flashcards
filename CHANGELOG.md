@@ -1,3 +1,15 @@
+## [3.11.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.10.0...v3.11.0) (2025-10-14)
+
+
+### Features
+
+* add name generator button and abacus emoji ([07212e4](https://github.com/antialias/soroban-abacus-flashcards/commit/07212e4df0c7fd4b8cccf935c48b14164df6961d))
+
+
+### Code Refactoring
+
+* make player names abacus and arithmetic themed ([97daad9](https://github.com/antialias/soroban-abacus-flashcards/commit/97daad9abb40a6f4d59ca8a4d4b671822b7b0955))
+
 ## [3.10.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.9.2...v3.10.0) (2025-10-14)
 
 
