@@ -1,3 +1,10 @@
+## [3.13.4](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.13.3...v3.13.4) (2025-10-14)
+
+
+### Bug Fixes
+
+* **api:** include members and memberPlayers in room creation response ([8320d9e](https://github.com/antialias/soroban-abacus-flashcards/commit/8320d9e730e2b9964e509847dfa504a78b721b5a))
+
 ## [3.13.3](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.13.2...v3.13.3) (2025-10-14)
 
 
