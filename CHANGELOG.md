@@ -1,3 +1,10 @@
+## [3.13.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.12.0...v3.13.0) (2025-10-14)
+
+
+### Features
+
+* **moderation:** add inline feedback and persistent password display ([86e3d41](https://github.com/antialias/soroban-abacus-flashcards/commit/86e3d4199628f95048b9265c9de0adfdc2934f93))
+
 ## [3.12.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.11.1...v3.12.0) (2025-10-14)
 
 
