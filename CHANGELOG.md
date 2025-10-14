@@ -1,3 +1,10 @@
+## [3.13.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.13.0...v3.13.1) (2025-10-14)
+
+
+### Bug Fixes
+
+* **arcade:** allow room creator to rejoin restricted/approval rooms ([654ba19](https://github.com/antialias/soroban-abacus-flashcards/commit/654ba19ccca595d34ad205c036c18afb99a494c7))
+
 ## [3.13.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.12.0...v3.13.0) (2025-10-14)
 
 
