@@ -1,3 +1,10 @@
+## [3.9.2](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.9.1...v3.9.2) (2025-10-14)
+
+
+### Bug Fixes
+
+* remove duplicate ModerationNotifications causing double toasts ([c6886a0](https://github.com/antialias/soroban-abacus-flashcards/commit/c6886a0e59b3cbf051a828e0157495101cd8c823))
+
 ## [3.9.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.9.0...v3.9.1) (2025-10-14)
 
 
