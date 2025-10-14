@@ -1,3 +1,10 @@
+## [3.11.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.11.0...v3.11.1) (2025-10-14)
+
+
+### Bug Fixes
+
+* **moderation:** improve access mode settings UX ([dd9e657](https://github.com/antialias/soroban-abacus-flashcards/commit/dd9e657db85752b32ff91ae1b33a0bf7a7628e07))
+
 ## [3.11.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.10.0...v3.11.0) (2025-10-14)
 
 
