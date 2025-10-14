@@ -1,3 +1,10 @@
+## [3.6.2](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.6.1...v3.6.2) (2025-10-14)
+
+
+### Bug Fixes
+
+* allow join with pending invitation for restricted rooms ([85b2cf9](https://github.com/antialias/soroban-abacus-flashcards/commit/85b2cf98167ccf632ab634a94eb436e1eb584614))
+
 ## [3.6.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.6.0...v3.6.1) (2025-10-14)
 
 
