@@ -1,3 +1,10 @@
+## [3.9.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.8.1...v3.9.0) (2025-10-14)
+
+
+### Features
+
+* prevent invitations to retired rooms ([a7c3c1f](https://github.com/antialias/soroban-abacus-flashcards/commit/a7c3c1f4cd802985c8f040bc1cdf3ea4482a2fce))
+
 ## [3.8.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.8.0...v3.8.1) (2025-10-14)
 
 
