@@ -1,3 +1,10 @@
+## [3.10.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.9.2...v3.10.0) (2025-10-14)
+
+
+### Features
+
+* add fun automatic player naming system ([249257c](https://github.com/antialias/soroban-abacus-flashcards/commit/249257c6c77d503b48479065664c96c5de36a234))
+
 ## [3.9.2](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.9.1...v3.9.2) (2025-10-14)
 
 
