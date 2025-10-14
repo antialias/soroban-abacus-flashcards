@@ -1,3 +1,10 @@
+## [3.4.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.3.1...v3.4.0) (2025-10-14)
+
+
+### Features
+
+* add waiting state for approval requests in JoinRoomModal ([f9b0429](https://github.com/antialias/soroban-abacus-flashcards/commit/f9b0429a2e2d22944acba66009dd87a9d9eb28c2))
+
 ## [3.3.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.3.0...v3.3.1) (2025-10-14)
 
 
