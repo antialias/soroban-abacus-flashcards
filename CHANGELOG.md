@@ -1,3 +1,23 @@
+## [3.14.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.13.7...v3.14.0) (2025-10-14)
+
+
+### Features
+
+* **arcade:** add Change Game functionality for room hosts ([ee39241](https://github.com/antialias/soroban-abacus-flashcards/commit/ee39241e3c9e04202592497d9987eafcb89c00c9))
+* **arcade:** add game selection screen with navigation to room page ([4124f1c](https://github.com/antialias/soroban-abacus-flashcards/commit/4124f1cc081f5cb9d6f450f3c2e0cca8a247deba))
+
+
+### Bug Fixes
+
+* **player-config:** correct label positioning in player settings dialog ([554cc40](https://github.com/antialias/soroban-abacus-flashcards/commit/554cc4063bc756c9c9cd1adf0c1964d3f2f6151b))
+
+
+### Code Refactoring
+
+* implement in-room game selection UI ([f07b96d](https://github.com/antialias/soroban-abacus-flashcards/commit/f07b96d26eb9f63f3ee55f721139c37ccc34c3df))
+* make game_name nullable to support in-room game selection ([a9a6cef](https://github.com/antialias/soroban-abacus-flashcards/commit/a9a6cefafcaf7340902328ef1cb02eb3fdd3aa84))
+* **nav:** rename emphasizeGameContext to emphasizePlayerSelection ([6bb7016](https://github.com/antialias/soroban-abacus-flashcards/commit/6bb7016eea1e8ca40204a921db4a8b8fb9a06f73))
+
 ## [3.13.7](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.13.6...v3.13.7) (2025-10-14)
 
 
