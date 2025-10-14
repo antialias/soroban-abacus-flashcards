@@ -1,3 +1,15 @@
+## [3.1.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.0.0...v3.1.0) (2025-10-14)
+
+
+### Features
+
+* add room access modes and ownership transfer ([6ff21c4](https://github.com/antialias/soroban-abacus-flashcards/commit/6ff21c4f1dd0dd1db14257612809b4d40512689a))
+
+
+### Bug Fixes
+
+* replace isLocked with accessMode and add bcryptjs ([a74b96b](https://github.com/antialias/soroban-abacus-flashcards/commit/a74b96bb6fe331d27f3d27b8f77a3ce32b254bce))
+
 ## [3.0.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v2.17.2...v3.0.0) (2025-10-13)
 
 
