@@ -1,3 +1,10 @@
+## [3.13.6](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.13.5...v3.13.6) (2025-10-14)
+
+
+### Bug Fixes
+
+* **nav:** navigate to /arcade/room (not /arcade/rooms/{id}) ([1c55f36](https://github.com/antialias/soroban-abacus-flashcards/commit/1c55f3630cb5f07b685555e41baa5a49314f15a3))
+
 ## [3.13.5](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.13.4...v3.13.5) (2025-10-14)
 
 
