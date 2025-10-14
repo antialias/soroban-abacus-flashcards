@@ -1,3 +1,10 @@
+## [3.14.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.14.0...v3.14.1) (2025-10-14)
+
+
+### Bug Fixes
+
+* resolve Memory Quiz room-based multiplayer validation issues ([2ffeade](https://github.com/antialias/soroban-abacus-flashcards/commit/2ffeade43710b5f3fff9991cc84763bbdbf97010))
+
 ## [3.14.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.13.7...v3.14.0) (2025-10-14)
 
 
