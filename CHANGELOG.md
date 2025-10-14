@@ -1,3 +1,10 @@
+## [3.2.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.1.2...v3.2.0) (2025-10-14)
+
+
+### Features
+
+* improve room creation UX and add password support for share links ([dcbb507](https://github.com/antialias/soroban-abacus-flashcards/commit/dcbb5072d8e0a12838fe70e3faa85f94cd63b0c1))
+
 ## [3.1.2](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.1.1...v3.1.2) (2025-10-14)
 
 
