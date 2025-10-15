@@ -1,3 +1,15 @@
+## [3.17.14](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.17.13...v3.17.14) (2025-10-15)
+
+
+### Bug Fixes
+
+* **arcade:** resolve TypeScript errors in game config helpers ([04c9944](https://github.com/antialias/soroban-abacus-flashcards/commit/04c9944f2ed1025f5a4ece61761889edd08cc60d))
+
+
+### Documentation
+
+* **arcade:** update GAME_SETTINGS_PERSISTENCE.md for new schema ([260bdc2](https://github.com/antialias/soroban-abacus-flashcards/commit/260bdc2e9d458cb42a96d3ed36a18134260b4520))
+
 ## [3.17.13](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.17.12...v3.17.13) (2025-10-15)
 
 
