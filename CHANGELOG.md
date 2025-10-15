@@ -1,3 +1,10 @@
+## [3.19.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.18.1...v3.19.0) (2025-10-15)
+
+
+### Features
+
+* implement avatar-themed name generation with probabilistic mixing ([76a8472](https://github.com/antialias/soroban-abacus-flashcards/commit/76a8472f12d251071b97f2288f62f0b358576232))
+
 ## [3.18.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.18.0...v3.18.1) (2025-10-15)
 
 
