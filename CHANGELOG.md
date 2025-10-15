@@ -1,3 +1,10 @@
+## [3.17.8](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.17.7...v3.17.8) (2025-10-15)
+
+
+### Bug Fixes
+
+* **arcade:** preserve game settings when returning to game selection ([0ee7739](https://github.com/antialias/soroban-abacus-flashcards/commit/0ee7739091d60580d2f98cfe288b8586b03348f3))
+
 ## [3.17.7](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.17.6...v3.17.7) (2025-10-15)
 
 
