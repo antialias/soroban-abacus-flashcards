@@ -1,3 +1,10 @@
+## [3.17.10](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.17.9...v3.17.10) (2025-10-15)
+
+
+### Bug Fixes
+
+* **memory-quiz:** persist playMode setting across game switches ([487ca7f](https://github.com/antialias/soroban-abacus-flashcards/commit/487ca7fba62e370c85bc3779ca8a96eb2c2cc3e3))
+
 ## [3.17.9](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.17.8...v3.17.9) (2025-10-15)
 
 
