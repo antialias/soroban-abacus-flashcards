@@ -1,3 +1,10 @@
+## [3.17.2](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.17.1...v3.17.2) (2025-10-15)
+
+
+### Bug Fixes
+
+* **room-data:** update query cache when gameConfig changes ([7cea297](https://github.com/antialias/soroban-abacus-flashcards/commit/7cea297095b78d74f5b77ca83489ec1be684a486))
+
 ## [3.17.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.17.0...v3.17.1) (2025-10-15)
 
 
