@@ -1,3 +1,15 @@
+## [3.17.12](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.17.11...v3.17.12) (2025-10-15)
+
+
+### Code Refactoring
+
+* **arcade:** remove non-productive debug logging from memory-quiz ([38e554e](https://github.com/antialias/soroban-abacus-flashcards/commit/38e554e6ea0386e48798338dd938e50ba73d5576))
+
+
+### Documentation
+
+* **arcade:** document game settings persistence architecture ([8f8f112](https://github.com/antialias/soroban-abacus-flashcards/commit/8f8f112de222e40901d4b3168fa751d233337e4b))
+
 ## [3.17.11](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.17.10...v3.17.11) (2025-10-15)
 
 
