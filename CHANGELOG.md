@@ -1,3 +1,10 @@
+## [3.17.13](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.17.12...v3.17.13) (2025-10-15)
+
+
+### Code Refactoring
+
+* **arcade:** migrate game settings to normalized database schema ([1bd7354](https://github.com/antialias/soroban-abacus-flashcards/commit/1bd73544df6d62416961eea0b358955aaf82b79d))
+
 ## [3.17.12](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.17.11...v3.17.12) (2025-10-15)
 
 
