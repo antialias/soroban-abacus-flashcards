@@ -1,3 +1,10 @@
+## [3.14.2](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.14.1...v3.14.2) (2025-10-15)
+
+
+### Bug Fixes
+
+* **room:** update GAME_TYPE_TO_NAME mapping for memory-quiz ([4afa171](https://github.com/antialias/soroban-abacus-flashcards/commit/4afa171af212902120599b3d68f58cfbdf7820b0))
+
 ## [3.14.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.14.0...v3.14.1) (2025-10-14)
 
 
