@@ -1,3 +1,10 @@
+## [3.17.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.16.0...v3.17.0) (2025-10-15)
+
+
+### Features
+
+* **memory-quiz:** persist game settings per-game across sessions ([05a8e0a](https://github.com/antialias/soroban-abacus-flashcards/commit/05a8e0a84272c6c45a4014413ee00726eb88b76a))
+
 ## [3.16.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.15.2...v3.16.0) (2025-10-15)
 
 
