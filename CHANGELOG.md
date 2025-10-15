@@ -1,3 +1,15 @@
+## [3.17.3](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.17.2...v3.17.3) (2025-10-15)
+
+
+### Bug Fixes
+
+* **arcade:** preserve gameConfig when switching games ([2273c71](https://github.com/antialias/soroban-abacus-flashcards/commit/2273c71a872a5122d0b2023835fe30640106048e))
+
+
+### Code Refactoring
+
+* remove verbose console logging for cleaner debugging ([9cb5fdd](https://github.com/antialias/soroban-abacus-flashcards/commit/9cb5fdd2fa43560adc32dd052f47a7b06b2c5b69))
+
 ## [3.17.2](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.17.1...v3.17.2) (2025-10-15)
 
 
