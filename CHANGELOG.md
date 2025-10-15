@@ -1,3 +1,10 @@
+## [3.21.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.20.0...v3.21.0) (2025-10-15)
+
+
+### Features
+
+* **arcade:** add modular game SDK and registry system ([de30bec](https://github.com/antialias/soroban-abacus-flashcards/commit/de30bec47923565fe5d1d5a6f719f3fc4e9d1509))
+
 ## [3.20.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.19.0...v3.20.0) (2025-10-15)
 
 
