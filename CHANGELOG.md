@@ -1,3 +1,10 @@
+## [3.14.4](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.14.3...v3.14.4) (2025-10-15)
+
+
+### Bug Fixes
+
+* **memory-quiz:** prevent input lag during rapid typing in room mode ([b45139b](https://github.com/antialias/soroban-abacus-flashcards/commit/b45139b588d0ab6df4d6c1003c1b65b634e2b041))
+
 ## [3.14.3](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.14.2...v3.14.3) (2025-10-15)
 
 
