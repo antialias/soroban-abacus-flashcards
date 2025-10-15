@@ -1,3 +1,15 @@
+## [3.20.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.19.0...v3.20.0) (2025-10-15)
+
+
+### Features
+
+* adjust tier probabilities for more abacus flavor ([49219e3](https://github.com/antialias/soroban-abacus-flashcards/commit/49219e34cde32736155a11929d10581e783cba69))
+
+
+### Code Refactoring
+
+* use per-word-type tier selection for name generation ([499ee52](https://github.com/antialias/soroban-abacus-flashcards/commit/499ee525a835249b439044cf602bf9f0ff322cec))
+
 ## [3.19.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.18.1...v3.19.0) (2025-10-15)
 
 
