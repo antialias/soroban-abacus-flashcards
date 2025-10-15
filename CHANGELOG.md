@@ -1,3 +1,10 @@
+## [3.15.2](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.15.1...v3.15.2) (2025-10-15)
+
+
+### Bug Fixes
+
+* **memory-quiz:** prevent duplicate card processing from optimistic updates ([51676fc](https://github.com/antialias/soroban-abacus-flashcards/commit/51676fc15f5bc15cdb43393d3e66f7c5a0667868))
+
 ## [3.15.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.15.0...v3.15.1) (2025-10-15)
 
 
