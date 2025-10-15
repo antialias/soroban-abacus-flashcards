@@ -1,3 +1,11 @@
+## [3.17.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.17.0...v3.17.1) (2025-10-15)
+
+
+### Bug Fixes
+
+* **arcade-rooms:** navigate to invite link after room creation ([1922b21](https://github.com/antialias/soroban-abacus-flashcards/commit/1922b2122bb1bc4aeada7526d8c46aa89024bb00))
+* **memory-quiz:** scope game settings by game name for proper persistence ([3dfe54f](https://github.com/antialias/soroban-abacus-flashcards/commit/3dfe54f1cb89bd636e763e1c5acb03776f97c011))
+
 ## [3.17.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.16.0...v3.17.0) (2025-10-15)
 
 
