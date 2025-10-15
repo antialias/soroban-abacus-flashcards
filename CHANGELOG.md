@@ -1,3 +1,10 @@
+## [3.18.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.18.0...v3.18.1) (2025-10-15)
+
+
+### Bug Fixes
+
+* **arcade:** prevent empty update in settings API when only gameConfig changes ([ffb626f](https://github.com/antialias/soroban-abacus-flashcards/commit/ffb626f4038fd32d0f40dba8d83ae4d881d698d0))
+
 ## [3.18.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.17.14...v3.18.0) (2025-10-15)
 
 
