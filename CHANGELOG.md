@@ -1,3 +1,10 @@
+## [3.17.5](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.17.4...v3.17.5) (2025-10-15)
+
+
+### Bug Fixes
+
+* **arcade:** implement settings persistence for matching game ([08fe432](https://github.com/antialias/soroban-abacus-flashcards/commit/08fe4326a6a7c484b9058a241f4ff79b3fb5125f))
+
 ## [3.17.4](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.17.3...v3.17.4) (2025-10-15)
 
 
