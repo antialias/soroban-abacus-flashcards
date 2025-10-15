@@ -1,3 +1,15 @@
+## [3.18.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.17.14...v3.18.0) (2025-10-15)
+
+
+### Features
+
+* add drizzle migration for room_game_configs table ([3bae00b](https://github.com/antialias/soroban-abacus-flashcards/commit/3bae00b9a9dc925039a02fe07d036a2fc5e0fb79))
+
+
+### Documentation
+
+* document manual migration of room_game_configs table ([ff79140](https://github.com/antialias/soroban-abacus-flashcards/commit/ff791409cf4bae1a5df43eb974eacbc7612d8eec))
+
 ## [3.17.14](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.17.13...v3.17.14) (2025-10-15)
 
 
