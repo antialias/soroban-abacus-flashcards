@@ -1,3 +1,10 @@
+## [3.15.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.15.0...v3.15.1) (2025-10-15)
+
+
+### Bug Fixes
+
+* **memory-quiz:** synchronize card display across all players in multiplayer ([472f201](https://github.com/antialias/soroban-abacus-flashcards/commit/472f201088d82f92030273fadaf8a8e488820d6c))
+
 ## [3.15.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.14.4...v3.15.0) (2025-10-15)
 
 
