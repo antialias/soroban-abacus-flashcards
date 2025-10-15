@@ -1,3 +1,10 @@
+## [3.16.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.15.2...v3.16.0) (2025-10-15)
+
+
+### Features
+
+* **arcade:** broadcast game selection changes to all room members ([b99e754](https://github.com/antialias/soroban-abacus-flashcards/commit/b99e7543952bb0d47f42e79dc4226b3c1280a0ee))
+
 ## [3.15.2](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.15.1...v3.15.2) (2025-10-15)
 
 
