@@ -1,3 +1,16 @@
+## [3.15.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.14.4...v3.15.0) (2025-10-15)
+
+
+### Features
+
+* **memory-quiz:** add multiplayer support with redesigned scoreboards ([1cf4469](https://github.com/antialias/soroban-abacus-flashcards/commit/1cf44696c26473ce4ab2fc2039ff42f08c20edb6))
+* **memory-quiz:** show player emojis on cards to indicate who found them ([05bd11a](https://github.com/antialias/soroban-abacus-flashcards/commit/05bd11a133706c9ed8c09c744da7ca8955fa979a))
+
+
+### Bug Fixes
+
+* **arcade:** add defensive checks and update test fixtures ([a93d981](https://github.com/antialias/soroban-abacus-flashcards/commit/a93d981d1ab3abed019b28cebe87525191313cc7))
+
 ## [3.14.4](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.14.3...v3.14.4) (2025-10-15)
 
 
