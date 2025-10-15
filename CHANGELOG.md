@@ -1,3 +1,10 @@
+## [3.17.11](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.17.10...v3.17.11) (2025-10-15)
+
+
+### Bug Fixes
+
+* **memory-quiz:** fix playMode persistence by updating validator ([de0efd5](https://github.com/antialias/soroban-abacus-flashcards/commit/de0efd59321ec779cddb900724035884290419b7))
+
 ## [3.17.10](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.17.9...v3.17.10) (2025-10-15)
 
 
