@@ -1,3 +1,10 @@
+## [3.17.7](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.17.6...v3.17.7) (2025-10-15)
+
+
+### Bug Fixes
+
+* **arcade:** prevent gameConfig from being overwritten when switching games ([a89d3a9](https://github.com/antialias/soroban-abacus-flashcards/commit/a89d3a970137471e2652de992c45370dbb97416d))
+
 ## [3.17.6](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.17.5...v3.17.6) (2025-10-15)
 
 
