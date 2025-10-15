@@ -1,3 +1,10 @@
+## [3.14.3](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.14.2...v3.14.3) (2025-10-15)
+
+
+### Bug Fixes
+
+* **arcade:** delete old session when room game changes ([98a3a25](https://github.com/antialias/soroban-abacus-flashcards/commit/98a3a2573db51899c41ba02796895d676c4e16ef))
+
 ## [3.14.2](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.14.1...v3.14.2) (2025-10-15)
 
 
