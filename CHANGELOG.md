@@ -1,3 +1,10 @@
+## [3.17.9](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.17.8...v3.17.9) (2025-10-15)
+
+
+### Bug Fixes
+
+* **arcade:** read nested gameConfig correctly when creating sessions ([94ef392](https://github.com/antialias/soroban-abacus-flashcards/commit/94ef39234d362b82e032cb69d3561b9fcb436eaf))
+
 ## [3.17.8](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.17.7...v3.17.8) (2025-10-15)
 
 
