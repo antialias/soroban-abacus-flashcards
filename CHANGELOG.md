@@ -1,3 +1,10 @@
+## [3.17.6](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.17.5...v3.17.6) (2025-10-15)
+
+
+### Code Refactoring
+
+* **logging:** use JSON.stringify for all object logging ([c33698c](https://github.com/antialias/soroban-abacus-flashcards/commit/c33698ce52ebdc18ce3a0d856f9241c7389ed651))
+
 ## [3.17.5](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.17.4...v3.17.5) (2025-10-15)
 
 
