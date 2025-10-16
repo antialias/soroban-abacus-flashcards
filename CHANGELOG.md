@@ -1,3 +1,15 @@
+## [3.22.3](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.22.2...v3.22.3) (2025-10-16)
+
+
+### Bug Fixes
+
+* **number-guesser:** add turn indicators, error feedback, and fix player ordering ([9f62623](https://github.com/antialias/soroban-abacus-flashcards/commit/9f626236845493ef68e1b3626e80efa35637b449))
+
+
+### Documentation
+
+* **arcade:** update docs for unified validator registry ([6f6cb14](https://github.com/antialias/soroban-abacus-flashcards/commit/6f6cb14650ba3636a7e2b036e2a2a9410492e7c3))
+
 ## [3.22.2](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.22.1...v3.22.2) (2025-10-16)
 
 
