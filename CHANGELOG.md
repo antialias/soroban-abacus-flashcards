@@ -1,3 +1,10 @@
+## [4.3.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.2.2...v4.3.0) (2025-10-16)
+
+
+### Features
+
+* **complement-race:** implement state adapter for multiplayer support ([13882bd](https://github.com/antialias/soroban-abacus-flashcards/commit/13882bda3258d68a817473d7d830381f02553043))
+
 ## [4.2.2](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.2.1...v4.2.2) (2025-10-16)
 
 
