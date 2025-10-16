@@ -1,3 +1,10 @@
+## [4.3.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.3.0...v4.3.1) (2025-10-16)
+
+
+### Bug Fixes
+
+* **complement-race:** resolve TypeScript errors in state adapter ([59abcca](https://github.com/antialias/soroban-abacus-flashcards/commit/59abcca4c4192ca28944fa1fa366791d557c1c27))
+
 ## [4.3.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.2.2...v4.3.0) (2025-10-16)
 
 
