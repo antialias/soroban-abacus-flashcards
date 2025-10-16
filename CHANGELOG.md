@@ -1,3 +1,11 @@
+## [3.22.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.22.0...v3.22.1) (2025-10-16)
+
+
+### Bug Fixes
+
+* **arcade:** add Number Guesser to game config helpers ([7d1a351](https://github.com/antialias/soroban-abacus-flashcards/commit/7d1a351ed6a1442ae34f6b75d46039bfa77a921b))
+* **nav:** update types for registry games with nullable gameName ([a51e539](https://github.com/antialias/soroban-abacus-flashcards/commit/a51e539d023681daf639ec104e79079c8ceec98e))
+
 ## [3.22.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.21.0...v3.22.0) (2025-10-16)
 
 
