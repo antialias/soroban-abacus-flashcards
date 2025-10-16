@@ -1,3 +1,10 @@
+## [3.22.2](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.22.1...v3.22.2) (2025-10-16)
+
+
+### Code Refactoring
+
+* **arcade:** create unified validator registry to fix dual registration ([f775fc5](https://github.com/antialias/soroban-abacus-flashcards/commit/f775fc55e50af0c3a29b3e00fc722e7d7ce90212)), closes [#1](https://github.com/antialias/soroban-abacus-flashcards/issues/1)
+
 ## [3.22.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.22.0...v3.22.1) (2025-10-16)
 
 
