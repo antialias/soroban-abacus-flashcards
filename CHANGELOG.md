@@ -1,3 +1,22 @@
+## [3.23.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.22.3...v3.23.0) (2025-10-16)
+
+
+### Features
+
+* **arcade:** add Math Sprint game implementation ([e5be09e](https://github.com/antialias/soroban-abacus-flashcards/commit/e5be09ef5f170c7544557f75b9eca17bb2069246))
+* **arcade:** register Math Sprint in game system ([0c05a7c](https://github.com/antialias/soroban-abacus-flashcards/commit/0c05a7c6bbc8d6f6e1f92e15e691d7e1aba0d8f7)), closes [#2](https://github.com/antialias/soroban-abacus-flashcards/issues/2) [#3](https://github.com/antialias/soroban-abacus-flashcards/issues/3)
+
+
+### Bug Fixes
+
+* **api:** add 'math-sprint' to settings endpoint validation ([d790e5e](https://github.com/antialias/soroban-abacus-flashcards/commit/d790e5e278f81686077dbe3ef4adca49574ae434)), closes [#1](https://github.com/antialias/soroban-abacus-flashcards/issues/1)
+* **db:** add 'math-sprint' to database schema enums ([7b112a9](https://github.com/antialias/soroban-abacus-flashcards/commit/7b112a98babe782d4c254ef18a0295e7cbf8fefa)), closes [#1](https://github.com/antialias/soroban-abacus-flashcards/issues/1)
+
+
+### Documentation
+
+* add architecture quality audit [#2](https://github.com/antialias/soroban-abacus-flashcards/issues/2) ([5b91b71](https://github.com/antialias/soroban-abacus-flashcards/commit/5b91b710782dc450405583bc196e5156a296d0df))
+
 ## [3.22.3](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.22.2...v3.22.3) (2025-10-16)
 
 
