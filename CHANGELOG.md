@@ -1,3 +1,10 @@
+## [4.0.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.0.0...v4.0.1) (2025-10-16)
+
+
+### Code Refactoring
+
+* **arcade:** move config validation to game definitions ([b19437b](https://github.com/antialias/soroban-abacus-flashcards/commit/b19437b7dc418f194fb60e12f1c17034024eca2a)), closes [#3](https://github.com/antialias/soroban-abacus-flashcards/issues/3)
+
 ## [4.0.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.24.0...v4.0.0) (2025-10-16)
 
 
