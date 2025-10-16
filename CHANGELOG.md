@@ -1,3 +1,25 @@
+## [4.0.3](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.0.2...v4.0.3) (2025-10-16)
+
+
+### Bug Fixes
+
+* **math-sprint:** remove unused import and autoFocus attribute ([51593eb](https://github.com/antialias/soroban-abacus-flashcards/commit/51593eb44f93e369d6a773ee80e5f5cf50f3be67))
+
+
+### Code Refactoring
+
+* **arcade:** implement Phase 3 - infer config types from game definitions ([eed468c](https://github.com/antialias/soroban-abacus-flashcards/commit/eed468c6c4057e3c09a1e8df88551a9336c490c5))
+
+
+### Documentation
+
+* **arcade:** update README with Phase 3 type inference architecture ([b47b1cc](https://github.com/antialias/soroban-abacus-flashcards/commit/b47b1cc03f4b5fcfe8340653ca8a5dd903833481))
+
+
+### Styles
+
+* **math-sprint:** apply Biome formatting ([d7d8d8b](https://github.com/antialias/soroban-abacus-flashcards/commit/d7d8d8b1e32f9c9bb73d076f5d611210f809eca8))
+
 ## [4.0.2](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.0.1...v4.0.2) (2025-10-16)
 
 
