@@ -1,3 +1,14 @@
+## [4.0.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.24.0...v4.0.0) (2025-10-16)
+
+
+### ⚠ BREAKING CHANGES
+
+* **db:** Database schemas now accept any string for game names
+
+### Code Refactoring
+
+* **db:** remove database schema coupling for game names ([e135d92](https://github.com/antialias/soroban-abacus-flashcards/commit/e135d92abb4d27f646c1fbeff6524a729d107426)), closes [#1](https://github.com/antialias/soroban-abacus-flashcards/issues/1)
+
 ## [3.24.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.23.0...v3.24.0) (2025-10-16)
 
 
