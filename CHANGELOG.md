@@ -1,3 +1,10 @@
+## [3.22.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.21.0...v3.22.0) (2025-10-16)
+
+
+### Features
+
+* **arcade:** add Number Guesser demo game with plugin architecture ([0e3c058](https://github.com/antialias/soroban-abacus-flashcards/commit/0e3c0587073a69574a50f05c467f2499296012bf))
+
 ## [3.21.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.20.0...v3.21.0) (2025-10-15)
 
 
