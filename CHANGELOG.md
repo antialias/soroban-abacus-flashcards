@@ -1,3 +1,10 @@
+## [3.24.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.23.0...v3.24.0) (2025-10-16)
+
+
+### Features
+
+* **math-sprint:** add game manifest ([1eefcc8](https://github.com/antialias/soroban-abacus-flashcards/commit/1eefcc89a58b79f928932a7425d6b88fb45a5526))
+
 ## [3.23.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v3.22.3...v3.23.0) (2025-10-16)
 
 
