@@ -1,3 +1,23 @@
+## [4.1.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.0.3...v4.1.0) (2025-10-16)
+
+
+### Features
+
+* **arcade:** migrate memory-quiz to modular game system ([f48c37a](https://github.com/antialias/soroban-abacus-flashcards/commit/f48c37accccb88e790c7a1b438fd0566e7120e11))
+
+
+### Code Refactoring
+
+* **arcade:** remove memory-quiz from legacy GAMES_CONFIG ([9952e11](https://github.com/antialias/soroban-abacus-flashcards/commit/9952e11c27f6cacb8eef1c5494b8cfea29dac907))
+
+
+### Documentation
+
+* add matching pairs battle migration plan ([3948582](https://github.com/antialias/soroban-abacus-flashcards/commit/39485826fc6c87f54c07795211909da0278a2ad0))
+* add memory-quiz migration plan documentation ([7e2df10](https://github.com/antialias/soroban-abacus-flashcards/commit/7e2df106e68a1a0be414852a3e603b89029635b7))
+* **arcade:** document Phase 3 completion in ARCHITECTURAL_IMPROVEMENTS.md ([704f34f](https://github.com/antialias/soroban-abacus-flashcards/commit/704f34f83e76332cb3610bda75289cbd0036e7eb))
+* update playbook with memory-quiz completion ([99eee69](https://github.com/antialias/soroban-abacus-flashcards/commit/99eee69f28d17d0f9a3c806a1b84d90ee1fad683))
+
 ## [4.0.3](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.0.2...v4.0.3) (2025-10-16)
 
 
