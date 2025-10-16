@@ -1,3 +1,10 @@
+## [4.0.2](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.0.1...v4.0.2) (2025-10-16)
+
+
+### Bug Fixes
+
+* **arcade:** prevent server-side loading of React components ([784793b](https://github.com/antialias/soroban-abacus-flashcards/commit/784793ba244731edf45391da44588a978b137abe))
+
 ## [4.0.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.0.0...v4.0.1) (2025-10-16)
 
 
