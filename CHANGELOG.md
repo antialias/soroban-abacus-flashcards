@@ -1,3 +1,21 @@
+## [4.2.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.1.0...v4.2.0) (2025-10-16)
+
+
+### Features
+
+* **arcade:** migrate matching pairs - phases 1-4 and 7 complete ([2a3af97](https://github.com/antialias/soroban-abacus-flashcards/commit/2a3af973f70ff07de30b38bbe1cdc549a971846f))
+
+
+### Bug Fixes
+
+* resolve TypeScript errors in MemoryGrid and StandardGameLayout ([cabbc82](https://github.com/antialias/soroban-abacus-flashcards/commit/cabbc821955d70f118630dc21a9fcbb6d340f278))
+
+
+### Code Refactoring
+
+* **matching:** migrate to modular game system ([e5c4a4b](https://github.com/antialias/soroban-abacus-flashcards/commit/e5c4a4bae078c69e632945730c61299f7062f4be))
+* **matching:** remove legacy battle-arena references ([c46a098](https://github.com/antialias/soroban-abacus-flashcards/commit/c46a0983813c87d5e82a5aa32c48a10a49259b00))
+
 ## [4.1.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.0.3...v4.1.0) (2025-10-16)
 
 
