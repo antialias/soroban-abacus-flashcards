@@ -1,3 +1,10 @@
+## [4.4.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.3.1...v4.4.0) (2025-10-16)
+
+
+### Features
+
+* **complement-race:** add mini app navigation bar ([ed0ef2d](https://github.com/antialias/soroban-abacus-flashcards/commit/ed0ef2d3b87324470d06b3246652967544caec26))
+
 ## [4.3.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.3.0...v4.3.1) (2025-10-16)
 
 
