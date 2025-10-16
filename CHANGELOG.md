@@ -1,3 +1,15 @@
+## [4.2.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.2.0...v4.2.1) (2025-10-16)
+
+
+### Bug Fixes
+
+* **socket-io:** update import path for socket-server module ([1a64dec](https://github.com/antialias/soroban-abacus-flashcards/commit/1a64decf5afe67c16e1aec283262ffa6132dcd83))
+
+
+### Code Refactoring
+
+* **matching:** complete validator migration to modular location ([f2958cd](https://github.com/antialias/soroban-abacus-flashcards/commit/f2958cd8c424989b8651ea666ce9843e97e75929))
+
 ## [4.2.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.1.0...v4.2.0) (2025-10-16)
 
 
