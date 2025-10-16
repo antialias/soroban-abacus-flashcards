@@ -1,3 +1,10 @@
+## [4.2.2](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.2.1...v4.2.2) (2025-10-16)
+
+
+### Code Refactoring
+
+* **types:** consolidate type system - eliminate fragmentation ([0726176](https://github.com/antialias/soroban-abacus-flashcards/commit/0726176e4d2666f6f3a289f01736747c33e93879))
+
 ## [4.2.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.2.0...v4.2.1) (2025-10-16)
 
 
