@@ -1,3 +1,10 @@
+## [4.4.5](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.4.4...v4.4.5) (2025-10-17)
+
+
+### Bug Fixes
+
+* **complement-race:** add missing useEffect import ([3054130](https://github.com/antialias/soroban-abacus-flashcards/commit/30541304dd0f0801860dd62967f7f7cae717bcdd))
+
 ## [4.4.4](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.4.3...v4.4.4) (2025-10-17)
 
 
