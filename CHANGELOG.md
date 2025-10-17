@@ -1,3 +1,11 @@
+## [4.4.12](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.4.11...v4.4.12) (2025-10-17)
+
+
+### Bug Fixes
+
+* **complement-race:** track physical car indices to prevent boarding issues ([53bbae8](https://github.com/antialias/soroban-abacus-flashcards/commit/53bbae84af7317d5e12109db2054cc70ca5bea27))
+* **complement-race:** update passenger display when state changes ([5116364](https://github.com/antialias/soroban-abacus-flashcards/commit/511636400c19776b58c6bddf8f7c9cc398a05236))
+
 ## [4.4.11](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.4.10...v4.4.11) (2025-10-17)
 
 
