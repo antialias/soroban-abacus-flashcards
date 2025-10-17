@@ -1,3 +1,10 @@
+## [4.4.8](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.4.7...v4.4.8) (2025-10-17)
+
+
+### Bug Fixes
+
+* **complement-race:** implement client-side momentum with continuous decay for smooth train movement ([ea19ff9](https://github.com/antialias/soroban-abacus-flashcards/commit/ea19ff918bc70ad3eb0339e18dbd32195f34816e))
+
 ## [4.4.7](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.4.6...v4.4.7) (2025-10-17)
 
 
