@@ -1,3 +1,10 @@
+## [4.4.9](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.4.8...v4.4.9) (2025-10-17)
+
+
+### Bug Fixes
+
+* **complement-race:** reduce initial momentum from 50 to 10 to prevent train sailing past first station ([5f146b0](https://github.com/antialias/soroban-abacus-flashcards/commit/5f146b0daf74d54e1c7b9a57d3a2f37e73849ff2))
+
 ## [4.4.8](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.4.7...v4.4.8) (2025-10-17)
 
 
