@@ -1,3 +1,10 @@
+## [4.4.2](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.4.1...v4.4.2) (2025-10-17)
+
+
+### Code Refactoring
+
+* **complement-race:** remove verbose logging, keep only train debug logs ([86af2fe](https://github.com/antialias/soroban-abacus-flashcards/commit/86af2fe902b3d3790b7b4659fdc698caed8e4dd9))
+
 ## [4.4.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.4.0...v4.4.1) (2025-10-17)
 
 
