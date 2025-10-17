@@ -1,3 +1,10 @@
+## [4.4.10](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.4.9...v4.4.10) (2025-10-17)
+
+
+### Bug Fixes
+
+* **complement-race:** correct passenger boarding to use multiplayer fields ([7ed1b94](https://github.com/antialias/soroban-abacus-flashcards/commit/7ed1b94b8fa620cb4f64ba43e160ef511704f3ce))
+
 ## [4.4.9](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.4.8...v4.4.9) (2025-10-17)
 
 
