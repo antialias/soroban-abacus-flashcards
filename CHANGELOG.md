@@ -1,3 +1,10 @@
+## [4.4.4](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.4.3...v4.4.4) (2025-10-17)
+
+
+### Bug Fixes
+
+* **complement-race:** add pressure decay system and improve logging ([66992e8](https://github.com/antialias/soroban-abacus-flashcards/commit/66992e877065a42d00379ef8fae0a6e252b0ffcb))
+
 ## [4.4.3](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.4.2...v4.4.3) (2025-10-17)
 
 
