@@ -1,3 +1,15 @@
+## [4.4.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.4.0...v4.4.1) (2025-10-17)
+
+
+### Bug Fixes
+
+* **complement-race:** clear input state on question transitions ([5872030](https://github.com/antialias/soroban-abacus-flashcards/commit/587203056a1e1692348805eb0de909d81d16e158))
+
+
+### Documentation
+
+* **complement-race:** add Phase 9 for multiplayer visual features ([131c54b](https://github.com/antialias/soroban-abacus-flashcards/commit/131c54b5627ceeac7ca3653f683c32822a2007af))
+
 ## [4.4.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.3.1...v4.4.0) (2025-10-16)
 
 
