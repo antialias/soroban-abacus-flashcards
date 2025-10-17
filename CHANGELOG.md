@@ -1,3 +1,15 @@
+## [4.4.3](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.4.2...v4.4.3) (2025-10-17)
+
+
+### Bug Fixes
+
+* **complement-race:** train now moves in sprint mode ([54b46e7](https://github.com/antialias/soroban-abacus-flashcards/commit/54b46e771e654721e7fabb1f45ecd45daf8e447f))
+
+
+### Code Refactoring
+
+* simplify train debug logs to strings only ([334a49c](https://github.com/antialias/soroban-abacus-flashcards/commit/334a49c92e112c852c483b5dbe3a3d0aef8a5c03))
+
 ## [4.4.2](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.4.1...v4.4.2) (2025-10-17)
 
 
