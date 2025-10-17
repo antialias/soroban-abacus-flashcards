@@ -1,3 +1,10 @@
+## [4.4.13](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.4.12...v4.4.13) (2025-10-17)
+
+
+### Bug Fixes
+
+* **complement-race:** show new passengers when route changes ([ec1c8ed](https://github.com/antialias/soroban-abacus-flashcards/commit/ec1c8ed263844f56477c1f709041339b42b48f4e))
+
 ## [4.4.12](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.4.11...v4.4.12) (2025-10-17)
 
 
