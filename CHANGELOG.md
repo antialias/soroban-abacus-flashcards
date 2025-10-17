@@ -1,3 +1,10 @@
+## [4.4.11](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.4.10...v4.4.11) (2025-10-17)
+
+
+### Code Refactoring
+
+* **logging:** replace per-frame debug logging with event-based logging ([fedb324](https://github.com/antialias/soroban-abacus-flashcards/commit/fedb32486ab5c6c619ebc03570b6c66529a1344e))
+
 ## [4.4.10](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.4.9...v4.4.10) (2025-10-17)
 
 
