@@ -1,3 +1,10 @@
+## [4.4.6](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.4.5...v4.4.6) (2025-10-17)
+
+
+### Bug Fixes
+
+* **complement-race:** restore smooth train movement with client-side game loop ([46a80cb](https://github.com/antialias/soroban-abacus-flashcards/commit/46a80cbcc8ec39224d4edaf540da25611d48fbdd))
+
 ## [4.4.5](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.4.4...v4.4.5) (2025-10-17)
 
 
