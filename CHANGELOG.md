@@ -1,3 +1,10 @@
+## [4.13.3](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.13.2...v4.13.3) (2025-10-18)
+
+
+### Bug Fixes
+
+* **card-sorting:** increase SVG size to fill card containers ([cf9d893](https://github.com/antialias/soroban-abacus-flashcards/commit/cf9d893f3fdbef6e91cd0ba283d602b9215569f1))
+
 ## [4.13.2](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.13.1...v4.13.2) (2025-10-18)
 
 
