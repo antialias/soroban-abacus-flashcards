@@ -1,3 +1,10 @@
+## [4.5.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.4.15...v4.5.0) (2025-10-18)
+
+
+### Features
+
+* **complement-race:** add infinite win condition for Steam Sprint mode ([d8fdfee](https://github.com/antialias/soroban-abacus-flashcards/commit/d8fdfeef74a5d3bb9684254af1c9d64d264b46ad))
+
 ## [4.4.15](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.4.14...v4.4.15) (2025-10-18)
 
 
