@@ -1,3 +1,10 @@
+## [4.6.3](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.6.2...v4.6.3) (2025-10-18)
+
+
+### Bug Fixes
+
+* **complement-race:** balance AI speeds to match original implementation ([054f0c0](https://github.com/antialias/soroban-abacus-flashcards/commit/054f0c0d235dc2b0042a0f6af48840d23a4c5ff8))
+
 ## [4.6.2](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.6.1...v4.6.2) (2025-10-18)
 
 
