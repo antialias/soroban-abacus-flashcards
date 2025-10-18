@@ -1,3 +1,10 @@
+## [4.11.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.11.0...v4.11.1) (2025-10-18)
+
+
+### Bug Fixes
+
+* **card-sorting:** center AbacusReact SVGs in card tiles ([26edec1](https://github.com/antialias/soroban-abacus-flashcards/commit/26edec1bbf038264405ec9d161edcd18f67a6fc6))
+
 ## [4.11.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.10.6...v4.11.0) (2025-10-18)
 
 
