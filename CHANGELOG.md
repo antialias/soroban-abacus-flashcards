@@ -1,3 +1,10 @@
+## [4.10.2](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.10.1...v4.10.2) (2025-10-18)
+
+
+### Bug Fixes
+
+* **card-sorting:** faithfully port UI/UX from Python original ([c92076f](https://github.com/antialias/soroban-abacus-flashcards/commit/c92076f232930aa12d9a0230fa745b73b5cc04d9)), closes [#2c5f76](https://github.com/antialias/soroban-abacus-flashcards/issues/2c5f76) [#1976d2](https://github.com/antialias/soroban-abacus-flashcards/issues/1976d2)
+
 ## [4.10.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.10.0...v4.10.1) (2025-10-18)
 
 
