@@ -1,3 +1,10 @@
+## [4.13.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.12.0...v4.13.0) (2025-10-18)
+
+
+### Features
+
+* make home page abacus interactive with audio ([9a53d7e](https://github.com/antialias/soroban-abacus-flashcards/commit/9a53d7e5db18853aca4e2e0c7abc799217feaecf))
+
 ## [4.12.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.11.1...v4.12.0) (2025-10-18)
 
 
