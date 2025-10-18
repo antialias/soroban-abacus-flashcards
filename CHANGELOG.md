@@ -1,3 +1,15 @@
+## [4.13.10](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.13.9...v4.13.10) (2025-10-18)
+
+
+### Bug Fixes
+
+* add Typst to Docker image for flashcard generation ([d9a7694](https://github.com/antialias/soroban-abacus-flashcards/commit/d9a769403187bf70fb069be7ffe77417a62271a5))
+
+
+### Code Refactoring
+
+* remove 'Complete Soroban Learning Platform' section ([42dcbff](https://github.com/antialias/soroban-abacus-flashcards/commit/42dcbff85708ad378550634cbf7a3345eccb578e))
+
 ## [4.13.9](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.13.8...v4.13.9) (2025-10-18)
 
 
