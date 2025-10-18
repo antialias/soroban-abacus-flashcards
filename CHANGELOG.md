@@ -1,3 +1,10 @@
+## [4.13.4](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.13.3...v4.13.4) (2025-10-18)
+
+
+### Bug Fixes
+
+* **card-sorting:** increase card tile sizes to contain abacuses ([d2a3b7a](https://github.com/antialias/soroban-abacus-flashcards/commit/d2a3b7ae2e3f6819b8d9ace32be22f04f748d1bc))
+
 ## [4.13.3](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.13.2...v4.13.3) (2025-10-18)
 
 
