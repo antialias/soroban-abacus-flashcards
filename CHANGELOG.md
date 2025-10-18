@@ -1,3 +1,10 @@
+## [4.7.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.6.10...v4.7.0) (2025-10-18)
+
+
+### Features
+
+* **complement-race:** enable adaptive AI difficulty in arcade ([55010d2](https://github.com/antialias/soroban-abacus-flashcards/commit/55010d2bcd953718d8fea428b1f7f613a193779c))
+
 ## [4.6.10](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.6.9...v4.6.10) (2025-10-18)
 
 
