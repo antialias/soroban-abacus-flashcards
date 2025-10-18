@@ -1,3 +1,10 @@
+## [4.6.6](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.6.5...v4.6.6) (2025-10-18)
+
+
+### Bug Fixes
+
+* **complement-race:** use local player emoji instead of first active player ([76eb051](https://github.com/antialias/soroban-abacus-flashcards/commit/76eb0517c202d1b9160b49dec0b99ff4972daff2))
+
 ## [4.6.5](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.6.4...v4.6.5) (2025-10-18)
 
 
