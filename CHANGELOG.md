@@ -1,3 +1,10 @@
+## [4.13.12](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.13.11...v4.13.12) (2025-10-18)
+
+
+### Bug Fixes
+
+* **card-sorting:** use blue gradient matching other game cards ([bdb84f5](https://github.com/antialias/soroban-abacus-flashcards/commit/bdb84f5d909542060fa886a83a5af62c4a785a98))
+
 ## [4.13.11](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.13.10...v4.13.11) (2025-10-18)
 
 
