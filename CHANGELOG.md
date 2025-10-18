@@ -1,3 +1,10 @@
+## [4.10.5](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.10.4...v4.10.5) (2025-10-18)
+
+
+### Code Refactoring
+
+* **arcade:** merge /arcade/room into /arcade route ([0790074](https://github.com/antialias/soroban-abacus-flashcards/commit/0790074ffc5008bce9a162fe0ddbd1d5c214c4f7))
+
 ## [4.10.4](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.10.3...v4.10.4) (2025-10-18)
 
 
