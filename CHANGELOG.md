@@ -1,3 +1,11 @@
+## [4.13.7](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.13.6...v4.13.7) (2025-10-18)
+
+
+### Bug Fixes
+
+* add dark color for abacus numerals ([73ff32c](https://github.com/antialias/soroban-abacus-flashcards/commit/73ff32c2432beb62710e57aa8b3b4793eca43fda)), closes [#1f2937](https://github.com/antialias/soroban-abacus-flashcards/issues/1f2937)
+* use app-wide abacus config and remove instruction text ([0a50c73](https://github.com/antialias/soroban-abacus-flashcards/commit/0a50c733b089c7c341f0fdef47da78d1c61a3cb5))
+
 ## [4.13.6](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.13.5...v4.13.6) (2025-10-18)
 
 
