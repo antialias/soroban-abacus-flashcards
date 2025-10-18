@@ -1,3 +1,10 @@
+## [4.13.8](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.13.7...v4.13.8) (2025-10-18)
+
+
+### Bug Fixes
+
+* use color instead of fill for numeral styling ([ea10c16](https://github.com/antialias/soroban-abacus-flashcards/commit/ea10c16811eb969b9963417079c330ae9ff295ba))
+
 ## [4.13.7](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.13.6...v4.13.7) (2025-10-18)
 
 
