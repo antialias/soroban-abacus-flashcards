@@ -1,3 +1,10 @@
+## [4.6.2](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.6.1...v4.6.2) (2025-10-18)
+
+
+### Bug Fixes
+
+* **build:** resolve Docker build failures preventing deployment ([7801dbb](https://github.com/antialias/soroban-abacus-flashcards/commit/7801dbb25fb0a33429c70f11294264f7238ce7a4))
+
 ## [4.6.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.6.0...v4.6.1) (2025-10-18)
 
 
