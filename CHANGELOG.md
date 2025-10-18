@@ -1,3 +1,10 @@
+## [4.6.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.5.0...v4.6.0) (2025-10-18)
+
+
+### Features
+
+* **complement-race:** restore AI opponents in practice and survival modes ([325e07d](https://github.com/antialias/soroban-abacus-flashcards/commit/325e07de5929169aa333ef16f7bca5b41eeb1622))
+
 ## [4.5.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.4.15...v4.5.0) (2025-10-18)
 
 
