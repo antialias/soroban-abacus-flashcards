@@ -1,3 +1,10 @@
+## [4.12.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.11.1...v4.12.0) (2025-10-18)
+
+
+### Features
+
+* redesign home page with component showcase ([29af265](https://github.com/antialias/soroban-abacus-flashcards/commit/29af265958f9fdab0253b92e153c01575840454d))
+
 ## [4.11.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.11.0...v4.11.1) (2025-10-18)
 
 
