@@ -1,3 +1,10 @@
+## [4.6.5](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.6.4...v4.6.5) (2025-10-18)
+
+
+### Bug Fixes
+
+* **complement-race:** flip player avatar to face right in practice mode ([fa6b3b6](https://github.com/antialias/soroban-abacus-flashcards/commit/fa6b3b69d5a4a7eb70f8c18fc8c122c54c4d504a))
+
 ## [4.6.4](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.6.3...v4.6.4) (2025-10-18)
 
 
