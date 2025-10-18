@@ -1,3 +1,10 @@
+## [4.10.3](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.10.2...v4.10.3) (2025-10-18)
+
+
+### Bug Fixes
+
+* **arcade:** remove broken query param from game URLs ([87631af](https://github.com/antialias/soroban-abacus-flashcards/commit/87631af6788bd7b42e671374e55ec0ad8435900c))
+
 ## [4.10.2](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.10.1...v4.10.2) (2025-10-18)
 
 
