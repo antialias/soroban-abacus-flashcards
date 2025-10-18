@@ -1,3 +1,10 @@
+## [4.11.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.10.6...v4.11.0) (2025-10-18)
+
+
+### Features
+
+* **home:** redesign home page to showcase complete platform ([ee6c4f2](https://github.com/antialias/soroban-abacus-flashcards/commit/ee6c4f2f4f39e3b30f59c54866c3857c218fb80f))
+
 ## [4.10.6](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.10.5...v4.10.6) (2025-10-18)
 
 
