@@ -1,3 +1,10 @@
+## [4.4.15](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.4.14...v4.4.15) (2025-10-18)
+
+
+### Bug Fixes
+
+* **complement-race:** track previous position to detect route threshold crossing ([a6c20aa](https://github.com/antialias/soroban-abacus-flashcards/commit/a6c20aab3b245d9893808d188d16a35ab80cfca9))
+
 ## [4.4.14](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.4.13...v4.4.14) (2025-10-18)
 
 
