@@ -1,3 +1,10 @@
+## [4.13.5](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.13.4...v4.13.5) (2025-10-18)
+
+
+### Bug Fixes
+
+* correct AbacusReact API usage and add structural styling ([247377f](https://github.com/antialias/soroban-abacus-flashcards/commit/247377fca35ee3433e02ad594ecc1c4f391f0143)), closes [#fbbf24](https://github.com/antialias/soroban-abacus-flashcards/issues/fbbf24) [#a78](https://github.com/antialias/soroban-abacus-flashcards/issues/a78)
+
 ## [4.13.4](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.13.3...v4.13.4) (2025-10-18)
 
 
