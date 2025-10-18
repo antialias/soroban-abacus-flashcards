@@ -1,3 +1,10 @@
+## [4.13.6](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.13.5...v4.13.6) (2025-10-18)
+
+
+### Bug Fixes
+
+* simplify abacus pane with light background ([30f48ab](https://github.com/antialias/soroban-abacus-flashcards/commit/30f48ab8976976688e089b07ece7fdae6d7ada79))
+
 ## [4.13.5](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.13.4...v4.13.5) (2025-10-18)
 
 
