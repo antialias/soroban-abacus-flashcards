@@ -1,3 +1,10 @@
+## [4.13.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.13.0...v4.13.1) (2025-10-18)
+
+
+### Bug Fixes
+
+* use defaultValue for interactive abacus control ([06aca98](https://github.com/antialias/soroban-abacus-flashcards/commit/06aca986ace4d76b70f2fd2f5e57f66758185b38))
+
 ## [4.13.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.12.0...v4.13.0) (2025-10-18)
 
 
