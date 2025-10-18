@@ -1,3 +1,11 @@
+## [4.13.11](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.13.10...v4.13.11) (2025-10-18)
+
+
+### Bug Fixes
+
+* **card-sorting:** match game selector background to other games ([db62519](https://github.com/antialias/soroban-abacus-flashcards/commit/db62519f9beb0b4bc6120e1fd5ec251cfde5c3c1)), closes [#ccfbf1](https://github.com/antialias/soroban-abacus-flashcards/issues/ccfbf1) [#99f6e4](https://github.com/antialias/soroban-abacus-flashcards/issues/99f6e4)
+* **docker:** copy core package with Python scripts to production image ([33e9ad2](https://github.com/antialias/soroban-abacus-flashcards/commit/33e9ad2f79b591f1c5ee57a6691e1bcf48420859))
+
 ## [4.13.10](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.13.9...v4.13.10) (2025-10-18)
 
 
