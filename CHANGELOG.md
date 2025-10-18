@@ -1,3 +1,10 @@
+## [4.9.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.8.0...v4.9.0) (2025-10-18)
+
+
+### Features
+
+* **card-sorting:** implement Provider with arcade session integration ([7f6fea9](https://github.com/antialias/soroban-abacus-flashcards/commit/7f6fea91f6dcc69a173eea86bcefc9921f1c1664))
+
 ## [4.8.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.7.1...v4.8.0) (2025-10-18)
 
 
