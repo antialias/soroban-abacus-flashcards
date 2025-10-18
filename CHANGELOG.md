@@ -1,3 +1,10 @@
+## [4.6.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.6.0...v4.6.1) (2025-10-18)
+
+
+### Code Refactoring
+
+* **complement-race:** move AI opponents from server-side to client-side ([09e21fa](https://github.com/antialias/soroban-abacus-flashcards/commit/09e21fa4934c634d0ce46381ef7e40238fc134c3))
+
 ## [4.6.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.5.0...v4.6.0) (2025-10-18)
 
 
