@@ -1,3 +1,10 @@
+## [4.8.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.7.1...v4.8.0) (2025-10-18)
+
+
+### Features
+
+* **arcade:** add Card Sorting Challenge game scaffolding ([df37260](https://github.com/antialias/soroban-abacus-flashcards/commit/df37260e26bbb146493e0834e093afd98fa3f2a4))
+
 ## [4.7.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.7.0...v4.7.1) (2025-10-18)
 
 
