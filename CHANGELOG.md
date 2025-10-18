@@ -1,3 +1,15 @@
+## [4.6.9](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.6.8...v4.6.9) (2025-10-18)
+
+
+### Bug Fixes
+
+* **complement-race:** add missing AI commentary cooldown updates ([357aa30](https://github.com/antialias/soroban-abacus-flashcards/commit/357aa30618f80d659ae515f94b7b9254bb458910))
+
+
+### Code Refactoring
+
+* remove dead Python bridge and unused packages ([22426f6](https://github.com/antialias/soroban-abacus-flashcards/commit/22426f677f9b127441377b95571f0066a0990d3f))
+
 ## [4.6.8](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.6.7...v4.6.8) (2025-10-18)
 
 
