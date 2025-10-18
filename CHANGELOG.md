@@ -1,3 +1,11 @@
+## [4.6.10](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.6.9...v4.6.10) (2025-10-18)
+
+
+### Bug Fixes
+
+* **complement-race:** improve AI speech bubble positioning ([6e436db](https://github.com/antialias/soroban-abacus-flashcards/commit/6e436db5e709d944ebffed6936ea1f8e4bd2e19e))
+* **docker:** remove reference to deleted @soroban/client package ([2953ef8](https://github.com/antialias/soroban-abacus-flashcards/commit/2953ef8917f7b13f6eb562eb7d58d14179a718da))
+
 ## [4.6.9](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.6.8...v4.6.9) (2025-10-18)
 
 
