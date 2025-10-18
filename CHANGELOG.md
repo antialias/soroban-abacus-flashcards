@@ -1,3 +1,10 @@
+## [4.13.9](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.13.8...v4.13.9) (2025-10-18)
+
+
+### Bug Fixes
+
+* set color on abacus container div for numeral visibility ([cd47960](https://github.com/antialias/soroban-abacus-flashcards/commit/cd4796024e41f731ae5d83c82f6582e19d6eaf99)), closes [#1f2937](https://github.com/antialias/soroban-abacus-flashcards/issues/1f2937)
+
 ## [4.13.8](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.13.7...v4.13.8) (2025-10-18)
 
 
