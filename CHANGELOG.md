@@ -1,3 +1,10 @@
+## [4.10.6](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.10.5...v4.10.6) (2025-10-18)
+
+
+### Bug Fixes
+
+* **card-sorting:** position slots flow horizontally with wrap ([e14ffe4](https://github.com/antialias/soroban-abacus-flashcards/commit/e14ffe44d66d0c97bc0cc4e0c255698e88ce723a))
+
 ## [4.10.5](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.10.4...v4.10.5) (2025-10-18)
 
 
