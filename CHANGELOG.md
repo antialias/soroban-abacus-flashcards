@@ -1,3 +1,10 @@
+## [4.6.4](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.6.3...v4.6.4) (2025-10-18)
+
+
+### Bug Fixes
+
+* **complement-race:** flip AI racers to face right in practice mode ([ebfff1a](https://github.com/antialias/soroban-abacus-flashcards/commit/ebfff1a62fd104d531a8158345c8c012ec8a55d3))
+
 ## [4.6.3](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.6.2...v4.6.3) (2025-10-18)
 
 
