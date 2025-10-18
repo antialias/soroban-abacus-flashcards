@@ -1,3 +1,10 @@
+## [4.4.14](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.4.13...v4.4.14) (2025-10-18)
+
+
+### Bug Fixes
+
+* **complement-race:** remove dual game loop conflict preventing route progression ([84d42e2](https://github.com/antialias/soroban-abacus-flashcards/commit/84d42e22ac0cdd25e87e45dc698029ad7ed78559))
+
 ## [4.4.13](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.4.12...v4.4.13) (2025-10-17)
 
 
