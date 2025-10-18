@@ -1,3 +1,10 @@
+## [4.7.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.7.0...v4.7.1) (2025-10-18)
+
+
+### Code Refactoring
+
+* **arcade:** remove number-guesser and math-sprint games ([9fb9786](https://github.com/antialias/soroban-abacus-flashcards/commit/9fb9786e54928e81ecf226b36d343a73143fb674))
+
 ## [4.7.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.6.10...v4.7.0) (2025-10-18)
 
 
