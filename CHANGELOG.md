@@ -1,3 +1,10 @@
+## [4.6.8](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.6.7...v4.6.8) (2025-10-18)
+
+
+### Bug Fixes
+
+* **complement-race:** counter-flip AI speech bubbles to make text readable ([07d5607](https://github.com/antialias/soroban-abacus-flashcards/commit/07d5607218aee03e813eceff5d161a7838d66bcb))
+
 ## [4.6.7](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.6.6...v4.6.7) (2025-10-18)
 
 
