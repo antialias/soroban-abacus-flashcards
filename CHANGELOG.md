@@ -1,3 +1,10 @@
+## [4.6.7](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.6.6...v4.6.7) (2025-10-18)
+
+
+### Bug Fixes
+
+* **complement-race:** use active local players pattern from navbar ([71cdc34](https://github.com/antialias/soroban-abacus-flashcards/commit/71cdc342c97ca53b5e7e4202d4d344199e8ddd98))
+
 ## [4.6.6](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.6.5...v4.6.6) (2025-10-18)
 
 
