@@ -1,3 +1,10 @@
+## [4.10.4](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.10.3...v4.10.4) (2025-10-18)
+
+
+### Bug Fixes
+
+* **card-sorting:** match Python card layout with flex wrap ([9679d68](https://github.com/antialias/soroban-abacus-flashcards/commit/9679d68154ac8b6a2f905ec7d17a34b39bc00237))
+
 ## [4.10.3](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.10.2...v4.10.3) (2025-10-18)
 
 
