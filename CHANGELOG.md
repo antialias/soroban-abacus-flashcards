@@ -1,3 +1,10 @@
+## [4.13.2](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.13.1...v4.13.2) (2025-10-18)
+
+
+### Bug Fixes
+
+* show initial value and improve numeral contrast ([1b57f6d](https://github.com/antialias/soroban-abacus-flashcards/commit/1b57f6ddecf3a118f2e4fadd1a91be1256f5a034)), closes [#fbbf24](https://github.com/antialias/soroban-abacus-flashcards/issues/fbbf24)
+
 ## [4.13.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.13.0...v4.13.1) (2025-10-18)
 
 
