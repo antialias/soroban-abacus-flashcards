@@ -1,3 +1,10 @@
+## [4.14.3](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.14.2...v4.14.3) (2025-10-19)
+
+
+### Bug Fixes
+
+* **docker:** add qpdf for PDF linearization and validation ([c92ff39](https://github.com/antialias/soroban-abacus-flashcards/commit/c92ff3971c853e4e55ccd632ff3ee292fcce8315))
+
 ## [4.14.2](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.14.1...v4.14.2) (2025-10-19)
 
 
