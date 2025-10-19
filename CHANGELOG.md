@@ -1,3 +1,10 @@
+## [4.20.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.19.0...v4.20.0) (2025-10-19)
+
+
+### Features
+
+* **tutorial:** add hideTooltip prop and improve dark mode coaching bar ([1ee25b3](https://github.com/antialias/soroban-abacus-flashcards/commit/1ee25b3dd2f0ee9dd7ed571ba818b7ca5a247f85))
+
 ## [4.19.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.18.1...v4.19.0) (2025-10-19)
 
 
