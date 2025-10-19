@@ -1,3 +1,11 @@
+## [4.20.2](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.20.1...v4.20.2) (2025-10-19)
+
+
+### Bug Fixes
+
+* **homepage:** improve text contrast in Your Journey section ([24d1200](https://github.com/antialias/soroban-abacus-flashcards/commit/24d120004dccecc1ce2f08c1b73eec902868fb23))
+* **tutorial:** resolve TypeScript errors in TutorialPlayer ([88f57ce](https://github.com/antialias/soroban-abacus-flashcards/commit/88f57ce6df125142d6ea7feec60c475926bd4929))
+
 ## [4.20.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.20.0...v4.20.1) (2025-10-19)
 
 
