@@ -1,3 +1,15 @@
+## [4.15.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.15.0...v4.15.1) (2025-10-19)
+
+
+### Bug Fixes
+
+* **tutorial:** resolve React hydration error in TutorialPlayer ([c883d9e](https://github.com/antialias/soroban-abacus-flashcards/commit/c883d9e4c1b3a2f52c9d41e3ddce7418399f2649))
+
+
+### Code Refactoring
+
+* replace demo component with real TutorialPlayer system ([19b03bc](https://github.com/antialias/soroban-abacus-flashcards/commit/19b03bc77c649cf51d7b9a3617417c6ec8229ac7))
+
 ## [4.15.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.14.6...v4.15.0) (2025-10-19)
 
 
