@@ -1,3 +1,15 @@
+## [4.14.6](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.14.5...v4.14.6) (2025-10-19)
+
+
+### Bug Fixes
+
+* replace native alerts with inline confirmations in ModerationPanel ([ebe123e](https://github.com/antialias/soroban-abacus-flashcards/commit/ebe123ed7edf24fbc7b8765ed709455a8513d6d5))
+
+
+### Documentation
+
+* add UI style guide documenting no native alerts rule ([9afd3a7](https://github.com/antialias/soroban-abacus-flashcards/commit/9afd3a7e925fddb76fa587747881b61f7cb077a5))
+
 ## [4.14.5](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.14.4...v4.14.5) (2025-10-19)
 
 
