@@ -1,3 +1,16 @@
+## [4.14.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.13.15...v4.14.0) (2025-10-19)
+
+
+### Features
+
+* **card-sorting:** add spectator mode UX enhancements ([4ab093a](https://github.com/antialias/soroban-abacus-flashcards/commit/4ab093a9d8ba5b290da44aaa6aa71ad7d7149b32))
+
+
+### Documentation
+
+* **arcade:** add comprehensive spectator mode documentation ([1eb6cec](https://github.com/antialias/soroban-abacus-flashcards/commit/1eb6ceca19805be53dfe3194e07e68002b2d09a7))
+* **arcade:** spec spectator mode UX enhancements for card sorting ([aafba77](https://github.com/antialias/soroban-abacus-flashcards/commit/aafba77d62b47403f21f5dd72859d6a6fbb1efac))
+
 ## [4.13.15](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.13.14...v4.13.15) (2025-10-19)
 
 
