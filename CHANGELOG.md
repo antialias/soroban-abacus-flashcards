@@ -1,3 +1,16 @@
+## [4.13.14](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.13.13...v4.13.14) (2025-10-19)
+
+
+### Bug Fixes
+
+* **docker:** install py3-pip for Python dependency installation ([0f55909](https://github.com/antialias/soroban-abacus-flashcards/commit/0f55909533414bdc07f113b93bb8bfa21367959b))
+
+
+### Documentation
+
+* add Panda CSS styling framework documentation ([c92d7d9](https://github.com/antialias/soroban-abacus-flashcards/commit/c92d7d9d89a72e012c30fc5ac88fa96e7a526f83))
+* **arcade:** fix incorrect Tailwind references - use Panda CSS ([34a377d](https://github.com/antialias/soroban-abacus-flashcards/commit/34a377d91b37ad47968b85aedd112f9fcf72ad63))
+
 ## [4.13.13](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.13.12...v4.13.13) (2025-10-19)
 
 
