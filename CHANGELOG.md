@@ -1,3 +1,10 @@
+## [4.18.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.18.0...v4.18.1) (2025-10-19)
+
+
+### Bug Fixes
+
+* **tutorial:** use correct customStyles API for dark mode frame styling ([fdc882c](https://github.com/antialias/soroban-abacus-flashcards/commit/fdc882cb046e3d8835fbca59841e9af5329bcc52))
+
 ## [4.18.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.17.2...v4.18.0) (2025-10-19)
 
 
