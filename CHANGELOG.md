@@ -1,3 +1,15 @@
+## [4.17.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.16.0...v4.17.0) (2025-10-19)
+
+
+### Features
+
+* **tutorial:** add dark theme and column control props ([d42f9b2](https://github.com/antialias/soroban-abacus-flashcards/commit/d42f9b2d9ad630826c55b753dc581c469e8f9083))
+
+
+### Styles
+
+* **homepage:** soften tutorial styling for dark theme cohesion ([faaefba](https://github.com/antialias/soroban-abacus-flashcards/commit/faaefbacff419b337aa0fac4a101d5106a18c77c)), closes [#f9](https://github.com/antialias/soroban-abacus-flashcards/issues/f9)
+
 ## [4.16.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.15.1...v4.16.0) (2025-10-19)
 
 
