@@ -1,3 +1,10 @@
+## [4.19.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.18.1...v4.19.0) (2025-10-19)
+
+
+### Features
+
+* **tutorial:** add fill color support for dark mode column posts and reckoning bar ([2eb3ff3](https://github.com/antialias/soroban-abacus-flashcards/commit/2eb3ff340613301df20bf14f5b461371a27d7f05))
+
 ## [4.18.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.18.0...v4.18.1) (2025-10-19)
 
 
