@@ -1,3 +1,10 @@
+## [4.17.2](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.17.1...v4.17.2) (2025-10-19)
+
+
+### Bug Fixes
+
+* **tutorial:** correct column index calculation for variable column counts ([bf1ced4](https://github.com/antialias/soroban-abacus-flashcards/commit/bf1ced43f801938b05f01548eea5fe771de1b58f))
+
 ## [4.17.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.17.0...v4.17.1) (2025-10-19)
 
 
