@@ -1,3 +1,10 @@
+## [4.14.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.14.0...v4.14.1) (2025-10-19)
+
+
+### Bug Fixes
+
+* **deployment:** pass git info to Docker build for deployment info modal ([4b04e43](https://github.com/antialias/soroban-abacus-flashcards/commit/4b04e43ff8c9e9f239d7f5e306aab338b535296f))
+
 ## [4.14.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.13.15...v4.14.0) (2025-10-19)
 
 
