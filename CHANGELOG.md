@@ -1,3 +1,10 @@
+## [4.17.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.17.0...v4.17.1) (2025-10-19)
+
+
+### Bug Fixes
+
+* **tutorial:** filter bead highlights when using fewer columns ([4d906ec](https://github.com/antialias/soroban-abacus-flashcards/commit/4d906ec20e90a9b0b3838f9b8428e0c68992f381))
+
 ## [4.17.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.16.0...v4.17.0) (2025-10-19)
 
 
