@@ -1,3 +1,11 @@
+## [4.14.4](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.14.3...v4.14.4) (2025-10-19)
+
+
+### Bug Fixes
+
+* **arcade:** add host-only game selection with clear messaging ([22df1b0](https://github.com/antialias/soroban-abacus-flashcards/commit/22df1b0b661efe69fac1a6bd716531c904757412))
+* **arcade:** add host-only game selection with clear messaging ([c0680ca](https://github.com/antialias/soroban-abacus-flashcards/commit/c0680cad0fa26af0933e93a06c50317bf443cc7d))
+
 ## [4.14.3](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.14.2...v4.14.3) (2025-10-19)
 
 
