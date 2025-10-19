@@ -1,3 +1,10 @@
+## [4.20.4](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.20.3...v4.20.4) (2025-10-19)
+
+
+### Bug Fixes
+
+* **homepage:** use inline styles for Your Journey text contrast ([8e51390](https://github.com/antialias/soroban-abacus-flashcards/commit/8e5139001818d7013e1b2654ac707f7429316d58)), closes [#e5e7](https://github.com/antialias/soroban-abacus-flashcards/issues/e5e7) [#e5e7](https://github.com/antialias/soroban-abacus-flashcards/issues/e5e7) [#9ca3](https://github.com/antialias/soroban-abacus-flashcards/issues/9ca3) [#d1d5](https://github.com/antialias/soroban-abacus-flashcards/issues/d1d5)
+
 ## [4.20.3](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.20.2...v4.20.3) (2025-10-19)
 
 
