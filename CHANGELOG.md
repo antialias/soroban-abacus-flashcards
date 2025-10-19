@@ -1,3 +1,15 @@
+## [4.20.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.20.0...v4.20.1) (2025-10-19)
+
+
+### Bug Fixes
+
+* **homepage:** correct positioning of progression arrows in Your Journey section ([3fff9ef](https://github.com/antialias/soroban-abacus-flashcards/commit/3fff9ef140bf1f462042f8319ed6c5e2a376e4ba))
+
+
+### Code Refactoring
+
+* **homepage:** move What You'll Learn above tutorial ([ca1c6d8](https://github.com/antialias/soroban-abacus-flashcards/commit/ca1c6d86029c891e019a96ba161e49b08b5be1bf))
+
 ## [4.20.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.19.0...v4.20.0) (2025-10-19)
 
 
