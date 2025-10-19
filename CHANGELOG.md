@@ -1,3 +1,10 @@
+## [4.18.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.17.2...v4.18.0) (2025-10-19)
+
+
+### Features
+
+* **tutorial:** add dark mode styling for coaching bar and abacus frame ([7e2f580](https://github.com/antialias/soroban-abacus-flashcards/commit/7e2f580877af9d21409f427778fa3569c950fcf5))
+
 ## [4.17.2](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.17.1...v4.17.2) (2025-10-19)
 
 
