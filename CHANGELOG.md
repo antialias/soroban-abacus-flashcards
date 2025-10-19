@@ -1,3 +1,10 @@
+## [4.13.15](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.13.14...v4.13.15) (2025-10-19)
+
+
+### Bug Fixes
+
+* **docker:** bypass PEP 668 externally-managed-environment error ([bb59c61](https://github.com/antialias/soroban-abacus-flashcards/commit/bb59c61638e60b0678043e954e044d9390f88e7f))
+
 ## [4.13.14](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.13.13...v4.13.14) (2025-10-19)
 
 
