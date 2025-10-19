@@ -1,3 +1,10 @@
+## [4.15.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.14.6...v4.15.0) (2025-10-19)
+
+
+### Features
+
+* redesign homepage with educational vision and interactive demo ([2f09cb5](https://github.com/antialias/soroban-abacus-flashcards/commit/2f09cb5539f2bb0b8c77359c6f774c3742313e1e))
+
 ## [4.14.6](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.14.5...v4.14.6) (2025-10-19)
 
 
