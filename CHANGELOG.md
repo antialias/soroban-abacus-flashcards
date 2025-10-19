@@ -1,3 +1,10 @@
+## [4.14.2](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.14.1...v4.14.2) (2025-10-19)
+
+
+### Bug Fixes
+
+* **docker:** add packages/templates for Typst flashcard generation ([1417722](https://github.com/antialias/soroban-abacus-flashcards/commit/14177224380b8c37413123bee344c9b762055a15))
+
 ## [4.14.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.14.0...v4.14.1) (2025-10-19)
 
 
