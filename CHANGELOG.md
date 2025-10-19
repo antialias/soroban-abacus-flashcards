@@ -1,3 +1,15 @@
+## [4.13.13](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.13.12...v4.13.13) (2025-10-19)
+
+
+### Bug Fixes
+
+* **docker:** install Python dependencies for flashcard generation ([c9b7e92](https://github.com/antialias/soroban-abacus-flashcards/commit/c9b7e92f39ee7aa7f13606c2836763144df102e7))
+
+
+### Code Refactoring
+
+* **arcade:** standardize game card themes with preset system ([0209975](https://github.com/antialias/soroban-abacus-flashcards/commit/0209975af642944cc5a434c0b44205a87e634e7e)), closes [#99f6e4](https://github.com/antialias/soroban-abacus-flashcards/issues/99f6e4) [#5eead4](https://github.com/antialias/soroban-abacus-flashcards/issues/5eead4)
+
 ## [4.13.12](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.13.11...v4.13.12) (2025-10-18)
 
 
