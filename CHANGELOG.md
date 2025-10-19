@@ -1,3 +1,15 @@
+## [4.16.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.15.1...v4.16.0) (2025-10-19)
+
+
+### Features
+
+* **tutorial:** add hideNavigation prop to TutorialPlayer ([79ea52a](https://github.com/antialias/soroban-abacus-flashcards/commit/79ea52af80c8cbb482bbdd87f77caf32ada737ee))
+
+
+### Styles
+
+* **homepage:** update tutorial container to match dark theme ([6b017b0](https://github.com/antialias/soroban-abacus-flashcards/commit/6b017b0fe92d4277843d9fe2645c22366f219d76))
+
 ## [4.15.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.15.0...v4.15.1) (2025-10-19)
 
 
