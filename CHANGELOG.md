@@ -1,3 +1,10 @@
+## [4.14.5](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.14.4...v4.14.5) (2025-10-19)
+
+
+### Bug Fixes
+
+* **rooms:** add real-time ownership transfer updates via WebSocket ([c00cfa3](https://github.com/antialias/soroban-abacus-flashcards/commit/c00cfa3de011720f3399fa340182b347f7e0d456))
+
 ## [4.14.4](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.14.3...v4.14.4) (2025-10-19)
 
 
