@@ -1,3 +1,10 @@
+## [4.20.3](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.20.2...v4.20.3) (2025-10-19)
+
+
+### Bug Fixes
+
+* **homepage:** use explicit RGBA colors for Your Journey text ([9c51cc9](https://github.com/antialias/soroban-abacus-flashcards/commit/9c51cc94eec4efcab9c0b9d1190f5b79c0c7d365))
+
 ## [4.20.2](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.20.1...v4.20.2) (2025-10-19)
 
 
