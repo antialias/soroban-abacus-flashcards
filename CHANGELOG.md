@@ -1,3 +1,10 @@
+## [4.35.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.34.0...v4.35.0) (2025-10-20)
+
+
+### Features
+
+* **levels:** replace slider thumb with diamond-shaped abacus beads ([0fbde53](https://github.com/antialias/soroban-abacus-flashcards/commit/0fbde53039d3ea000c6a3be492b733479e7bf47c))
+
 ## [4.34.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.33.8...v4.34.0) (2025-10-20)
 
 
