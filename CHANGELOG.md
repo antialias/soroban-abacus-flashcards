@@ -1,3 +1,10 @@
+## [4.46.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.46.0...v4.46.1) (2025-10-20)
+
+
+### Bug Fixes
+
+* **hero-abacus:** restructure layout to prevent visual overlap ([02b6c70](https://github.com/antialias/soroban-abacus-flashcards/commit/02b6c70b7a52f7de2954e5e0efddbed64d419d6c))
+
 ## [4.46.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.45.0...v4.46.0) (2025-10-20)
 
 
