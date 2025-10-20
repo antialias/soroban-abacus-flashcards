@@ -1,3 +1,10 @@
+## [4.21.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.21.0...v4.21.1) (2025-10-20)
+
+
+### Code Refactoring
+
+* **homepage:** rearrange tutorial demo layout side by side ([8b4ecee](https://github.com/antialias/soroban-abacus-flashcards/commit/8b4eceebfaaaf07e38ea64c7fe015aec86ac754f))
+
 ## [4.21.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.20.7...v4.21.0) (2025-10-20)
 
 
