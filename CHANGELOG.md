@@ -1,3 +1,10 @@
+## [4.33.2](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.33.1...v4.33.2) (2025-10-20)
+
+
+### Bug Fixes
+
+* **levels:** add fixed height to entire level display pane ([200b26c](https://github.com/antialias/soroban-abacus-flashcards/commit/200b26c2cd35d1d637ede9dcfc3dbbc7f3f19320))
+
 ## [4.33.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.33.0...v4.33.1) (2025-10-20)
 
 
