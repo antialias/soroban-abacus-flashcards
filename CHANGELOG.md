@@ -1,3 +1,10 @@
+## [4.43.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.43.0...v4.43.1) (2025-10-20)
+
+
+### Bug Fixes
+
+* **levels:** use two-column grid for kyu details to prevent clipping ([fa3b73c](https://github.com/antialias/soroban-abacus-flashcards/commit/fa3b73c69169b4694201ffa19ae3f8b5a68dfe32))
+
 ## [4.43.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.42.1...v4.43.0) (2025-10-20)
 
 
