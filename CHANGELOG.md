@@ -1,3 +1,10 @@
+## [4.28.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.27.0...v4.28.0) (2025-10-20)
+
+
+### Features
+
+* **levels:** add informational footer section ([0b1bff7](https://github.com/antialias/soroban-abacus-flashcards/commit/0b1bff7eab8f5da84ae309dbda336e168c2fe3fd))
+
 ## [4.27.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.26.0...v4.27.0) (2025-10-20)
 
 
