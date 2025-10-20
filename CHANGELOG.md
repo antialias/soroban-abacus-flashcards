@@ -1,3 +1,10 @@
+## [4.38.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.37.0...v4.38.0) (2025-10-20)
+
+
+### Features
+
+* **levels:** add animated calculation effect to abacus display ([4f4c735](https://github.com/antialias/soroban-abacus-flashcards/commit/4f4c73577a944518c093b3208a85482909fe3064))
+
 ## [4.37.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.36.0...v4.37.0) (2025-10-20)
 
 
