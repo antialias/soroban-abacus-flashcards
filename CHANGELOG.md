@@ -1,3 +1,10 @@
+## [4.48.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.48.0...v4.48.1) (2025-10-20)
+
+
+### Bug Fixes
+
+* **hero:** prevent SSR hydration mismatch for subtitle ([1bfde8f](https://github.com/antialias/soroban-abacus-flashcards/commit/1bfde8fb251b227ccd2528bfe1c47acffd79fa49))
+
 ## [4.48.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.47.2...v4.48.0) (2025-10-20)
 
 
