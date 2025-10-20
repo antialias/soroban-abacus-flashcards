@@ -1,3 +1,15 @@
+## [4.48.2](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.48.1...v4.48.2) (2025-10-20)
+
+
+### Bug Fixes
+
+* **nav:** ensure nav bar appears above tutorial tooltips ([cc31564](https://github.com/antialias/soroban-abacus-flashcards/commit/cc315645de30218d1b034da3e130458fe2961a69))
+
+
+### Styles
+
+* **hero:** unify background with rest of homepage ([035d831](https://github.com/antialias/soroban-abacus-flashcards/commit/035d8312c707cbf5b0e2a725d7b1d8ff406f842d))
+
 ## [4.48.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.48.0...v4.48.1) (2025-10-20)
 
 
