@@ -1,3 +1,21 @@
+## [4.47.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.46.2...v4.47.0) (2025-10-20)
+
+
+### Features
+
+* **nav:** add transparent nav bar with borders when hero visible ([463841e](https://github.com/antialias/soroban-abacus-flashcards/commit/463841e1910f4ddb9af662f036e4efb867836a83))
+
+
+### Bug Fixes
+
+* **hero:** use Number.isNaN instead of global isNaN ([c229faf](https://github.com/antialias/soroban-abacus-flashcards/commit/c229faffac525f3eebeb12155cb5ca4dff744472))
+
+
+### Styles
+
+* **hero-abacus:** add purple bead colors for dark theme ([721dfe4](https://github.com/antialias/soroban-abacus-flashcards/commit/721dfe426db4fe259f6cdeac587d008339df769b))
+* **hero:** adjust spacing between title, subtitle, and abacus ([3a3706c](https://github.com/antialias/soroban-abacus-flashcards/commit/3a3706cc6fb694c7762f065f4ab4996bb8608dc4))
+
 ## [4.46.2](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.46.1...v4.46.2) (2025-10-20)
 
 
