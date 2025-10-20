@@ -1,3 +1,10 @@
+## [4.44.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.43.2...v4.44.0) (2025-10-20)
+
+
+### Features
+
+* **levels:** redesign kyu details with larger operators and prominent digits ([6739d59](https://github.com/antialias/soroban-abacus-flashcards/commit/6739d59f2b6189a98570e23e04c20d86d774ccce))
+
 ## [4.43.2](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.43.1...v4.43.2) (2025-10-20)
 
 
