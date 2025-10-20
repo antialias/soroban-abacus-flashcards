@@ -1,3 +1,10 @@
+## [4.52.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.51.0...v4.52.0) (2025-10-20)
+
+
+### Features
+
+* **homepage:** add interactive draggable flashcards with physics ([e711c52](https://github.com/antialias/soroban-abacus-flashcards/commit/e711c527574412de2f9d451c7985c4f8667d269a))
+
 ## [4.51.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.50.1...v4.51.0) (2025-10-20)
 
 
