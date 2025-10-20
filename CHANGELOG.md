@@ -1,3 +1,11 @@
+## [4.44.3](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.44.2...v4.44.3) (2025-10-20)
+
+
+### Bug Fixes
+
+* **levels:** reduce operator box sizes and remove divider line ([29d20a6](https://github.com/antialias/soroban-abacus-flashcards/commit/29d20a6c0741e7427f2bb64bc9c3e950b1a3238a))
+* **levels:** use uniform padding on operator box grid ([2818fd1](https://github.com/antialias/soroban-abacus-flashcards/commit/2818fd15cacac78de6d86ba769b9b2a02800ed1e))
+
 ## [4.44.2](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.44.1...v4.44.2) (2025-10-20)
 
 
