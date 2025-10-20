@@ -1,3 +1,10 @@
+## [4.33.5](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.33.4...v4.33.5) (2025-10-20)
+
+
+### Bug Fixes
+
+* **levels:** revert delayed column change, keep overflow hidden ([22f00f5](https://github.com/antialias/soroban-abacus-flashcards/commit/22f00f59f5facc36a846408dcd196ec54ea676b1))
+
 ## [4.33.4](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.33.3...v4.33.4) (2025-10-20)
 
 
