@@ -1,3 +1,10 @@
+## [4.42.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.42.0...v4.42.1) (2025-10-20)
+
+
+### Code Refactoring
+
+* **levels:** store kyu data verbatim, add formatting layer ([53d23f1](https://github.com/antialias/soroban-abacus-flashcards/commit/53d23f19bc06459462afb76ed94d9b99d583a32d))
+
 ## [4.42.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.41.0...v4.42.0) (2025-10-20)
 
 
