@@ -1,3 +1,10 @@
+## [4.39.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.39.0...v4.39.1) (2025-10-20)
+
+
+### Bug Fixes
+
+* **levels:** improve slider tick spacing to use full width ([1e90d6c](https://github.com/antialias/soroban-abacus-flashcards/commit/1e90d6c6207f29084a8dc96ccfbb1013a1a62271))
+
 ## [4.39.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.38.1...v4.39.0) (2025-10-20)
 
 
