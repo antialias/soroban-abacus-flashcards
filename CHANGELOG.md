@@ -1,3 +1,10 @@
+## [4.38.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.38.0...v4.38.1) (2025-10-20)
+
+
+### Bug Fixes
+
+* **levels:** adjust slider text positioning to prevent emoji overlap ([e5ffe39](https://github.com/antialias/soroban-abacus-flashcards/commit/e5ffe3927edfb1baea7ddd216507e081f50e5d2c))
+
 ## [4.38.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.37.0...v4.38.0) (2025-10-20)
 
 
