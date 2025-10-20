@@ -1,3 +1,10 @@
+## [4.46.2](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.46.1...v4.46.2) (2025-10-20)
+
+
+### Bug Fixes
+
+* **types:** properly type HomeHeroContext in AppNavBar ([f9a7cb7](https://github.com/antialias/soroban-abacus-flashcards/commit/f9a7cb7f05dfddf291d89212a77ba1c11c00c9c7))
+
 ## [4.46.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.46.0...v4.46.1) (2025-10-20)
 
 
