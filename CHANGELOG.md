@@ -1,3 +1,10 @@
+## [4.33.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.33.0...v4.33.1) (2025-10-20)
+
+
+### Bug Fixes
+
+* **levels:** only animate abacus, not container with background/border ([c80477d](https://github.com/antialias/soroban-abacus-flashcards/commit/c80477d24877ddada5f3f4405abbf05e1d753b5d))
+
 ## [4.33.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.32.1...v4.33.0) (2025-10-20)
 
 
