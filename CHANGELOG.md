@@ -1,3 +1,10 @@
+## [4.52.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.52.0...v4.52.1) (2025-10-20)
+
+
+### Bug Fixes
+
+* **homepage:** correct flashcard transform rendering ([5dc636a](https://github.com/antialias/soroban-abacus-flashcards/commit/5dc636a71c15db28c029fd4f60e4a6c95620f953))
+
 ## [4.52.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.51.0...v4.52.0) (2025-10-20)
 
 
