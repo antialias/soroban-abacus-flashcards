@@ -1,3 +1,15 @@
+## [4.36.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.35.1...v4.36.0) (2025-10-20)
+
+
+### Features
+
+* **levels:** make emoji tick marks clickable and remove redundant UI ([07c783a](https://github.com/antialias/soroban-abacus-flashcards/commit/07c783a79454f50e7302b19684be6d2e5930154d))
+
+
+### Bug Fixes
+
+* **levels:** add smooth CSS transitions for slider thumb movement ([ca8cef1](https://github.com/antialias/soroban-abacus-flashcards/commit/ca8cef1c36efeb1c8c214c74f8bd383f9295be3b))
+
 ## [4.35.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.35.0...v4.35.1) (2025-10-20)
 
 
