@@ -1,3 +1,15 @@
+## [4.49.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.48.5...v4.49.0) (2025-10-20)
+
+
+### Features
+
+* add vibrant gradients and equal heights to game cards ([a1a135a](https://github.com/antialias/soroban-abacus-flashcards/commit/a1a135a8586e314c9d695bec6c4e58ec24e5c9cb)), closes [#4](https://github.com/antialias/soroban-abacus-flashcards/issues/4) [#00f2](https://github.com/antialias/soroban-abacus-flashcards/issues/00f2) [#667](https://github.com/antialias/soroban-abacus-flashcards/issues/667) [#764ba2](https://github.com/antialias/soroban-abacus-flashcards/issues/764ba2) [#f093](https://github.com/antialias/soroban-abacus-flashcards/issues/f093) [#f5576](https://github.com/antialias/soroban-abacus-flashcards/issues/f5576) [#43e97](https://github.com/antialias/soroban-abacus-flashcards/issues/43e97) [#38f9d7](https://github.com/antialias/soroban-abacus-flashcards/issues/38f9d7)
+
+
+### Code Refactoring
+
+* make homepage game cards dynamic from game registry ([7f51652](https://github.com/antialias/soroban-abacus-flashcards/commit/7f516526fb5f5b60c1782db5c8c3e29f05caafa7))
+
 ## [4.48.5](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.48.4...v4.48.5) (2025-10-20)
 
 
