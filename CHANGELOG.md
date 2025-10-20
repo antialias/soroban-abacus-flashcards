@@ -1,3 +1,15 @@
+## [4.54.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.53.0...v4.54.0) (2025-10-20)
+
+
+### Features
+
+* **homepage:** add interactive levels slider to replace static progression ([8a2d5ae](https://github.com/antialias/soroban-abacus-flashcards/commit/8a2d5ae319af8fd66010dd5538e4b82f7fb35d40))
+
+
+### Code Refactoring
+
+* **levels:** extract levels slider into shared component ([015e30b](https://github.com/antialias/soroban-abacus-flashcards/commit/015e30b085ad2ef798ffd6f7f6716269e3256651))
+
 ## [4.53.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.52.2...v4.53.0) (2025-10-20)
 
 
