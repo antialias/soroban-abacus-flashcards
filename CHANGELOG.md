@@ -1,3 +1,10 @@
+## [4.20.7](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.20.6...v4.20.7) (2025-10-20)
+
+
+### Bug Fixes
+
+* **home:** use Panda CSS token() for dynamic colors and center arrows properly ([d52ba63](https://github.com/antialias/soroban-abacus-flashcards/commit/d52ba6373a4577655dc1e5f5ff4926af7f7d96c3))
+
 ## [4.20.6](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.20.5...v4.20.6) (2025-10-20)
 
 
