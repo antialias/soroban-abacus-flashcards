@@ -1,3 +1,10 @@
+## [4.33.4](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.33.3...v4.33.4) (2025-10-20)
+
+
+### Bug Fixes
+
+* **levels:** stabilize slider position and prevent abacus clipping ([09004dc](https://github.com/antialias/soroban-abacus-flashcards/commit/09004dc2c055031ee2f71c964ceee6f7b1d42ecd))
+
 ## [4.33.3](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.33.2...v4.33.3) (2025-10-20)
 
 
