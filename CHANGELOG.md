@@ -1,3 +1,10 @@
+## [4.50.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.49.1...v4.50.0) (2025-10-20)
+
+
+### Features
+
+* **homepage:** add interactive learning panels with animated mini-tutorials ([76d6f19](https://github.com/antialias/soroban-abacus-flashcards/commit/76d6f19d51fe4b9594998ae4e0a8823aff389854))
+
 ## [4.49.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.49.0...v4.49.1) (2025-10-20)
 
 
