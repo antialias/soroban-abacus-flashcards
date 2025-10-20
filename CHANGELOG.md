@@ -1,3 +1,10 @@
+## [4.26.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.25.1...v4.26.0) (2025-10-20)
+
+
+### Features
+
+* **levels:** add kyu level data and cards ([6463a3b](https://github.com/antialias/soroban-abacus-flashcards/commit/6463a3b2f6371ebebac1048197fb44178997d2ef))
+
 ## [4.25.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.25.0...v4.25.1) (2025-10-20)
 
 
