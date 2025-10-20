@@ -1,3 +1,10 @@
+## [4.21.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.20.7...v4.21.0) (2025-10-20)
+
+
+### Features
+
+* **tutorial:** add silentErrors prop to suppress error messages ([8835e1c](https://github.com/antialias/soroban-abacus-flashcards/commit/8835e1c57ab8adcecefe0db082360dd98fbfaac7))
+
 ## [4.20.7](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.20.6...v4.20.7) (2025-10-20)
 
 
