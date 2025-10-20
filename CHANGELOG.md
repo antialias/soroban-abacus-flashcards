@@ -1,3 +1,10 @@
+## [4.49.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.49.0...v4.49.1) (2025-10-20)
+
+
+### Code Refactoring
+
+* **homepage:** streamline homepage sections ([d362a77](https://github.com/antialias/soroban-abacus-flashcards/commit/d362a770d63405efee5ef8a896d34e783dd11de2))
+
 ## [4.49.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.48.5...v4.49.0) (2025-10-20)
 
 
