@@ -1,3 +1,10 @@
+## [4.52.2](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.52.1...v4.52.2) (2025-10-20)
+
+
+### Bug Fixes
+
+* **homepage:** use actual container dimensions for flashcard positioning ([4082a24](https://github.com/antialias/soroban-abacus-flashcards/commit/4082a246a33ea67617b762d5b7490a8c9af0ad49))
+
 ## [4.52.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.52.0...v4.52.1) (2025-10-20)
 
 
