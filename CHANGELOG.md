@@ -1,3 +1,11 @@
+## [4.33.8](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.33.7...v4.33.8) (2025-10-20)
+
+
+### Bug Fixes
+
+* **levels:** reduce Dan scale and container height to prevent clipping ([563136f](https://github.com/antialias/soroban-abacus-flashcards/commit/563136fb79fa10b2af3a119bf0f861e3b0812b2e))
+* **levels:** reduce max scale factor to allow more compact container ([ead9ee9](https://github.com/antialias/soroban-abacus-flashcards/commit/ead9ee9589aa4d7376e9385da5da53a6b444858a))
+
 ## [4.33.7](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.33.6...v4.33.7) (2025-10-20)
 
 
