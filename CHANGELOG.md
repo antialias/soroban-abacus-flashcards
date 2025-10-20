@@ -1,3 +1,10 @@
+## [4.55.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.54.0...v4.55.0) (2025-10-20)
+
+
+### Features
+
+* **homepage:** update section title to "The Arcade" ([f47b172](https://github.com/antialias/soroban-abacus-flashcards/commit/f47b172f66bee0017c11d8f129f5b83f2ef3dcd9))
+
 ## [4.54.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.53.0...v4.54.0) (2025-10-20)
 
 
