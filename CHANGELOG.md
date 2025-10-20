@@ -1,3 +1,10 @@
+## [4.25.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.25.0...v4.25.1) (2025-10-20)
+
+
+### Code Refactoring
+
+* **homepage:** make entire "Your Journey" card clickable ([3f30810](https://github.com/antialias/soroban-abacus-flashcards/commit/3f30810271418f3acf3df17e41d9a897a3312c34))
+
 ## [4.25.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.24.3...v4.25.0) (2025-10-20)
 
 
