@@ -1,3 +1,10 @@
+## [4.32.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.32.0...v4.32.1) (2025-10-20)
+
+
+### Bug Fixes
+
+* **levels:** use correct dark mode styling from homepage + docs update ([c38767f](https://github.com/antialias/soroban-abacus-flashcards/commit/c38767f4d399fa2caa5cd4e0185689d0207fbdaf))
+
 ## [4.32.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.31.1...v4.32.0) (2025-10-20)
 
 
