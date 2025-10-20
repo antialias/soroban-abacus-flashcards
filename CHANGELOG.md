@@ -1,3 +1,10 @@
+## [4.24.2](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.24.1...v4.24.2) (2025-10-20)
+
+
+### Code Refactoring
+
+* **homepage:** tighten mini abacus vertical padding ([514d07e](https://github.com/antialias/soroban-abacus-flashcards/commit/514d07ecb5f65a3c0982b8e90994e1c17ebaa59c))
+
 ## [4.24.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.24.0...v4.24.1) (2025-10-20)
 
 
