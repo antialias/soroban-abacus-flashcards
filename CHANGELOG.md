@@ -1,3 +1,10 @@
+## [4.51.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.50.1...v4.51.0) (2025-10-20)
+
+
+### Features
+
+* **homepage:** create fancy flashcard display with spread-out cards ([cd30944](https://github.com/antialias/soroban-abacus-flashcards/commit/cd30944c5e067f84d00dfdf41c37580acc589548))
+
 ## [4.50.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.50.0...v4.50.1) (2025-10-20)
 
 
