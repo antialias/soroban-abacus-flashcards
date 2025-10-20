@@ -1,3 +1,10 @@
+## [4.44.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.44.0...v4.44.1) (2025-10-20)
+
+
+### Bug Fixes
+
+* **levels:** add fixed dimensions and margins to kyu detail boxes ([05dd0b3](https://github.com/antialias/soroban-abacus-flashcards/commit/05dd0b30d3c397b82b7b7cc93a5ea575f3aada6d))
+
 ## [4.44.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.43.2...v4.44.0) (2025-10-20)
 
 
