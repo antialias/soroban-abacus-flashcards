@@ -1,3 +1,10 @@
+## [4.39.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.38.1...v4.39.0) (2025-10-20)
+
+
+### Features
+
+* **levels:** add auto-advance slider with hover pause ([41eaed2](https://github.com/antialias/soroban-abacus-flashcards/commit/41eaed24fce510bab7fd03fa2e39e829b33a7346))
+
 ## [4.38.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.38.0...v4.38.1) (2025-10-20)
 
 
