@@ -1,3 +1,10 @@
+## [4.24.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.23.0...v4.24.0) (2025-10-20)
+
+
+### Features
+
+* **homepage:** add animated mini abacus to "Read and set numbers" card ([e028e34](https://github.com/antialias/soroban-abacus-flashcards/commit/e028e342ad4bc01491e05a4ba074628155926fd8))
+
 ## [4.23.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.22.0...v4.23.0) (2025-10-20)
 
 
