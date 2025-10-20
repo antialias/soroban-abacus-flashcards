@@ -1,3 +1,10 @@
+## [4.24.3](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.24.2...v4.24.3) (2025-10-20)
+
+
+### Code Refactoring
+
+* **homepage:** align all skill icon panes horizontally ([4b04e86](https://github.com/antialias/soroban-abacus-flashcards/commit/4b04e8673da228863d4ec1869897ee431fa3d753))
+
 ## [4.24.2](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.24.1...v4.24.2) (2025-10-20)
 
 
