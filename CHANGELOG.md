@@ -1,3 +1,10 @@
+## [4.48.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.47.2...v4.48.0) (2025-10-20)
+
+
+### Features
+
+* **hero:** persist random subtitle per-session ([318f946](https://github.com/antialias/soroban-abacus-flashcards/commit/318f9469a0805c200c55ce4024a95fd7b8dbe6a2))
+
 ## [4.47.2](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.47.1...v4.47.2) (2025-10-20)
 
 
