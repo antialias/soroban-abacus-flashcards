@@ -1,3 +1,10 @@
+## [4.56.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.55.0...v4.56.0) (2025-10-20)
+
+
+### Features
+
+* **homepage:** emphasize single-player and observer modes ([a537bc1](https://github.com/antialias/soroban-abacus-flashcards/commit/a537bc18c34d94ca931e483ea01e497d6f5d4e5b))
+
 ## [4.55.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.54.0...v4.55.0) (2025-10-20)
 
 
