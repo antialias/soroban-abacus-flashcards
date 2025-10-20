@@ -1,3 +1,10 @@
+## [4.43.2](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.43.1...v4.43.2) (2025-10-20)
+
+
+### Code Refactoring
+
+* **levels:** remove Time and Pass sections from kyu details ([d90b5d5](https://github.com/antialias/soroban-abacus-flashcards/commit/d90b5d55322e75dd28b95376614663a506c829d4))
+
 ## [4.43.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.43.0...v4.43.1) (2025-10-20)
 
 
