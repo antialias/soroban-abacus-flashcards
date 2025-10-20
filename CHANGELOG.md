@@ -1,3 +1,10 @@
+## [4.27.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.26.0...v4.27.0) (2025-10-20)
+
+
+### Features
+
+* **levels:** add Dan levels ladder visualization ([c18012c](https://github.com/antialias/soroban-abacus-flashcards/commit/c18012cb505a1f2a86ebed7579b379a4d7d97f2c))
+
 ## [4.26.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.25.1...v4.26.0) (2025-10-20)
 
 
