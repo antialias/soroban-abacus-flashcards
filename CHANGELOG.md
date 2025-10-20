@@ -1,3 +1,15 @@
+## [4.25.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.24.3...v4.25.0) (2025-10-20)
+
+
+### Features
+
+* **levels:** add Kyu & Dan levels page with homepage link ([39b1e7d](https://github.com/antialias/soroban-abacus-flashcards/commit/39b1e7de16f15412c91cf648c714e31e2de7a6bc))
+
+
+### Styles
+
+* **homepage:** adjust journey emoji sizing and spacing ([2a0e469](https://github.com/antialias/soroban-abacus-flashcards/commit/2a0e469e83b99c88f091bfecd770e0b4c1cb6310))
+
 ## [4.24.3](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.24.2...v4.24.3) (2025-10-20)
 
 
