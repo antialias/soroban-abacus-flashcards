@@ -1,3 +1,11 @@
+## [4.50.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.50.0...v4.50.1) (2025-10-20)
+
+
+### Bug Fixes
+
+* **homepage:** set fixed width for learning panel to prevent layout shift ([dc19622](https://github.com/antialias/soroban-abacus-flashcards/commit/dc19622bbba2fead8cd9c0b2bda3a38abba0bd41))
+* **homepage:** set fixed width for tutorial panel to prevent layout shift ([aba9f8a](https://github.com/antialias/soroban-abacus-flashcards/commit/aba9f8a94d50590cf94b6cd87f85b497e89045e7))
+
 ## [4.50.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.49.1...v4.50.0) (2025-10-20)
 
 
