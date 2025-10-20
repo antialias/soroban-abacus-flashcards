@@ -1,3 +1,11 @@
+## [4.33.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.32.1...v4.33.0) (2025-10-20)
+
+
+### Features
+
+* **abacus-react:** add BigInt support for 30-digit Dan level abacuses ([0ab4cc2](https://github.com/antialias/soroban-abacus-flashcards/commit/0ab4cc288066b75a6ea4371f65098db5c0fc8847))
+* **levels:** add hover interaction and smooth React Spring transitions ([fd2b633](https://github.com/antialias/soroban-abacus-flashcards/commit/fd2b6338a84c3bbc683eff216a8da3b155749f0f))
+
 ## [4.32.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.32.0...v4.32.1) (2025-10-20)
 
 
