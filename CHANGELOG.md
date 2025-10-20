@@ -1,3 +1,10 @@
+## [4.40.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.39.1...v4.40.0) (2025-10-20)
+
+
+### Features
+
+* **levels:** progressive animation speed for Dan levels ([9dff3e7](https://github.com/antialias/soroban-abacus-flashcards/commit/9dff3e7b7b1ca46ea7f19a48135124b80c5182c0))
+
 ## [4.39.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.39.0...v4.39.1) (2025-10-20)
 
 
