@@ -1,3 +1,10 @@
+## [4.48.5](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.48.4...v4.48.5) (2025-10-20)
+
+
+### Bug Fixes
+
+* **homepage:** add dark gradient overlay for better text contrast on game cards ([6410b21](https://github.com/antialias/soroban-abacus-flashcards/commit/6410b21f829810af27e42d188295630bd67d6b6b))
+
 ## [4.48.4](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.48.3...v4.48.4) (2025-10-20)
 
 
