@@ -1,3 +1,20 @@
+## [4.46.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.45.0...v4.46.0) (2025-10-20)
+
+
+### Features
+
+* **homepage:** add full-page hero abacus with scroll-based nav transition ([d8ec642](https://github.com/antialias/soroban-abacus-flashcards/commit/d8ec64280ec0c2f44f2fd9c72a93a882481f650b))
+
+
+### Bug Fixes
+
+* **homepage:** improve hero abacus sizing and layout ([230f1dc](https://github.com/antialias/soroban-abacus-flashcards/commit/230f1dcd866e5b3625e19f7400f5eae478fe7d0c))
+
+
+### Styles
+
+* **hero-abacus:** apply dark theme to match homepage styling ([e0b6a2e](https://github.com/antialias/soroban-abacus-flashcards/commit/e0b6a2e88b3ebbaae41ed54f23f9e514604d2262))
+
 ## [4.45.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.44.3...v4.45.0) (2025-10-20)
 
 
