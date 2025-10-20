@@ -1,3 +1,25 @@
+# [2.1.0](https://github.com/antialias/soroban-abacus-flashcards/compare/abacus-react-v2.0.0...abacus-react-v2.1.0) (2025-10-20)
+
+
+### Bug Fixes
+
+* **levels:** add fixed height to entire level display pane ([200b26c](https://github.com/antialias/soroban-abacus-flashcards/commit/200b26c2cd35d1d637ede9dcfc3dbbc7f3f19320))
+* **levels:** increase container height to prevent abacus clipping ([cd5c15a](https://github.com/antialias/soroban-abacus-flashcards/commit/cd5c15aeb260c568fe7ad9b6a4f51c4d6498b2b8))
+* **levels:** only animate abacus, not container with background/border ([c80477d](https://github.com/antialias/soroban-abacus-flashcards/commit/c80477d24877ddada5f3f4405abbf05e1d753b5d))
+* **levels:** reduce Dan scale and container height to prevent clipping ([563136f](https://github.com/antialias/soroban-abacus-flashcards/commit/563136fb79fa10b2af3a119bf0f861e3b0812b2e))
+* **levels:** reduce max scale factor to allow more compact container ([ead9ee9](https://github.com/antialias/soroban-abacus-flashcards/commit/ead9ee9589aa4d7376e9385da5da53a6b444858a))
+* **levels:** reduce scale factor variation to minimize margin differences ([abb647c](https://github.com/antialias/soroban-abacus-flashcards/commit/abb647ce40b8f9d0c8268ab18c139324ae3195c5))
+* **levels:** revert delayed column change, keep overflow hidden ([22f00f5](https://github.com/antialias/soroban-abacus-flashcards/commit/22f00f59f5facc36a846408dcd196ec54ea676b1))
+* **levels:** stabilize slider position and prevent abacus clipping ([09004dc](https://github.com/antialias/soroban-abacus-flashcards/commit/09004dc2c055031ee2f71c964ceee6f7b1d42ecd))
+
+
+### Features
+
+* **abacus-react:** export StandaloneBead component wired to AbacusDisplayContext ([0146ce1](https://github.com/antialias/soroban-abacus-flashcards/commit/0146ce1e67da27a24cbaa8338ba6a1a6befd6bd3))
+* **levels:** add hover interaction and smooth React Spring transitions ([fd2b633](https://github.com/antialias/soroban-abacus-flashcards/commit/fd2b6338a84c3bbc683eff216a8da3b155749f0f))
+* **levels:** redesign slider with abacus-themed beads ([f3dce84](https://github.com/antialias/soroban-abacus-flashcards/commit/f3dce84532fa706e4ec9551facde2055a060ee13))
+* **levels:** replace slider thumb with diamond-shaped abacus beads ([0fbde53](https://github.com/antialias/soroban-abacus-flashcards/commit/0fbde53039d3ea000c6a3be492b733479e7bf47c))
+
 # [2.0.0](https://github.com/antialias/soroban-abacus-flashcards/compare/abacus-react-v1.8.0...abacus-react-v2.0.0) (2025-10-20)
 
 
