@@ -1,3 +1,10 @@
+## [4.29.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.28.0...v4.29.0) (2025-10-20)
+
+
+### Features
+
+* **levels:** replace kyu grid with interactive slider and abacus visualizations ([10978e8](https://github.com/antialias/soroban-abacus-flashcards/commit/10978e890beee65dea78ddcce52cfe5315d58063))
+
 ## [4.28.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.27.0...v4.28.0) (2025-10-20)
 
 
