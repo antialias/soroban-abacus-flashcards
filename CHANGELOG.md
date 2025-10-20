@@ -1,3 +1,10 @@
+## [4.40.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.40.0...v4.40.1) (2025-10-20)
+
+
+### Bug Fixes
+
+* **levels:** increase animation speed to 10ms for 10th Dan ([6f89d9e](https://github.com/antialias/soroban-abacus-flashcards/commit/6f89d9e274082908fc090a9c0ba310f2cb06f014))
+
 ## [4.40.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.39.1...v4.40.0) (2025-10-20)
 
 
