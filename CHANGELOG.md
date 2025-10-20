@@ -1,3 +1,15 @@
+## [4.34.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.33.8...v4.34.0) (2025-10-20)
+
+
+### Features
+
+* **levels:** redesign slider with abacus-themed beads ([f3dce84](https://github.com/antialias/soroban-abacus-flashcards/commit/f3dce84532fa706e4ec9551facde2055a060ee13))
+
+
+### Code Refactoring
+
+* **levels:** convert to Radix UI Slider with abacus theme ([a03e73c](https://github.com/antialias/soroban-abacus-flashcards/commit/a03e73c849c5da4337f26a74b8f12b617c66068e))
+
 ## [4.33.8](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.33.7...v4.33.8) (2025-10-20)
 
 
