@@ -1,3 +1,10 @@
+## [4.31.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.31.0...v4.31.1) (2025-10-20)
+
+
+### Bug Fixes
+
+* **levels:** use correct AbacusReact API with direct props ([892b377](https://github.com/antialias/soroban-abacus-flashcards/commit/892b377eb3bbd555dd2566bf58e946e9faa7b9f6))
+
 ## [4.31.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.30.0...v4.31.0) (2025-10-20)
 
 
