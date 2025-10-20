@@ -1,3 +1,15 @@
+## [4.22.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.21.1...v4.22.0) (2025-10-20)
+
+
+### Features
+
+* **homepage:** enhance "What You'll Learn" with visual cards ([d142342](https://github.com/antialias/soroban-abacus-flashcards/commit/d1423420e653b26b2f89d9d17ae5d597807d6979))
+
+
+### Bug Fixes
+
+* **tutorial:** reduce tooltip z-index to scroll under nav bar ([47640f3](https://github.com/antialias/soroban-abacus-flashcards/commit/47640f3486c6d4a7107d59bdcce043f76fabbb1d))
+
 ## [4.21.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.21.0...v4.21.1) (2025-10-20)
 
 
