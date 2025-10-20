@@ -1,3 +1,10 @@
+## [4.20.6](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.20.5...v4.20.6) (2025-10-20)
+
+
+### Bug Fixes
+
+* **homepage:** use inline styles for journey level colors ([5d85e89](https://github.com/antialias/soroban-abacus-flashcards/commit/5d85e898d65d44d8d09bee952fad44b5a9c0cd20)), closes [#4ade80](https://github.com/antialias/soroban-abacus-flashcards/issues/4ade80) [#60a5](https://github.com/antialias/soroban-abacus-flashcards/issues/60a5) [#a78](https://github.com/antialias/soroban-abacus-flashcards/issues/a78) [#fbbf24](https://github.com/antialias/soroban-abacus-flashcards/issues/fbbf24)
+
 ## [4.20.5](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.20.4...v4.20.5) (2025-10-20)
 
 
