@@ -1,3 +1,10 @@
+## [4.33.7](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.33.6...v4.33.7) (2025-10-20)
+
+
+### Bug Fixes
+
+* **levels:** reduce scale factor variation to minimize margin differences ([abb647c](https://github.com/antialias/soroban-abacus-flashcards/commit/abb647ce40b8f9d0c8268ab18c139324ae3195c5))
+
 ## [4.33.6](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.33.5...v4.33.6) (2025-10-20)
 
 
