@@ -1,3 +1,10 @@
+## [4.44.2](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.44.1...v4.44.2) (2025-10-20)
+
+
+### Bug Fixes
+
+* **levels:** match top/bottom margins to left padding on kyu detail boxes ([aa0bdcf](https://github.com/antialias/soroban-abacus-flashcards/commit/aa0bdcf686adcbfd1a145cf67121181d1f1194d9))
+
 ## [4.44.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.44.0...v4.44.1) (2025-10-20)
 
 
