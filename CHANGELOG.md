@@ -1,3 +1,10 @@
+## [4.33.6](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.33.5...v4.33.6) (2025-10-20)
+
+
+### Bug Fixes
+
+* **levels:** increase container height to prevent abacus clipping ([cd5c15a](https://github.com/antialias/soroban-abacus-flashcards/commit/cd5c15aeb260c568fe7ad9b6a4f51c4d6498b2b8))
+
 ## [4.33.5](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.33.4...v4.33.5) (2025-10-20)
 
 
