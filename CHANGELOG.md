@@ -1,3 +1,10 @@
+## [4.48.4](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.48.3...v4.48.4) (2025-10-20)
+
+
+### Bug Fixes
+
+* **homepage:** improve text contrast on game cards with text shadows ([b6410c7](https://github.com/antialias/soroban-abacus-flashcards/commit/b6410c7c225f01f42d095ca270b8da7903cbfbb0))
+
 ## [4.48.3](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.48.2...v4.48.3) (2025-10-20)
 
 
