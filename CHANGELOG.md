@@ -1,3 +1,10 @@
+## [4.37.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.36.0...v4.37.0) (2025-10-20)
+
+
+### Features
+
+* **levels:** add hover tracking to slider for real-time level preview ([477a0b3](https://github.com/antialias/soroban-abacus-flashcards/commit/477a0b367e32749b865b5a5405846e86d5bcef6a))
+
 ## [4.36.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.35.1...v4.36.0) (2025-10-20)
 
 
