@@ -1,3 +1,10 @@
+## [4.30.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.29.0...v4.30.0) (2025-10-20)
+
+
+### Features
+
+* **levels:** create true horizontal slider with abacus visualizations ([6d734f1](https://github.com/antialias/soroban-abacus-flashcards/commit/6d734f1d51f5ba1367f55923e58bd977413d754e))
+
 ## [4.29.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.28.0...v4.29.0) (2025-10-20)
 
 
