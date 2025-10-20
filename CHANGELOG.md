@@ -1,3 +1,15 @@
+## [4.48.3](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.48.2...v4.48.3) (2025-10-20)
+
+
+### Bug Fixes
+
+* **homepage:** display gradient backgrounds on all game cards ([c6dc210](https://github.com/antialias/soroban-abacus-flashcards/commit/c6dc210bf8e3a5b4d7d6e53f2a7427d335c65322))
+
+
+### Documentation
+
+* **z-index:** add comprehensive z-index and stacking context documentation ([c89aea7](https://github.com/antialias/soroban-abacus-flashcards/commit/c89aea744478696b6f812fe53311a2dba210540f))
+
 ## [4.48.2](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.48.1...v4.48.2) (2025-10-20)
 
 
