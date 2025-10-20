@@ -1,3 +1,10 @@
+## [4.20.5](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.20.4...v4.20.5) (2025-10-20)
+
+
+### Bug Fixes
+
+* **docker:** include Panda CSS styled-system in production image ([57fabff](https://github.com/antialias/soroban-abacus-flashcards/commit/57fabffe605d953b4a4d7e05032401cbf1ab2d14))
+
 ## [4.20.4](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.20.3...v4.20.4) (2025-10-19)
 
 
