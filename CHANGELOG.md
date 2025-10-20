@@ -1,3 +1,10 @@
+## [4.47.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.47.0...v4.47.1) (2025-10-20)
+
+
+### Bug Fixes
+
+* **hero:** prevent nav thrashing with hysteresis ([71b1b93](https://github.com/antialias/soroban-abacus-flashcards/commit/71b1b933b598c0a6a8aef1bc9f8c598c1871b2eb))
+
 ## [4.47.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.46.2...v4.47.0) (2025-10-20)
 
 
