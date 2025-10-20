@@ -1,3 +1,15 @@
+## [4.35.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.35.0...v4.35.1) (2025-10-20)
+
+
+### Features
+
+* **abacus-react:** export StandaloneBead component wired to AbacusDisplayContext ([0146ce1](https://github.com/antialias/soroban-abacus-flashcards/commit/0146ce1e67da27a24cbaa8338ba6a1a6befd6bd3))
+
+
+### Performance Improvements
+
+* **levels:** speed up slider animations for more responsive feel ([1e5467f](https://github.com/antialias/soroban-abacus-flashcards/commit/1e5467fad4e27b832300c49b4f73547dc47598b0))
+
 ## [4.35.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.34.0...v4.35.0) (2025-10-20)
 
 
