@@ -1,3 +1,10 @@
+## [4.33.3](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.33.2...v4.33.3) (2025-10-20)
+
+
+### Code Refactoring
+
+* **levels:** move slider into level display pane above abacus ([2d8bb4a](https://github.com/antialias/soroban-abacus-flashcards/commit/2d8bb4ab8804f399d1ccc8a18feff9f09eca8029))
+
 ## [4.33.2](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.33.1...v4.33.2) (2025-10-20)
 
 
