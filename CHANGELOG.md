@@ -1,3 +1,10 @@
+## [4.41.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.40.1...v4.41.0) (2025-10-20)
+
+
+### Features
+
+* **levels:** right-align abacus display ([8681b17](https://github.com/antialias/soroban-abacus-flashcards/commit/8681b17340e757cf04d17f884a780a251645bb33))
+
 ## [4.40.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.40.0...v4.40.1) (2025-10-20)
 
 
