@@ -1,3 +1,10 @@
+## [4.43.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.42.1...v4.43.0) (2025-10-20)
+
+
+### Features
+
+* **levels:** add structured kyu exam details with card UI ([6501b07](https://github.com/antialias/soroban-abacus-flashcards/commit/6501b073b100a00982cff1ca3140921e74f31a9c))
+
 ## [4.42.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.42.0...v4.42.1) (2025-10-20)
 
 
