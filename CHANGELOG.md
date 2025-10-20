@@ -1,3 +1,11 @@
+## [4.47.2](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.47.1...v4.47.2) (2025-10-20)
+
+
+### Bug Fixes
+
+* **nav:** prevent thrashing by using fixed position always ([eff44b3](https://github.com/antialias/soroban-abacus-flashcards/commit/eff44b3ad1ea0535c6965ad58012f9275cb143ec))
+* **nav:** remove unnecessary borders from transparent nav ([8c2ddca](https://github.com/antialias/soroban-abacus-flashcards/commit/8c2ddca28dbdd7743227eed4d19a9a8f662a72b5))
+
 ## [4.47.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.47.0...v4.47.1) (2025-10-20)
 
 
