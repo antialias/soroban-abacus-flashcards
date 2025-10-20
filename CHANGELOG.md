@@ -1,3 +1,20 @@
+## [4.24.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.24.0...v4.24.1) (2025-10-20)
+
+
+### Bug Fixes
+
+* **homepage:** adjust mini abacus container height ([c4066d6](https://github.com/antialias/soroban-abacus-flashcards/commit/c4066d687925bbe7737ebfeefdada7365ff97c6c))
+* **homepage:** fix MiniAbacus runtime error and improve sizing ([1fa0df8](https://github.com/antialias/soroban-abacus-flashcards/commit/1fa0df85f7d3988cbc61701d89476419ccf0a13c))
+* **homepage:** use correct AbacusReact API and fix clipping/styling issues ([1432afd](https://github.com/antialias/soroban-abacus-flashcards/commit/1432afd6e6bd547bd0da76dbeea1c2b71244826f))
+* **homepage:** use direct conditionals for mini abacus padding ([38ef16a](https://github.com/antialias/soroban-abacus-flashcards/commit/38ef16a8f91f8ab4ad0d717b0321e2002636fafb))
+
+
+### Styles
+
+* **homepage:** add more padding around mini abacus ([c5103d0](https://github.com/antialias/soroban-abacus-flashcards/commit/c5103d049f73a8f7ef26915edfbef9ea56d59094))
+* **homepage:** balance mini abacus padding horizontally and vertically ([2f0304e](https://github.com/antialias/soroban-abacus-flashcards/commit/2f0304eb81cdf84c21b0554c9cd4bd5478896dd8))
+* **homepage:** increase mini abacus padding to '5' ([1da9ed1](https://github.com/antialias/soroban-abacus-flashcards/commit/1da9ed1ce6995c605622fc2863f248e5e91ab9c3))
+
 ## [4.24.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.23.0...v4.24.0) (2025-10-20)
 
 
