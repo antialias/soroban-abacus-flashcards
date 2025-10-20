@@ -1,3 +1,10 @@
+## [4.45.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.44.3...v4.45.0) (2025-10-20)
+
+
+### Features
+
+* **branding:** rebrand navigation from 'Soroban Generator' to 'Abaci One' ([cce8980](https://github.com/antialias/soroban-abacus-flashcards/commit/cce8980e177da1b3c344e46561d928ed98b86f6c))
+
 ## [4.44.3](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.44.2...v4.44.3) (2025-10-20)
 
 
