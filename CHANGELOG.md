@@ -1,3 +1,10 @@
+## [4.32.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.31.1...v4.32.0) (2025-10-20)
+
+
+### Features
+
+* **levels:** add dark mode styling and responsive scaling to abacus ([92e1e62](https://github.com/antialias/soroban-abacus-flashcards/commit/92e1e621321039206f65b3605f5797bbdc6beafc))
+
 ## [4.31.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.31.0...v4.31.1) (2025-10-20)
 
 
