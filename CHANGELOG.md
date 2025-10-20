@@ -1,3 +1,10 @@
+## [4.31.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.30.0...v4.31.0) (2025-10-20)
+
+
+### Features
+
+* **levels:** implement interactive slider for exploring kyu & dan ranks ([eb3b100](https://github.com/antialias/soroban-abacus-flashcards/commit/eb3b1000563536d4143ba1f4ec04e59e8dd2e608))
+
 ## [4.30.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.29.0...v4.30.0) (2025-10-20)
 
 
