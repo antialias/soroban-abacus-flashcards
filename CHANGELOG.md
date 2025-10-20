@@ -1,3 +1,10 @@
+## [4.42.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.41.0...v4.42.0) (2025-10-20)
+
+
+### Features
+
+* **levels:** add kyu level details display with English translations ([c650ffa](https://github.com/antialias/soroban-abacus-flashcards/commit/c650ffa1935fe370d37190b2843c0deecdcce8e7))
+
 ## [4.41.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.40.1...v4.41.0) (2025-10-20)
 
 
