@@ -1,3 +1,10 @@
+## [4.23.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.22.0...v4.23.0) (2025-10-20)
+
+
+### Features
+
+* **homepage:** add more visual embellishments to learning cards ([4ec1b95](https://github.com/antialias/soroban-abacus-flashcards/commit/4ec1b952f202d50f6db287c41732ec65ca17c142))
+
 ## [4.22.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.21.1...v4.22.0) (2025-10-20)
 
 
