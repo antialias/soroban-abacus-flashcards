@@ -1,3 +1,10 @@
+## [4.62.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.61.3...v4.62.0) (2025-10-21)
+
+
+### Features
+
+* **flashcards:** add dynamic shadow based on drag speed ([92148a4](https://github.com/antialias/soroban-abacus-flashcards/commit/92148a4cf87e828ba2e5ec1740fb51d9667c1d73))
+
 ## [4.61.3](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.61.2...v4.61.3) (2025-10-21)
 
 
