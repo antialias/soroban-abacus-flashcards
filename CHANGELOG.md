@@ -1,3 +1,10 @@
+## [4.61.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.60.0...v4.61.0) (2025-10-21)
+
+
+### Features
+
+* **flashcards:** enable unbounded drag and position persistence ([ad1ad69](https://github.com/antialias/soroban-abacus-flashcards/commit/ad1ad690f014257b5a3c3f599e794205a11d286f))
+
 ## [4.60.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.59.1...v4.60.0) (2025-10-21)
 
 
