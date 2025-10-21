@@ -1,3 +1,10 @@
+## [4.63.4](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.63.3...v4.63.4) (2025-10-21)
+
+
+### Bug Fixes
+
+* **flashcards:** keep grab point under cursor with proper coordinate conversion ([1869216](https://github.com/antialias/soroban-abacus-flashcards/commit/1869216d2fda77303c0b79d4f613c6dcdaf5324b))
+
 ## [4.63.3](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.63.2...v4.63.3) (2025-10-21)
 
 
