@@ -1,3 +1,10 @@
+## [4.62.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.62.0...v4.62.1) (2025-10-21)
+
+
+### Bug Fixes
+
+* **flashcards:** improve shadow speed logging with separate throttling ([0f51366](https://github.com/antialias/soroban-abacus-flashcards/commit/0f51366fd56540e691df4931b6350c03043484f1))
+
 ## [4.62.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.61.3...v4.62.0) (2025-10-21)
 
 
