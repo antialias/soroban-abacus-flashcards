@@ -1,3 +1,10 @@
+## [4.57.2](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.57.1...v4.57.2) (2025-10-21)
+
+
+### Bug Fixes
+
+* **homepage:** increase skill card abacus container width ([e65e969](https://github.com/antialias/soroban-abacus-flashcards/commit/e65e96952f4e631722c73fc56d088fa3ff1ba858))
+
 ## [4.57.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.57.0...v4.57.1) (2025-10-21)
 
 
