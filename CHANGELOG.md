@@ -1,3 +1,10 @@
+## [4.63.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.62.1...v4.63.0) (2025-10-21)
+
+
+### Features
+
+* **flashcards:** add grab point physics for realistic rotation ([bf37eb1](https://github.com/antialias/soroban-abacus-flashcards/commit/bf37eb1928de8d07673234e2faa1fa6268c45686))
+
 ## [4.62.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.62.0...v4.62.1) (2025-10-21)
 
 
