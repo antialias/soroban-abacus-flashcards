@@ -1,3 +1,10 @@
+## [4.57.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.57.0...v4.57.1) (2025-10-21)
+
+
+### Bug Fixes
+
+* **homepage:** add overflow hidden to skill cards ([5070d8d](https://github.com/antialias/soroban-abacus-flashcards/commit/5070d8d64f7f58887ff7259bee9ce5166c4f8af8))
+
 ## [4.57.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.56.0...v4.57.0) (2025-10-21)
 
 
