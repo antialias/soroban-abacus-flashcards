@@ -1,3 +1,10 @@
+## [4.61.2](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.61.1...v4.61.2) (2025-10-21)
+
+
+### Bug Fixes
+
+* **flashcards:** use explicit per-property configs to fix decay physics ([f32480a](https://github.com/antialias/soroban-abacus-flashcards/commit/f32480a0f9153285341e5a28078840abc0590873))
+
 ## [4.61.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.61.0...v4.61.1) (2025-10-21)
 
 
