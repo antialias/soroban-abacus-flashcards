@@ -1,3 +1,10 @@
+## [4.63.8](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.63.7...v4.63.8) (2025-10-21)
+
+
+### Bug Fixes
+
+* **mobile:** restore abacus visibility in "Your Journey" section ([c96036d](https://github.com/antialias/soroban-abacus-flashcards/commit/c96036d86b6de2e25f7ecd3d00dd36221badc3b1))
+
 ## [4.63.7](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.63.6...v4.63.7) (2025-10-21)
 
 
