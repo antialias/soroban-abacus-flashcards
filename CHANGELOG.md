@@ -1,3 +1,11 @@
+## [4.57.7](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.57.6...v4.57.7) (2025-10-21)
+
+
+### Bug Fixes
+
+* **homepage:** restructure layout to center 1400px wide demo section ([61403f2](https://github.com/antialias/soroban-abacus-flashcards/commit/61403f2f506557b57716a298d4dc481d7853552f))
+* **homepage:** set min-width 1400px on container and remove max-width ([aa297d4](https://github.com/antialias/soroban-abacus-flashcards/commit/aa297d4ef7559473a147934766bfa3868552f58d))
+
 ## [4.57.6](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.57.5...v4.57.6) (2025-10-21)
 
 
