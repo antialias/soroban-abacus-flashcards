@@ -1,3 +1,10 @@
+## [4.61.3](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.61.2...v4.61.3) (2025-10-21)
+
+
+### Code Refactoring
+
+* **flashcards:** completely rewrite drag-drop with simple approach ([5f0ad14](https://github.com/antialias/soroban-abacus-flashcards/commit/5f0ad14133340d073e861f5721cb48e1abab03ff))
+
 ## [4.61.2](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.61.1...v4.61.2) (2025-10-21)
 
 
