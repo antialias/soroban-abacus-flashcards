@@ -1,3 +1,10 @@
+## [4.57.9](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.57.8...v4.57.9) (2025-10-21)
+
+
+### Bug Fixes
+
+* **homepage:** add overflow hidden to Your Journey section ([415a1fb](https://github.com/antialias/soroban-abacus-flashcards/commit/415a1fb1faa263c9d69b4e781ce22da235ca2b66))
+
 ## [4.57.8](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.57.7...v4.57.8) (2025-10-21)
 
 
