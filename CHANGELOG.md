@@ -1,3 +1,10 @@
+## [4.63.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.63.0...v4.63.1) (2025-10-21)
+
+
+### Bug Fixes
+
+* **flashcards:** increase rotation sensitivity 10x for visible grab point physics ([c0fa926](https://github.com/antialias/soroban-abacus-flashcards/commit/c0fa926d16d02c1bfe880b7f0056a760e8461b3b))
+
 ## [4.63.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.62.1...v4.63.0) (2025-10-21)
 
 
