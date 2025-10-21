@@ -1,3 +1,10 @@
+## [4.63.2](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.63.1...v4.63.2) (2025-10-21)
+
+
+### Bug Fixes
+
+* **flashcards:** correct pivot point to rotate around card center ([50fc3fd](https://github.com/antialias/soroban-abacus-flashcards/commit/50fc3fdf7f2c9b7412f6d7d890f5e0d52cb86a9b))
+
 ## [4.63.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.63.0...v4.63.1) (2025-10-21)
 
 
