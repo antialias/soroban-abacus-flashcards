@@ -1,3 +1,10 @@
+## [4.58.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.57.10...v4.58.0) (2025-10-21)
+
+
+### Features
+
+* **navbar:** add glassmorphism effect to nav links when scrolled ([89b9072](https://github.com/antialias/soroban-abacus-flashcards/commit/89b90723b7a3fc9ed12da3ba8718fccb6ce0760f))
+
 ## [4.57.10](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.57.9...v4.57.10) (2025-10-21)
 
 
