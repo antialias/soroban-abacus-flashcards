@@ -1,3 +1,10 @@
+## [4.63.6](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.63.5...v4.63.6) (2025-10-21)
+
+
+### Bug Fixes
+
+* **mobile:** optimize Your Journey section for iPhone displays ([9167fb4](https://github.com/antialias/soroban-abacus-flashcards/commit/9167fb40d68b7bdbe310b647083586434ceb6043))
+
 ## [4.63.5](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.63.4...v4.63.5) (2025-10-21)
 
 
