@@ -1,3 +1,10 @@
+## [4.60.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.59.1...v4.60.0) (2025-10-21)
+
+
+### Features
+
+* **homepage:** significantly increase mobile hero abacus size ([424f41d](https://github.com/antialias/soroban-abacus-flashcards/commit/424f41d4bfc1ddea068f8c110b495ebd5c0bb455))
+
 ## [4.59.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.59.0...v4.59.1) (2025-10-21)
 
 
