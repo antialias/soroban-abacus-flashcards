@@ -1,3 +1,10 @@
+## [4.58.2](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.58.1...v4.58.2) (2025-10-21)
+
+
+### Code Refactoring
+
+* **navbar:** prevent subtitle wrap and remove abacus emoji ([a58f7b7](https://github.com/antialias/soroban-abacus-flashcards/commit/a58f7b78b0020c85da523c36fdf6d70ad069736a))
+
 ## [4.58.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.58.0...v4.58.1) (2025-10-21)
 
 
