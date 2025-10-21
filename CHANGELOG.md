@@ -1,3 +1,15 @@
+## [4.57.10](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.57.9...v4.57.10) (2025-10-21)
+
+
+### Bug Fixes
+
+* **navbar:** remove border artifact and add 10px bottom fade ([d5f60ce](https://github.com/antialias/soroban-abacus-flashcards/commit/d5f60ce9d2fbc2a870b3bb96f5365a0e04e0afc4))
+
+
+### Styles
+
+* **navbar:** improve theming to match homepage dark aesthetic ([284fc90](https://github.com/antialias/soroban-abacus-flashcards/commit/284fc90a53f5f4868a3e41421760ebc813be12b5))
+
 ## [4.57.9](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.57.8...v4.57.9) (2025-10-21)
 
 
