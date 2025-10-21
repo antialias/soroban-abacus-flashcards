@@ -1,3 +1,10 @@
+## [4.59.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.58.2...v4.59.0) (2025-10-21)
+
+
+### Features
+
+* **homepage:** increase hero abacus size for better visibility ([7666b0a](https://github.com/antialias/soroban-abacus-flashcards/commit/7666b0aea949f2432a4d0f4648c1a366af3ea6d2))
+
 ## [4.58.2](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.58.1...v4.58.2) (2025-10-21)
 
 
