@@ -1,3 +1,10 @@
+## [4.63.3](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.63.2...v4.63.3) (2025-10-21)
+
+
+### Bug Fixes
+
+* **flashcards:** revert to simple delta positioning to prevent card jumping ([d018b69](https://github.com/antialias/soroban-abacus-flashcards/commit/d018b699c46aea90e9cdc3309e797ff2d7447ecf))
+
 ## [4.63.2](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.63.1...v4.63.2) (2025-10-21)
 
 
