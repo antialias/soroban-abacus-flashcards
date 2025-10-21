@@ -1,3 +1,15 @@
+## [4.57.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.56.0...v4.57.0) (2025-10-21)
+
+
+### Features
+
+* **homepage:** make skills section responsive with emojis ([9ec0a71](https://github.com/antialias/soroban-abacus-flashcards/commit/9ec0a71546ee483233ed7866dae97345bf2384d7))
+
+
+### Bug Fixes
+
+* **homepage:** prevent skill card overflow ([fa26acf](https://github.com/antialias/soroban-abacus-flashcards/commit/fa26acfbaef1a04bb225956b2f684cd5023b56fa))
+
 ## [4.56.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.55.0...v4.56.0) (2025-10-20)
 
 
