@@ -1,3 +1,10 @@
+## [4.58.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.58.0...v4.58.1) (2025-10-21)
+
+
+### Bug Fixes
+
+* **navbar:** apply glassmorphism to transparent mode, not scrolled mode ([8893675](https://github.com/antialias/soroban-abacus-flashcards/commit/8893675b36b1c1534c6fe7e57fa7e0cc55f198d6))
+
 ## [4.58.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.57.10...v4.58.0) (2025-10-21)
 
 
