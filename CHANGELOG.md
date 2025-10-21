@@ -1,3 +1,10 @@
+## [4.63.7](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.63.6...v4.63.7) (2025-10-21)
+
+
+### Bug Fixes
+
+* **mobile:** reduce height of Your Journey section on mobile ([8944035](https://github.com/antialias/soroban-abacus-flashcards/commit/89440355bf494e54072d2d1a1f228c33ec43d52d))
+
 ## [4.63.6](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.63.5...v4.63.6) (2025-10-21)
 
 
