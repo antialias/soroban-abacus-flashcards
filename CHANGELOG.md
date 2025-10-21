@@ -1,3 +1,10 @@
+## [4.57.5](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.57.4...v4.57.5) (2025-10-21)
+
+
+### Bug Fixes
+
+* **homepage:** prevent text overflow in skill cards ([a6ac55b](https://github.com/antialias/soroban-abacus-flashcards/commit/a6ac55b7b161e0dd33a4dd5acc0df647b2a513aa))
+
 ## [4.57.4](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.57.3...v4.57.4) (2025-10-21)
 
 
