@@ -1,3 +1,10 @@
+## [4.57.6](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.57.5...v4.57.6) (2025-10-21)
+
+
+### Bug Fixes
+
+* **homepage:** increase skill cards container width to prevent title wrapping ([cd3eb61](https://github.com/antialias/soroban-abacus-flashcards/commit/cd3eb61cb59e6faef37fbf609f37f7e2dc302e72))
+
 ## [4.57.5](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.57.4...v4.57.5) (2025-10-21)
 
 
