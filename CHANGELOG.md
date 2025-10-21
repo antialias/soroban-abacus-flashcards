@@ -1,3 +1,10 @@
+## [4.63.9](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.63.8...v4.63.9) (2025-10-21)
+
+
+### Bug Fixes
+
+* **homepage:** use app-wide abacus config in interactive flashcards ([cf1be2d](https://github.com/antialias/soroban-abacus-flashcards/commit/cf1be2d1730543bd30836a87d9cbdfd2cf48360e))
+
 ## [4.63.8](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.63.7...v4.63.8) (2025-10-21)
 
 
