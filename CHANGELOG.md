@@ -1,3 +1,10 @@
+## [4.61.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.61.0...v4.61.1) (2025-10-21)
+
+
+### Bug Fixes
+
+* **flashcards:** fix position snap-back by using api.set before decay ([30e16c8](https://github.com/antialias/soroban-abacus-flashcards/commit/30e16c8e5ac3bb25f2d54cf715dc6fb45adc4fcc))
+
 ## [4.61.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.60.0...v4.61.0) (2025-10-21)
 
 
