@@ -1,3 +1,12 @@
+## [4.57.4](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.57.3...v4.57.4) (2025-10-21)
+
+
+### Bug Fixes
+
+* **homepage:** align container width breakpoint with grid columns ([422bf3d](https://github.com/antialias/soroban-abacus-flashcards/commit/422bf3d968b67e4683ac7ea7e487a84513f992f9))
+* **homepage:** make MiniAbacus fill container properly ([3b5d147](https://github.com/antialias/soroban-abacus-flashcards/commit/3b5d14765dfb2d61a76f66ba3ae09695ce88bb6d))
+* **homepage:** widen skill cards container to 650px ([bc1ad3a](https://github.com/antialias/soroban-abacus-flashcards/commit/bc1ad3a43a79570e1f9c61d5118d14ac4c201d71))
+
 ## [4.57.3](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.57.2...v4.57.3) (2025-10-21)
 
 
