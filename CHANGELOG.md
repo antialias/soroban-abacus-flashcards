@@ -1,3 +1,10 @@
+## [4.63.5](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.63.4...v4.63.5) (2025-10-21)
+
+
+### Bug Fixes
+
+* **flashcards:** store grab offset in local coordinates to prevent jump ([39d93a9](https://github.com/antialias/soroban-abacus-flashcards/commit/39d93a9e9f48a7d1ce10763cad62a600851a41d5))
+
 ## [4.63.4](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.63.3...v4.63.4) (2025-10-21)
 
 
