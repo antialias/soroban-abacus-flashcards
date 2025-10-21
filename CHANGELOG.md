@@ -1,3 +1,10 @@
+## [4.57.3](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.57.2...v4.57.3) (2025-10-21)
+
+
+### Bug Fixes
+
+* **homepage:** increase abacus container width to 120px/150px ([57c212f](https://github.com/antialias/soroban-abacus-flashcards/commit/57c212f4f5be591f712e1c5610e1f323e56e15dd))
+
 ## [4.57.2](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.57.1...v4.57.2) (2025-10-21)
 
 
