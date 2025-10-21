@@ -1,3 +1,10 @@
+## [4.57.8](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.57.7...v4.57.8) (2025-10-21)
+
+
+### Bug Fixes
+
+* **homepage:** adjust responsive breakpoints to prevent skill card clipping ([62ff067](https://github.com/antialias/soroban-abacus-flashcards/commit/62ff067bb956b17a9b3569eadc2a32abd24c27b8))
+
 ## [4.57.7](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.57.6...v4.57.7) (2025-10-21)
 
 
