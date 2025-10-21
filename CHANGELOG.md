@@ -1,3 +1,11 @@
+## [4.59.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.59.0...v4.59.1) (2025-10-21)
+
+
+### Bug Fixes
+
+* **homepage:** adjust hero abacus scale for optimal sizing across devices ([86dee31](https://github.com/antialias/soroban-abacus-flashcards/commit/86dee31c9a51ca0712f1b4181a4899d25374d403))
+* **homepage:** reduce mobile abacus scale to prevent scroll hint overlap ([b8235be](https://github.com/antialias/soroban-abacus-flashcards/commit/b8235be612c3f1dbd0da2b6cd1a935001b7dac9b))
+
 ## [4.59.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.58.2...v4.59.0) (2025-10-21)
 
 
