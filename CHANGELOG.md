@@ -1,3 +1,10 @@
+## [4.64.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.64.0...v4.64.1) (2025-10-22)
+
+
+### Bug Fixes
+
+* **complement-race:** use local player instead of first player for train display ([915d8a5](https://github.com/antialias/soroban-abacus-flashcards/commit/915d8a5343e70a30c7a82bed645e6628fcc08a86))
+
 ## [4.64.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.63.11...v4.64.0) (2025-10-22)
 
 
