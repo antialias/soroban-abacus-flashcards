@@ -1,4 +1,5 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useMemo } from 'react'
+import { useSpring, useSprings } from '@react-spring/web'
 import type { RailroadTrackGenerator } from '../lib/RailroadTrackGenerator'
 
 interface TrainTransform {
@@ -27,22 +28,24 @@ export function useTrainTransforms({
   maxCars,
   carSpacing,
 }: UseTrainTransformsParams) {
-  const [trainTransform, setTrainTransform] = useState<TrainTransform>({
-    x: 50,
-    y: 300,
-    rotation: 0,
-  })
-
-  // Update train position and rotation
-  useEffect(() => {
-    if (pathRef.current) {
-      const transform = trackGenerator.getTrainTransform(pathRef.current, trainPosition)
-      setTrainTransform(transform)
+  // Calculate target locomotive transform
+  const locomotiveTarget = useMemo<TrainTransform>(() => {
+    if (!pathRef.current) {
+      return { x: 50, y: 300, rotation: 0 }
     }
+    return trackGenerator.getTrainTransform(pathRef.current, trainPosition)
   }, [trainPosition, trackGenerator, pathRef])
 
-  // Calculate train car transforms (each car follows behind the locomotive)
-  const trainCars = useMemo((): TrainCarTransform[] => {
+  // Animated spring for smooth locomotive movement
+  const trainTransform = useSpring({
+    x: locomotiveTarget.x,
+    y: locomotiveTarget.y,
+    rotation: locomotiveTarget.rotation,
+    config: { tension: 280, friction: 60 },
+  })
+
+  // Calculate target transforms for train cars (each car follows behind the locomotive)
+  const carTargets = useMemo((): TrainCarTransform[] => {
     if (!pathRef.current) {
       return Array.from({ length: maxCars }, () => ({
         x: 0,
@@ -86,8 +89,21 @@ export function useTrainTransforms({
     })
   }, [trainPosition, trackGenerator, pathRef, maxCars, carSpacing])
 
-  // Calculate locomotive opacity (fade in/out through tunnels)
-  const locomotiveOpacity = useMemo(() => {
+  // Animated springs for smooth car movement
+  const trainCars = useSprings(
+    carTargets.length,
+    carTargets.map((target) => ({
+      x: target.x,
+      y: target.y,
+      rotation: target.rotation,
+      opacity: target.opacity,
+      position: target.position,
+      config: { tension: 280, friction: 60 },
+    }))
+  )
+
+  // Calculate target locomotive opacity (fade in/out through tunnels)
+  const locomotiveOpacityTarget = useMemo(() => {
     const fadeInStart = 3
     const fadeInEnd = 8
     const fadeOutStart = 92
@@ -109,9 +125,15 @@ export function useTrainTransforms({
     return 1 // Default to fully visible
   }, [trainPosition])
 
+  // Animated spring for smooth locomotive opacity
+  const locomotiveOpacity = useSpring({
+    opacity: locomotiveOpacityTarget,
+    config: { tension: 280, friction: 60 },
+  })
+
   return {
     trainTransform,
     trainCars,
-    locomotiveOpacity,
+    locomotiveOpacity: locomotiveOpacity.opacity,
   }
 }

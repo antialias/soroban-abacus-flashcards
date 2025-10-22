@@ -1,21 +1,23 @@
 'use client'
 
 import { memo } from 'react'
+import { animated, to } from '@react-spring/web'
+import type { SpringValue } from '@react-spring/web'
 import type { BoardingAnimation, DisembarkingAnimation } from '../../hooks/usePassengerAnimations'
 import type { Passenger } from '@/arcade-games/complement-race/types'
 
 interface TrainCarTransform {
-  x: number
-  y: number
-  rotation: number
-  position: number
-  opacity: number
+  x: SpringValue<number>
+  y: SpringValue<number>
+  rotation: SpringValue<number>
+  position: SpringValue<number>
+  opacity: SpringValue<number>
 }
 
 interface TrainTransform {
-  x: number
-  y: number
-  rotation: number
+  x: SpringValue<number>
+  y: SpringValue<number>
+  rotation: SpringValue<number>
 }
 
 interface TrainAndCarsProps {
@@ -30,7 +32,7 @@ interface TrainAndCarsProps {
   trainCars: TrainCarTransform[]
   boardedPassengers: Passenger[]
   trainTransform: TrainTransform
-  locomotiveOpacity: number
+  locomotiveOpacity: SpringValue<number>
   playerEmoji: string
   momentum: number
 }
@@ -72,14 +74,14 @@ export const TrainAndCars = memo(
           const passenger = boardedPassengers[carIndex]
 
           return (
-            <g
+            <animated.g
               key={`train-car-${carIndex}`}
               data-component="train-car"
-              transform={`translate(${carTransform.x}, ${carTransform.y}) rotate(${carTransform.rotation}) scale(-1, 1)`}
+              transform={to(
+                [carTransform.x, carTransform.y, carTransform.rotation],
+                (x, y, rot) => `translate(${x}, ${y}) rotate(${rot}) scale(-1, 1)`
+              )}
               opacity={carTransform.opacity}
-              style={{
-                transition: 'opacity 0.5s ease-in',
-              }}
             >
               {/* Train car */}
               <text
@@ -114,18 +116,18 @@ export const TrainAndCars = memo(
                   {passenger.avatar}
                 </text>
               )}
-            </g>
+            </animated.g>
           )
         })}
 
         {/* Locomotive - rendered last so it appears on top */}
-        <g
+        <animated.g
           data-component="locomotive-group"
-          transform={`translate(${trainTransform.x}, ${trainTransform.y}) rotate(${trainTransform.rotation}) scale(-1, 1)`}
+          transform={to(
+            [trainTransform.x, trainTransform.y, trainTransform.rotation],
+            (x, y, rot) => `translate(${x}, ${y}) rotate(${rot}) scale(-1, 1)`
+          )}
           opacity={locomotiveOpacity}
-          style={{
-            transition: 'opacity 0.5s ease-in',
-          }}
         >
           {/* Train locomotive */}
           <text
@@ -191,7 +193,7 @@ export const TrainAndCars = memo(
                 }}
               />
             ))}
-        </g>
+        </animated.g>
       </>
     )
   }
