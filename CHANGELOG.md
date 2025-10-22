@@ -1,3 +1,10 @@
+## [4.65.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.65.0...v4.65.1) (2025-10-22)
+
+
+### Bug Fixes
+
+* **complement-race:** use sendMove with correct parameters for position updates ([06cd94b](https://github.com/antialias/soroban-abacus-flashcards/commit/06cd94b24cdd9dbd36fb5800c9ba7be194f7eed0))
+
 ## [4.65.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.64.2...v4.65.0) (2025-10-22)
 
 
