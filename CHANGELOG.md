@@ -1,3 +1,10 @@
+## [4.63.10](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.63.9...v4.63.10) (2025-10-22)
+
+
+### Bug Fixes
+
+* **complement-race:** show only first active player's passengers on train ([2bfd5d2](https://github.com/antialias/soroban-abacus-flashcards/commit/2bfd5d2bda7f7d2d83c69f75600ab461fde15d92))
+
 ## [4.63.9](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.63.8...v4.63.9) (2025-10-21)
 
 
