@@ -1,3 +1,10 @@
+## [4.66.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.66.0...v4.66.1) (2025-10-22)
+
+
+### Bug Fixes
+
+* **complement-race:** ensure continuous position broadcasting during train movement ([df60824](https://github.com/antialias/soroban-abacus-flashcards/commit/df60824f37f52e77e69d32c26926a24e1af88e66))
+
 ## [4.66.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.65.1...v4.66.0) (2025-10-22)
 
 
