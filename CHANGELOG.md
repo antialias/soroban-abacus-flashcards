@@ -1,3 +1,10 @@
+## [4.66.2](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.66.1...v4.66.2) (2025-10-22)
+
+
+### Bug Fixes
+
+* **complement-race:** fix ghost train position update lag and reload position reset ([ad78a65](https://github.com/antialias/soroban-abacus-flashcards/commit/ad78a65ed7f63509602e79246e3761653ea39a15))
+
 ## [4.66.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.66.0...v4.66.1) (2025-10-22)
 
 
