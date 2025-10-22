@@ -1,3 +1,10 @@
+## [4.66.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.65.1...v4.66.0) (2025-10-22)
+
+
+### Features
+
+* **complement-race:** implement per-car adaptive opacity for ghost trains ([9b1d47d](https://github.com/antialias/soroban-abacus-flashcards/commit/9b1d47d4c7bdaf44f3921ff99971dfb3b65442bd))
+
 ## [4.65.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.65.0...v4.65.1) (2025-10-22)
 
 
