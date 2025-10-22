@@ -1,3 +1,10 @@
+## [4.64.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.63.11...v4.64.0) (2025-10-22)
+
+
+### Features
+
+* **complement-race:** add ghost trains for multiplayer visibility ([7668cc9](https://github.com/antialias/soroban-abacus-flashcards/commit/7668cc9b113b3eae2acb1b852b0ad48c979e6604))
+
 ## [4.63.11](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.63.10...v4.63.11) (2025-10-22)
 
 
