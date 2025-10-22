@@ -1,3 +1,10 @@
+## [4.68.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.67.1...v4.68.0) (2025-10-22)
+
+
+### Features
+
+* **complement-race:** add react-spring animations to local train for smooth movement ([e5b58c8](https://github.com/antialias/soroban-abacus-flashcards/commit/e5b58c844cacce84b6118b3219b0d1f86e6f74a2))
+
 ## [4.67.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.67.0...v4.67.1) (2025-10-22)
 
 
