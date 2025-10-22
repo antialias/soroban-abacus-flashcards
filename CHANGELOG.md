@@ -1,3 +1,10 @@
+## [4.64.2](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.64.1...v4.64.2) (2025-10-22)
+
+
+### Bug Fixes
+
+* **complement-race:** use individual player positions for ghost trains ([00dc4b1](https://github.com/antialias/soroban-abacus-flashcards/commit/00dc4b1d06a4e1763deb16333a298145cafd9187))
+
 ## [4.64.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.64.0...v4.64.1) (2025-10-22)
 
 
