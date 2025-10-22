@@ -1,3 +1,10 @@
+## [4.67.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.67.0...v4.67.1) (2025-10-22)
+
+
+### Bug Fixes
+
+* **complement-race:** fix react-spring interpolation TypeScript errors ([0add9e4](https://github.com/antialias/soroban-abacus-flashcards/commit/0add9e4ef1d69e4e92ffe279cce09c68efa43714))
+
 ## [4.67.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.66.2...v4.67.0) (2025-10-22)
 
 
