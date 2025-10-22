@@ -1,3 +1,10 @@
+## [4.63.11](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.63.10...v4.63.11) (2025-10-22)
+
+
+### Bug Fixes
+
+* **complement-race:** actually filter by isActive instead of just id ([ef4ca57](https://github.com/antialias/soroban-abacus-flashcards/commit/ef4ca57a6c3f35d1bddc6a70952f478058fbc6b5))
+
 ## [4.63.10](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.63.9...v4.63.10) (2025-10-22)
 
 
