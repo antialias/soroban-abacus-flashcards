@@ -1,3 +1,10 @@
+## [4.65.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.64.2...v4.65.0) (2025-10-22)
+
+
+### Features
+
+* **complement-race:** implement position broadcasting for ghost trains ([c5fba5b](https://github.com/antialias/soroban-abacus-flashcards/commit/c5fba5b7dd0f36fd3bbe596409e01b0d3dbd4fbe))
+
 ## [4.64.2](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.64.1...v4.64.2) (2025-10-22)
 
 
