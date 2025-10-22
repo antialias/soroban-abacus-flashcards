@@ -1,3 +1,10 @@
+## [4.67.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.66.2...v4.67.0) (2025-10-22)
+
+
+### Features
+
+* **complement-race:** add react-spring animations to ghost trains for smooth movement ([eb3700a](https://github.com/antialias/soroban-abacus-flashcards/commit/eb3700a57d035a142c64b60d5d1b21181d21b69f))
+
 ## [4.66.2](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.66.1...v4.66.2) (2025-10-22)
 
 
