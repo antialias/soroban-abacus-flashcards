@@ -89,7 +89,7 @@ export function GhostTrain({
     y: locomotiveTarget?.y ?? 0,
     rotation: locomotiveTarget?.rotation ?? 0,
     opacity: locomotiveTarget?.opacity ?? 1,
-    config: { tension: 280, friction: 60 }, // Smooth but responsive
+    config: { tension: 600, friction: 35 }, // Fast/responsive to match local train
   })
 
   // Calculate target transforms for cars (used by spring animations)
@@ -133,7 +133,7 @@ export function GhostTrain({
       y: target.y,
       rotation: target.rotation,
       opacity: target.opacity,
-      config: { tension: 280, friction: 60 },
+      config: { tension: 600, friction: 35 }, // Fast/responsive to match local train
     }))
   )
 

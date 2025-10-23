@@ -41,7 +41,7 @@ export function useTrainTransforms({
     x: locomotiveTarget.x,
     y: locomotiveTarget.y,
     rotation: locomotiveTarget.rotation,
-    config: { tension: 280, friction: 60 },
+    config: { tension: 600, friction: 35 }, // Fast/responsive to avoid lag
   })
 
   // Calculate target transforms for train cars (each car follows behind the locomotive)
@@ -98,7 +98,7 @@ export function useTrainTransforms({
       rotation: target.rotation,
       opacity: target.opacity,
       position: target.position,
-      config: { tension: 280, friction: 60 },
+      config: { tension: 600, friction: 35 }, // Fast/responsive to avoid lag
     }))
   )
 
@@ -128,7 +128,7 @@ export function useTrainTransforms({
   // Animated spring for smooth locomotive opacity
   const locomotiveOpacity = useSpring({
     opacity: locomotiveOpacityTarget,
-    config: { tension: 280, friction: 60 },
+    config: { tension: 600, friction: 35 }, // Fast/responsive to avoid lag
   })
 
   return {
