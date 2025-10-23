@@ -1,3 +1,10 @@
+## [4.67.3](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.67.2...v4.67.3) (2025-10-23)
+
+
+### Bug Fixes
+
+* **complement-race:** resolve infinite render loop in useTrackManagement ([8b4dacd](https://github.com/antialias/soroban-abacus-flashcards/commit/8b4dacdc98cc8cb2a503b31698430ad7ffb6ef8e))
+
 ## [4.67.2](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.67.1...v4.67.2) (2025-10-23)
 
 
