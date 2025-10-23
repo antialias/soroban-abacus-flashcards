@@ -1,3 +1,10 @@
+## [4.67.2](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.67.1...v4.67.2) (2025-10-23)
+
+
+### Performance Improvements
+
+* **complement-race:** increase train position update frequency to 60fps ([fffaf1d](https://github.com/antialias/soroban-abacus-flashcards/commit/fffaf1df1d4d55c811bf634c957691e3564470d6))
+
 ## [4.67.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.67.0...v4.67.1) (2025-10-22)
 
 
