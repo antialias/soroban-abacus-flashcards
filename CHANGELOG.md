@@ -1,3 +1,10 @@
+## [4.68.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.68.0...v4.68.1) (2025-10-23)
+
+
+### Performance Improvements
+
+* **complement-race:** increase spring animation responsiveness to reduce lag ([5bd0dad](https://github.com/antialias/soroban-abacus-flashcards/commit/5bd0dadfdf9d6d81d7db4374983e40de00effecb))
+
 ## [4.68.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.67.1...v4.68.0) (2025-10-22)
 
 
