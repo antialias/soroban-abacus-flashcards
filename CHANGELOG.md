@@ -20,6 +20,52 @@
 * **arcade:** implement optimistic locking in session manager ([71fd66d](https://github.com/antialias/soroban-abacus-flashcards/commit/71fd66d96a3b03650c90f59f6e516aae7dddc345))
 * **card-sorting:** add border radius to outer card container ([a922eba](https://github.com/antialias/soroban-abacus-flashcards/commit/a922eba73c4656ee941ce4dfb1dc57a62f076570))
 * **card-sorting:** add overflow hidden to clip rounded corners ([84c66fe](https://github.com/antialias/soroban-abacus-flashcards/commit/84c66feec6b4112b015e1afd95bf33b24b5f6a4f))
+* **card-sorting:** keep arrow sequence numbers upright ([79c9469](https://github.com/antialias/soroban-abacus-flashcards/commit/79c94699fa1cc2a2886e3ab1addc5fcd975602f5))
+* **card-sorting:** preserve card positions on pause/resume ([0d8af09](https://github.com/antialias/soroban-abacus-flashcards/commit/0d8af09517534f1e1cf1f57160391d465a279d76))
+* **card-sorting:** preserve rotation when starting drag ([3364144](https://github.com/antialias/soroban-abacus-flashcards/commit/3364144fb6212934b6ad6d63ac6e7b78b436b258))
+* **card-sorting:** prevent duplicate START_GAME moves on Play Again ([a0b14f8](https://github.com/antialias/soroban-abacus-flashcards/commit/a0b14f87e9c5b32fcbb685da4e70c563f70ed91a))
+* **card-sorting:** prevent position jump when clicking rotated cards ([564a00f](https://github.com/antialias/soroban-abacus-flashcards/commit/564a00f82b6ca6aa8a2c0586ca49fc42d44991a8))
+* **complement-race:** prevent delivery move thrashing in steam sprint mode ([e1258ee](https://github.com/antialias/soroban-abacus-flashcards/commit/e1258ee0416010909774694c0b25306b6f30329c))
+* **qr-button:** improve layout and z-index ([646a422](https://github.com/antialias/soroban-abacus-flashcards/commit/646a4228d0573796b1a429e31bc037411024c0ff))
+* **qr-button:** increase mini QR code size to 80px ([61ac737](https://github.com/antialias/soroban-abacus-flashcards/commit/61ac7378bdb01132b26bfc265a057c095ea41606))
+* **qr-button:** increase mini QR code to 84px ([3fae5ea](https://github.com/antialias/soroban-abacus-flashcards/commit/3fae5ea6fa9ebd0f8fe8c9140a027be7f6a041aa))
+* **qr-button:** make button square and increase QR size ([dc2d466](https://github.com/antialias/soroban-abacus-flashcards/commit/dc2d46663b8e0ec94a1508a57c4f8c2d8ba03506))
+* **qr-button:** match height of stacked buttons ([81f202d](https://github.com/antialias/soroban-abacus-flashcards/commit/81f202d21556aa430402fda814519adbc8883831))
+* **room-info:** hide Leave Room button when user is alone ([5927f61](https://github.com/antialias/soroban-abacus-flashcards/commit/5927f61c3c34ba583ee45c8cee48a116c1c03071))
+
+
+### Code Refactoring
+
+* **card-sorting:** send complete card sequence instead of individual moves ([e4df843](https://github.com/antialias/soroban-abacus-flashcards/commit/e4df8432b9c4a2055d47833d56b6e9fcf325ca94))
+
+
+### Documentation
+
+* add deployment verification guidelines to prevent false positives ([3d8da23](https://github.com/antialias/soroban-abacus-flashcards/commit/3d8da2348b4e8a227e963791d15dc6718eac5af1))
+* update workflow to require manual testing before commits ([0991796](https://github.com/antialias/soroban-abacus-flashcards/commit/0991796f1eccef345f10205e675e4c33d1a62b17))
+
+## [4.68.0](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.67.1...v4.68.0) (2025-10-23)
+
+
+### Features
+
+* **arcade:** auto-create room when user has none ([ff88c3a](https://github.com/antialias/soroban-abacus-flashcards/commit/ff88c3a1b81703a87a1d57eeb5cc139da7d9df04))
+* **card-sorting:** add CardPosition type and position syncing ([656f5a7](https://github.com/antialias/soroban-abacus-flashcards/commit/656f5a7838ed6003c214ec484d4c37072270fa8d))
+* **card-sorting:** add green border to correctly positioned cards ([16fca86](https://github.com/antialias/soroban-abacus-flashcards/commit/16fca86b7687115f1cf565c533a512e92946e3a8)), closes [#22c55](https://github.com/antialias/soroban-abacus-flashcards/issues/22c55)
+* **card-sorting:** add react-spring animations for real-time sync ([c367e0c](https://github.com/antialias/soroban-abacus-flashcards/commit/c367e0ceece41d8e7c2bc8aebe3239ff6053a115))
+* **card-sorting:** add smooth transition to drop shadow ([b0b93d0](https://github.com/antialias/soroban-abacus-flashcards/commit/b0b93d0175c8a1c8958d6ba346d969c234fdd6ff))
+* **card-sorting:** add updateCardPositions action to Provider ([f6ed4a2](https://github.com/antialias/soroban-abacus-flashcards/commit/f6ed4a27a26d8bfa495ba5f580a446286b9674a0))
+* **card-sorting:** improve card distribution for natural scattered look ([0b0503f](https://github.com/antialias/soroban-abacus-flashcards/commit/0b0503f0354a4a82fe6b9bfe827729e8e5a9e329))
+* **create-room:** replace hardcoded game grid with dynamic Radix Select dropdown ([83d0ba2](https://github.com/antialias/soroban-abacus-flashcards/commit/83d0ba26f5eeec3e189d279710d5bbcf13e82f29))
+* **room-share:** add QR code button for easy mobile joining ([349290a](https://github.com/antialias/soroban-abacus-flashcards/commit/349290ac6a411651686b64d2e6b540083d2df1d9))
+
+
+### Bug Fixes
+
+* **arcade:** add automatic retry for version conflict rejections ([fbcde25](https://github.com/antialias/soroban-abacus-flashcards/commit/fbcde2505f7ff2bf3426f3458e480c4548314ba4))
+* **arcade:** implement optimistic locking in session manager ([71fd66d](https://github.com/antialias/soroban-abacus-flashcards/commit/71fd66d96a3b03650c90f59f6e516aae7dddc345))
+* **card-sorting:** add border radius to outer card container ([a922eba](https://github.com/antialias/soroban-abacus-flashcards/commit/a922eba73c4656ee941ce4dfb1dc57a62f076570))
+* **card-sorting:** add overflow hidden to clip rounded corners ([84c66fe](https://github.com/antialias/soroban-abacus-flashcards/commit/84c66feec6b4112b015e1afd95bf33b24b5f6a4f))
 * **card-sorting:** preserve card positions on pause/resume ([0d8af09](https://github.com/antialias/soroban-abacus-flashcards/commit/0d8af09517534f1e1cf1f57160391d465a279d76))
 * **card-sorting:** preserve rotation when starting drag ([3364144](https://github.com/antialias/soroban-abacus-flashcards/commit/3364144fb6212934b6ad6d63ac6e7b78b436b258))
 * **card-sorting:** prevent duplicate START_GAME moves on Play Again ([a0b14f8](https://github.com/antialias/soroban-abacus-flashcards/commit/a0b14f87e9c5b32fcbb685da4e70c563f70ed91a))
