@@ -45,6 +45,7 @@ export function useSteamJourney() {
   const routeExitThresholdRef = useRef<number>(107) // Default for 1 car: 100 + 7
   const missedPassengersRef = useRef<Set<string>>(new Set()) // Track which passengers have been logged as missed
   const pendingBoardingRef = useRef<Set<string>>(new Set()) // Track passengers with pending boarding requests across frames
+  const pendingDeliveryRef = useRef<Set<string>>(new Set()) // Track passengers with pending delivery requests across frames
   const previousTrainPositionRef = useRef<number>(0) // Track previous position to detect threshold crossings
 
   // Initialize game start time
@@ -65,19 +66,23 @@ export function useSteamJourney() {
     }
   }, [state.currentRoute, state.passengers, state.stations, state.maxConcurrentPassengers])
 
-  // Clean up pendingBoardingRef when passengers are claimed/delivered or route changes
+  // Clean up pendingBoardingRef and pendingDeliveryRef when passengers are claimed/delivered or route changes
   useEffect(() => {
-    // Remove passengers from pending set if they've been claimed or delivered
+    // Remove passengers from pending sets if they've been claimed or delivered
     state.passengers.forEach((passenger) => {
       if (passenger.claimedBy !== null || passenger.deliveredBy !== null) {
         pendingBoardingRef.current.delete(passenger.id)
       }
+      if (passenger.deliveredBy !== null) {
+        pendingDeliveryRef.current.delete(passenger.id)
+      }
     })
   }, [state.passengers])
 
-  // Clear all pending boarding requests when route changes
+  // Clear all pending boarding and delivery requests when route changes
   useEffect(() => {
     pendingBoardingRef.current.clear()
+    pendingDeliveryRef.current.clear()
     missedPassengersRef.current.clear()
     previousTrainPositionRef.current = 0 // Reset previous position for new route
   }, [state.currentRoute])
@@ -159,6 +164,9 @@ export function useSteamJourney() {
       currentBoardedPassengers.forEach((passenger) => {
         if (!passenger || passenger.deliveredBy !== null || passenger.carIndex === null) return
 
+        // Skip if delivery already dispatched (prevents render loop spam)
+        if (pendingDeliveryRef.current.has(passenger.id)) return
+
         const station = state.stations.find((s) => s.id === passenger.destinationStationId)
         if (!station) return
 
@@ -172,6 +180,10 @@ export function useSteamJourney() {
           console.log(
             `🎯 DELIVERY: ${passenger.name} delivered from Car ${passenger.carIndex} to ${station.emoji} ${station.name} (+${points} pts) (trainPos=${trainPosition.toFixed(1)}, carPos=${carPosition.toFixed(1)}, stationPos=${station.position})`
           )
+
+          // Mark as pending BEFORE dispatch to prevent duplicate delivery attempts across frames
+          pendingDeliveryRef.current.add(passenger.id)
+
           dispatch({
             type: 'DELIVER_PASSENGER',
             passengerId: passenger.id,
