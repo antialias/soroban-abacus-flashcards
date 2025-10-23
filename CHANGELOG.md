@@ -1,3 +1,10 @@
+## [4.67.2](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.67.1...v4.67.2) (2025-10-23)
+
+
+### Bug Fixes
+
+* **complement-race:** prevent delivery move thrashing in steam sprint mode ([e1258ee](https://github.com/antialias/soroban-abacus-flashcards/commit/e1258ee0416010909774694c0b25306b6f30329c))
+
 ## [4.67.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.67.0...v4.67.1) (2025-10-22)
 
 
