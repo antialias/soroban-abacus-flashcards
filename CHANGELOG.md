@@ -1,3 +1,10 @@
+## [4.68.2](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.68.1...v4.68.2) (2025-10-23)
+
+
+### Bug Fixes
+
+* **complement-race:** prevent passenger delivery render loop causing thrashing ([f637ddf](https://github.com/antialias/soroban-abacus-flashcards/commit/f637ddfdb8a62c85ebf8f08c35927af9ebcdf0d7))
+
 ## [4.68.1](https://github.com/antialias/soroban-abacus-flashcards/compare/v4.68.0...v4.68.1) (2025-10-23)
 
 
