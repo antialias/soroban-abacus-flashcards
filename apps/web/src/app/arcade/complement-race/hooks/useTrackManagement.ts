@@ -104,7 +104,9 @@ export function useTrackManagement({
       setDisplayPassengers(passengers)
     }
     // Otherwise, keep displaying old passengers until train resets
-  }, [passengers, displayPassengers, trainPosition, currentRoute])
+    // Note: displayPassengers is intentionally NOT in deps to avoid infinite loop
+    // (it's used for comparison, but we don't need to re-run when it changes)
+  }, [passengers, trainPosition, currentRoute])
 
   // Generate ties and rails when path is ready
   useEffect(() => {
