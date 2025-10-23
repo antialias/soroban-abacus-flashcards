@@ -365,7 +365,7 @@ export function ComplementRaceProvider({ children }: { children: ReactNode }) {
   const MOMENTUM_GAIN_PER_CORRECT = 15
   const MOMENTUM_LOSS_PER_WRONG = 10
   const SPEED_MULTIPLIER = 0.15 // momentum * 0.15 = % per second
-  const UPDATE_INTERVAL = 50 // 50ms = ~20fps
+  const UPDATE_INTERVAL = 16 // 16ms = ~60fps for smooth animation
 
   // Transform multiplayer state to look like single-player state
   const compatibleState = useMemo((): CompatibleGameState => {
@@ -486,7 +486,12 @@ export function ComplementRaceProvider({ children }: { children: ReactNode }) {
     if (multiplayerState.gamePhase !== 'playing') {
       hasInitializedPositionRef.current = false
     }
-  }, [multiplayerState.gamePhase, multiplayerState.config.style, multiplayerState.players, localPlayerId])
+  }, [
+    multiplayerState.gamePhase,
+    multiplayerState.config.style,
+    multiplayerState.players,
+    localPlayerId,
+  ])
 
   // Initialize game start time when game becomes active
   useEffect(() => {
@@ -636,7 +641,7 @@ export function ComplementRaceProvider({ children }: { children: ReactNode }) {
 
     console.log('[POS_BROADCAST] Starting position broadcast interval')
 
-    // Send position update every 100ms for smoother ghost trains (reads from refs to avoid restarting interval)
+    // Send position update every 16ms (~60fps) for smoother ghost trains (reads from refs to avoid restarting interval)
     const interval = setInterval(() => {
       const currentPos = clientPositionRef.current
       broadcastCountRef.current++
@@ -659,7 +664,7 @@ export function ComplementRaceProvider({ children }: { children: ReactNode }) {
         userId: viewerId || '',
         data: { position: currentPos },
       } as ComplementRaceMove)
-    }, 100)
+    }, 16)
 
     return () => {
       console.log(`[POS_BROADCAST] Stopping interval (sent ${broadcastCountRef.current} updates)`)

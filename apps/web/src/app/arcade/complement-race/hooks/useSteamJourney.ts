@@ -34,7 +34,7 @@ const MOMENTUM_DECAY_RATES = {
 
 const MOMENTUM_GAIN_PER_CORRECT = 15 // Momentum added for each correct answer
 const SPEED_MULTIPLIER = 0.15 // Convert momentum to speed (% per second at momentum=100)
-const UPDATE_INTERVAL = 50 // Update every 50ms (~20 fps)
+const UPDATE_INTERVAL = 16 // Update every 16ms (~60 fps for smooth animation)
 const GAME_DURATION = 60000 // 60 seconds in milliseconds
 
 export function useSteamJourney() {
