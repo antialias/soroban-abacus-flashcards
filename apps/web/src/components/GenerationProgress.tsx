@@ -2,7 +2,8 @@
 
 import * as Progress from '@radix-ui/react-progress'
 import { CheckCircle, Sparkles, Zap } from 'lucide-react'
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
+import { useTranslations } from 'next-intl'
 import type { FlashcardFormState } from '@/app/create/page'
 import { css } from '../../styled-system/css'
 import { hstack, stack } from '../../styled-system/patterns'
@@ -23,35 +24,40 @@ export function GenerationProgress({ config }: GenerationProgressProps) {
   const [progress, setProgress] = useState(0)
   const [currentStep, setCurrentStep] = useState(0)
   const [steps, setSteps] = useState<ProgressStep[]>([])
+  const t = useTranslations('create.progress')
 
   useEffect(() => {
     // Initialize steps based on config
     const generationSteps: ProgressStep[] = [
       {
         id: 'validate',
-        label: 'Validating Configuration',
-        description: 'Checking parameters and dependencies',
+        label: t('steps.validate.label'),
+        description: t('steps.validate.description'),
         icon: <CheckCircle size={20} />,
         status: 'pending',
       },
       {
         id: 'generate',
-        label: 'Generating Soroban Patterns',
-        description: `Creating ${getEstimatedCardCount(config)} flashcard patterns`,
+        label: t('steps.generate.label'),
+        description: t('steps.generate.description', {
+          count: getEstimatedCardCount(config),
+        }),
         icon: <Sparkles size={20} />,
         status: 'pending',
       },
       {
         id: 'render',
-        label: `Rendering ${config.format?.toUpperCase() || 'PDF'}`,
-        description: 'Converting to your chosen format',
+        label: t('steps.render.label', {
+          format: config.format?.toUpperCase() || t('steps.render.defaultFormat'),
+        }),
+        description: t('steps.render.description'),
         icon: <Zap size={20} />,
         status: 'pending',
       },
       {
         id: 'finalize',
-        label: 'Finalizing Download',
-        description: 'Preparing your flashcards for download',
+        label: t('steps.finalize.label'),
+        description: t('steps.finalize.description'),
         icon: <CheckCircle size={20} />,
         status: 'pending',
       },
@@ -73,7 +79,7 @@ export function GenerationProgress({ config }: GenerationProgressProps) {
     }, 500)
 
     return () => clearInterval(progressInterval)
-  }, [config])
+  }, [config, t])
 
   useEffect(() => {
     // Update step statuses based on current step
@@ -87,6 +93,8 @@ export function GenerationProgress({ config }: GenerationProgressProps) {
 
   const estimatedTime = getEstimatedTime(config)
   const currentStepData = steps[currentStep]
+  const funFacts = (t.raw('funFacts') as string[]) || []
+  const funFact = useMemo(() => getFunFact(funFacts), [funFacts])
 
   return (
     <div className={stack({ gap: '6' })}>
@@ -99,7 +107,7 @@ export function GenerationProgress({ config }: GenerationProgressProps) {
               color: 'gray.900',
             })}
           >
-            Generating Your Flashcards
+            {t('title')}
           </h3>
           <div
             className={css({
@@ -108,7 +116,7 @@ export function GenerationProgress({ config }: GenerationProgressProps) {
               fontWeight: 'medium',
             })}
           >
-            ~{estimatedTime} seconds
+            {t('estimatedTime', { seconds: estimatedTime })}
           </div>
         </div>
 
@@ -181,7 +189,7 @@ export function GenerationProgress({ config }: GenerationProgressProps) {
               color: 'gray.600',
             })}
           >
-            {Math.round(progress)}% complete
+            {t('percentComplete', { percent: Math.round(progress) })}
           </span>
           <span
             className={css({
@@ -190,7 +198,7 @@ export function GenerationProgress({ config }: GenerationProgressProps) {
               color: 'brand.600',
             })}
           >
-            Step {currentStep + 1} of {steps.length}
+            {t('stepCount', { current: currentStep + 1, total: steps.length })}
           </span>
         </div>
       </div>
@@ -308,7 +316,7 @@ export function GenerationProgress({ config }: GenerationProgressProps) {
             mb: '2',
           })}
         >
-          💡 Did you know?
+          {t('funFactTitle')}
         </h4>
         <p
           className={css({
@@ -317,7 +325,7 @@ export function GenerationProgress({ config }: GenerationProgressProps) {
             lineHeight: 'relaxed',
           })}
         >
-          {getFunFact(config)}
+          {funFact}
         </p>
       </div>
     </div>
@@ -355,17 +363,10 @@ function getEstimatedTime(config: FlashcardFormState): number {
   return Math.round((baseTime + cardTime) * formatMultiplier)
 }
 
-function getFunFact(_config: FlashcardFormState): string {
-  const facts = [
-    'The soroban is a Japanese counting tool that dates back over 400 years!',
-    'Master soroban users can calculate faster than electronic calculators.',
-    'Each bead position on a soroban represents a specific numeric value.',
-    'The word "soroban" comes from ancient Chinese "suanpan" (counting board).',
-    'Soroban training improves mathematical intuition and mental calculation speed.',
-    'Modern soroban competitions feature lightning-fast calculations.',
-    'The soroban method strengthens both logical and creative thinking.',
-    'Japanese students often learn soroban alongside traditional mathematics.',
-  ]
+function getFunFact(facts: string[]): string {
+  if (!Array.isArray(facts) || facts.length === 0) {
+    return ''
+  }
 
   return facts[Math.floor(Math.random() * facts.length)]
 }

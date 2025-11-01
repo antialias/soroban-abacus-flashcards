@@ -1,0 +1,229 @@
+{
+  "create": {
+    "page": {
+      "navTitle": "Crear tarjetas didácticas",
+      "hero": {
+        "title": "Crea tus tarjetas didácticas",
+        "subtitle": "Configura el contenido y el estilo, observa la vista previa al instante y luego genera tus tarjetas"
+      },
+      "style": {
+        "title": "🎨 Estilo visual",
+        "subtitle": "Observa los cambios al instante en la vista previa"
+      },
+      "generateButton": {
+        "loading": "Generando tus tarjetas...",
+        "cta": "Generar tarjetas"
+      },
+      "error": {
+        "title": "La generación falló",
+        "retry": "Intentar de nuevo"
+      }
+    },
+    "form": {
+      "title": "Configuración",
+      "subtitle": "Ajustes de contenido, diseño y salida",
+      "tabs": {
+        "content": "📝 Contenido",
+        "output": "💾 Salida"
+      },
+      "content": {
+        "range": {
+          "label": "Rango numérico",
+          "description": "Define qué números se incluirán (p. ej., '0-99' o '1,2,5,10')",
+          "placeholder": "0-99"
+        },
+        "step": {
+          "label": "Tamaño de paso",
+          "description": "Para rangos, aumenta en esta cantidad"
+        },
+        "shuffle": {
+          "label": "Mezclar tarjetas",
+          "description": "Aleatorizar el orden"
+        }
+      },
+      "output": {
+        "format": {
+          "label": "Formato de salida",
+          "description": "Elige tu formato de archivo preferido"
+        },
+        "pdf": {
+          "sectionTitle": "📄 Opciones de diseño PDF",
+          "sectionDescription": "Configura el diseño de página y las opciones de impresión para tu PDF",
+          "cardsPerPage": {
+            "label": "Tarjetas por página",
+            "description": "Cantidad de tarjetas en cada página",
+            "value": "{count, plural, one {{count} tarjeta} other {{count} tarjetas}}"
+          },
+          "paperSize": {
+            "label": "Tamaño de papel",
+            "description": "Dimensiones del papel de salida",
+            "options": {
+              "us-letter": "US Letter (8.5×11\")",
+              "a4": "A4 (210×297 mm)",
+              "a3": "A3 (297×420 mm)",
+              "a5": "A5 (148×210 mm)"
+            }
+          },
+          "orientation": {
+            "label": "Orientación",
+            "description": "Dirección del diseño de página",
+            "options": {
+              "portrait": {
+                "label": "📄 Vertical",
+                "description": "Más alto que ancho"
+              },
+              "landscape": {
+                "label": "📃 Horizontal",
+                "description": "Más ancho que alto"
+              }
+            }
+          },
+          "showCutMarks": {
+            "label": "Mostrar guías de corte",
+            "description": "Agregar guías para recortar las tarjetas"
+          },
+          "showRegistration": {
+            "label": "Marcas de registro",
+            "description": "Guías de alineación para impresión a doble cara"
+          }
+        },
+        "scaleFactor": {
+          "label": "Factor de escala",
+          "description": "Ajusta el tamaño general de las tarjetas",
+          "value": "{percent}%"
+        }
+      },
+      "shared": {
+        "selectPlaceholder": "Seleccionar..."
+      },
+      "formatOptions": {
+        "pdf": {
+          "label": "PDF",
+          "description": "Documento vectorial listo para imprimir con opciones de diseño"
+        },
+        "html": {
+          "label": "HTML",
+          "description": "Tarjetas web interactivas"
+        },
+        "svg": {
+          "label": "SVG",
+          "description": "Imágenes vectoriales escalables"
+        },
+        "png": {
+          "label": "PNG",
+          "description": "Imágenes de alta resolución"
+        }
+      }
+    },
+    "styleControls": {
+      "colorScheme": {
+        "label": "Esquema de color",
+        "description": "Elige cómo se aplican los colores a las cuentas",
+        "options": {
+          "monochrome": {
+            "label": "Monocromático",
+            "description": "Clásico blanco y negro"
+          },
+          "place-value": {
+            "label": "Valor posicional",
+            "description": "Colores según la posición de cada dígito"
+          },
+          "heaven-earth": {
+            "label": "Cielo-Tierra",
+            "description": "Colores distintos para cuentas de cinco y de uno"
+          },
+          "alternating": {
+            "label": "Alternado",
+            "description": "Colores alternados por columna"
+          }
+        }
+      },
+      "beadShape": {
+        "label": "Forma de las cuentas",
+        "description": "Elige el estilo visual de las cuentas",
+        "options": {
+          "diamond": {
+            "label": "💎 Diamante",
+            "description": "Apariencia realista en 3D"
+          },
+          "circle": {
+            "label": "⭕ Círculo",
+            "description": "Cuentas redondas tradicionales"
+          },
+          "square": {
+            "label": "⬜ Cuadrado",
+            "description": "Estilo geométrico moderno"
+          }
+        }
+      },
+      "coloredNumerals": {
+        "label": "Números coloreados",
+        "description": "Igualar el color de los números con el de las cuentas"
+      },
+      "hideInactiveBeads": {
+        "label": "Ocultar cuentas inactivas",
+        "description": "Mostrar solo las cuentas activas para mayor claridad"
+      }
+    },
+    "progress": {
+      "title": "Generando tus tarjetas",
+      "estimatedTime": "~{seconds} segundos",
+      "percentComplete": "{percent}% completado",
+      "stepCount": "Paso {current} de {total}",
+      "steps": {
+        "validate": {
+          "label": "Validando la configuración",
+          "description": "Comprobando parámetros y dependencias"
+        },
+        "generate": {
+          "label": "Generando patrones de soroban",
+          "description": "Creando {count} patrones de tarjetas"
+        },
+        "render": {
+          "label": "Renderizando {format}",
+          "defaultFormat": "PDF",
+          "description": "Convirtiendo al formato elegido"
+        },
+        "finalize": {
+          "label": "Finalizando la descarga",
+          "description": "Preparando tus tarjetas para descargar"
+        }
+      },
+      "funFactTitle": "💡 ¿Sabías que...?",
+      "funFacts": [
+        "El soroban es una herramienta japonesa de cálculo con más de 400 años de historia.",
+        "Los expertos del soroban pueden calcular más rápido que las calculadoras electrónicas.",
+        "Cada posición de cuenta en el soroban representa un valor numérico específico.",
+        "La palabra \"soroban\" proviene del antiguo chino \"suanpan\" (tablero de conteo).",
+        "El entrenamiento con soroban mejora la intuición matemática y la velocidad mental.",
+        "Las competencias modernas de soroban muestran cálculos a gran velocidad.",
+        "El método soroban fortalece tanto el pensamiento lógico como el creativo.",
+        "En Japón, el soroban suele aprenderse junto con las matemáticas tradicionales."
+      ]
+    },
+    "preview": {
+      "title": "Vista previa en vivo",
+      "subtitle": "Observa cómo se verán tus tarjetas",
+      "badge": "{count} {count, plural, one {tarjeta} other {tarjetas}} • {format}",
+      "summary": {
+        "title": "Resumen de configuración",
+        "range": {
+          "label": "Rango",
+          "empty": "Sin definir"
+        },
+        "format": {
+          "label": "Formato",
+          "default": "PDF"
+        },
+        "cardsPerPage": {
+          "label": "Tarjetas por página",
+          "default": "6"
+        },
+        "paperSize": {
+          "label": "Tamaño de papel",
+          "default": "US-LETTER"
+        }
+      }
+    }
+  }
+}

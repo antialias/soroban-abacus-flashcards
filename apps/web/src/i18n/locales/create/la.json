@@ -1,0 +1,229 @@
+{
+  "create": {
+    "page": {
+      "navTitle": "Chartas memoriales crea",
+      "hero": {
+        "title": "Chartas tuas memoriales para",
+        "subtitle": "Argumentum et formam dispone, statim praenotam aspice, deinde chartas tuas gignito"
+      },
+      "style": {
+        "title": "🎨 Stilus visualis",
+        "subtitle": "Mutationes in praenota continuo vide"
+      },
+      "generateButton": {
+        "loading": "Chartae tuae gignuntur...",
+        "cta": "Chartas gignere"
+      },
+      "error": {
+        "title": "Generatio defecit",
+        "retry": "Iterum conare"
+      }
+    },
+    "form": {
+      "title": "Configuratio",
+      "subtitle": "Praecepta de argumento, dispositione et exitu",
+      "tabs": {
+        "content": "📝 Argumentum",
+        "output": "💾 Exitus"
+      },
+      "content": {
+        "range": {
+          "label": "Intervallum numerorum",
+          "description": "Quos numeros includas determina (exempli gratia '0-99' vel '1,2,5,10')",
+          "placeholder": "0-99"
+        },
+        "step": {
+          "label": "Incrementum gradus",
+          "description": "In intervallis hoc quantulum augetur"
+        },
+        "shuffle": {
+          "label": "Chartas misce",
+          "description": "Ordinem fortuito verte"
+        }
+      },
+      "output": {
+        "format": {
+          "label": "Forma exitus",
+          "description": "Formam tabellae quam mavis selige"
+        },
+        "pdf": {
+          "sectionTitle": "📄 Optiones dispositionis PDF",
+          "sectionDescription": "Paginam et optiones imprimendi pro PDF dispone",
+          "cardsPerPage": {
+            "label": "Chartae per paginam",
+            "description": "Quot chartae singulae paginae habeant",
+            "value": "{count, plural, one {{count} charta} other {{count} chartae}}"
+          },
+          "paperSize": {
+            "label": "Magnitudo chartae",
+            "description": "Dimensiones chartae exitus",
+            "options": {
+              "us-letter": "US Letter (8.5×11\")",
+              "a4": "A4 (210×297 mm)",
+              "a3": "A3 (297×420 mm)",
+              "a5": "A5 (148×210 mm)"
+            }
+          },
+          "orientation": {
+            "label": "Directio",
+            "description": "Quo modo pagina vertatur",
+            "options": {
+              "portrait": {
+                "label": "📄 Verticalis",
+                "description": "Altior quam lata"
+              },
+              "landscape": {
+                "label": "📃 Horizontali",
+                "description": "Latior quam alta"
+              }
+            }
+          },
+          "showCutMarks": {
+            "label": "Signa sectionis ostende",
+            "description": "Lineas ad chartas secandas adde"
+          },
+          "showRegistration": {
+            "label": "Signa directionis",
+            "description": "Ducet alignmenti pro impressione duplici"
+          }
+        },
+        "scaleFactor": {
+          "label": "Factor scalae",
+          "description": "Magnitudinem totam chartarum tempera",
+          "value": "{percent}%"
+        }
+      },
+      "shared": {
+        "selectPlaceholder": "Elige..."
+      },
+      "formatOptions": {
+        "pdf": {
+          "label": "PDF",
+          "description": "Documentum vectorium ad imprimendum paratum cum optionibus dispositionis"
+        },
+        "html": {
+          "label": "HTML",
+          "description": "Chartae interretiales interactivae"
+        },
+        "svg": {
+          "label": "SVG",
+          "description": "Imagines vectoriae scalabiles"
+        },
+        "png": {
+          "label": "PNG",
+          "description": "Imagines altae resolutionis"
+        }
+      }
+    },
+    "styleControls": {
+      "colorScheme": {
+        "label": "Schema colorum",
+        "description": "Defini quomodo colores in globulos applicantur",
+        "options": {
+          "monochrome": {
+            "label": "Monochromum",
+            "description": "Classica nigro-alba"
+          },
+          "place-value": {
+            "label": "Valor locorum",
+            "description": "Colores secundum ordinem digitorum"
+          },
+          "heaven-earth": {
+            "label": "Caelum-Terra",
+            "description": "Diversi colores globulis quinariis et singularibus"
+          },
+          "alternating": {
+            "label": "Alternans",
+            "description": "Columnae alterno colore"
+          }
+        }
+      },
+      "beadShape": {
+        "label": "Figura globulorum",
+        "description": "Genus aspectus globulorum elige",
+        "options": {
+          "diamond": {
+            "label": "💎 Adamans",
+            "description": "Species quasi tridimensionalis"
+          },
+          "circle": {
+            "label": "⭕ Orbis",
+            "description": "Globuli rotundi traditi"
+          },
+          "square": {
+            "label": "⬜ Quadratum",
+            "description": "Moderna forma geometrica"
+          }
+        }
+      },
+      "coloredNumerals": {
+        "label": "Numeri colorati",
+        "description": "Numerorum colores cum globulis compone"
+      },
+      "hideInactiveBeads": {
+        "label": "Globulos inactivos occulta",
+        "description": "Ut clarius sit, tantum globulos activos ostende"
+      }
+    },
+    "progress": {
+      "title": "Chartae tuae generantur",
+      "estimatedTime": "~{seconds} secundae",
+      "percentComplete": "{percent}% perfectum",
+      "stepCount": "Gradus {current} ex {total}",
+      "steps": {
+        "validate": {
+          "label": "Configuratio probatur",
+          "description": "Parametri et dependentiae recognoscuntur"
+        },
+        "generate": {
+          "label": "Forma soroban paratur",
+          "description": "{count} schemata chartarum creantur"
+        },
+        "render": {
+          "label": "{format} redditur",
+          "defaultFormat": "PDF",
+          "description": "In formam electam convertitur"
+        },
+        "finalize": {
+          "label": "Download paratur",
+          "description": "Chartae ad detrahendum componuntur"
+        }
+      },
+      "funFactTitle": "💡 Scisne?",
+      "funFacts": [
+        "Soroban instrumentum Iaponicum numerandi est quod plus quam annos quadringentos superest.",
+        "Periti soroban citius quam calculatrices electronicae rationes conficiunt.",
+        "Quisque locus globuli in soroban certum numerum repraesentat.",
+        "Vocabulum \"soroban\" ex antiquo Sinico \"suanpan\" (tabula computatoria) derivatur.",
+        "Exercitatio soroban sensum mathematicum et velocitatem mentis auget.",
+        "Certamina soroban hodierna fulmineas computationes ostendunt.",
+        "Methodus soroban tam cogitationem logicam quam creatricem firmat.",
+        "Pueri Iaponici saepe soroban una cum mathematica tradita discunt."
+      ]
+    },
+    "preview": {
+      "title": "Praenotio viva",
+      "subtitle": "Vide quomodo chartae tuae apparebunt",
+      "badge": "{count} {count, plural, one {charta} other {chartae}} • {format}",
+      "summary": {
+        "title": "Summarium configurationis",
+        "range": {
+          "label": "Intervallum",
+          "empty": "Nondum definitum"
+        },
+        "format": {
+          "label": "Forma",
+          "default": "PDF"
+        },
+        "cardsPerPage": {
+          "label": "Chartae per paginam",
+          "default": "6"
+        },
+        "paperSize": {
+          "label": "Magnitudo chartae",
+          "default": "US-LETTER"
+        }
+      }
+    }
+  }
+}

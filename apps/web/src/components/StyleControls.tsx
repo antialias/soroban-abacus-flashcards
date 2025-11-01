@@ -6,6 +6,7 @@ import * as Switch from '@radix-ui/react-switch'
 import { useAbacusDisplay } from '@soroban/abacus-react'
 import type { FormApi } from '@tanstack/react-form'
 import { useEffect } from 'react'
+import { useTranslations } from 'next-intl'
 import type { FlashcardFormState } from '@/app/create/page'
 import { css } from '../../styled-system/css'
 import { grid, hstack, stack } from '../../styled-system/patterns'
@@ -16,6 +17,7 @@ interface StyleControlsProps {
 
 export function StyleControls({ form }: StyleControlsProps) {
   const { config, updateConfig } = useAbacusDisplay()
+  const t = useTranslations('create.styleControls')
 
   // Sync form values with global context
   useEffect(() => {
@@ -26,7 +28,10 @@ export function StyleControls({ form }: StyleControlsProps) {
   }, [config, form])
   return (
     <div className={stack({ gap: '4' })}>
-      <FormField label="Color Scheme" description="Choose how colors are applied to beads">
+      <FormField
+        label={t('colorScheme.label')}
+        description={t('colorScheme.description')}
+      >
         <form.Field name="colorScheme">
           {(field) => (
             <RadioGroupField
@@ -38,23 +43,23 @@ export function StyleControls({ form }: StyleControlsProps) {
               options={[
                 {
                   value: 'monochrome',
-                  label: 'Monochrome',
-                  desc: 'Classic black and white',
+                  label: t('colorScheme.options.monochrome.label'),
+                  desc: t('colorScheme.options.monochrome.description'),
                 },
                 {
                   value: 'place-value',
-                  label: 'Place Value',
-                  desc: 'Colors by digit position',
+                  label: t('colorScheme.options.place-value.label'),
+                  desc: t('colorScheme.options.place-value.description'),
                 },
                 {
                   value: 'heaven-earth',
-                  label: 'Heaven-Earth',
-                  desc: 'Different colors for 5s and 1s',
+                  label: t('colorScheme.options.heaven-earth.label'),
+                  desc: t('colorScheme.options.heaven-earth.description'),
                 },
                 {
                   value: 'alternating',
-                  label: 'Alternating',
-                  desc: 'Alternating column colors',
+                  label: t('colorScheme.options.alternating.label'),
+                  desc: t('colorScheme.options.alternating.description'),
                 },
               ]}
             />
@@ -62,7 +67,7 @@ export function StyleControls({ form }: StyleControlsProps) {
         </form.Field>
       </FormField>
 
-      <FormField label="Bead Shape" description="Choose the visual style of the beads">
+      <FormField label={t('beadShape.label')} description={t('beadShape.description')}>
         <form.Field name="beadShape">
           {(field) => (
             <RadioGroupField
@@ -74,18 +79,18 @@ export function StyleControls({ form }: StyleControlsProps) {
               options={[
                 {
                   value: 'diamond',
-                  label: '💎 Diamond',
-                  desc: 'Realistic 3D appearance',
+                  label: t('beadShape.options.diamond.label'),
+                  desc: t('beadShape.options.diamond.description'),
                 },
                 {
                   value: 'circle',
-                  label: '⭕ Circle',
-                  desc: 'Traditional round beads',
+                  label: t('beadShape.options.circle.label'),
+                  desc: t('beadShape.options.circle.description'),
                 },
                 {
                   value: 'square',
-                  label: '⬜ Square',
-                  desc: 'Modern geometric style',
+                  label: t('beadShape.options.square.label'),
+                  desc: t('beadShape.options.square.description'),
                 },
               ]}
             />
@@ -94,7 +99,10 @@ export function StyleControls({ form }: StyleControlsProps) {
       </FormField>
 
       <div className={grid({ columns: 1, gap: '4' })}>
-        <FormField label="Colored Numerals" description="Match numeral colors to bead colors">
+        <FormField
+          label={t('coloredNumerals.label')}
+          description={t('coloredNumerals.description')}
+        >
           <form.Field name="coloredNumerals">
             {(field) => (
               <SwitchField
@@ -108,7 +116,10 @@ export function StyleControls({ form }: StyleControlsProps) {
           </form.Field>
         </FormField>
 
-        <FormField label="Hide Inactive Beads" description="Show only active beads for clarity">
+        <FormField
+          label={t('hideInactiveBeads.label')}
+          description={t('hideInactiveBeads.description')}
+        >
           <form.Field name="hideInactiveBeads">
             {(field) => (
               <SwitchField

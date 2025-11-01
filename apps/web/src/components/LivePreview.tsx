@@ -3,6 +3,7 @@
 import { AbacusReact } from '@soroban/abacus-react'
 import { Eye } from 'lucide-react'
 import { useMemo, useState } from 'react'
+import { useTranslations } from 'next-intl'
 import type { FlashcardFormState } from '@/app/create/page'
 import { css } from '../../styled-system/css'
 import { grid, hstack, stack } from '../../styled-system/patterns'
@@ -12,12 +13,14 @@ interface LivePreviewProps {
 }
 
 export function LivePreview({ config }: LivePreviewProps) {
+  const t = useTranslations('create.preview')
   // Generate preview numbers directly from config
   const previewNumbers = useMemo(() => {
     return getPreviewNumbers(config.range || '1-10')
   }, [config.range])
 
   const previewCount = previewNumbers.length
+  const formatLabel = config.format?.toUpperCase() || t('summary.format.default')
 
   return (
     <div className={stack({ gap: '6' })}>
@@ -30,7 +33,7 @@ export function LivePreview({ config }: LivePreviewProps) {
               color: 'gray.900',
             })}
           >
-            Live Preview
+            {t('title')}
           </h3>
           <p
             className={css({
@@ -38,7 +41,7 @@ export function LivePreview({ config }: LivePreviewProps) {
               color: 'gray.600',
             })}
           >
-            See how your flashcards will look
+            {t('subtitle')}
           </p>
         </div>
         <div className={hstack({ gap: '3', alignItems: 'center' })}>
@@ -53,7 +56,7 @@ export function LivePreview({ config }: LivePreviewProps) {
               rounded: 'full',
             })}
           >
-            {previewCount} cards • {config.format?.toUpperCase()}
+            {t('badge', { count: previewCount, format: formatLabel })}
           </div>
         </div>
       </div>
@@ -88,13 +91,25 @@ export function LivePreview({ config }: LivePreviewProps) {
             mb: '2',
           })}
         >
-          Configuration Summary
+          {t('summary.title')}
         </h4>
         <div className={grid({ columns: { base: 1, md: 2 }, gap: '3' })}>
-          <ConfigItem label="Range" value={config.range || 'Not set'} />
-          <ConfigItem label="Format" value={config.format?.toUpperCase() || 'PDF'} />
-          <ConfigItem label="Cards per page" value={config.cardsPerPage?.toString() || '6'} />
-          <ConfigItem label="Paper size" value={config.paperSize?.toUpperCase() || 'US-LETTER'} />
+          <ConfigItem
+            label={t('summary.range.label')}
+            value={config.range || t('summary.range.empty')}
+          />
+          <ConfigItem
+            label={t('summary.format.label')}
+            value={config.format?.toUpperCase() || t('summary.format.default')}
+          />
+          <ConfigItem
+            label={t('summary.cardsPerPage.label')}
+            value={config.cardsPerPage?.toString() || t('summary.cardsPerPage.default')}
+          />
+          <ConfigItem
+            label={t('summary.paperSize.label')}
+            value={config.paperSize?.toUpperCase() || t('summary.paperSize.default')}
+          />
         </div>
       </div>
     </div>
