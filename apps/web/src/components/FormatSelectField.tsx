@@ -4,48 +4,30 @@ import * as Select from '@radix-ui/react-select'
 import { ChevronDown } from 'lucide-react'
 import { css } from '../../styled-system/css'
 import { hstack, stack } from '../../styled-system/patterns'
-
-interface FormatOption {
-  value: string
-  label: string
-  icon: string
-  description: string
-}
+import { useTranslations } from 'next-intl'
 
 interface FormatSelectFieldProps {
   value: string
   onValueChange: (value: string) => void
 }
 
-const formatOptions: FormatOption[] = [
-  {
-    value: 'pdf',
-    label: 'PDF',
-    icon: '📄',
-    description: 'Print-ready vector document with layout options',
-  },
-  {
-    value: 'html',
-    label: 'HTML',
-    icon: '🌐',
-    description: 'Interactive web flashcards',
-  },
-  {
-    value: 'svg',
-    label: 'SVG',
-    icon: '🖼️',
-    description: 'Scalable vector images',
-  },
-  {
-    value: 'png',
-    label: 'PNG',
-    icon: '📷',
-    description: 'High-resolution images',
-  },
-]
-
 export function FormatSelectField({ value, onValueChange }: FormatSelectFieldProps) {
-  const selectedOption = formatOptions.find((option) => option.value === value) || formatOptions[0]
+  const t = useTranslations('create.form.formatOptions')
+  const formatOptions = (['pdf', 'html', 'svg', 'png'] as const).map((option) => ({
+    value: option,
+    icon:
+      {
+        pdf: '📄',
+        html: '🌐',
+        svg: '🖼️',
+        png: '📷',
+      }[option],
+    label: t(`${option}.label`),
+    description: t(`${option}.description`),
+  }))
+
+  const selectedOption =
+    formatOptions.find((option) => option.value === value) || formatOptions[0]
 
   return (
     <Select.Root value={value} onValueChange={onValueChange}>

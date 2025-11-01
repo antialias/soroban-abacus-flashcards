@@ -1,0 +1,229 @@
+{
+  "create": {
+    "page": {
+      "navTitle": "Create Flashcards",
+      "hero": {
+        "title": "Create Your Flashcards",
+        "subtitle": "Configure content and style, preview instantly, then generate your flashcards"
+      },
+      "style": {
+        "title": "🎨 Visual Style",
+        "subtitle": "See changes instantly in the preview"
+      },
+      "generateButton": {
+        "loading": "Generating Your Flashcards...",
+        "cta": "Generate Flashcards"
+      },
+      "error": {
+        "title": "Generation Failed",
+        "retry": "Try Again"
+      }
+    },
+    "form": {
+      "title": "Configuration",
+      "subtitle": "Content, layout, and output settings",
+      "tabs": {
+        "content": "📝 Content",
+        "output": "💾 Output"
+      },
+      "content": {
+        "range": {
+          "label": "Number Range",
+          "description": "Define which numbers to include (e.g., '0-99' or '1,2,5,10')",
+          "placeholder": "0-99"
+        },
+        "step": {
+          "label": "Step Size",
+          "description": "For ranges, increment by this amount"
+        },
+        "shuffle": {
+          "label": "Shuffle Cards",
+          "description": "Randomize the order"
+        }
+      },
+      "output": {
+        "format": {
+          "label": "Output Format",
+          "description": "Choose your preferred file format"
+        },
+        "pdf": {
+          "sectionTitle": "📄 PDF Layout Options",
+          "sectionDescription": "Configure page layout and printing options for your PDF",
+          "cardsPerPage": {
+            "label": "Cards Per Page",
+            "description": "Number of flashcards on each page",
+            "value": "{count, plural, one {{count} card} other {{count} cards}}"
+          },
+          "paperSize": {
+            "label": "Paper Size",
+            "description": "Output paper dimensions",
+            "options": {
+              "us-letter": "US Letter (8.5×11\")",
+              "a4": "A4 (210×297mm)",
+              "a3": "A3 (297×420mm)",
+              "a5": "A5 (148×210mm)"
+            }
+          },
+          "orientation": {
+            "label": "Orientation",
+            "description": "Page layout direction",
+            "options": {
+              "portrait": {
+                "label": "📄 Portrait",
+                "description": "Taller than wide"
+              },
+              "landscape": {
+                "label": "📃 Landscape",
+                "description": "Wider than tall"
+              }
+            }
+          },
+          "showCutMarks": {
+            "label": "Show Cut Marks",
+            "description": "Add guides for cutting cards"
+          },
+          "showRegistration": {
+            "label": "Registration Marks",
+            "description": "Alignment guides for duplex printing"
+          }
+        },
+        "scaleFactor": {
+          "label": "Scale Factor",
+          "description": "Adjust the overall size of flashcards",
+          "value": "{percent}%"
+        }
+      },
+      "shared": {
+        "selectPlaceholder": "Select..."
+      },
+      "formatOptions": {
+        "pdf": {
+          "label": "PDF",
+          "description": "Print-ready vector document with layout options"
+        },
+        "html": {
+          "label": "HTML",
+          "description": "Interactive web flashcards"
+        },
+        "svg": {
+          "label": "SVG",
+          "description": "Scalable vector images"
+        },
+        "png": {
+          "label": "PNG",
+          "description": "High-resolution images"
+        }
+      }
+    },
+    "styleControls": {
+      "colorScheme": {
+        "label": "Color Scheme",
+        "description": "Choose how colors are applied to beads",
+        "options": {
+          "monochrome": {
+            "label": "Monochrome",
+            "description": "Classic black and white"
+          },
+          "place-value": {
+            "label": "Place Value",
+            "description": "Colors by digit position"
+          },
+          "heaven-earth": {
+            "label": "Heaven-Earth",
+            "description": "Different colors for 5s and 1s"
+          },
+          "alternating": {
+            "label": "Alternating",
+            "description": "Alternating column colors"
+          }
+        }
+      },
+      "beadShape": {
+        "label": "Bead Shape",
+        "description": "Choose the visual style of the beads",
+        "options": {
+          "diamond": {
+            "label": "💎 Diamond",
+            "description": "Realistic 3D appearance"
+          },
+          "circle": {
+            "label": "⭕ Circle",
+            "description": "Traditional round beads"
+          },
+          "square": {
+            "label": "⬜ Square",
+            "description": "Modern geometric style"
+          }
+        }
+      },
+      "coloredNumerals": {
+        "label": "Colored Numerals",
+        "description": "Match numeral colors to bead colors"
+      },
+      "hideInactiveBeads": {
+        "label": "Hide Inactive Beads",
+        "description": "Show only active beads for clarity"
+      }
+    },
+    "progress": {
+      "title": "Generating Your Flashcards",
+      "estimatedTime": "~{seconds} seconds",
+      "percentComplete": "{percent}% complete",
+      "stepCount": "Step {current} of {total}",
+      "steps": {
+        "validate": {
+          "label": "Validating Configuration",
+          "description": "Checking parameters and dependencies"
+        },
+        "generate": {
+          "label": "Generating Soroban Patterns",
+          "description": "Creating {count} flashcard patterns"
+        },
+        "render": {
+          "label": "Rendering {format}",
+          "defaultFormat": "PDF",
+          "description": "Converting to your chosen format"
+        },
+        "finalize": {
+          "label": "Finalizing Download",
+          "description": "Preparing your flashcards for download"
+        }
+      },
+      "funFactTitle": "💡 Did you know?",
+      "funFacts": [
+        "The soroban is a Japanese counting tool that dates back over 400 years!",
+        "Master soroban users can calculate faster than electronic calculators.",
+        "Each bead position on a soroban represents a specific numeric value.",
+        "The word \"soroban\" comes from ancient Chinese \"suanpan\" (counting board).",
+        "Soroban training improves mathematical intuition and mental calculation speed.",
+        "Modern soroban competitions feature lightning-fast calculations.",
+        "The soroban method strengthens both logical and creative thinking.",
+        "Japanese students often learn soroban alongside traditional mathematics."
+      ]
+    },
+    "preview": {
+      "title": "Live Preview",
+      "subtitle": "See how your flashcards will look",
+      "badge": "{count} {count, plural, one {card} other {cards}} • {format}",
+      "summary": {
+        "title": "Configuration Summary",
+        "range": {
+          "label": "Range",
+          "empty": "Not set"
+        },
+        "format": {
+          "label": "Format",
+          "default": "PDF"
+        },
+        "cardsPerPage": {
+          "label": "Cards per page",
+          "default": "6"
+        },
+        "paperSize": {
+          "label": "Paper size",
+          "default": "US-LETTER"
+        }
+      }
+    }
+  }
+}

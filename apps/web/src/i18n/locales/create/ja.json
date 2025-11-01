@@ -1,0 +1,229 @@
+{
+  "create": {
+    "page": {
+      "navTitle": "フラッシュカードを作成",
+      "hero": {
+        "title": "フラッシュカードを作りましょう",
+        "subtitle": "内容とスタイルを設定し、すぐにプレビューしてからフラッシュカードを生成しましょう"
+      },
+      "style": {
+        "title": "🎨 ビジュアルスタイル",
+        "subtitle": "プレビューで変更をすぐに確認"
+      },
+      "generateButton": {
+        "loading": "フラッシュカードを生成しています...",
+        "cta": "フラッシュカードを生成"
+      },
+      "error": {
+        "title": "生成に失敗しました",
+        "retry": "もう一度試す"
+      }
+    },
+    "form": {
+      "title": "設定",
+      "subtitle": "コンテンツ・レイアウト・出力の設定",
+      "tabs": {
+        "content": "📝 コンテンツ",
+        "output": "💾 出力"
+      },
+      "content": {
+        "range": {
+          "label": "数値範囲",
+          "description": "含める数字を指定します（例：'0-99' や '1,2,5,10'）",
+          "placeholder": "0-99"
+        },
+        "step": {
+          "label": "刻み幅",
+          "description": "範囲の場合はこの値ずつ増加します"
+        },
+        "shuffle": {
+          "label": "カードをシャッフル",
+          "description": "順番をランダムに並べ替えます"
+        }
+      },
+      "output": {
+        "format": {
+          "label": "出力形式",
+          "description": "お好みのファイル形式を選択"
+        },
+        "pdf": {
+          "sectionTitle": "📄 PDF レイアウトオプション",
+          "sectionDescription": "PDF のページレイアウトと印刷オプションを設定します",
+          "cardsPerPage": {
+            "label": "1ページあたりのカード数",
+            "description": "各ページに配置するカードの数",
+            "value": "{count}枚のカード"
+          },
+          "paperSize": {
+            "label": "用紙サイズ",
+            "description": "出力する用紙の寸法",
+            "options": {
+              "us-letter": "USレター (8.5×11\")",
+              "a4": "A4 (210×297mm)",
+              "a3": "A3 (297×420mm)",
+              "a5": "A5 (148×210mm)"
+            }
+          },
+          "orientation": {
+            "label": "向き",
+            "description": "ページレイアウトの向き",
+            "options": {
+              "portrait": {
+                "label": "📄 縦向き",
+                "description": "高さが幅より長い"
+              },
+              "landscape": {
+                "label": "📃 横向き",
+                "description": "幅が高さより長い"
+              }
+            }
+          },
+          "showCutMarks": {
+            "label": "カットマークを表示",
+            "description": "カードを切り分けるためのガイドを追加"
+          },
+          "showRegistration": {
+            "label": "見当合わせのマーク",
+            "description": "両面印刷のための位置合わせガイド"
+          }
+        },
+        "scaleFactor": {
+          "label": "縮尺",
+          "description": "カード全体のサイズを調整",
+          "value": "{percent}%"
+        }
+      },
+      "shared": {
+        "selectPlaceholder": "選択..."
+      },
+      "formatOptions": {
+        "pdf": {
+          "label": "PDF",
+          "description": "レイアウト設定が可能な印刷向けベクター文書"
+        },
+        "html": {
+          "label": "HTML",
+          "description": "インタラクティブなウェブカード"
+        },
+        "svg": {
+          "label": "SVG",
+          "description": "スケーラブルなベクター画像"
+        },
+        "png": {
+          "label": "PNG",
+          "description": "高解像度の画像"
+        }
+      }
+    },
+    "styleControls": {
+      "colorScheme": {
+        "label": "配色",
+        "description": "ビーズに色を適用する方法を選択",
+        "options": {
+          "monochrome": {
+            "label": "モノクロ",
+            "description": "クラシックな白黒"
+          },
+          "place-value": {
+            "label": "位取り",
+            "description": "桁の位置ごとに色分け"
+          },
+          "heaven-earth": {
+            "label": "天地",
+            "description": "五玉と一玉で別の色"
+          },
+          "alternating": {
+            "label": "交互",
+            "description": "列ごとに交互の色"
+          }
+        }
+      },
+      "beadShape": {
+        "label": "ビーズの形",
+        "description": "ビーズの見た目のスタイルを選択",
+        "options": {
+          "diamond": {
+            "label": "💎 ダイヤ",
+            "description": "リアルな立体感"
+          },
+          "circle": {
+            "label": "⭕ 円",
+            "description": "伝統的な丸いビーズ"
+          },
+          "square": {
+            "label": "⬜ 四角",
+            "description": "モダンな幾何学スタイル"
+          }
+        }
+      },
+      "coloredNumerals": {
+        "label": "数字の色を付ける",
+        "description": "数字の色をビーズの色に合わせる"
+      },
+      "hideInactiveBeads": {
+        "label": "非アクティブなビーズを隠す",
+        "description": "見やすさのためにアクティブなビーズのみ表示"
+      }
+    },
+    "progress": {
+      "title": "フラッシュカードを生成しています",
+      "estimatedTime": "~{seconds}秒",
+      "percentComplete": "{percent}% 完了",
+      "stepCount": "全{total}ステップ中 {current} ステップ目",
+      "steps": {
+        "validate": {
+          "label": "設定を検証しています",
+          "description": "パラメーターと依存関係を確認中"
+        },
+        "generate": {
+          "label": "そろばんパターンを生成",
+          "description": "{count} 件のカードパターンを作成中"
+        },
+        "render": {
+          "label": "{format} をレンダリング",
+          "defaultFormat": "PDF",
+          "description": "選択した形式に変換中"
+        },
+        "finalize": {
+          "label": "ダウンロードを最終準備",
+          "description": "カードをダウンロード用に整えています"
+        }
+      },
+      "funFactTitle": "💡 豆知識",
+      "funFacts": [
+        "そろばんは400年以上の歴史を持つ日本の計算器です。",
+        "熟練したそろばん使いは電子計算機よりも速く計算できます。",
+        "そろばんの各ビーズの位置は特定の数値を表します。",
+        "「そろばん」という言葉は中国古来の「算盤」から来ています。",
+        "そろばんの練習は数学的直感と暗算の速度を高めます。",
+        "現代のそろばん大会では驚異的な速さの計算が披露されます。",
+        "そろばんの学習は論理的思考と創造的思考の両方を鍛えます。",
+        "日本では学校で数学と一緒にそろばんを学ぶことがよくあります。"
+      ]
+    },
+    "preview": {
+      "title": "ライブプレビュー",
+      "subtitle": "フラッシュカードの仕上がりを確認しましょう",
+      "badge": "{count}枚のカード • {format}",
+      "summary": {
+        "title": "設定のサマリー",
+        "range": {
+          "label": "範囲",
+          "empty": "未設定"
+        },
+        "format": {
+          "label": "形式",
+          "default": "PDF"
+        },
+        "cardsPerPage": {
+          "label": "1ページあたりのカード数",
+          "default": "6"
+        },
+        "paperSize": {
+          "label": "用紙サイズ",
+          "default": "US-LETTER"
+        }
+      }
+    }
+  }
+}

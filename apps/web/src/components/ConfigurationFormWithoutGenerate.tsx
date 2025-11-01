@@ -8,6 +8,7 @@ import * as Switch from '@radix-ui/react-switch'
 import * as Tabs from '@radix-ui/react-tabs'
 import type { FormApi } from '@tanstack/react-form'
 import { ChevronDown } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 import type { FlashcardFormState } from '@/app/create/page'
 import { css } from '../../styled-system/css'
 import { grid, hstack, stack } from '../../styled-system/patterns'
@@ -18,6 +19,8 @@ interface ConfigurationFormProps {
 }
 
 export function ConfigurationFormWithoutGenerate({ form }: ConfigurationFormProps) {
+  const t = useTranslations('create.form')
+
   return (
     <div className={stack({ gap: '6' })}>
       <div className={stack({ gap: '2' })}>
@@ -28,14 +31,14 @@ export function ConfigurationFormWithoutGenerate({ form }: ConfigurationFormProp
             color: 'gray.900',
           })}
         >
-          Configuration
+          {t('title')}
         </h2>
         <p
           className={css({
             color: 'gray.600',
           })}
         >
-          Content, layout, and output settings
+          {t('subtitle')}
         </p>
       </div>
 
@@ -57,8 +60,8 @@ export function ConfigurationFormWithoutGenerate({ form }: ConfigurationFormProp
                 })}
               >
                 {[
-                  { value: 'content', label: '📝 Content', icon: '🔢' },
-                  { value: 'output', label: '💾 Output', icon: '💾' },
+                  { value: 'content', label: t('tabs.content'), icon: '🔢' },
+                  { value: 'output', label: t('tabs.output'), icon: '💾' },
                 ].map((tab) => (
                   <Tabs.Trigger
                     key={tab.value}
@@ -90,15 +93,15 @@ export function ConfigurationFormWithoutGenerate({ form }: ConfigurationFormProp
               <Tabs.Content value="content" className={css({ mt: '6' })}>
                 <div className={stack({ gap: '6' })}>
                   <FormField
-                    label="Number Range"
-                    description="Define which numbers to include (e.g., '0-99' or '1,2,5,10')"
+                    label={t('content.range.label')}
+                    description={t('content.range.description')}
                   >
                     <form.Field name="range">
                       {(field) => (
                         <input
                           value={field.state.value || ''}
                           onChange={(e) => field.handleChange(e.target.value)}
-                          placeholder="0-99"
+                          placeholder={t('content.range.placeholder')}
                           className={inputStyles}
                         />
                       )}
@@ -106,7 +109,7 @@ export function ConfigurationFormWithoutGenerate({ form }: ConfigurationFormProp
                   </FormField>
 
                   <div className={grid({ columns: 2, gap: '4' })}>
-                    <FormField label="Step Size" description="For ranges, increment by this amount">
+                    <FormField label={t('content.step.label')} description={t('content.step.description')}>
                       <form.Field name="step">
                         {(field) => (
                           <input
@@ -120,7 +123,7 @@ export function ConfigurationFormWithoutGenerate({ form }: ConfigurationFormProp
                       </form.Field>
                     </FormField>
 
-                    <FormField label="Shuffle Cards" description="Randomize the order">
+                    <FormField label={t('content.shuffle.label')} description={t('content.shuffle.description')}>
                       <form.Field name="shuffle">
                         {(field) => (
                           <SwitchField
@@ -137,7 +140,10 @@ export function ConfigurationFormWithoutGenerate({ form }: ConfigurationFormProp
               {/* Output Tab */}
               <Tabs.Content value="output" className={css({ mt: '6' })}>
                 <div className={stack({ gap: '6' })}>
-                  <FormField label="Output Format" description="Choose your preferred file format">
+                  <FormField
+                    label={t('output.format.label')}
+                    description={t('output.format.description')}
+                  >
                     <form.Field name="format">
                       {(field) => (
                         <FormatSelectField
@@ -173,7 +179,7 @@ export function ConfigurationFormWithoutGenerate({ form }: ConfigurationFormProp
                                     color: 'blue.800',
                                   })}
                                 >
-                                  📄 PDF Layout Options
+                                  {t('output.pdf.sectionTitle')}
                                 </h3>
                                 <p
                                   className={css({
@@ -181,14 +187,14 @@ export function ConfigurationFormWithoutGenerate({ form }: ConfigurationFormProp
                                     color: 'blue.700',
                                   })}
                                 >
-                                  Configure page layout and printing options for your PDF
+                                  {t('output.pdf.sectionDescription')}
                                 </p>
                               </div>
 
                               <div className={grid({ columns: 2, gap: '4' })}>
                                 <FormField
-                                  label="Cards Per Page"
-                                  description="Number of flashcards on each page"
+                                  label={t('output.pdf.cardsPerPage.label')}
+                                  description={t('output.pdf.cardsPerPage.description')}
                                 >
                                   <form.Field name="cardsPerPage">
                                     {(field) => (
@@ -198,13 +204,18 @@ export function ConfigurationFormWithoutGenerate({ form }: ConfigurationFormProp
                                         min={1}
                                         max={12}
                                         step={1}
-                                        formatValue={(value) => `${value} cards`}
+                                        formatValue={(value) =>
+                                          t('output.pdf.cardsPerPage.value', { count: value })
+                                        }
                                       />
                                     )}
                                   </form.Field>
                                 </FormField>
 
-                                <FormField label="Paper Size" description="Output paper dimensions">
+                                <FormField
+                                  label={t('output.pdf.paperSize.label')}
+                                  description={t('output.pdf.paperSize.description')}
+                                >
                                   <form.Field name="paperSize">
                                     {(field) => (
                                       <SelectField
@@ -213,28 +224,32 @@ export function ConfigurationFormWithoutGenerate({ form }: ConfigurationFormProp
                                         options={[
                                           {
                                             value: 'us-letter',
-                                            label: 'US Letter (8.5×11")',
+                                            label: t('output.pdf.paperSize.options.us-letter'),
                                           },
                                           {
                                             value: 'a4',
-                                            label: 'A4 (210×297mm)',
+                                            label: t('output.pdf.paperSize.options.a4'),
                                           },
                                           {
                                             value: 'a3',
-                                            label: 'A3 (297×420mm)',
+                                            label: t('output.pdf.paperSize.options.a3'),
                                           },
                                           {
                                             value: 'a5',
-                                            label: 'A5 (148×210mm)',
+                                            label: t('output.pdf.paperSize.options.a5'),
                                           },
                                         ]}
+                                        placeholder={t('shared.selectPlaceholder')}
                                       />
                                     )}
                                   </form.Field>
                                 </FormField>
                               </div>
 
-                              <FormField label="Orientation" description="Page layout direction">
+                              <FormField
+                                label={t('output.pdf.orientation.label')}
+                                description={t('output.pdf.orientation.description')}
+                              >
                                 <form.Field name="orientation">
                                   {(field) => (
                                     <RadioGroupField
@@ -243,13 +258,17 @@ export function ConfigurationFormWithoutGenerate({ form }: ConfigurationFormProp
                                       options={[
                                         {
                                           value: 'portrait',
-                                          label: '📄 Portrait',
-                                          desc: 'Taller than wide',
+                                          label: t('output.pdf.orientation.options.portrait.label'),
+                                          desc: t(
+                                            'output.pdf.orientation.options.portrait.description'
+                                          ),
                                         },
                                         {
                                           value: 'landscape',
-                                          label: '📃 Landscape',
-                                          desc: 'Wider than tall',
+                                          label: t('output.pdf.orientation.options.landscape.label'),
+                                          desc: t(
+                                            'output.pdf.orientation.options.landscape.description'
+                                          ),
                                         },
                                       ]}
                                     />
@@ -259,8 +278,8 @@ export function ConfigurationFormWithoutGenerate({ form }: ConfigurationFormProp
 
                               <div className={grid({ columns: 2, gap: '4' })}>
                                 <FormField
-                                  label="Show Cut Marks"
-                                  description="Add guides for cutting cards"
+                                  label={t('output.pdf.showCutMarks.label')}
+                                  description={t('output.pdf.showCutMarks.description')}
                                 >
                                   <form.Field name="showCutMarks">
                                     {(field) => (
@@ -273,8 +292,8 @@ export function ConfigurationFormWithoutGenerate({ form }: ConfigurationFormProp
                                 </FormField>
 
                                 <FormField
-                                  label="Registration Marks"
-                                  description="Alignment guides for duplex printing"
+                                  label={t('output.pdf.showRegistration.label')}
+                                  description={t('output.pdf.showRegistration.description')}
                                 >
                                   <form.Field name="showRegistration">
                                     {(field) => (
@@ -294,8 +313,8 @@ export function ConfigurationFormWithoutGenerate({ form }: ConfigurationFormProp
                   </form.Field>
 
                   <FormField
-                    label="Scale Factor"
-                    description="Adjust the overall size of flashcards"
+                    label={t('output.scaleFactor.label')}
+                    description={t('output.scaleFactor.description')}
                   >
                     <form.Field name="scaleFactor">
                       {(field) => (
@@ -305,7 +324,11 @@ export function ConfigurationFormWithoutGenerate({ form }: ConfigurationFormProp
                           min={0.5}
                           max={1.0}
                           step={0.05}
-                          formatValue={(value) => `${Math.round(value * 100)}%`}
+                          formatValue={(value) =>
+                            t('output.scaleFactor.value', {
+                              percent: Math.round(value * 100),
+                            })
+                          }
                         />
                       )}
                     </form.Field>

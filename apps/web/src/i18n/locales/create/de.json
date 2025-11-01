@@ -1,0 +1,229 @@
+{
+  "create": {
+    "page": {
+      "navTitle": "Karteikarten erstellen",
+      "hero": {
+        "title": "Erstelle deine Karteikarten",
+        "subtitle": "Konfiguriere Inhalt und Stil, sieh dir sofort eine Vorschau an und generiere dann deine Karteikarten"
+      },
+      "style": {
+        "title": "🎨 Visueller Stil",
+        "subtitle": "Sieh Änderungen sofort in der Vorschau"
+      },
+      "generateButton": {
+        "loading": "Karteikarten werden erstellt...",
+        "cta": "Karteikarten generieren"
+      },
+      "error": {
+        "title": "Erstellung fehlgeschlagen",
+        "retry": "Erneut versuchen"
+      }
+    },
+    "form": {
+      "title": "Konfiguration",
+      "subtitle": "Einstellungen für Inhalt, Layout und Ausgabe",
+      "tabs": {
+        "content": "📝 Inhalt",
+        "output": "💾 Ausgabe"
+      },
+      "content": {
+        "range": {
+          "label": "Zahlenbereich",
+          "description": "Lege fest, welche Zahlen enthalten sind (z. B. '0-99' oder '1,2,5,10')",
+          "placeholder": "0-99"
+        },
+        "step": {
+          "label": "Schrittweite",
+          "description": "Bei Bereichen wird um diesen Wert erhöht"
+        },
+        "shuffle": {
+          "label": "Karten mischen",
+          "description": "Reihenfolge zufällig anordnen"
+        }
+      },
+      "output": {
+        "format": {
+          "label": "Ausgabeformat",
+          "description": "Wähle dein bevorzugtes Dateiformat"
+        },
+        "pdf": {
+          "sectionTitle": "📄 PDF-Layout-Optionen",
+          "sectionDescription": "Konfiguriere Seitenlayout und Druckoptionen für dein PDF",
+          "cardsPerPage": {
+            "label": "Karten pro Seite",
+            "description": "Anzahl der Karteikarten je Seite",
+            "value": "{count, plural, one {{count} Karte} other {{count} Karten}}"
+          },
+          "paperSize": {
+            "label": "Papierformat",
+            "description": "Ausgabemaße des Papiers",
+            "options": {
+              "us-letter": "US Letter (8.5×11\")",
+              "a4": "A4 (210×297 mm)",
+              "a3": "A3 (297×420 mm)",
+              "a5": "A5 (148×210 mm)"
+            }
+          },
+          "orientation": {
+            "label": "Ausrichtung",
+            "description": "Ausrichtung des Seitenlayouts",
+            "options": {
+              "portrait": {
+                "label": "📄 Hochformat",
+                "description": "Höher als breit"
+              },
+              "landscape": {
+                "label": "📃 Querformat",
+                "description": "Breiter als hoch"
+              }
+            }
+          },
+          "showCutMarks": {
+            "label": "Schnittmarken anzeigen",
+            "description": "Hilfslinien zum Zuschneiden hinzufügen"
+          },
+          "showRegistration": {
+            "label": "Passkreuze",
+            "description": "Ausrichtungshilfen für Duplexdruck"
+          }
+        },
+        "scaleFactor": {
+          "label": "Skalierungsfaktor",
+          "description": "Gesamtgröße der Karteikarten anpassen",
+          "value": "{percent}%"
+        }
+      },
+      "shared": {
+        "selectPlaceholder": "Auswählen..."
+      },
+      "formatOptions": {
+        "pdf": {
+          "label": "PDF",
+          "description": "Druckfertiges Vektordokument mit Layoutoptionen"
+        },
+        "html": {
+          "label": "HTML",
+          "description": "Interaktive Web-Karteikarten"
+        },
+        "svg": {
+          "label": "SVG",
+          "description": "Skalierbare Vektorgrafiken"
+        },
+        "png": {
+          "label": "PNG",
+          "description": "Hochauflösende Bilder"
+        }
+      }
+    },
+    "styleControls": {
+      "colorScheme": {
+        "label": "Farbschema",
+        "description": "Lege fest, wie Farben auf die Perlen angewendet werden",
+        "options": {
+          "monochrome": {
+            "label": "Monochrom",
+            "description": "Klassisches Schwarz-Weiß"
+          },
+          "place-value": {
+            "label": "Stellenwert",
+            "description": "Farben nach Stellenwert"
+          },
+          "heaven-earth": {
+            "label": "Himmel-Erde",
+            "description": "Unterschiedliche Farben für Fünfer und Einer"
+          },
+          "alternating": {
+            "label": "Alternierend",
+            "description": "Abwechselnde Spaltenfarben"
+          }
+        }
+      },
+      "beadShape": {
+        "label": "Perlenform",
+        "description": "Bestimme den visuellen Stil der Perlen",
+        "options": {
+          "diamond": {
+            "label": "💎 Diamant",
+            "description": "Realistische 3D-Anmutung"
+          },
+          "circle": {
+            "label": "⭕ Kreis",
+            "description": "Traditionelle runde Perlen"
+          },
+          "square": {
+            "label": "⬜ Quadrat",
+            "description": "Moderner geometrischer Stil"
+          }
+        }
+      },
+      "coloredNumerals": {
+        "label": "Farbige Ziffern",
+        "description": "Ziffernfarben an die Perlenfarben anpassen"
+      },
+      "hideInactiveBeads": {
+        "label": "Inaktive Perlen ausblenden",
+        "description": "Nur aktive Perlen für bessere Übersicht zeigen"
+      }
+    },
+    "progress": {
+      "title": "Karteikarten werden erstellt",
+      "estimatedTime": "~{seconds} Sekunden",
+      "percentComplete": "{percent}% abgeschlossen",
+      "stepCount": "Schritt {current} von {total}",
+      "steps": {
+        "validate": {
+          "label": "Konfiguration wird geprüft",
+          "description": "Parameter und Abhängigkeiten werden kontrolliert"
+        },
+        "generate": {
+          "label": "Soroban-Muster werden erzeugt",
+          "description": "{count} Kartenmuster werden erstellt"
+        },
+        "render": {
+          "label": "{format} wird gerendert",
+          "defaultFormat": "PDF",
+          "description": "Umwandlung in dein ausgewähltes Format"
+        },
+        "finalize": {
+          "label": "Download wird vorbereitet",
+          "description": "Karteikarten für den Download bereitstellen"
+        }
+      },
+      "funFactTitle": "💡 Schon gewusst?",
+      "funFacts": [
+        "Das Soroban ist ein japanisches Rechenbrett, das über 400 Jahre alt ist!",
+        "Geübte Soroban-Anwender rechnen schneller als elektronische Taschenrechner.",
+        "Jede Perlenposition auf dem Soroban steht für einen bestimmten Zahlenwert.",
+        "Das Wort \"Soroban\" stammt vom chinesischen \"Suanpan\" (Rechenbrett).",
+        "Soroban-Training verbessert Intuition und Geschwindigkeit beim Kopfrechnen.",
+        "Moderne Soroban-Wettbewerbe zeigen blitzschnelle Rechenkünstler.",
+        "Die Soroban-Methode stärkt logisches und kreatives Denken gleichermaßen.",
+        "In Japan lernen Kinder Soroban oft parallel zum Mathematikunterricht."
+      ]
+    },
+    "preview": {
+      "title": "Live-Vorschau",
+      "subtitle": "So werden deine Karteikarten aussehen",
+      "badge": "{count} {count, plural, one {Karte} other {Karten}} • {format}",
+      "summary": {
+        "title": "Konfigurationsübersicht",
+        "range": {
+          "label": "Bereich",
+          "empty": "Nicht festgelegt"
+        },
+        "format": {
+          "label": "Format",
+          "default": "PDF"
+        },
+        "cardsPerPage": {
+          "label": "Karten pro Seite",
+          "default": "6"
+        },
+        "paperSize": {
+          "label": "Papierformat",
+          "default": "US-LETTER"
+        }
+      }
+    }
+  }
+}
