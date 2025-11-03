@@ -1,3 +1,45 @@
+# [2.3.0](https://github.com/antialias/soroban-abacus-flashcards/compare/abacus-react-v2.2.0...abacus-react-v2.3.0) (2025-11-03)
+
+
+### Bug Fixes
+
+* adjust hero abacus position to avoid covering subtitle ([f03d341](https://github.com/antialias/soroban-abacus-flashcards/commit/f03d3413145cc7ddfba93728ecdec7eabea9ada6))
+* configure favicon metadata and improve bead visibility ([e1369fa](https://github.com/antialias/soroban-abacus-flashcards/commit/e1369fa2754cd61745a2950e6cb767d6b08db38f))
+* correct hero abacus scroll direction to flow with page content ([4232746](https://github.com/antialias/soroban-abacus-flashcards/commit/423274657c9698bba28f7246fbf48d8508d97ef9))
+* extract pure SVG content from AbacusReact renders ([b07f1c4](https://github.com/antialias/soroban-abacus-flashcards/commit/b07f1c421616bcfd1f949f9a42ce1b03df418945))
+* **games:** prevent horizontal page scroll from carousel overflow ([5a8c98f](https://github.com/antialias/soroban-abacus-flashcards/commit/5a8c98fc10704e459690308a84dc7ee2bfa0ef6c))
+* **games:** smooth scroll feel for carousel wheel navigation ([f80a73b](https://github.com/antialias/soroban-abacus-flashcards/commit/f80a73b35c324959bfd7141ebf086cb47d3c0ebc))
+* **games:** use specific transition properties for smooth carousel loop ([187271e](https://github.com/antialias/soroban-abacus-flashcards/commit/187271e51527ee0129f71d77be1bd24072b963c4))
+* include column posts in favicon bounding box ([0b2f481](https://github.com/antialias/soroban-abacus-flashcards/commit/0b2f48106a939307b728c86fe2ea1be1e0247ea8))
+* mark dynamic routes as force-dynamic to prevent static generation errors ([d7b35d9](https://github.com/antialias/soroban-abacus-flashcards/commit/d7b35d954421fd7577cd2c26247666e5953b647d))
+* **nav:** show full navigation on /games page ([d3fe6ac](https://github.com/antialias/soroban-abacus-flashcards/commit/d3fe6acbb0390e1df71869a4095e5ee6021e06b1))
+* reduce padding to minimize gap below last bead ([0e529be](https://github.com/antialias/soroban-abacus-flashcards/commit/0e529be789caf16e73f3e2ee77f52e243841aef4))
+* resolve z-index layering and hero abacus visibility issues ([ed9a050](https://github.com/antialias/soroban-abacus-flashcards/commit/ed9a050d64db905e1328008f25dc0014e9a81999))
+* separate horizontal and vertical bounding box logic ([83090df](https://github.com/antialias/soroban-abacus-flashcards/commit/83090df4dfad1d1d5cfa6c278c241526cacc7972))
+* tolerate OpenSCAD CGAL warnings if output file is created ([88993f3](https://github.com/antialias/soroban-abacus-flashcards/commit/88993f36629206a7bdcf9aa9d5641f1580b64de5))
+* use Debian base for deps stage to match runner for binary compatibility ([f8fe6e4](https://github.com/antialias/soroban-abacus-flashcards/commit/f8fe6e4a415f8655626af567129d0cda61b82e15))
+* use default BOSL2 branch instead of non-existent v2.0.0 tag ([f4ffc5b](https://github.com/antialias/soroban-abacus-flashcards/commit/f4ffc5b0277535358bea7588309a1a4afd1983a1))
+* use nested SVG viewBox for actual cropping, not just scaling ([440b492](https://github.com/antialias/soroban-abacus-flashcards/commit/440b492e85beff1612697346b6c5cfc8461e83da))
+* various game improvements and UI enhancements ([b67cf61](https://github.com/antialias/soroban-abacus-flashcards/commit/b67cf610c570d54744553cd8f6694243fa50bee1))
+
+
+### Features
+
+* add 3D printing support for abacus models ([dafdfdd](https://github.com/antialias/soroban-abacus-flashcards/commit/dafdfdd233b53464b9825a8a9b5f2e6206fc54cb))
+* add comprehensive Storybook coverage and migration guide ([7a4a37e](https://github.com/antialias/soroban-abacus-flashcards/commit/7a4a37ec6d0171782778e18122da782f069e0556))
+* add game preview system with mock arcade environment ([25880cc](https://github.com/antialias/soroban-abacus-flashcards/commit/25880cc7e463f98a5a23c812c1ffd43734d3fe1f))
+* add per-player stats tracking system ([613301c](https://github.com/antialias/soroban-abacus-flashcards/commit/613301cd137ad6f712571a0be45c708ce391fc8f))
+* add unified trophy abacus with hero mode integration ([6620418](https://github.com/antialias/soroban-abacus-flashcards/commit/6620418a704dcca810b511a5f394084521104e6b))
+* dynamic day-of-month favicon using subprocess pattern ([4d0795a](https://github.com/antialias/soroban-abacus-flashcards/commit/4d0795a9df74fcb085af821eafb923bdcb5f0b0c))
+* dynamically crop favicon to active beads for maximum size ([5670322](https://github.com/antialias/soroban-abacus-flashcards/commit/567032296aecaad13408bdc17d108ec7c57fb4a8))
+* **games:** add autoplay and improve carousel layout ([9f51edf](https://github.com/antialias/soroban-abacus-flashcards/commit/9f51edfaa95c14f55a30a6eceafb9099eeed437f))
+* **games:** add horizontal scroll support to carousels ([a224abb](https://github.com/antialias/soroban-abacus-flashcards/commit/a224abb6f660e1aa31ab04f5590b003fae072af9))
+* **games:** add rotating games hero carousel ([24231e6](https://github.com/antialias/soroban-abacus-flashcards/commit/24231e6b2ebbdcae066344df54e7e80e7d221128))
+* **i18n:** update games page hero section copy ([6333c60](https://github.com/antialias/soroban-abacus-flashcards/commit/6333c60352b920916afd81cc3b0229706a1519fa))
+* install embla-carousel-autoplay for games carousel ([946e5d1](https://github.com/antialias/soroban-abacus-flashcards/commit/946e5d19107020992be8945f8fe7c41e4bc2a0e2))
+* install embla-carousel-react for player profile carousel ([642ae95](https://github.com/antialias/soroban-abacus-flashcards/commit/642ae957383cfe1d6045f645bbe426fd80c56f35))
+* switch to royal color theme with transparent background ([944ad65](https://github.com/antialias/soroban-abacus-flashcards/commit/944ad6574e01a67ce1fdbb1f2452fe632c78ce43)), closes [#fbbf24](https://github.com/antialias/soroban-abacus-flashcards/issues/fbbf24) [#f59e0](https://github.com/antialias/soroban-abacus-flashcards/issues/f59e0) [#a855f7](https://github.com/antialias/soroban-abacus-flashcards/issues/a855f7) [#7e22](https://github.com/antialias/soroban-abacus-flashcards/issues/7e22)
+
 # [2.2.0](https://github.com/antialias/soroban-abacus-flashcards/compare/abacus-react-v2.1.0...abacus-react-v2.2.0) (2025-11-03)
 
 
