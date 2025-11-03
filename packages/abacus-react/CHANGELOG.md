@@ -1,3 +1,19 @@
+# [2.4.0](https://github.com/antialias/soroban-abacus-flashcards/compare/abacus-react-v2.3.0...abacus-react-v2.4.0) (2025-11-03)
+
+
+### Bug Fixes
+
+* remove distracting parallax and wobble 3D effects ([28a2d40](https://github.com/antialias/soroban-abacus-flashcards/commit/28a2d40996256700bf19cd80130b26e24441949f))
+* remove wobble physics and enhance wood grain visibility ([5d97673](https://github.com/antialias/soroban-abacus-flashcards/commit/5d976734062eb3d943bfdfdd125473c56b533759))
+* rewrite 3D stories to use props instead of CSS wrappers ([26bdb11](https://github.com/antialias/soroban-abacus-flashcards/commit/26bdb112370cece08634e3d693d15336111fc70f))
+* use absolute positioning for hero abacus to eliminate scroll lag ([096104b](https://github.com/antialias/soroban-abacus-flashcards/commit/096104b094b45aa584f2b9d47a440a8c14d82fc0))
+
+
+### Features
+
+* complete 3D enhancement integration for all three proposals ([5ac55cc](https://github.com/antialias/soroban-abacus-flashcards/commit/5ac55cc14980b778f9be32f0833f8760aa16b631))
+* enable 3D enhancement on hero/open MyAbacus modes ([37e330f](https://github.com/antialias/soroban-abacus-flashcards/commit/37e330f26e5398c2358599361cd417b4aeefac7d))
+
 # [2.3.0](https://github.com/antialias/soroban-abacus-flashcards/compare/abacus-react-v2.2.0...abacus-react-v2.3.0) (2025-11-03)
 
 
