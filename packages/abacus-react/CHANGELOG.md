@@ -1,3 +1,14 @@
+# [2.5.0](https://github.com/antialias/soroban-abacus-flashcards/compare/abacus-react-v2.4.0...abacus-react-v2.5.0) (2025-11-03)
+
+
+### Features
+
+* **abacus-react:** add core utility functions for state management ([e65541c](https://github.com/antialias/soroban-abacus-flashcards/commit/e65541c100e590a51448750c6d5178ed4f3e8eeb))
+* **abacus-react:** add layout and educational props ([35bbcec](https://github.com/antialias/soroban-abacus-flashcards/commit/35bbcecb9e36f1ef5917a5a629f5e78f1f490e9c))
+* **abacus-react:** add pre-defined theme presets ([cf1f950](https://github.com/antialias/soroban-abacus-flashcards/commit/cf1f950c7c5fb9ee1f0de673235d6f037be3b9d6))
+* **abacus-react:** add React hooks for abacus calculations ([de038d2](https://github.com/antialias/soroban-abacus-flashcards/commit/de038d2afc26c36c1490d5ea45dace0ab812c5cc))
+* **abacus-react:** export new utilities, hooks, and themes ([ce4e44d](https://github.com/antialias/soroban-abacus-flashcards/commit/ce4e44d6302746053ad40dc61bab57ef3a0a9f31))
+
 # [2.4.0](https://github.com/antialias/soroban-abacus-flashcards/compare/abacus-react-v2.3.0...abacus-react-v2.4.0) (2025-11-03)
 
 
