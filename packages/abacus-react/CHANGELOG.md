@@ -1,3 +1,18 @@
+# [2.7.0](https://github.com/antialias/soroban-abacus-flashcards/compare/abacus-react-v2.6.0...abacus-react-v2.7.0) (2025-11-04)
+
+
+### Bug Fixes
+
+* **web:** add dynamic export to rithmomachia page ([329e623](https://github.com/antialias/soroban-abacus-flashcards/commit/329e62321245ef62726c986c917f19a909a5b65e))
+* **web:** fix Typst PDF generation path resolution ([7ce1287](https://github.com/antialias/soroban-abacus-flashcards/commit/7ce12875254a31d8acdb35ef5de7d36d215ccd92))
+
+
+### Features
+
+* **abacus-react:** add separate /static export path for React Server Components ([ed69f6b](https://github.com/antialias/soroban-abacus-flashcards/commit/ed69f6b917c543bbcaa4621a0e63745bee70f5bf))
+* **web:** add test page for AbacusStatic RSC compatibility ([903dea2](https://github.com/antialias/soroban-abacus-flashcards/commit/903dea25844f1d2b3730fbcbd8478e7af1887663))
+* **web:** improve calendar abacus preview styling ([8439727](https://github.com/antialias/soroban-abacus-flashcards/commit/8439727b152accf61f0c28158b92788510ca086e))
+
 # [2.6.0](https://github.com/antialias/soroban-abacus-flashcards/compare/abacus-react-v2.5.0...abacus-react-v2.6.0) (2025-11-04)
 
 
