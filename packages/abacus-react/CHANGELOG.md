@@ -1,3 +1,10 @@
+## [2.8.2](https://github.com/antialias/soroban-abacus-flashcards/compare/abacus-react-v2.8.1...abacus-react-v2.8.2) (2025-11-04)
+
+
+### Bug Fixes
+
+* **abacus-react:** add data-testid attributes back to beads for testing ([23ae1b0](https://github.com/antialias/soroban-abacus-flashcards/commit/23ae1b0c6f878daf79a993992d43ad80a89fa790))
+
 ## [2.8.1](https://github.com/antialias/soroban-abacus-flashcards/compare/abacus-react-v2.8.0...abacus-react-v2.8.1) (2025-11-04)
 
 
