@@ -1,3 +1,11 @@
+## [2.7.1](https://github.com/antialias/soroban-abacus-flashcards/compare/abacus-react-v2.7.0...abacus-react-v2.7.1) (2025-11-04)
+
+
+### Bug Fixes
+
+* add xmlns to AbacusStatic for Typst SVG parsing ([98cd019](https://github.com/antialias/soroban-abacus-flashcards/commit/98cd019d4af91d7ca4e7a88f700194273476afb7))
+* **web:** use AbacusStatic for calendar SVG generation ([08c6a41](https://github.com/antialias/soroban-abacus-flashcards/commit/08c6a419e25d220560eba13d6db437145e6e61b8))
+
 # [2.7.0](https://github.com/antialias/soroban-abacus-flashcards/compare/abacus-react-v2.6.0...abacus-react-v2.7.0) (2025-11-04)
 
 
