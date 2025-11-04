@@ -1,3 +1,16 @@
+# [2.6.0](https://github.com/antialias/soroban-abacus-flashcards/compare/abacus-react-v2.5.0...abacus-react-v2.6.0) (2025-11-04)
+
+
+### Bug Fixes
+
+* **abacus-react:** correct column highlighting offset in AbacusStatic ([0641eb7](https://github.com/antialias/soroban-abacus-flashcards/commit/0641eb719ef56c67de965296006df666f83e5b08))
+
+
+### Features
+
+* **abacus-react:** add AbacusStatic for React Server Components ([3b8e864](https://github.com/antialias/soroban-abacus-flashcards/commit/3b8e864cfa3af50b1912ce7ff55003d7f6b9c229))
+* **web:** add test page for AbacusStatic Server Component ([3588d5a](https://github.com/antialias/soroban-abacus-flashcards/commit/3588d5acde25588ce4db3ee32adb04ace0e394d4))
+
 # [2.5.0](https://github.com/antialias/soroban-abacus-flashcards/compare/abacus-react-v2.4.0...abacus-react-v2.5.0) (2025-11-03)
 
 
