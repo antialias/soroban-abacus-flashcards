@@ -1,3 +1,24 @@
+# [2.8.0](https://github.com/antialias/soroban-abacus-flashcards/compare/abacus-react-v2.7.1...abacus-react-v2.8.0) (2025-11-04)
+
+
+### Bug Fixes
+
+* **docker:** add scripts, abacus-react, and tsx for production calendar generation ([33eb90e](https://github.com/antialias/soroban-abacus-flashcards/commit/33eb90e316f84650ae619f8c6c02c9e77c663d1b))
+* **web:** generate styled-system artifacts during build ([293390a](https://github.com/antialias/soroban-abacus-flashcards/commit/293390ae350a6c6aa467410f68c735512104d9dd))
+* **web:** move react-dom/server import to API route to satisfy Next.js ([00a8bc3](https://github.com/antialias/soroban-abacus-flashcards/commit/00a8bc3e5e8f044df280c4356d3605a852f82e84))
+* **web:** prevent abacus overlap in composite calendar ([448f93c](https://github.com/antialias/soroban-abacus-flashcards/commit/448f93c1e2a7f86bc48e678d4599ca968c6d81d2)), closes [#f0f0f0](https://github.com/antialias/soroban-abacus-flashcards/issues/f0f0f0)
+* **web:** use dynamic import for react-dom/server in API route ([4f93c7d](https://github.com/antialias/soroban-abacus-flashcards/commit/4f93c7d996732de4bc19e7acf2d4ce803cba88b6))
+* **web:** use nested SVG elements to prevent coordinate space conflicts ([f9cbee8](https://github.com/antialias/soroban-abacus-flashcards/commit/f9cbee8fcdf80641f3b82a65fad6b8a3575525fc))
+
+
+### Features
+
+* **abacus-react:** add shared dimension calculator for consistent sizing ([e5ba772](https://github.com/antialias/soroban-abacus-flashcards/commit/e5ba772fde9839c22daec92007f052ca125c7695))
+* **web:** add Typst-based preview endpoint with React Suspense ([599a758](https://github.com/antialias/soroban-abacus-flashcards/commit/599a758471c43ab0fc87301c5e7eeceed608062e))
+* **web:** add year abacus to calendar header and make grid bolder ([867c7ee](https://github.com/antialias/soroban-abacus-flashcards/commit/867c7ee17251b8df13665bee9c0391961975e681)), closes [#333](https://github.com/antialias/soroban-abacus-flashcards/issues/333)
+* **web:** optimize monthly calendar for single-page layout ([b277a89](https://github.com/antialias/soroban-abacus-flashcards/commit/b277a89415d1823455376c3e0f641b52f3394e7c))
+* **web:** redesign monthly calendar as single composite SVG ([8ce8038](https://github.com/antialias/soroban-abacus-flashcards/commit/8ce8038baeea0b8b0fffe3215746958731bd9d6a))
+
 ## [2.7.1](https://github.com/antialias/soroban-abacus-flashcards/compare/abacus-react-v2.7.0...abacus-react-v2.7.1) (2025-11-04)
 
 
