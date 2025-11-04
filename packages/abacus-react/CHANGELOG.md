@@ -1,3 +1,11 @@
+## [2.8.1](https://github.com/antialias/soroban-abacus-flashcards/compare/abacus-react-v2.8.0...abacus-react-v2.8.1) (2025-11-04)
+
+
+### Bug Fixes
+
+* **abacus-react:** fix animations by preventing component remounting ([be7d4c4](https://github.com/antialias/soroban-abacus-flashcards/commit/be7d4c471327534a95c4c75372680c629b5f12c2))
+* **abacus-react:** restore original AbacusReact measurements and positioning ([88c0baa](https://github.com/antialias/soroban-abacus-flashcards/commit/88c0baaad9b83b60ab8cdcad92070cc049d61cc7))
+
 # [2.8.0](https://github.com/antialias/soroban-abacus-flashcards/compare/abacus-react-v2.7.1...abacus-react-v2.8.0) (2025-11-04)
 
 
