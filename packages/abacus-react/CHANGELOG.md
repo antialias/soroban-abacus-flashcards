@@ -1,3 +1,13 @@
+## [2.8.3](https://github.com/antialias/soroban-abacus-flashcards/compare/abacus-react-v2.8.2...abacus-react-v2.8.3) (2025-11-05)
+
+
+### Bug Fixes
+
+* **tutorial:** correct column validation for bead highlights ([9ba1824](https://github.com/antialias/soroban-abacus-flashcards/commit/9ba18242262cd63cc6c25361aaec3a4c0f66b161))
+* **tutorial:** fix overlay rendering, arrow indicators, and bead visibility ([a804316](https://github.com/antialias/soroban-abacus-flashcards/commit/a80431608dbc4f54d8e4f1095936b95a258b4a72))
+* **web,docker:** add --format flag for Typst and upgrade to v0.13.0 ([19b9d7a](https://github.com/antialias/soroban-abacus-flashcards/commit/19b9d7a74f549c7e93c9564e4a903e1bcd5a4bbc))
+* **web:** move tsx to production dependencies for calendar generation ([ffae9c1](https://github.com/antialias/soroban-abacus-flashcards/commit/ffae9c1bdbccc5edb2e747a09d1fcad3b29e4eac))
+
 ## [2.8.2](https://github.com/antialias/soroban-abacus-flashcards/compare/abacus-react-v2.8.1...abacus-react-v2.8.2) (2025-11-04)
 
 
