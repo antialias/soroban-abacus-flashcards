@@ -1,3 +1,18 @@
+# [2.10.0](https://github.com/antialias/soroban-abacus-flashcards/compare/abacus-react-v2.9.0...abacus-react-v2.10.0) (2025-11-05)
+
+
+### Bug Fixes
+
+* replace regex HTML parsing with deterministic bead position calculations in icon generation ([41a3707](https://github.com/antialias/soroban-abacus-flashcards/commit/41a3707841595a74de56c6adf6d271237f81ee0e))
+
+
+### Features
+
+* add cropToActiveBeads prop to AbacusStatic and AbacusReact ([35b0824](https://github.com/antialias/soroban-abacus-flashcards/commit/35b0824fc4fb0b754e53b20a00541da1bf4b8434))
+* **calendar:** add beautiful daily calendar with locale-based paper size detection ([bdca315](https://github.com/antialias/soroban-abacus-flashcards/commit/bdca3154f8336e17a7031be8d2917f9cf05f274a))
+* **calendar:** add i18n support and cropped abacus day numbers ([5242f89](https://github.com/antialias/soroban-abacus-flashcards/commit/5242f890f725c872a74b6ee45cd611092628690a))
+* **i18n:** add internationalization for all create pages ([b080970](https://github.com/antialias/soroban-abacus-flashcards/commit/b080970d7647c8286a713b05b772166c2d701c4c))
+
 # [2.9.0](https://github.com/antialias/soroban-abacus-flashcards/compare/abacus-react-v2.8.3...abacus-react-v2.9.0) (2025-11-05)
 
 
