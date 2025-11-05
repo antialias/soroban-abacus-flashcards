@@ -1,3 +1,22 @@
+# [2.9.0](https://github.com/antialias/soroban-abacus-flashcards/compare/abacus-react-v2.8.3...abacus-react-v2.9.0) (2025-11-05)
+
+
+### Bug Fixes
+
+* **docker:** upgrade OpenSCAD to 2024.11 to fix CGAL intersection bug ([e1bcd24](https://github.com/antialias/soroban-abacus-flashcards/commit/e1bcd241691050fa05cd49e14c288b4b070a7d17))
+* **guide:** increase abacus sizes - they were too small ([1074624](https://github.com/antialias/soroban-abacus-flashcards/commit/1074624b2fbce1d1d887dbd6326cf22eeb31dcec))
+* **guide:** make abacus sizes consistent and add nav spacing ([bea4842](https://github.com/antialias/soroban-abacus-flashcards/commit/bea4842a29aa86ca4261b4ddd6150bacc8babc46))
+* **guide:** remove inner containers and tighten margins ([7e54c6f](https://github.com/antialias/soroban-abacus-flashcards/commit/7e54c6f4fc5bc4daa6088eb3381d860a495776f2))
+* **layout:** add systematic spacing for fixed nav bar ([4559fb1](https://github.com/antialias/soroban-abacus-flashcards/commit/4559fb121d0df954ebaf33616a5262c7ca633c6e))
+* **layout:** remove wrapper, use utility class for nav spacing ([247c3d9](https://github.com/antialias/soroban-abacus-flashcards/commit/247c3d9874303f83641e599724a485eea8d5604a))
+* **nav:** restrict transparent hero styling to home page only ([fab227d](https://github.com/antialias/soroban-abacus-flashcards/commit/fab227d6862672e8250b1c169b302fbae23ce4d2))
+
+
+### Features
+
+* **3d-abacus:** change default columns from 13 to 4 ([cd15c70](https://github.com/antialias/soroban-abacus-flashcards/commit/cd15c70a25c597c17ee5d2f816b1c85ba8ce4ce9))
+* add client-side OpenSCAD WASM support for 3D preview ([eaaf17c](https://github.com/antialias/soroban-abacus-flashcards/commit/eaaf17cd4c675bfd40e0573b9c99f0c733d926aa))
+
 ## [2.8.3](https://github.com/antialias/soroban-abacus-flashcards/compare/abacus-react-v2.8.2...abacus-react-v2.8.3) (2025-11-05)
 
 
