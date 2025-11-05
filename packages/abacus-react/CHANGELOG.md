@@ -1,3 +1,10 @@
+## [2.10.1](https://github.com/antialias/soroban-abacus-flashcards/compare/abacus-react-v2.10.0...abacus-react-v2.10.1) (2025-11-05)
+
+
+### Bug Fixes
+
+* **i18n:** add nav bar to 3D abacus creator page ([827a949](https://github.com/antialias/soroban-abacus-flashcards/commit/827a949216709d9f6a7ea5446acb36b6d83bf861))
+
 # [2.10.0](https://github.com/antialias/soroban-abacus-flashcards/compare/abacus-react-v2.9.0...abacus-react-v2.10.0) (2025-11-05)
 
 
