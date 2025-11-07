@@ -1,3 +1,46 @@
+# [2.11.0](https://github.com/antialias/soroban-abacus-flashcards/compare/abacus-react-v2.10.1...abacus-react-v2.11.0) (2025-11-07)
+
+
+### Bug Fixes
+
+* **abacus-react:** include space for numbers in viewBox calculation ([1da3358](https://github.com/antialias/soroban-abacus-flashcards/commit/1da3358db107abb8d36822337af9e29ff282adca))
+* **db:** add statement-breakpoint to worksheet_settings migration ([42e1a71](https://github.com/antialias/soroban-abacus-flashcards/commit/42e1a71292f4f660d5b6b69a28c54ba7e29805f5))
+* **docker:** add libfuse2 and APPIMAGE_EXTRACT_AND_RUN for OpenSCAD extraction ([12490a7](https://github.com/antialias/soroban-abacus-flashcards/commit/12490a7083dd127ec95e5a2e15d604e97a81d00c))
+* **syntax:** correct div nesting and indentation in abacus page ([3c9ecca](https://github.com/antialias/soroban-abacus-flashcards/commit/3c9eccab7840e04e876878bbd3ad4f01679bdca3))
+* **syntax:** remove emoji variation selector causing build error ([00aabd8](https://github.com/antialias/soroban-abacus-flashcards/commit/00aabd8e6b2fe87cf4ea5cddc978c0788140be07))
+* **ui:** add wrapper div to prevent content from appearing under nav ([99f4dd5](https://github.com/antialias/soroban-abacus-flashcards/commit/99f4dd51e3d4e28ea2eb4428d9c3aa12372ac592))
+* **worksheets:** only show ten-frames row for problems that need regrouping ([8f92f5a](https://github.com/antialias/soroban-abacus-flashcards/commit/8f92f5a57b633ca7464b0d7bef7db3c54f9e3e62))
+* **worksheets:** remove foreign key constraint to support guest users ([e6e9ec3](https://github.com/antialias/soroban-abacus-flashcards/commit/e6e9ec3e4fdb6b533a550e55738d47007f6e7aa3))
+* **worksheets:** resolve SSR URL error and guest user foreign key constraint ([42ea8d5](https://github.com/antialias/soroban-abacus-flashcards/commit/42ea8d561e400ba213825bb4f9fc2a3f4249c09d))
+
+
+### Features
+
+* add API endpoint for live worksheet preview examples ([bef3a21](https://github.com/antialias/soroban-abacus-flashcards/commit/bef3a2144249316c53b46a2748f099039a0b104c))
+* add DisplayOptionsPreview component with debouncing ([6502da7](https://github.com/antialias/soroban-abacus-flashcards/commit/6502da7e378acea468d48fc58a07fa2dfa91076d))
+* **blog:** add blog pages and API endpoints ([1886ea0](https://github.com/antialias/soroban-abacus-flashcards/commit/1886ea0e7339f67b87780910698025af4ecc549c))
+* **blog:** generate worksheet examples showing scaffolding progression ([b628a34](https://github.com/antialias/soroban-abacus-flashcards/commit/b628a3460565ff6f8d5e73ae37d8563209f66498))
+* **create:** add worksheet creator card to hub page ([c84d712](https://github.com/antialias/soroban-abacus-flashcards/commit/c84d7122f3c9636a80313df2438ff91fdedf0e30))
+* **flashcards:** add live preview functionality ([b38bec8](https://github.com/antialias/soroban-abacus-flashcards/commit/b38bec814b283a60d8f7cd39ae1b4af791af07dc))
+* **homepage:** responsive 2-column layout with data attributes ([ad33056](https://github.com/antialias/soroban-abacus-flashcards/commit/ad33056b12559355d0a8d1cec8a59783f3db59d4))
+* **i18n:** add translations for addition worksheet creator ([2bf645a](https://github.com/antialias/soroban-abacus-flashcards/commit/2bf645a30c9c1ecdedbc7fc6b1a6013e88e90c5c))
+* **i18n:** add worksheet translations for all languages ([6acd15a](https://github.com/antialias/soroban-abacus-flashcards/commit/6acd15aab8a0ea1cab3f96e9d9023b2e78735a88))
+* replace static examples with live preview in display options ([4361ad3](https://github.com/antialias/soroban-abacus-flashcards/commit/4361ad30051b11e5415f4828e9d199f940af205d))
+* **worksheets:** add customizable operands to preview ([21cda18](https://github.com/antialias/soroban-abacus-flashcards/commit/21cda181e4102220c6524a4879dccf5b8e6d4b7f))
+* **worksheets:** add diagonal-split pattern to carry boxes ([5b91809](https://github.com/antialias/soroban-abacus-flashcards/commit/5b9180916ebd2c8ed3425b80ea25add2334da2ea))
+* **worksheets:** add double-digit addition worksheet creator ([1a75213](https://github.com/antialias/soroban-abacus-flashcards/commit/1a75213df0772d98a15efa6ca5bbb751904a98c3))
+* **worksheets:** add type-safe config persistence with schema versioning ([0406adc](https://github.com/antialias/soroban-abacus-flashcards/commit/0406adc9dab6346a1b4fab02d5b8a11fa149a8be))
+* **worksheets:** enhance addition worksheets with ten-frames and refinements ([71ad300](https://github.com/antialias/soroban-abacus-flashcards/commit/71ad300c23ffa8024c8dbeef32e06ff67bb25259))
+* **worksheets:** generate discrete pages with precise sizing ([56c0227](https://github.com/antialias/soroban-abacus-flashcards/commit/56c0227e9f27c39087ff9af7fa32128df6fc7311))
+* **worksheets:** implement auto-save and load for worksheet settings ([186fa81](https://github.com/antialias/soroban-abacus-flashcards/commit/186fa81b08bfadca33b87c34906235015ccf3146))
+* **worksheets:** implement constrained 2D difficulty system with pedagogical zones ([c39b7f6](https://github.com/antialias/soroban-abacus-flashcards/commit/c39b7f6d3ac845a6ec9601b7c260c173df39a49e))
+* **worksheets:** improve difficulty controls and problem sizing ([aedeb45](https://github.com/antialias/soroban-abacus-flashcards/commit/aedeb456f16a731c18a49fc388b6d6e17f99f29d))
+* **worksheets:** improve preview error reporting ([d8b4951](https://github.com/antialias/soroban-abacus-flashcards/commit/d8b4951d6317e5255e739b76ce10eea34ca39095))
+* **worksheets:** pre-generate preview on server to eliminate loading flash ([02c9187](https://github.com/antialias/soroban-abacus-flashcards/commit/02c918713d508ccd4f31b9c671c6d8cbe8f84036))
+* **worksheets:** redesign display options as toggle buttons ([ac3b749](https://github.com/antialias/soroban-abacus-flashcards/commit/ac3b74960506be3f7d9b03e558e6e60b8ce6af4a))
+* **worksheets:** simplify difficulty controls with collapsible regrouping pane ([bb363c0](https://github.com/antialias/soroban-abacus-flashcards/commit/bb363c0837a064db98f1145cf599af74907f3d80))
+* **worksheets:** update ConfigPanel with accurate page calculations ([2c0fbd9](https://github.com/antialias/soroban-abacus-flashcards/commit/2c0fbd90740c9cfc6510208f46954dc503fc294d))
+
 ## [2.10.1](https://github.com/antialias/soroban-abacus-flashcards/compare/abacus-react-v2.10.0...abacus-react-v2.10.1) (2025-11-05)
 
 
