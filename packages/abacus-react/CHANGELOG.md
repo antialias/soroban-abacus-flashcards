@@ -1,3 +1,10 @@
+## [2.13.2](https://github.com/antialias/soroban-abacus-flashcards/compare/abacus-react-v2.13.1...abacus-react-v2.13.2) (2025-11-08)
+
+
+### Bug Fixes
+
+* **abacus-react:** remove duplicate numeral rendering and fix dark mode colors ([fcbf0f5](https://github.com/antialias/soroban-abacus-flashcards/commit/fcbf0f5421a790784dc7cc286f9082c6d46746ee))
+
 ## [2.13.1](https://github.com/antialias/soroban-abacus-flashcards/compare/abacus-react-v2.13.0...abacus-react-v2.13.1) (2025-11-08)
 
 
