@@ -1,3 +1,16 @@
+# [2.13.0](https://github.com/antialias/soroban-abacus-flashcards/compare/abacus-react-v2.12.0...abacus-react-v2.13.0) (2025-11-08)
+
+
+### Bug Fixes
+
+* add missing color definitions to example route ([bc7ca12](https://github.com/antialias/soroban-abacus-flashcards/commit/bc7ca12158a03c3e0bfe87f34b1c8ad399e27007))
+* PDF generation now respects operator and digitRange settings ([8b8dfee](https://github.com/antialias/soroban-abacus-flashcards/commit/8b8dfeefbdf2f75300b20ddf731677a627d50438))
+
+
+### Features
+
+* **abacus-react:** add comprehensive Storybook stories for automatic theme detection ([8ef57cc](https://github.com/antialias/soroban-abacus-flashcards/commit/8ef57ccec5debaa0ffa1c0e36005bd478cde60f1))
+
 # [2.12.0](https://github.com/antialias/soroban-abacus-flashcards/compare/abacus-react-v2.11.0...abacus-react-v2.12.0) (2025-11-08)
 
 
