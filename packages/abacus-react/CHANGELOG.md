@@ -1,3 +1,33 @@
+# [2.14.0](https://github.com/antialias/soroban-abacus-flashcards/compare/abacus-react-v2.13.2...abacus-react-v2.14.0) (2025-11-08)
+
+
+### Bug Fixes
+
+* add light/dark mode support to tutorial tooltips and decomposition UI ([ea10249](https://github.com/antialias/soroban-abacus-flashcards/commit/ea10249e949008e6b82ba79869f40990edd1e997))
+* replace hardcoded colors with semantic tokens in HomeBlogSection ([e124096](https://github.com/antialias/soroban-abacus-flashcards/commit/e1240969149150c5de9e6976dd0c19a19ab5efa7))
+* use semantic tokens for nav bar transparent mode on hero ([d05c6a8](https://github.com/antialias/soroban-abacus-flashcards/commit/d05c6a8664450b26b0feae813b16b54f43f32cff))
+* **worksheets:** Add "Practice" difficulty profile for scaffolded regrouping mastery ([d23b606](https://github.com/antialias/soroban-abacus-flashcards/commit/d23b606642d0f72890d5449a4451c7bb3d44d7dd))
+* **worksheets:** Fix subtraction regrouping frequency bug ([8d8e55d](https://github.com/antialias/soroban-abacus-flashcards/commit/8d8e55d5c4e3daa5bf489fca7d89546aa289d1a3))
+
+
+### Features
+
+* add close button and theme support to mobile menu ([ea41b32](https://github.com/antialias/soroban-abacus-flashcards/commit/ea41b323d08f63ea81efa6d988ea3acf1a0b003a))
+* add function-based custom bead rendering and HTTP status code easter eggs ([fde5ae9](https://github.com/antialias/soroban-abacus-flashcards/commit/fde5ae916430c194de4b0d2aa5fd95f25b2f7a80))
+* add theme support to abacus style dropdown ([2e294ee](https://github.com/antialias/soroban-abacus-flashcards/commit/2e294ee820bdf01dde39c80cef85db39d5657d70))
+* add theme support to config panel components ([c868421](https://github.com/antialias/soroban-abacus-flashcards/commit/c8684213fa61a926cdf90fbdd1dc84c008bb6ea3))
+* add theme support to desktop hamburger menu ([ab9272b](https://github.com/antialias/soroban-abacus-flashcards/commit/ab9272bee61703af465264f3a8bb2dd6c270a9f3))
+* add theme support to MyAbacus button ([702c1c9](https://github.com/antialias/soroban-abacus-flashcards/commit/702c1c9af25e99960ee958d0ad5b631f48138488))
+* add theme support to orientation and generate panels ([e38775b](https://github.com/antialias/soroban-abacus-flashcards/commit/e38775b9910751c4cd1d7aed420324315f21537a))
+* add theme support to worksheet page container ([5c14925](https://github.com/antialias/soroban-abacus-flashcards/commit/5c14925d7dbfc6e30dc7b53d6824f6aa8c2f421e))
+* add theme support to worksheet preview ([693b679](https://github.com/antialias/soroban-abacus-flashcards/commit/693b67996599036f9eb20cc165f4200a4905a6dc))
+* implement full-screen mobile hamburger menu with portal ([615cd28](https://github.com/antialias/soroban-abacus-flashcards/commit/615cd288292f1def1a7a86fb36fd430debe976cf))
+* implement two-column landscape layout with smart viewport-based flexbox ([b57458b](https://github.com/antialias/soroban-abacus-flashcards/commit/b57458b039bb0826e264116fdde7237d0b7b0a75))
+* make mobile menu more responsive with larger touch targets ([3ad244f](https://github.com/antialias/soroban-abacus-flashcards/commit/3ad244f2d3993a62e1a129eb2618e53b11cf0b0d))
+* **worksheets:** filter operator-specific scaffolds from difficulty change descriptions ([cace1c7](https://github.com/antialias/soroban-abacus-flashcards/commit/cace1c75c6730402e4a4206ff54d59f7a18bf1f7))
+* **worksheets:** filter operator-specific scaffolds from preset summaries ([8407b07](https://github.com/antialias/soroban-abacus-flashcards/commit/8407b070f9a0940d4f5321afc0b60e97b2334a2f))
+* **worksheets:** integrate subtraction scaffolding into smart difficulty mode ([15bded1](https://github.com/antialias/soroban-abacus-flashcards/commit/15bded1ab852d405f74b6646688225720acdd843))
+
 ## [2.13.2](https://github.com/antialias/soroban-abacus-flashcards/compare/abacus-react-v2.13.1...abacus-react-v2.13.2) (2025-11-08)
 
 
