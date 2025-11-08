@@ -1,3 +1,10 @@
+## [2.13.1](https://github.com/antialias/soroban-abacus-flashcards/compare/abacus-react-v2.13.0...abacus-react-v2.13.1) (2025-11-08)
+
+
+### Bug Fixes
+
+* **abacus-react:** showNumbers prop was hardcoded to false, breaking numeral display ([de89dcd](https://github.com/antialias/soroban-abacus-flashcards/commit/de89dcddb3e6b5021cc0f90c68c4109f8f6c8907))
+
 # [2.13.0](https://github.com/antialias/soroban-abacus-flashcards/compare/abacus-react-v2.12.0...abacus-react-v2.13.0) (2025-11-08)
 
 
