@@ -112,7 +112,7 @@ export function validateProblemSpace(
   pages: number,
   digitRange: { min: number; max: number },
   pAnyStart: number,
-  operator: 'addition' | 'subtraction' | 'mixed'
+  operator: 'addition' | 'subtraction' | 'mixed' | 'fractions'
 ): ProblemSpaceValidation {
   const requestedProblems = problemsPerPage * pages
   const warnings: string[] = []
@@ -123,6 +123,9 @@ export function validateProblemSpace(
     const addSpace = estimateUniqueProblemSpace(digitRange, pAnyStart, 'addition')
     const subSpace = estimateUniqueProblemSpace(digitRange, pAnyStart, 'subtraction')
     estimatedSpace = addSpace + subSpace
+  } else if (operator === 'fractions') {
+    // Fractions have a very large combinatorial space when denominators are unconstrained
+    estimatedSpace = 1000000
   } else {
     estimatedSpace = estimateUniqueProblemSpace(digitRange, pAnyStart, operator)
   }
