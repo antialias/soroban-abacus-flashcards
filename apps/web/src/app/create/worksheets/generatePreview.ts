@@ -5,6 +5,7 @@ import type { WorksheetFormState } from '@/app/create/worksheets/types'
 import {
   generateMasteryMixedProblems,
   generateMixedProblems,
+  generateFractionProblems,
   generateProblems,
   generateSubtractionProblems,
 } from './problemGenerator'
@@ -86,7 +87,9 @@ export async function generateWorksheetPreview(
     let problems
 
     // Special handling for mastery + mixed mode
-    if (mode === 'mastery' && operator === 'mixed') {
+    if (operator === 'fractions') {
+      problems = generateFractionProblems(validatedConfig.total, validatedConfig.seed ?? Date.now())
+    } else if (mode === 'mastery' && operator === 'mixed') {
       // Query both skill configs
       const addSkillId = config.currentAdditionSkillId
       const subSkillId = config.currentSubtractionSkillId

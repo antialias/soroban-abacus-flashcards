@@ -8,7 +8,7 @@ import type { DisplayRules } from '../../displayRules'
 interface ProblemPreviewProps {
   displayRules: DisplayRules
   resolvedDisplayRules?: DisplayRules
-  operator?: 'addition' | 'subtraction' | 'mixed'
+  operator?: 'addition' | 'subtraction' | 'mixed' | 'fractions'
   digitRange?: { min: number; max: number }
   className?: string
 }

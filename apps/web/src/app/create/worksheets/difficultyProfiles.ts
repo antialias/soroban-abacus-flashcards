@@ -243,7 +243,7 @@ function describeScaffoldingChange(
   fromRules: DisplayRules,
   toRules: DisplayRules,
   direction: 'added' | 'reduced',
-  operator?: 'addition' | 'subtraction' | 'mixed'
+  operator?: 'addition' | 'subtraction' | 'mixed' | 'fractions'
 ): string {
   const changes: string[] = []
 
@@ -786,7 +786,7 @@ export function makeHarder(
     displayRules: DisplayRules
   },
   mode: DifficultyMode = 'both',
-  operator?: 'addition' | 'subtraction' | 'mixed'
+  operator?: 'addition' | 'subtraction' | 'mixed' | 'fractions'
 ): {
   pAnyStart: number
   pAllStart: number
@@ -989,7 +989,7 @@ export function makeEasier(
     displayRules: DisplayRules
   },
   mode: DifficultyMode = 'both',
-  operator?: 'addition' | 'subtraction' | 'mixed'
+  operator?: 'addition' | 'subtraction' | 'mixed' | 'fractions'
 ): {
   pAnyStart: number
   pAllStart: number

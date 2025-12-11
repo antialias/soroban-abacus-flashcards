@@ -9,7 +9,10 @@ import { ProblemPreview } from './ProblemPreview'
 export interface Tab {
   id: string
   label: string
-  icon: string | ((operator?: 'addition' | 'subtraction' | 'mixed') => string) | 'preview'
+  icon:
+    | string
+    | ((operator?: 'addition' | 'subtraction' | 'mixed' | 'fractions') => string)
+    | 'preview'
   subtitle?: (props: {
     mode?: 'custom' | 'manual' | 'mastery'
     difficultyProfile?: string
@@ -20,7 +23,7 @@ export interface Tab {
     pages?: number
     displayRules?: DisplayRules
     resolvedDisplayRules?: DisplayRules
-    operator?: 'addition' | 'subtraction' | 'mixed'
+    operator?: 'addition' | 'subtraction' | 'mixed' | 'fractions'
   }) => string | null
 }
 
@@ -31,6 +34,7 @@ export const TABS: Tab[] = [
     icon: (operator) => {
       if (operator === 'mixed') return '±'
       if (operator === 'subtraction') return '−'
+      if (operator === 'fractions') return '⅟'
       return '+'
     },
   },
@@ -115,7 +119,7 @@ export const TABS: Tab[] = [
 interface TabNavigationProps {
   activeTab: string
   onChange: (tabId: string) => void
-  operator?: 'addition' | 'subtraction' | 'mixed'
+  operator?: 'addition' | 'subtraction' | 'mixed' | 'fractions'
   mode?: 'custom' | 'manual' | 'mastery'
   difficultyProfile?: string
   interpolate?: boolean

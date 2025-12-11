@@ -112,7 +112,7 @@ export function validateProblemSpace(
   pages: number,
   digitRange: { min: number; max: number },
   pAnyStart: number,
-  operator: 'addition' | 'subtraction' | 'mixed'
+  operator: 'addition' | 'subtraction' | 'mixed' | 'fractions'
 ): ProblemSpaceValidation {
   const requestedProblems = problemsPerPage * pages
   const warnings: string[] = []
@@ -123,12 +123,15 @@ export function validateProblemSpace(
     const addSpace = estimateUniqueProblemSpace(digitRange, pAnyStart, 'addition')
     const subSpace = estimateUniqueProblemSpace(digitRange, pAnyStart, 'subtraction')
     estimatedSpace = addSpace + subSpace
+  } else if (operator === 'fractions') {
+    // Fractions have extremely large combinatorial space; treat as effectively infinite
+    estimatedSpace = Number.POSITIVE_INFINITY
   } else {
     estimatedSpace = estimateUniqueProblemSpace(digitRange, pAnyStart, operator)
   }
 
   // Calculate duplicate risk
-  const ratio = requestedProblems / estimatedSpace
+  const ratio = estimatedSpace === Number.POSITIVE_INFINITY ? 0 : requestedProblems / estimatedSpace
   let duplicateRisk: 'none' | 'low' | 'medium' | 'high' | 'extreme'
 
   if (ratio < 0.3) {
