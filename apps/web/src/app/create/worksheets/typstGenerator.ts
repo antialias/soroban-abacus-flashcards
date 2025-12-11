@@ -629,7 +629,7 @@ function generateFractionAnswerKeyTypst(
   ${
     qrCodeSvg
       ? `\\
-  #place(bottom + left, dx: 0.1in, dy: -0.1in)[#stack(dir: ttb, spacing: 2pt, align(center)[#image(bytes("${qrCodeSvg.replace(/"/g, '\\"').replace(/\n/g, '')}"), format: "svg", width: 0.63in, height: 0.63in)], align(center)[#text(size: 7pt, font: "Courier New")[${shareCode || 'PREVIEW'}]])]`)
+  #place(bottom + left, dx: 0.1in, dy: -0.1in)[#stack(dir: ttb, spacing: 2pt, align(center)[#image(bytes("${qrCodeSvg.replace(/"/g, '\\"').replace(/\n/g, '')}"), format: "svg", width: 0.63in, height: 0.63in)], align(center)[#text(size: 7pt, font: "Courier New")[${shareCode || 'PREVIEW'}]])]`
       : ''
   }
 ]
