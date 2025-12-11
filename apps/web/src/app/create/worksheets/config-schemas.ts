@@ -342,8 +342,8 @@ const additionConfigV4BaseSchema = z.object({
       message: 'min must be less than or equal to max',
     }),
 
-  // V4: Operator selection (addition, subtraction, or mixed)
-  operator: z.enum(['addition', 'subtraction', 'mixed']).default('addition'),
+  // V4: Operator selection (addition, subtraction, mixed, or fractions)
+  operator: z.enum(['addition', 'subtraction', 'mixed', 'fractions']).default('addition'),
 
   // Regrouping probabilities (shared between modes)
   pAnyStart: z.number().min(0).max(1),

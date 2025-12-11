@@ -3,7 +3,9 @@
 import { execSync } from 'child_process'
 import type { WorksheetFormState } from '@/app/create/worksheets/types'
 import {
+  createPRNG,
   generateMasteryMixedProblems,
+  generateFractionProblems,
   generateMixedProblems,
   generateProblems,
   generateSubtractionProblems,
@@ -12,6 +14,48 @@ import { getSkillById } from './skills'
 import { generateTypstSource } from './typstGenerator'
 import { validateProblemSpace } from './utils/validateProblemSpace'
 import { validateWorksheetConfig } from './validation'
+
+function renderFractionPageSvg(
+  pageProblems: ReturnType<typeof generateFractionProblems>,
+  config: WorksheetFormState,
+  pageIndex: number
+): string {
+  const width = config.orientation === 'portrait' ? 850 : 1100
+  const height = config.orientation === 'portrait' ? 1100 : 850
+  const margin = 48
+  const cols = config.cols ?? 4
+  const rows = Math.max(1, Math.ceil(pageProblems.length / cols))
+
+  const cellWidth = (width - margin * 2) / cols
+  const cellHeight = (height - margin * 2) / rows
+
+  const problemTexts = pageProblems
+    .map((problem, index) => {
+      const col = index % cols
+      const row = Math.floor(index / cols)
+      const x = margin + col * cellWidth + cellWidth / 2
+      const y = margin + row * cellHeight + cellHeight / 2
+
+      const label = problem
+        ? `${problem.numerator1}/${problem.denominator1} + ${problem.numerator2}/${problem.denominator2} =`
+        : ''
+
+      return `<g transform="translate(${x}, ${y})">
+        <text text-anchor="middle" dominant-baseline="middle" font-size="22" font-family="Inter, Arial" fill="#111827">${
+          (pageIndex * (config.problemsPerPage ?? 20)) + index + 1
+        }.) ${label}</text>
+      </g>`
+    })
+    .join('\n')
+
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}">
+    <rect x="0" y="0" width="${width}" height="${height}" fill="white"/>
+    <text x="${margin}" y="${margin - 16}" font-size="18" font-family="Inter, Arial" fill="#374151">
+      ${config.name || 'Fraction Practice'} • Page ${pageIndex + 1}
+    </text>
+    ${problemTexts}
+  </svg>`
+}
 
 export interface PreviewResult {
   success: boolean
@@ -64,13 +108,16 @@ export async function generateWorksheetPreview(
 
     // Validate problem space for duplicate risk
     const operator = validatedConfig.operator ?? 'addition'
-    const spaceValidation = validateProblemSpace(
-      validatedConfig.problemsPerPage,
-      validatedConfig.pages,
-      validatedConfig.digitRange,
-      validatedConfig.pAnyStart,
-      operator
-    )
+    const spaceValidation =
+      operator === 'fractions'
+        ? { warnings: [] }
+        : validateProblemSpace(
+            validatedConfig.problemsPerPage,
+            validatedConfig.pages,
+            validatedConfig.digitRange,
+            validatedConfig.pAnyStart,
+            operator
+          )
 
     if (spaceValidation.warnings.length > 0) {
       console.log('[PREVIEW] Problem space warnings:', spaceValidation.warnings)
@@ -78,6 +125,7 @@ export async function generateWorksheetPreview(
 
     // Generate all problems for full preview based on operator
     const mode = config.mode ?? 'custom'
+    const rand = createPRNG(validatedConfig.seed ?? Date.now() % 2147483647)
 
     console.log(
       `[PREVIEW] Step 2: Generating ${validatedConfig.total} problems (mode: ${mode}, operator: ${operator})...`
@@ -146,17 +194,51 @@ export async function generateWorksheetPreview(
                 validatedConfig.interpolate,
                 validatedConfig.seed
               )
-            : generateMixedProblems(
-                validatedConfig.total,
-                validatedConfig.digitRange,
-                validatedConfig.pAnyStart,
-                validatedConfig.pAllStart,
-                validatedConfig.interpolate,
-                validatedConfig.seed
-              )
+            : operator === 'fractions'
+              ? generateFractionProblems(validatedConfig.total, rand)
+              : generateMixedProblems(
+                  validatedConfig.total,
+                  validatedConfig.digitRange,
+                  validatedConfig.pAnyStart,
+                  validatedConfig.pAllStart,
+                  validatedConfig.interpolate,
+                  validatedConfig.seed
+                )
     }
 
     console.log(`[PREVIEW] Step 2: ✓ Generated ${problems.length} problems`)
+
+    if (operator === 'fractions') {
+      const problemsPerPage = validatedConfig.problemsPerPage ?? 20
+      const totalPages = Math.ceil(problems.length / problemsPerPage)
+      const start = startPage !== undefined ? Math.max(0, startPage) : 0
+      const end = endPage !== undefined ? Math.min(endPage, totalPages - 1) : totalPages - 1
+
+      if (start > end || start >= totalPages) {
+        return {
+          success: false,
+          error: `Invalid page range: start=${start}, end=${end}, totalPages=${totalPages}`,
+        }
+      }
+
+      const pages: string[] = []
+      for (let i = start; i <= end; i++) {
+        const startIndex = i * problemsPerPage
+        const pageProblems = problems.slice(startIndex, startIndex + problemsPerPage) as ReturnType<
+          typeof generateFractionProblems
+        >
+        pages.push(renderFractionPageSvg(pageProblems, validatedConfig, i))
+      }
+
+      return {
+        success: true,
+        pages,
+        totalPages,
+        startPage: start,
+        endPage: end,
+        warnings: spaceValidation.warnings.length > 0 ? spaceValidation.warnings : undefined,
+      }
+    }
 
     // Generate Typst sources (one per page)
     // Use placeholder URL for QR code in preview (actual URL will be generated when PDF is created)
@@ -280,6 +362,7 @@ export async function generateSinglePage(
     // This is unavoidable because problems are distributed across pages
     const operator = validatedConfig.operator ?? 'addition'
     const mode = config.mode ?? 'custom'
+    const rand = createPRNG(validatedConfig.seed ?? Date.now() % 2147483647)
 
     let problems
 
@@ -328,6 +411,8 @@ export async function generateSinglePage(
         validatedConfig.interpolate,
         validatedConfig.seed
       )
+    } else if (operator === 'fractions') {
+      problems = generateFractionProblems(validatedConfig.total, rand)
     } else if (operator === 'subtraction') {
       problems = generateSubtractionProblems(
         validatedConfig.total,
@@ -347,6 +432,20 @@ export async function generateSinglePage(
         validatedConfig.seed,
         validatedConfig.digitRange
       )
+    }
+
+    if (operator === 'fractions') {
+      const problemsPerPage = validatedConfig.problemsPerPage ?? 20
+      const startIndex = pageNumber * problemsPerPage
+      const pageProblems = problems.slice(startIndex, startIndex + problemsPerPage) as ReturnType<
+        typeof generateFractionProblems
+      >
+
+      return {
+        success: true,
+        page: renderFractionPageSvg(pageProblems, validatedConfig, pageNumber),
+        totalPages,
+      }
     }
 
     // Generate Typst source for ALL pages (lightweight operation)
