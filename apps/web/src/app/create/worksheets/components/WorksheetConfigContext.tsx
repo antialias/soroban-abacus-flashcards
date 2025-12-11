@@ -10,7 +10,7 @@ import type { WorksheetFormState } from '@/app/create/worksheets/types'
 export interface WorksheetConfigContextValue {
   formState: WorksheetFormState
   onChange: (updates: Partial<WorksheetFormState>) => void
-  operator: 'addition' | 'subtraction' | 'mixed'
+  operator: 'addition' | 'subtraction' | 'mixed' | 'fractions'
   isReadOnly?: boolean
 }
 
