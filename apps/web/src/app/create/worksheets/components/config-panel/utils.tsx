@@ -9,7 +9,7 @@ import { css } from '@styled/css'
  */
 export function getScaffoldingSummary(
   displayRules: any,
-  operator?: 'addition' | 'subtraction' | 'mixed'
+  operator?: 'addition' | 'subtraction' | 'mixed' | 'fractions'
 ): React.ReactNode {
   console.log('[getScaffoldingSummary] displayRules:', displayRules, 'operator:', operator)
 

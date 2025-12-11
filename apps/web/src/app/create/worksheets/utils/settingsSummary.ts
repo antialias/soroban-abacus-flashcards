@@ -10,6 +10,7 @@ export const SETTING_ICONS = {
     multiplication: '×',
     division: '÷',
     mixed: '±',
+    fractions: '¾',
   },
   difficulty: {
     smart: '🎯',

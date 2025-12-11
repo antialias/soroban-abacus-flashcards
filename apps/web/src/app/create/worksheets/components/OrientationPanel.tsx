@@ -25,7 +25,7 @@ interface OrientationPanelProps {
   // Config for problem space validation
   digitRange?: { min: number; max: number }
   pAnyStart?: number
-  operator?: 'addition' | 'subtraction' | 'mixed'
+  operator?: 'addition' | 'subtraction' | 'mixed' | 'fractions'
   mode?: 'custom' | 'mastery'
   // Layout options
   problemNumbers?: 'always' | 'never'
