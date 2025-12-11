@@ -1,7 +1,7 @@
 import { css } from '@styled/css'
 
 export interface OperatorIconProps {
-  operator: 'addition' | 'subtraction' | 'mixed'
+  operator: 'addition' | 'subtraction' | 'mixed' | 'fractions'
   size?: 'sm' | 'md' | 'lg' | 'xl'
   isDark?: boolean
   color?: 'gray' | 'green'
@@ -15,8 +15,9 @@ const sizeMap = {
   xl: 'xl',
 } as const
 
-function getOperatorSymbol(operator: 'addition' | 'subtraction' | 'mixed'): string {
+function getOperatorSymbol(operator: 'addition' | 'subtraction' | 'mixed' | 'fractions'): string {
   if (operator === 'mixed') return '±'
+  if (operator === 'fractions') return '¾'
   if (operator === 'subtraction') return '−'
   return '+'
 }

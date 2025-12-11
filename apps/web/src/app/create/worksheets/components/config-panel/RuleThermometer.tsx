@@ -102,7 +102,7 @@ export function RuleThermometer({
           const isAutoResolved = !isMixedMode && isAutoSelected && resolvedValue === option.value
 
           // Determine which operator to show
-          let operatorToShow: 'addition' | 'subtraction' | 'mixed' | null = null
+          let operatorToShow: 'addition' | 'subtraction' | 'mixed' | 'fractions' | null = null
           if (isAutoResolvedMixed) {
             if (additionDefersHere && subtractionDefersHere) {
               operatorToShow = 'mixed' // Both defer here
