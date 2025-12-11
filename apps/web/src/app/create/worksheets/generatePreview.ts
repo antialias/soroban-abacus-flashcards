@@ -3,6 +3,7 @@
 import { execSync } from 'child_process'
 import type { WorksheetFormState } from '@/app/create/worksheets/types'
 import {
+  generateFractionProblems,
   generateMasteryMixedProblems,
   generateMixedProblems,
   generateProblems,
@@ -127,33 +128,36 @@ export async function generateWorksheetPreview(
       )
     } else {
       // Standard problem generation
-      problems =
-        operator === 'addition'
-          ? generateProblems(
-              validatedConfig.total,
-              validatedConfig.pAnyStart,
-              validatedConfig.pAllStart,
-              validatedConfig.interpolate,
-              validatedConfig.seed,
-              validatedConfig.digitRange
-            )
-          : operator === 'subtraction'
-            ? generateSubtractionProblems(
-                validatedConfig.total,
-                validatedConfig.digitRange,
-                validatedConfig.pAnyStart,
-                validatedConfig.pAllStart,
-                validatedConfig.interpolate,
-                validatedConfig.seed
-              )
-            : generateMixedProblems(
-                validatedConfig.total,
-                validatedConfig.digitRange,
-                validatedConfig.pAnyStart,
-                validatedConfig.pAllStart,
-                validatedConfig.interpolate,
-                validatedConfig.seed
-              )
+      if (operator === 'addition') {
+        problems = generateProblems(
+          validatedConfig.total,
+          validatedConfig.pAnyStart,
+          validatedConfig.pAllStart,
+          validatedConfig.interpolate,
+          validatedConfig.seed,
+          validatedConfig.digitRange
+        )
+      } else if (operator === 'subtraction') {
+        problems = generateSubtractionProblems(
+          validatedConfig.total,
+          validatedConfig.digitRange,
+          validatedConfig.pAnyStart,
+          validatedConfig.pAllStart,
+          validatedConfig.interpolate,
+          validatedConfig.seed
+        )
+      } else if (operator === 'fractions') {
+        problems = generateFractionProblems(validatedConfig.total, validatedConfig.seed)
+      } else {
+        problems = generateMixedProblems(
+          validatedConfig.total,
+          validatedConfig.digitRange,
+          validatedConfig.pAnyStart,
+          validatedConfig.pAllStart,
+          validatedConfig.interpolate,
+          validatedConfig.seed
+        )
+      }
     }
 
     console.log(`[PREVIEW] Step 2: ✓ Generated ${problems.length} problems`)
@@ -328,6 +332,8 @@ export async function generateSinglePage(
         validatedConfig.interpolate,
         validatedConfig.seed
       )
+    } else if (operator === 'fractions') {
+      problems = generateFractionProblems(validatedConfig.total, validatedConfig.seed)
     } else if (operator === 'subtraction') {
       problems = generateSubtractionProblems(
         validatedConfig.total,

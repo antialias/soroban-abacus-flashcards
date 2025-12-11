@@ -2,8 +2,8 @@ import { css } from '@styled/css'
 import { OperatorIcon } from './OperatorIcon'
 
 export interface OperatorSectionProps {
-  operator: 'addition' | 'subtraction' | 'mixed' | undefined
-  onChange: (operator: 'addition' | 'subtraction' | 'mixed') => void
+  operator: 'addition' | 'subtraction' | 'mixed' | 'fractions' | undefined
+  onChange: (operator: 'addition' | 'subtraction' | 'mixed' | 'fractions') => void
   isDark?: boolean
 }
 
@@ -11,8 +11,13 @@ export function OperatorSection({ operator, onChange, isDark = false }: Operator
   // Derive checkbox states from operator value
   const additionChecked = operator === 'addition' || operator === 'mixed' || !operator
   const subtractionChecked = operator === 'subtraction' || operator === 'mixed'
+  const fractionsChecked = operator === 'fractions'
 
   const handleAdditionChange = (checked: boolean) => {
+    if (fractionsChecked) {
+      onChange(checked ? 'addition' : 'subtraction')
+      return
+    }
     if (!checked && !subtractionChecked) {
       // Can't uncheck if it's the only one checked
       return
@@ -27,6 +32,10 @@ export function OperatorSection({ operator, onChange, isDark = false }: Operator
   }
 
   const handleSubtractionChange = (checked: boolean) => {
+    if (fractionsChecked) {
+      onChange(checked ? 'subtraction' : 'addition')
+      return
+    }
     if (!checked && !additionChecked) {
       // Can't uncheck if it's the only one checked
       return
@@ -187,6 +196,69 @@ export function OperatorSection({ operator, onChange, isDark = false }: Operator
             </span>
           </div>
         </label>
+
+        {/* Fractions Selector */}
+        <label
+          data-action="toggle-fractions"
+          className={css({
+            display: 'flex',
+            alignItems: 'center',
+            gap: '3',
+            cursor: 'pointer',
+            px: '3',
+            py: '2.5',
+            rounded: 'lg',
+            border: '2px solid',
+            transition: 'all 0.2s',
+            bg: fractionsChecked
+              ? isDark
+                ? 'brand.900'
+                : 'brand.50'
+              : isDark
+                ? 'gray.700'
+                : 'white',
+            borderColor: fractionsChecked ? 'brand.500' : isDark ? 'gray.600' : 'gray.300',
+            _hover: {
+              borderColor: 'brand.400',
+            },
+          })}
+        >
+          <input
+            type="radio"
+            checked={fractionsChecked}
+            onChange={(e) => onChange(e.target.checked ? 'fractions' : 'addition')}
+            className={css({
+              width: '5',
+              height: '5',
+              cursor: 'pointer',
+              accentColor: 'brand.600',
+              flexShrink: 0,
+            })}
+          />
+          <div
+            className={css({
+              display: 'flex',
+              alignItems: 'center',
+              gap: '2',
+              flex: 1,
+              minWidth: 0,
+            })}
+          >
+            <OperatorIcon operator="fractions" isDark={isDark} />
+            <span
+              className={css({
+                fontSize: 'sm',
+                fontWeight: 'semibold',
+                color: isDark ? 'gray.200' : 'gray.700',
+                '@media (max-width: 200px)': {
+                  fontSize: 'xs',
+                },
+              })}
+            >
+              Mixed denominator fractions
+            </span>
+          </div>
+        </label>
       </div>
 
       <p
@@ -196,11 +268,13 @@ export function OperatorSection({ operator, onChange, isDark = false }: Operator
           lineHeight: '1.5',
         })}
       >
-        {additionChecked && subtractionChecked
-          ? 'Problems will randomly use addition or subtraction'
-          : subtractionChecked
-            ? 'All problems will be subtraction'
-            : 'All problems will be addition'}
+        {fractionsChecked
+          ? 'All problems will be mixed-denominator fraction addition'
+          : additionChecked && subtractionChecked
+            ? 'Problems will randomly use addition or subtraction'
+            : subtractionChecked
+              ? 'All problems will be subtraction'
+              : 'All problems will be addition'}
       </p>
     </div>
   )
