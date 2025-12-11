@@ -2,8 +2,8 @@ import { css } from '@styled/css'
 import { OperatorIcon } from './OperatorIcon'
 
 export interface OperatorSectionProps {
-  operator: 'addition' | 'subtraction' | 'mixed' | undefined
-  onChange: (operator: 'addition' | 'subtraction' | 'mixed') => void
+  operator: 'addition' | 'subtraction' | 'mixed' | 'fractions' | undefined
+  onChange: (operator: 'addition' | 'subtraction' | 'mixed' | 'fractions') => void
   isDark?: boolean
 }
 
@@ -11,6 +11,7 @@ export function OperatorSection({ operator, onChange, isDark = false }: Operator
   // Derive checkbox states from operator value
   const additionChecked = operator === 'addition' || operator === 'mixed' || !operator
   const subtractionChecked = operator === 'subtraction' || operator === 'mixed'
+  const fractionsChecked = operator === 'fractions'
 
   const handleAdditionChange = (checked: boolean) => {
     if (!checked && !subtractionChecked) {
@@ -38,6 +39,10 @@ export function OperatorSection({ operator, onChange, isDark = false }: Operator
     } else {
       onChange('addition')
     }
+  }
+
+  const handleFractionsSelect = () => {
+    onChange('fractions')
   }
 
   return (
@@ -187,6 +192,85 @@ export function OperatorSection({ operator, onChange, isDark = false }: Operator
             </span>
           </div>
         </label>
+
+        {/* Mixed-Denominator Fractions */}
+        <label
+          data-action="toggle-fractions"
+          className={css({
+            display: 'flex',
+            alignItems: 'center',
+            gap: '3',
+            cursor: 'pointer',
+            px: '3',
+            py: '2.5',
+            rounded: 'lg',
+            border: '2px solid',
+            transition: 'all 0.2s',
+            bg: fractionsChecked
+              ? isDark
+                ? 'brand.900'
+                : 'brand.50'
+              : isDark
+                ? 'gray.700'
+                : 'white',
+            borderColor: fractionsChecked ? 'brand.500' : isDark ? 'gray.600' : 'gray.300',
+            _hover: {
+              borderColor: 'brand.400',
+            },
+          })}
+        >
+          <input
+            type="radio"
+            checked={fractionsChecked}
+            onChange={handleFractionsSelect}
+            className={css({
+              width: '5',
+              height: '5',
+              cursor: 'pointer',
+              accentColor: 'brand.600',
+              flexShrink: 0,
+            })}
+          />
+          <div
+            className={css({
+              display: 'flex',
+              alignItems: 'center',
+              gap: '2',
+              flex: 1,
+              minWidth: 0,
+            })}
+          >
+            <OperatorIcon operator="fractions" isDark={isDark} />
+            <div
+              className={css({
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '0.5',
+                color: isDark ? 'gray.200' : 'gray.700',
+              })}
+            >
+              <span
+                className={css({
+                  fontSize: 'sm',
+                  fontWeight: 'semibold',
+                  '@media (max-width: 200px)': {
+                    fontSize: 'xs',
+                  },
+                })}
+              >
+                Mixed Denominator Fractions
+              </span>
+              <span
+                className={css({
+                  fontSize: 'xs',
+                  color: isDark ? 'gray.400' : 'gray.600',
+                })}
+              >
+                Build fluency adding unlike denominators.
+              </span>
+            </div>
+          </div>
+        </label>
       </div>
 
       <p
@@ -196,11 +280,13 @@ export function OperatorSection({ operator, onChange, isDark = false }: Operator
           lineHeight: '1.5',
         })}
       >
-        {additionChecked && subtractionChecked
-          ? 'Problems will randomly use addition or subtraction'
-          : subtractionChecked
-            ? 'All problems will be subtraction'
-            : 'All problems will be addition'}
+        {fractionsChecked
+          ? 'All problems will be mixed-denominator fraction addition'
+          : additionChecked && subtractionChecked
+            ? 'Problems will randomly use addition or subtraction'
+            : subtractionChecked
+              ? 'All problems will be subtraction'
+              : 'All problems will be addition'}
       </p>
     </div>
   )
