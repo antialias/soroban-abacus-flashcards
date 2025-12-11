@@ -2,8 +2,8 @@ import { css } from '@styled/css'
 import { OperatorIcon } from './OperatorIcon'
 
 export interface OperatorSectionProps {
-  operator: 'addition' | 'subtraction' | 'mixed' | undefined
-  onChange: (operator: 'addition' | 'subtraction' | 'mixed') => void
+  operator: 'addition' | 'subtraction' | 'mixed' | 'fractions' | undefined
+  onChange: (operator: 'addition' | 'subtraction' | 'mixed' | 'fractions') => void
   isDark?: boolean
 }
 
@@ -187,6 +187,67 @@ export function OperatorSection({ operator, onChange, isDark = false }: Operator
             </span>
           </div>
         </label>
+
+        {/* Fractions Toggle */}
+        <label
+          data-action="toggle-fractions"
+          className={css({
+            display: 'flex',
+            alignItems: 'center',
+            gap: '3',
+            cursor: 'pointer',
+            px: '3',
+            py: '2.5',
+            rounded: 'lg',
+            border: '2px solid',
+            transition: 'all 0.2s',
+            bg:
+              operator === 'fractions'
+                ? isDark
+                  ? 'brand.900'
+                  : 'brand.50'
+                : isDark
+                  ? 'gray.700'
+                  : 'white',
+            borderColor: operator === 'fractions' ? 'brand.500' : isDark ? 'gray.600' : 'gray.300',
+            _hover: {
+              borderColor: 'brand.400',
+            },
+          })}
+        >
+          <input
+            type="radio"
+            checked={operator === 'fractions'}
+            onChange={() => onChange('fractions')}
+            className={css({
+              width: '5',
+              height: '5',
+              cursor: 'pointer',
+              accentColor: 'brand.600',
+              flexShrink: 0,
+            })}
+          />
+          <div
+            className={css({
+              display: 'flex',
+              alignItems: 'center',
+              gap: '2',
+              flex: 1,
+              minWidth: 0,
+            })}
+          >
+            <OperatorIcon operator="addition" isDark={isDark} />
+            <span
+              className={css({
+                fontSize: 'sm',
+                fontWeight: 'semibold',
+                color: isDark ? 'gray.200' : 'gray.700',
+              })}
+            >
+              Mixed Denominator Fractions
+            </span>
+          </div>
+        </label>
       </div>
 
       <p
@@ -196,11 +257,13 @@ export function OperatorSection({ operator, onChange, isDark = false }: Operator
           lineHeight: '1.5',
         })}
       >
-        {additionChecked && subtractionChecked
-          ? 'Problems will randomly use addition or subtraction'
-          : subtractionChecked
-            ? 'All problems will be subtraction'
-            : 'All problems will be addition'}
+        {operator === 'fractions'
+          ? 'All problems will add fractions with different denominators'
+          : additionChecked && subtractionChecked
+            ? 'Problems will randomly use addition or subtraction'
+            : subtractionChecked
+              ? 'All problems will be subtraction'
+              : 'All problems will be addition'}
       </p>
     </div>
   )

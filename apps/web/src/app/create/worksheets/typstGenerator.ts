@@ -1,6 +1,6 @@
 // Typst document generator for addition worksheets
 
-import type { WorksheetConfig, WorksheetProblem } from '@/app/create/worksheets/types'
+import type { FractionProblem, WorksheetConfig, WorksheetProblem } from '@/app/create/worksheets/types'
 import { resolveDisplayForProblem } from './displayRules'
 import { analyzeProblem, analyzeSubtractionProblem } from './problemAnalysis'
 import { generateQRCodeSVG } from './qrCodeGenerator'
@@ -24,6 +24,13 @@ function generateWorksheetDescription(config: WorksheetConfig): {
   title: string
   scaffolding: string
 } {
+  if (config.operator === 'fractions') {
+    return {
+      title: 'Fraction addition (mixed denominators)',
+      scaffolding: 'No scaffolding elements required',
+    }
+  }
+
   // Line 1: Digit range + operator + regrouping percentage
   const parts: string[] = []
 
@@ -116,6 +123,26 @@ function chunkProblems(problems: WorksheetProblem[], pageSize: number): Workshee
   return pages
 }
 
+function gcd(a: number, b: number): number {
+  return b === 0 ? Math.abs(a) : gcd(b, a % b)
+}
+
+function lcm(a: number, b: number): number {
+  return Math.abs((a * b) / gcd(a, b))
+}
+
+function addAndSimplifyFractions(problem: FractionProblem) {
+  const commonDenominator = lcm(problem.aDenominator, problem.bDenominator)
+  const numerator =
+    problem.aNumerator * (commonDenominator / problem.aDenominator) +
+    problem.bNumerator * (commonDenominator / problem.bDenominator)
+  const divisor = gcd(numerator, commonDenominator)
+  return {
+    numerator: numerator / divisor,
+    denominator: commonDenominator / divisor,
+  }
+}
+
 /**
  * Calculate maximum number of digits in any problem on this page
  * Returns max digits across all operands (handles both addition and subtraction)
@@ -128,11 +155,20 @@ function calculateMaxDigits(problems: WorksheetProblem[]): number {
       const digitsB = problem.b.toString().length
       const maxProblemDigits = Math.max(digitsA, digitsB)
       maxDigits = Math.max(maxDigits, maxProblemDigits)
-    } else {
+    } else if (problem.operator === 'sub') {
       // Subtraction
       const digitsMinuend = problem.minuend.toString().length
       const digitsSubtrahend = problem.subtrahend.toString().length
       const maxProblemDigits = Math.max(digitsMinuend, digitsSubtrahend)
+      maxDigits = Math.max(maxDigits, maxProblemDigits)
+    } else {
+      const fractionProblem = problem as FractionProblem
+      const maxProblemDigits = Math.max(
+        fractionProblem.aNumerator.toString().length,
+        fractionProblem.aDenominator.toString().length,
+        fractionProblem.bNumerator.toString().length,
+        fractionProblem.bDenominator.toString().length
+      )
       maxDigits = Math.max(maxDigits, maxProblemDigits)
     }
   }
@@ -596,6 +632,12 @@ export async function generateTypstSource(
   shareUrl?: string,
   domain?: string
 ): Promise<string[]> {
+  const hasFractionProblems = problems.some((p) => (p as WorksheetProblem).operator === 'fractions')
+
+  if (hasFractionProblems) {
+    return await generateFractionTypstSource(config, problems as FractionProblem[], shareUrl, domain)
+  }
+
   // Use the problemsPerPage directly from config (primary state)
   const problemsPerPage = config.problemsPerPage
   const rowsPerPage = problemsPerPage / config.cols
@@ -650,4 +692,134 @@ export async function generateTypstSource(
   }
 
   return worksheetPages
+}
+
+function generateFractionPageTypst(
+  config: WorksheetConfig,
+  pageProblems: FractionProblem[],
+  problemOffset: number,
+  qrCodeSvg?: string,
+  shareCode?: string,
+  domain?: string
+): string {
+  const margin = 0.4
+  const problemData = pageProblems
+    .map((p, idx) => {
+      const answer = addAndSimplifyFractions(p)
+      return `  (number: ${problemOffset + idx + 1}, aNum: ${p.aNumerator}, aDen: ${p.aDenominator}, bNum: ${p.bNumerator}, bDen: ${p.bDenominator}, ansNum: ${answer.numerator}, ansDen: ${answer.denominator}),`
+    })
+    .join('\n')
+
+  return `#let fraction-problems = (
+${problemData}
+)
+
+#page(
+  paper: (${config.page.wIn}in, ${config.page.hIn}in),
+  margin: (${margin}in, ${margin}in),
+  header: align(center)[
+    #text(size: 14pt, weight: 'bold')[${config.name}]
+    #v(6pt)
+    #text(size: 10pt)[Fraction Addition (Mixed Denominators)]
+  ],
+  footer: align(center)[
+    #text(size: 8pt)[${domain || 'abaci.one'}]
+  ],
+)[
+  #grid(columns: ${config.cols}, gutter: 0.3in)[
+    ..for p in fraction-problems {
+      box(stroke: 0.5pt, inset: 10pt)[
+        #stack(dir: ttb, spacing: 6pt)[
+          #align(center)[
+            #text(size: 13pt)[#frac(p.aNum, p.aDen) + #frac(p.bNum, p.bDen) = \h(30pt)]
+          ]
+          #align(right)[#text(size: 8pt)[#p.number]]
+        ]
+      ]
+    }
+  ]
+  ${
+    qrCodeSvg
+      ? `#place(bottom + left, dx: 0.1in, dy: -0.05in)[#stack(dir: ttb, spacing: 2pt, align(center)[#image(bytes("${qrCodeSvg.replace(/"/g, '\\"').replace(/\n/g, '')}"), format: "svg", width: 0.63in, height: 0.63in)], align(center)[#text(size: 7pt, font: "Courier New")[${shareCode || 'PREVIEW'}]])]`
+      : ''
+  }
+]
+`
+}
+
+function generateFractionAnswerKey(
+  config: WorksheetConfig,
+  problems: FractionProblem[],
+  qrCodeSvg?: string,
+  shareCode?: string
+): string[] {
+  const margin = 0.4
+  const answerLines = problems
+    .map((p, idx) => {
+      const answer = addAndSimplifyFractions(p)
+      return `  #text(size: 11pt)[${idx + 1}. #frac(${p.aNumerator}, ${p.aDenominator}) + #frac(${p.bNumerator}, ${p.bDenominator}) = #frac(${answer.numerator}, ${answer.denominator})]`
+    })
+    .join('\n')
+
+  const qrBlock =
+    qrCodeSvg && shareCode
+      ? `#place(bottom + left, dx: 0.1in, dy: -0.05in)[#stack(dir: ttb, spacing: 2pt, align(center)[#image(bytes("${qrCodeSvg.replace(/"/g, '\\"').replace(/\n/g, '')}"), format: "svg", width: 0.63in, height: 0.63in)], align(center)[#text(size: 7pt, font: "Courier New")[${shareCode}])])]`
+      : ''
+
+  return [
+    `#page(
+  paper: (${config.page.wIn}in, ${config.page.hIn}in),
+  margin: (${margin}in, ${margin}in),
+  header: align(center)[#text(size: 14pt, weight: 'bold')[Answer Key - Fractions]],
+)[
+  #stack(dir: ttb, spacing: 6pt)[
+${answerLines}
+  ]
+  ${qrBlock}
+]
+`,
+  ]
+}
+
+async function generateFractionTypstSource(
+  config: WorksheetConfig,
+  problems: FractionProblem[],
+  shareUrl?: string,
+  domain?: string
+): Promise<string[]> {
+  const problemsPerPage = config.problemsPerPage
+  const pages = chunkProblems(problems, problemsPerPage)
+
+  let qrCodeSvg: string | undefined
+  let shareCode: string | undefined
+  if (config.includeQRCode && shareUrl) {
+    qrCodeSvg = await generateQRCodeSVG(shareUrl, 200)
+    shareCode = extractShareCode(shareUrl)
+  }
+
+  let brandDomain = domain
+  if (!brandDomain && shareUrl) {
+    try {
+      brandDomain = new URL(shareUrl).hostname
+    } catch {
+      // Ignore invalid URL and fall back to default
+    }
+  }
+
+  const fractionPages = pages.map((page, pageIndex) =>
+    generateFractionPageTypst(
+      config,
+      page,
+      pageIndex * problemsPerPage,
+      qrCodeSvg,
+      shareCode,
+      brandDomain
+    )
+  )
+
+  if (config.includeAnswerKey) {
+    return [...fractionPages, ...generateFractionAnswerKey(config, problems, qrCodeSvg, shareCode)]
+  }
+
+  return fractionPages
 }

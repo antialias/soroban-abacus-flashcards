@@ -2,6 +2,7 @@
 
 import type {
   AdditionProblem,
+  FractionProblem,
   ProblemCategory,
   SubtractionProblem,
   WorksheetProblem,
@@ -1265,6 +1266,52 @@ export function generateMixedProblems(
       )
       problems.push(subProblems[0])
     }
+  }
+
+  return problems
+}
+
+export function generateFractionProblems(
+  total: number,
+  seed: number,
+  options: {
+    minNumerator?: number
+    maxNumerator?: number
+    minDenominator?: number
+    maxDenominator?: number
+  } = {}
+): FractionProblem[] {
+  const {
+    minNumerator = 1,
+    maxNumerator = 9,
+    minDenominator = 2,
+    maxDenominator = 12,
+  } = options
+
+  const rand = createPRNG(seed)
+  const problems: FractionProblem[] = []
+
+  const randomFraction = () => {
+    const denominator = randint(minDenominator, maxDenominator, rand)
+    const numerator = randint(minNumerator, Math.max(minNumerator, denominator - 1), rand)
+    return { numerator, denominator }
+  }
+
+  for (let i = 0; i < total; i++) {
+    let a = randomFraction()
+    let b = randomFraction()
+
+    while (a.denominator === b.denominator) {
+      b = randomFraction()
+    }
+
+    problems.push({
+      aNumerator: a.numerator,
+      aDenominator: a.denominator,
+      bNumerator: b.numerator,
+      bDenominator: b.denominator,
+      operator: 'fractions',
+    })
   }
 
   return problems

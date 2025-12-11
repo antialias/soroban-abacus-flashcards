@@ -343,7 +343,7 @@ const additionConfigV4BaseSchema = z.object({
     }),
 
   // V4: Operator selection (addition, subtraction, or mixed)
-  operator: z.enum(['addition', 'subtraction', 'mixed']).default('addition'),
+  operator: z.enum(['addition', 'subtraction', 'mixed', 'fractions']).default('addition'),
 
   // Regrouping probabilities (shared between modes)
   pAnyStart: z.number().min(0).max(1),
