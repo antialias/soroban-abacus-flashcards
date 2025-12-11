@@ -140,7 +140,7 @@ async function fetchExample(options: {
   showTenFrames: boolean
   showTenFramesForAll: boolean
   showBorrowNotation: boolean
-  operator: 'addition' | 'subtraction' | 'mixed'
+  operator: 'addition' | 'subtraction' | 'mixed' | 'fractions'
   addend1?: number
   addend2?: number
   minuend?: number

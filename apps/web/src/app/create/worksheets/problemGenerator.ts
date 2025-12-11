@@ -1269,3 +1269,45 @@ export function generateMixedProblems(
 
   return problems
 }
+
+function gcd(a: number, b: number): number {
+  return b === 0 ? Math.abs(a) : gcd(b, a % b)
+}
+
+function simplifyFraction(numerator: number, denominator: number): { numerator: number; denominator: number } {
+  const divisor = gcd(numerator, denominator)
+  return { numerator: numerator / divisor, denominator: denominator / divisor }
+}
+
+/**
+ * Generate addition problems with mixed denominators (fractions)
+ */
+export function generateFractionProblems(total: number, seed: number): FractionProblem[] {
+  const rand = createPRNG(seed)
+  const problems: FractionProblem[] = []
+
+  for (let i = 0; i < total; i++) {
+    let leftDen = randint(2, 12, rand)
+    let rightDen = randint(2, 12, rand)
+
+    // Ensure mixed denominators
+    if (rightDen === leftDen) {
+      rightDen = ((rightDen % 12) + 1) + 1 // rotate to a different denominator between 2-13
+      if (rightDen > 12) rightDen = 2
+    }
+
+    const leftNum = randint(1, leftDen - 1, rand)
+    const rightNum = randint(1, rightDen - 1, rand)
+
+    const left = simplifyFraction(leftNum, leftDen)
+    const right = simplifyFraction(rightNum, rightDen)
+
+    problems.push({
+      left,
+      right,
+      operator: 'fraction',
+    })
+  }
+
+  return problems
+}
