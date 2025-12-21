@@ -2,6 +2,7 @@
 
 import type {
   AdditionProblem,
+  FractionProblem,
   ProblemCategory,
   SubtractionProblem,
   WorksheetProblem,
@@ -38,6 +39,42 @@ function shuffleArray<T>(arr: T[], rand: () => number): T[] {
     ;[shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]
   }
   return shuffled
+}
+
+/**
+ * Generate mixed-denominator fraction addition problems
+ */
+export function generateFractionProblems(
+  total: number,
+  rand: () => number
+): FractionProblem[] {
+  const problems: FractionProblem[] = []
+
+  const pickDenominator = () => randint(2, 12, rand)
+  const pickNumerator = (denominator: number) => randint(1, denominator - 1, rand)
+
+  while (problems.length < total) {
+    const denominator1 = pickDenominator()
+    let denominator2 = pickDenominator()
+
+    // Ensure denominators are different to enforce mixed denominators
+    if (denominator2 === denominator1) {
+      denominator2 = ((denominator2 + 1 - 2) % 11) + 2 // rotate within 2-12
+    }
+
+    const numerator1 = pickNumerator(denominator1)
+    const numerator2 = pickNumerator(denominator2)
+
+    problems.push({
+      numerator1,
+      denominator1,
+      numerator2,
+      denominator2,
+      operator: 'fraction',
+    })
+  }
+
+  return problems
 }
 
 /**

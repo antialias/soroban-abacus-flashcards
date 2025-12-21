@@ -165,10 +165,10 @@ export function validateWorksheetConfig(formState: WorksheetFormState): Validati
     errors.push('Digit range min cannot be greater than max')
   }
 
-  // V4: Validate operator (addition, subtraction, or mixed)
+  // V4: Validate operator (addition, subtraction, mixed, or fractions)
   const operator = formState.operator ?? 'addition'
-  if (!['addition', 'subtraction', 'mixed'].includes(operator)) {
-    errors.push('Operator must be "addition", "subtraction", or "mixed"')
+  if (!['addition', 'subtraction', 'mixed', 'fractions'].includes(operator)) {
+    errors.push('Operator must be "addition", "subtraction", "mixed", or "fractions"')
   }
 
   // Validate seed (must be positive integer)
