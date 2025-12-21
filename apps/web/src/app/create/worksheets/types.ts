@@ -116,7 +116,7 @@ export type WorksheetFormState = Partial<Omit<AdditionConfigV4Custom, 'version'>
 /**
  * Worksheet operator type
  */
-export type WorksheetOperator = 'addition' | 'subtraction' | 'mixed'
+export type WorksheetOperator = 'addition' | 'subtraction' | 'mixed' | 'fractions'
 
 /**
  * A single addition problem
@@ -137,9 +137,18 @@ export interface SubtractionProblem {
 }
 
 /**
+ * A single fraction addition problem with mixed denominators
+ */
+export interface FractionProblem {
+  left: { numerator: number; denominator: number }
+  right: { numerator: number; denominator: number }
+  operator: 'fraction'
+}
+
+/**
  * Unified problem type (addition or subtraction)
  */
-export type WorksheetProblem = AdditionProblem | SubtractionProblem
+export type WorksheetProblem = AdditionProblem | SubtractionProblem | FractionProblem
 
 /**
  * Validation result

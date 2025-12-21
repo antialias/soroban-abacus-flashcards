@@ -1,6 +1,6 @@
 // Typst document generator for addition worksheets
 
-import type { WorksheetConfig, WorksheetProblem } from '@/app/create/worksheets/types'
+import type { FractionProblem, WorksheetConfig, WorksheetProblem } from '@/app/create/worksheets/types'
 import { resolveDisplayForProblem } from './displayRules'
 import { analyzeProblem, analyzeSubtractionProblem } from './problemAnalysis'
 import { generateQRCodeSVG } from './qrCodeGenerator'
@@ -114,6 +114,21 @@ function chunkProblems(problems: WorksheetProblem[], pageSize: number): Workshee
     pages.push(problems.slice(i, i + pageSize))
   }
   return pages
+}
+
+function gcdInt(a: number, b: number): number {
+  return b === 0 ? Math.abs(a) : gcdInt(b, a % b)
+}
+
+function addFractions(problem: FractionProblem): { numerator: number; denominator: number } {
+  const lcmDenominator =
+    (problem.left.denominator * problem.right.denominator) /
+    gcdInt(problem.left.denominator, problem.right.denominator)
+  const numerator =
+    problem.left.numerator * (lcmDenominator / problem.left.denominator) +
+    problem.right.numerator * (lcmDenominator / problem.right.denominator)
+  const divisor = gcdInt(numerator, lcmDenominator)
+  return { numerator: numerator / divisor, denominator: lcmDenominator / divisor }
 }
 
 /**
@@ -448,9 +463,11 @@ ${(() => {
 function calculateAnswer(problem: WorksheetProblem): number {
   if (problem.operator === 'add') {
     return problem.a + problem.b
-  } else {
+  } else if (problem.operator === 'sub') {
     return problem.minuend - problem.subtrahend
   }
+  const fractionAnswer = addFractions(problem as FractionProblem)
+  return fractionAnswer.numerator / fractionAnswer.denominator
 }
 
 /**
@@ -462,14 +479,164 @@ function formatProblemWithAnswer(
   index: number,
   showNumber: boolean
 ): string {
-  const answer = calculateAnswer(problem)
+  const prefix = showNumber ? `*${index + 1}.* ` : ''
   if (problem.operator === 'add') {
-    const prefix = showNumber ? `*${index + 1}.* ` : ''
-    return `${prefix}${problem.a} + ${problem.b} = *${answer}*`
-  } else {
-    const prefix = showNumber ? `*${index + 1}.* ` : ''
-    return `${prefix}${problem.minuend} − ${problem.subtrahend} = *${answer}*`
+    return `${prefix}${problem.a} + ${problem.b} = *${calculateAnswer(problem)}*`
   }
+  if (problem.operator === 'sub') {
+    return `${prefix}${problem.minuend} − ${problem.subtrahend} = *${calculateAnswer(problem)}*`
+  }
+  const answer = addFractions(problem as FractionProblem)
+  const left = (problem as FractionProblem).left
+  const right = (problem as FractionProblem).right
+  return `${prefix}${left.numerator}/${left.denominator} + ${right.numerator}/${right.denominator} = *${answer.numerator}/${answer.denominator}*`
+}
+
+function generateFractionPageTypst(
+  config: WorksheetConfig,
+  pageProblems: WorksheetProblem[],
+  problemOffset: number,
+  rowsPerPage: number,
+  qrCodeSvg?: string,
+  shareCode?: string,
+  domain?: string
+): string {
+  const actualRows = Math.ceil(pageProblems.length / config.cols)
+  const margin = 0.4
+  const contentWidth = config.page.wIn - margin * 2
+  const contentHeight = config.page.hIn - margin * 2
+  const headerHeight = 0.35
+  const availableHeight = contentHeight - headerHeight
+  const problemBoxHeight = availableHeight / actualRows
+  const problemBoxWidth = contentWidth / config.cols
+
+  const problemsTypst = pageProblems
+    .map((p) => {
+      const fraction = p as FractionProblem
+      return `  (left_num: ${fraction.left.numerator}, left_den: ${fraction.left.denominator}, right_num: ${fraction.right.numerator}, right_den: ${fraction.right.denominator}),`
+    })
+    .join('\n')
+
+  const description = generateWorksheetDescription(config)
+  const brandDomain = domain || 'abaci.one'
+  const breadcrumb = 'Create › Worksheets'
+
+  return String.raw`
+// fraction-worksheet-page.typ (auto-generated)
+
+#set page(
+  width: ${config.page.wIn}in,
+  height: ${config.page.hIn}in,
+  margin: ${margin}in,
+  fill: white
+)
+#set text(size: ${config.fontSize}pt, font: "New Computer Modern Math")
+
+#let problems = (
+${problemsTypst}
+)
+
+#block(breakable: false)[
+  #box(
+    width: 100%,
+    stroke: (bottom: 1pt + gray),
+    inset: (bottom: 2pt),
+  )[
+    #grid(
+      columns: (1fr, auto),
+      column-gutter: 0.1in,
+      align: (left + top, right + top),
+      [
+        #text(size: 0.85em, weight: "bold")[${description.title}] \\
+        #text(size: 0.6em, fill: gray.darken(20%))[${description.scaffolding}]
+      ],
+      [
+        #stack(dir: ttb, spacing: 1pt, align(right)[
+          #text(size: 0.6em)[*Date:* ${config.date}]
+        ], align(right)[
+          #text(size: 0.5em, fill: gray.darken(10%), weight: "medium")[${brandDomain}]
+        ], align(right)[
+          #text(size: 0.4em, fill: gray)[${breadcrumb}]
+        ])
+      ]
+    )
+  ]
+
+  #v(-0.25in)
+
+  #let fraction-box(problem, index) = {
+    box(
+      inset: (top: 0pt, bottom: -${(problemBoxHeight / 3).toFixed(3)}in, left: 0pt, right: 0pt),
+      width: ${problemBoxWidth}in,
+      height: ${problemBoxHeight}in,
+      stroke: (thickness: 1pt, dash: "dashed", paint: gray.darken(20%))
+    )[
+      #if index != none {
+        place(top + left, dx: 0.02in, dy: 0.02in)[
+          #text(size: ${(problemBoxHeight * 72 * 0.35).toFixed(1)}pt, weight: "bold", font: "New Computer Modern Math")[\##(index + 1).]
+        ]
+      }
+      #align(center + horizon)[
+        #text(size: ${config.fontSize}pt)[#frac(problem.left_num, problem.left_den) + #frac(problem.right_num, problem.right_den) = ]
+      ]
+    ]
+  }
+
+  #grid(
+    columns: ${config.cols},
+    column-gutter: 0pt,
+    row-gutter: 0pt,
+    ..for r in range(0, ${actualRows}) {
+      for c in range(0, ${config.cols}) {
+        let idx = r * ${config.cols} + c
+        if idx < problems.len() {
+          (fraction-box(problems.at(idx), ${problemOffset} + idx),)
+        } else {
+          (box(width: ${problemBoxWidth}in, height: ${problemBoxHeight}in),)
+        }
+      }
+    }
+  )
+]
+`
+}
+
+function generateFractionAnswerKeyTypst(
+  config: WorksheetConfig,
+  problems: WorksheetProblem[],
+  showProblemNumbers: boolean,
+  qrCodeSvg?: string,
+  shareCode?: string
+): string[] {
+  const problemsPerPage = config.problemsPerPage
+  const worksheetPageCount = Math.ceil(problems.length / problemsPerPage)
+  const pages: string[] = []
+
+  for (let i = 0; i < worksheetPageCount; i++) {
+    const start = i * problemsPerPage
+    const pageProblems = problems.slice(start, start + problemsPerPage)
+    const answers = pageProblems
+      .map((problem, idx) => formatProblemWithAnswer(problem, start + idx, showProblemNumbers))
+      .join(' \\\n')
+
+    pages.push(String.raw`
+#set page(width: ${config.page.wIn}in, height: ${config.page.hIn}in, margin: 0.6in)
+#set text(size: ${config.fontSize}pt, font: "New Computer Modern Math")
+
+#block(breakable: false)[
+  #text(size: 12pt, weight: "bold")[Answer Key - Page ${i + 1}] \\
+  ${answers}
+  ${
+    qrCodeSvg
+      ? `\\
+  #place(bottom + left, dx: 0.1in, dy: -0.1in)[#stack(dir: ttb, spacing: 2pt, align(center)[#image(bytes("${qrCodeSvg.replace(/"/g, '\\"').replace(/\n/g, '')}"), format: "svg", width: 0.63in, height: 0.63in)], align(center)[#text(size: 7pt, font: "Courier New")[${shareCode || 'PREVIEW'}]])]`
+      : ''
+  }
+]
+`)
+  }
+
+  return pages
 }
 
 /**
@@ -621,6 +788,35 @@ export async function generateTypstSource(
 
   // Chunk problems into discrete pages
   const pages = chunkProblems(problems, problemsPerPage)
+
+  const hasFractionProblems = problems.some((p) => p.operator === 'fraction')
+  if (hasFractionProblems) {
+    const worksheetPages = pages.map((pageProblems, pageIndex) =>
+      generateFractionPageTypst(
+        config,
+        pageProblems,
+        pageIndex * problemsPerPage,
+        rowsPerPage,
+        qrCodeSvg,
+        shareCode,
+        brandDomain
+      )
+    )
+
+    if (config.includeAnswerKey) {
+      const showProblemNumbers = true
+      const answerPages = generateFractionAnswerKeyTypst(
+        config,
+        problems,
+        showProblemNumbers,
+        qrCodeSvg,
+        shareCode
+      )
+      return [...worksheetPages, ...answerPages]
+    }
+
+    return worksheetPages
+  }
 
   // Generate separate Typst source for each worksheet page
   const worksheetPages = pages.map((pageProblems, pageIndex) =>
