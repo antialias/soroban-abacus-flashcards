@@ -1,3 +1,11 @@
+# [2.19.0](https://github.com/antialias/soroban-abacus-flashcards/compare/abacus-react-v2.18.0...abacus-react-v2.19.0) (2026-01-01)
+
+
+### Features
+
+* **vision:** add physical abacus column setting and fix remote flash toggle ([b206eb3](https://github.com/antialias/soroban-abacus-flashcards/commit/b206eb30712e4b98525a9fa2544c2b5a235a8b72))
+* **vision:** improve remote camera calibration and UX ([8846cec](https://github.com/antialias/soroban-abacus-flashcards/commit/8846cece93941a36c187abd4ecee9cc88de0c2ec))
+
 # [2.18.0](https://github.com/antialias/soroban-abacus-flashcards/compare/abacus-react-v2.17.0...abacus-react-v2.18.0) (2026-01-01)
 
 
