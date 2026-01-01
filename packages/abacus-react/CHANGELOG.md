@@ -1,18 +1,16 @@
 # [2.17.0](https://github.com/antialias/soroban-abacus-flashcards/compare/abacus-react-v2.16.0...abacus-react-v2.17.0) (2025-12-20)
 
-
 ### Bug Fixes
 
-* **modal:** expand settings by default on tall phones to fill space ([2ffb71a](https://github.com/antialias/soroban-abacus-flashcards/commit/2ffb71ab282d27993a733cc4f2f9107586fe9764))
-* **modal:** make StartPracticeModal full-screen on mobile phones ([1383db8](https://github.com/antialias/soroban-abacus-flashcards/commit/1383db8185e2fbbb3c2c6ef8ceb7096c44ad9777))
-
+- **modal:** expand settings by default on tall phones to fill space ([2ffb71a](https://github.com/antialias/soroban-abacus-flashcards/commit/2ffb71ab282d27993a733cc4f2f9107586fe9764))
+- **modal:** make StartPracticeModal full-screen on mobile phones ([1383db8](https://github.com/antialias/soroban-abacus-flashcards/commit/1383db8185e2fbbb3c2c6ef8ceb7096c44ad9777))
 
 ### Features
 
-* **banner:** add scroll-based projection with FLIP animation ([d405038](https://github.com/antialias/soroban-abacus-flashcards/commit/d405038711666bf54ff96346541deb702118eff4))
-* **modal:** redesign StartPracticeModal layout for tall phones ([0e2fcee](https://github.com/antialias/soroban-abacus-flashcards/commit/0e2fcee0ae3b1d78d51be6d319b36bee41b9d7ad))
-* **practice:** unify session resume/start into projecting banner ([d128e80](https://github.com/antialias/soroban-abacus-flashcards/commit/d128e808dbb7a37b1dfb70fe88d32bb9fa89ab8f))
-* **session-summary:** unify summary and debug views with progressive disclosure ([2977bd5](https://github.com/antialias/soroban-abacus-flashcards/commit/2977bd57df743f936af8b81d8216fbe514bb2f76))
+- **banner:** add scroll-based projection with FLIP animation ([d405038](https://github.com/antialias/soroban-abacus-flashcards/commit/d405038711666bf54ff96346541deb702118eff4))
+- **modal:** redesign StartPracticeModal layout for tall phones ([0e2fcee](https://github.com/antialias/soroban-abacus-flashcards/commit/0e2fcee0ae3b1d78d51be6d319b36bee41b9d7ad))
+- **practice:** unify session resume/start into projecting banner ([d128e80](https://github.com/antialias/soroban-abacus-flashcards/commit/d128e808dbb7a37b1dfb70fe88d32bb9fa89ab8f))
+- **session-summary:** unify summary and debug views with progressive disclosure ([2977bd5](https://github.com/antialias/soroban-abacus-flashcards/commit/2977bd57df743f936af8b81d8216fbe514bb2f76))
 
 # [2.16.0](https://github.com/antialias/soroban-abacus-flashcards/compare/abacus-react-v2.15.0...abacus-react-v2.16.0) (2025-12-19)
 
