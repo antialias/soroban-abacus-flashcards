@@ -20,12 +20,7 @@
               "ragged": false,
               "name": "input_layer",
               "optional": false,
-              "batchInputShape": [
-                null,
-                128,
-                64,
-                1
-              ]
+              "batchInputShape": [null, 128, 64, 1]
             }
           },
           {
@@ -35,20 +30,11 @@
               "trainable": true,
               "dtype": "float32",
               "filters": 32,
-              "kernel_size": [
-                3,
-                3
-              ],
-              "strides": [
-                1,
-                1
-              ],
+              "kernel_size": [3, 3],
+              "strides": [1, 1],
               "padding": "same",
               "data_format": "channels_last",
-              "dilation_rate": [
-                1,
-                1
-              ],
+              "dilation_rate": [1, 1],
               "groups": 1,
               "activation": "relu",
               "use_bias": true,
@@ -121,15 +107,9 @@
               "name": "max_pooling2d",
               "trainable": true,
               "dtype": "float32",
-              "pool_size": [
-                2,
-                2
-              ],
+              "pool_size": [2, 2],
               "padding": "valid",
-              "strides": [
-                2,
-                2
-              ],
+              "strides": [2, 2],
               "data_format": "channels_last"
             }
           },
@@ -151,20 +131,11 @@
               "trainable": true,
               "dtype": "float32",
               "filters": 64,
-              "kernel_size": [
-                3,
-                3
-              ],
-              "strides": [
-                1,
-                1
-              ],
+              "kernel_size": [3, 3],
+              "strides": [1, 1],
               "padding": "same",
               "data_format": "channels_last",
-              "dilation_rate": [
-                1,
-                1
-              ],
+              "dilation_rate": [1, 1],
               "groups": 1,
               "activation": "relu",
               "use_bias": true,
@@ -237,15 +208,9 @@
               "name": "max_pooling2d_1",
               "trainable": true,
               "dtype": "float32",
-              "pool_size": [
-                2,
-                2
-              ],
+              "pool_size": [2, 2],
               "padding": "valid",
-              "strides": [
-                2,
-                2
-              ],
+              "strides": [2, 2],
               "data_format": "channels_last"
             }
           },
@@ -267,20 +232,11 @@
               "trainable": true,
               "dtype": "float32",
               "filters": 128,
-              "kernel_size": [
-                3,
-                3
-              ],
-              "strides": [
-                1,
-                1
-              ],
+              "kernel_size": [3, 3],
+              "strides": [1, 1],
               "padding": "same",
               "data_format": "channels_last",
-              "dilation_rate": [
-                1,
-                1
-              ],
+              "dilation_rate": [1, 1],
               "groups": 1,
               "activation": "relu",
               "use_bias": true,
@@ -353,15 +309,9 @@
               "name": "max_pooling2d_2",
               "trainable": true,
               "dtype": "float32",
-              "pool_size": [
-                2,
-                2
-              ],
+              "pool_size": [2, 2],
               "padding": "valid",
-              "strides": [
-                2,
-                2
-              ],
+              "strides": [2, 2],
               "data_format": "channels_last"
             }
           },
@@ -499,20 +449,13 @@
             }
           }
         ],
-        "build_input_shape": [
-          null,
-          128,
-          64,
-          1
-        ]
+        "build_input_shape": [null, 128, 64, 1]
       }
     },
     "training_config": {
       "loss": "sparse_categorical_crossentropy",
       "loss_weights": null,
-      "metrics": [
-        "accuracy"
-      ],
+      "metrics": ["accuracy"],
       "weighted_metrics": null,
       "run_eagerly": false,
       "steps_per_execution": 1,
@@ -541,15 +484,11 @@
   },
   "weightsManifest": [
     {
-      "paths": [
-        "group1-shard1of1.bin"
-      ],
+      "paths": ["group1-shard1of1.bin"],
       "weights": [
         {
           "name": "batch_normalization/gamma",
-          "shape": [
-            32
-          ],
+          "shape": [32],
           "dtype": "float32",
           "quantization": {
             "dtype": "uint8",
@@ -560,9 +499,7 @@
         },
         {
           "name": "batch_normalization/beta",
-          "shape": [
-            32
-          ],
+          "shape": [32],
           "dtype": "float32",
           "quantization": {
             "dtype": "uint8",
@@ -573,9 +510,7 @@
         },
         {
           "name": "batch_normalization/moving_mean",
-          "shape": [
-            32
-          ],
+          "shape": [32],
           "dtype": "float32",
           "quantization": {
             "dtype": "uint8",
@@ -586,9 +521,7 @@
         },
         {
           "name": "batch_normalization/moving_variance",
-          "shape": [
-            32
-          ],
+          "shape": [32],
           "dtype": "float32",
           "quantization": {
             "dtype": "uint8",
@@ -599,9 +532,7 @@
         },
         {
           "name": "batch_normalization_1/gamma",
-          "shape": [
-            64
-          ],
+          "shape": [64],
           "dtype": "float32",
           "quantization": {
             "dtype": "uint8",
@@ -612,9 +543,7 @@
         },
         {
           "name": "batch_normalization_1/beta",
-          "shape": [
-            64
-          ],
+          "shape": [64],
           "dtype": "float32",
           "quantization": {
             "dtype": "uint8",
@@ -625,9 +554,7 @@
         },
         {
           "name": "batch_normalization_1/moving_mean",
-          "shape": [
-            64
-          ],
+          "shape": [64],
           "dtype": "float32",
           "quantization": {
             "dtype": "uint8",
@@ -638,9 +565,7 @@
         },
         {
           "name": "batch_normalization_1/moving_variance",
-          "shape": [
-            64
-          ],
+          "shape": [64],
           "dtype": "float32",
           "quantization": {
             "dtype": "uint8",
@@ -651,9 +576,7 @@
         },
         {
           "name": "batch_normalization_2/gamma",
-          "shape": [
-            128
-          ],
+          "shape": [128],
           "dtype": "float32",
           "quantization": {
             "dtype": "uint8",
@@ -664,9 +587,7 @@
         },
         {
           "name": "batch_normalization_2/beta",
-          "shape": [
-            128
-          ],
+          "shape": [128],
           "dtype": "float32",
           "quantization": {
             "dtype": "uint8",
@@ -677,9 +598,7 @@
         },
         {
           "name": "batch_normalization_2/moving_mean",
-          "shape": [
-            128
-          ],
+          "shape": [128],
           "dtype": "float32",
           "quantization": {
             "dtype": "uint8",
@@ -690,9 +609,7 @@
         },
         {
           "name": "batch_normalization_2/moving_variance",
-          "shape": [
-            128
-          ],
+          "shape": [128],
           "dtype": "float32",
           "quantization": {
             "dtype": "uint8",
@@ -703,9 +620,7 @@
         },
         {
           "name": "batch_normalization_3/gamma",
-          "shape": [
-            128
-          ],
+          "shape": [128],
           "dtype": "float32",
           "quantization": {
             "dtype": "uint8",
@@ -716,9 +631,7 @@
         },
         {
           "name": "batch_normalization_3/beta",
-          "shape": [
-            128
-          ],
+          "shape": [128],
           "dtype": "float32",
           "quantization": {
             "dtype": "uint8",
@@ -729,9 +642,7 @@
         },
         {
           "name": "batch_normalization_3/moving_mean",
-          "shape": [
-            128
-          ],
+          "shape": [128],
           "dtype": "float32",
           "quantization": {
             "dtype": "uint8",
@@ -742,9 +653,7 @@
         },
         {
           "name": "batch_normalization_3/moving_variance",
-          "shape": [
-            128
-          ],
+          "shape": [128],
           "dtype": "float32",
           "quantization": {
             "dtype": "uint8",
@@ -755,12 +664,7 @@
         },
         {
           "name": "conv2d/kernel",
-          "shape": [
-            3,
-            3,
-            1,
-            32
-          ],
+          "shape": [3, 3, 1, 32],
           "dtype": "float32",
           "quantization": {
             "dtype": "uint8",
@@ -771,9 +675,7 @@
         },
         {
           "name": "conv2d/bias",
-          "shape": [
-            32
-          ],
+          "shape": [32],
           "dtype": "float32",
           "quantization": {
             "dtype": "uint8",
@@ -784,12 +686,7 @@
         },
         {
           "name": "conv2d_1/kernel",
-          "shape": [
-            3,
-            3,
-            32,
-            64
-          ],
+          "shape": [3, 3, 32, 64],
           "dtype": "float32",
           "quantization": {
             "dtype": "uint8",
@@ -800,9 +697,7 @@
         },
         {
           "name": "conv2d_1/bias",
-          "shape": [
-            64
-          ],
+          "shape": [64],
           "dtype": "float32",
           "quantization": {
             "dtype": "uint8",
@@ -813,12 +708,7 @@
         },
         {
           "name": "conv2d_2/kernel",
-          "shape": [
-            3,
-            3,
-            64,
-            128
-          ],
+          "shape": [3, 3, 64, 128],
           "dtype": "float32",
           "quantization": {
             "dtype": "uint8",
@@ -829,9 +719,7 @@
         },
         {
           "name": "conv2d_2/bias",
-          "shape": [
-            128
-          ],
+          "shape": [128],
           "dtype": "float32",
           "quantization": {
             "dtype": "uint8",
@@ -842,10 +730,7 @@
         },
         {
           "name": "dense/kernel",
-          "shape": [
-            16384,
-            128
-          ],
+          "shape": [16384, 128],
           "dtype": "float32",
           "quantization": {
             "dtype": "uint8",
@@ -856,9 +741,7 @@
         },
         {
           "name": "dense/bias",
-          "shape": [
-            128
-          ],
+          "shape": [128],
           "dtype": "float32",
           "quantization": {
             "dtype": "uint8",
@@ -869,10 +752,7 @@
         },
         {
           "name": "dense_1/kernel",
-          "shape": [
-            128,
-            10
-          ],
+          "shape": [128, 10],
           "dtype": "float32",
           "quantization": {
             "dtype": "uint8",
@@ -883,9 +763,7 @@
         },
         {
           "name": "dense_1/bias",
-          "shape": [
-            10
-          ],
+          "shape": [10],
           "dtype": "float32",
           "quantization": {
             "dtype": "uint8",
