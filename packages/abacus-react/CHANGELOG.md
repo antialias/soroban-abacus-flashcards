@@ -1,3 +1,23 @@
+# [2.20.0](https://github.com/antialias/soroban-abacus-flashcards/compare/abacus-react-v2.19.0...abacus-react-v2.20.0) (2026-01-02)
+
+
+### Bug Fixes
+
+* **vision:** clear config when switching camera sources ([ff59612](https://github.com/antialias/soroban-abacus-flashcards/commit/ff59612e7b9bab3ef4a8fba3c60e9dbcb37a140a))
+* **vision:** hide flip camera button when only one camera available ([7a9185e](https://github.com/antialias/soroban-abacus-flashcards/commit/7a9185eadb3609de596e3d150090af19225fdab6))
+* **vision:** include remote camera in isVisionSetupComplete check ([a8fb77e](https://github.com/antialias/soroban-abacus-flashcards/commit/a8fb77e8e3f2f4293c2dab99ca1ec1de78b1e37c))
+* **vision:** remote camera persistence and UI bugs ([d90d263](https://github.com/antialias/soroban-abacus-flashcards/commit/d90d263b2a2a5f228d93af2217bb11241ee8f0f5))
+
+
+### Features
+
+* **vision:** add activeCameraSource tracking and simplify calibration UI ([1be6151](https://github.com/antialias/soroban-abacus-flashcards/commit/1be6151bae0f2ffc0781792bf002cb7672635842))
+* **vision:** add CV-based bead detection and fix remote camera connection ([005140a](https://github.com/antialias/soroban-abacus-flashcards/commit/005140a1e72238459ea987e57f83e169b213d7b9))
+* **vision:** add TensorFlow.js column classifier model and improve detection ([5d0ac65](https://github.com/antialias/soroban-abacus-flashcards/commit/5d0ac65bdd2bd22c8e2d586add3a0aba8dd82426))
+* **vision:** broadcast vision frames to observers (Phase 5) ([b3b769c](https://github.com/antialias/soroban-abacus-flashcards/commit/b3b769c0e2e15d4a0f4e70219982dc78c72e4e2b))
+* **vision:** disable auto-detection with feature flag ([a5025f0](https://github.com/antialias/soroban-abacus-flashcards/commit/a5025f01bc759de1b87c06a2a9d2d94344adc790))
+* **vision:** integrate vision feed into docked abacus ([d8c7645](https://github.com/antialias/soroban-abacus-flashcards/commit/d8c764595d34dabb4b836e2eea93e0b869f09cd2))
+
 # [2.19.0](https://github.com/antialias/soroban-abacus-flashcards/compare/abacus-react-v2.18.0...abacus-react-v2.19.0) (2026-01-01)
 
 ### Features
