@@ -1,3 +1,20 @@
+# [2.21.0](https://github.com/antialias/soroban-abacus-flashcards/compare/abacus-react-v2.20.0...abacus-react-v2.21.0) (2026-01-03)
+
+
+### Bug Fixes
+
+* **practice:** add fallback error message when photo upload is blocked ([33efdf0](https://github.com/antialias/soroban-abacus-flashcards/commit/33efdf0c0d8b222160956af9c9fd641ca4d07e8a))
+* **vision:** hide detection overlay when auto-detection disabled ([995cb60](https://github.com/antialias/soroban-abacus-flashcards/commit/995cb600860950cfdaf070f229351186060ea67e))
+* **vision:** remote camera connection and session management ([8a45415](https://github.com/antialias/soroban-abacus-flashcards/commit/8a454158b5e3817f0d9535225b4a99cb0a9ab977))
+
+
+### Features
+
+* add LLM client package and worksheet parsing infrastructure ([5a4c751](https://github.com/antialias/soroban-abacus-flashcards/commit/5a4c751ebe9c337ce2115253b243b345c4f76156))
+* **observer:** responsive session observer layout ([9610ddb](https://github.com/antialias/soroban-abacus-flashcards/commit/9610ddb8f13ef27c4d1fd205ae03a4dc292c2ff7))
+* **worksheet-parsing:** add parsing UI and fix parent access control ([91aaddb](https://github.com/antialias/soroban-abacus-flashcards/commit/91aaddbeab8eeef54547d60a41362e9933c3edb1))
+* **worksheet-parsing:** add selective re-parsing and improve UI ([830a48e](https://github.com/antialias/soroban-abacus-flashcards/commit/830a48e74f2c38c0247b658104a5db6d2894127a))
+
 # [2.20.0](https://github.com/antialias/soroban-abacus-flashcards/compare/abacus-react-v2.19.0...abacus-react-v2.20.0) (2026-01-02)
 
 
