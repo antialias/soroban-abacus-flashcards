@@ -1,39 +1,35 @@
 # [2.21.0](https://github.com/antialias/soroban-abacus-flashcards/compare/abacus-react-v2.20.0...abacus-react-v2.21.0) (2026-01-03)
 
-
 ### Bug Fixes
 
-* **practice:** add fallback error message when photo upload is blocked ([33efdf0](https://github.com/antialias/soroban-abacus-flashcards/commit/33efdf0c0d8b222160956af9c9fd641ca4d07e8a))
-* **vision:** hide detection overlay when auto-detection disabled ([995cb60](https://github.com/antialias/soroban-abacus-flashcards/commit/995cb600860950cfdaf070f229351186060ea67e))
-* **vision:** remote camera connection and session management ([8a45415](https://github.com/antialias/soroban-abacus-flashcards/commit/8a454158b5e3817f0d9535225b4a99cb0a9ab977))
-
+- **practice:** add fallback error message when photo upload is blocked ([33efdf0](https://github.com/antialias/soroban-abacus-flashcards/commit/33efdf0c0d8b222160956af9c9fd641ca4d07e8a))
+- **vision:** hide detection overlay when auto-detection disabled ([995cb60](https://github.com/antialias/soroban-abacus-flashcards/commit/995cb600860950cfdaf070f229351186060ea67e))
+- **vision:** remote camera connection and session management ([8a45415](https://github.com/antialias/soroban-abacus-flashcards/commit/8a454158b5e3817f0d9535225b4a99cb0a9ab977))
 
 ### Features
 
-* add LLM client package and worksheet parsing infrastructure ([5a4c751](https://github.com/antialias/soroban-abacus-flashcards/commit/5a4c751ebe9c337ce2115253b243b345c4f76156))
-* **observer:** responsive session observer layout ([9610ddb](https://github.com/antialias/soroban-abacus-flashcards/commit/9610ddb8f13ef27c4d1fd205ae03a4dc292c2ff7))
-* **worksheet-parsing:** add parsing UI and fix parent access control ([91aaddb](https://github.com/antialias/soroban-abacus-flashcards/commit/91aaddbeab8eeef54547d60a41362e9933c3edb1))
-* **worksheet-parsing:** add selective re-parsing and improve UI ([830a48e](https://github.com/antialias/soroban-abacus-flashcards/commit/830a48e74f2c38c0247b658104a5db6d2894127a))
+- add LLM client package and worksheet parsing infrastructure ([5a4c751](https://github.com/antialias/soroban-abacus-flashcards/commit/5a4c751ebe9c337ce2115253b243b345c4f76156))
+- **observer:** responsive session observer layout ([9610ddb](https://github.com/antialias/soroban-abacus-flashcards/commit/9610ddb8f13ef27c4d1fd205ae03a4dc292c2ff7))
+- **worksheet-parsing:** add parsing UI and fix parent access control ([91aaddb](https://github.com/antialias/soroban-abacus-flashcards/commit/91aaddbeab8eeef54547d60a41362e9933c3edb1))
+- **worksheet-parsing:** add selective re-parsing and improve UI ([830a48e](https://github.com/antialias/soroban-abacus-flashcards/commit/830a48e74f2c38c0247b658104a5db6d2894127a))
 
 # [2.20.0](https://github.com/antialias/soroban-abacus-flashcards/compare/abacus-react-v2.19.0...abacus-react-v2.20.0) (2026-01-02)
 
-
 ### Bug Fixes
 
-* **vision:** clear config when switching camera sources ([ff59612](https://github.com/antialias/soroban-abacus-flashcards/commit/ff59612e7b9bab3ef4a8fba3c60e9dbcb37a140a))
-* **vision:** hide flip camera button when only one camera available ([7a9185e](https://github.com/antialias/soroban-abacus-flashcards/commit/7a9185eadb3609de596e3d150090af19225fdab6))
-* **vision:** include remote camera in isVisionSetupComplete check ([a8fb77e](https://github.com/antialias/soroban-abacus-flashcards/commit/a8fb77e8e3f2f4293c2dab99ca1ec1de78b1e37c))
-* **vision:** remote camera persistence and UI bugs ([d90d263](https://github.com/antialias/soroban-abacus-flashcards/commit/d90d263b2a2a5f228d93af2217bb11241ee8f0f5))
-
+- **vision:** clear config when switching camera sources ([ff59612](https://github.com/antialias/soroban-abacus-flashcards/commit/ff59612e7b9bab3ef4a8fba3c60e9dbcb37a140a))
+- **vision:** hide flip camera button when only one camera available ([7a9185e](https://github.com/antialias/soroban-abacus-flashcards/commit/7a9185eadb3609de596e3d150090af19225fdab6))
+- **vision:** include remote camera in isVisionSetupComplete check ([a8fb77e](https://github.com/antialias/soroban-abacus-flashcards/commit/a8fb77e8e3f2f4293c2dab99ca1ec1de78b1e37c))
+- **vision:** remote camera persistence and UI bugs ([d90d263](https://github.com/antialias/soroban-abacus-flashcards/commit/d90d263b2a2a5f228d93af2217bb11241ee8f0f5))
 
 ### Features
 
-* **vision:** add activeCameraSource tracking and simplify calibration UI ([1be6151](https://github.com/antialias/soroban-abacus-flashcards/commit/1be6151bae0f2ffc0781792bf002cb7672635842))
-* **vision:** add CV-based bead detection and fix remote camera connection ([005140a](https://github.com/antialias/soroban-abacus-flashcards/commit/005140a1e72238459ea987e57f83e169b213d7b9))
-* **vision:** add TensorFlow.js column classifier model and improve detection ([5d0ac65](https://github.com/antialias/soroban-abacus-flashcards/commit/5d0ac65bdd2bd22c8e2d586add3a0aba8dd82426))
-* **vision:** broadcast vision frames to observers (Phase 5) ([b3b769c](https://github.com/antialias/soroban-abacus-flashcards/commit/b3b769c0e2e15d4a0f4e70219982dc78c72e4e2b))
-* **vision:** disable auto-detection with feature flag ([a5025f0](https://github.com/antialias/soroban-abacus-flashcards/commit/a5025f01bc759de1b87c06a2a9d2d94344adc790))
-* **vision:** integrate vision feed into docked abacus ([d8c7645](https://github.com/antialias/soroban-abacus-flashcards/commit/d8c764595d34dabb4b836e2eea93e0b869f09cd2))
+- **vision:** add activeCameraSource tracking and simplify calibration UI ([1be6151](https://github.com/antialias/soroban-abacus-flashcards/commit/1be6151bae0f2ffc0781792bf002cb7672635842))
+- **vision:** add CV-based bead detection and fix remote camera connection ([005140a](https://github.com/antialias/soroban-abacus-flashcards/commit/005140a1e72238459ea987e57f83e169b213d7b9))
+- **vision:** add TensorFlow.js column classifier model and improve detection ([5d0ac65](https://github.com/antialias/soroban-abacus-flashcards/commit/5d0ac65bdd2bd22c8e2d586add3a0aba8dd82426))
+- **vision:** broadcast vision frames to observers (Phase 5) ([b3b769c](https://github.com/antialias/soroban-abacus-flashcards/commit/b3b769c0e2e15d4a0f4e70219982dc78c72e4e2b))
+- **vision:** disable auto-detection with feature flag ([a5025f0](https://github.com/antialias/soroban-abacus-flashcards/commit/a5025f01bc759de1b87c06a2a9d2d94344adc790))
+- **vision:** integrate vision feed into docked abacus ([d8c7645](https://github.com/antialias/soroban-abacus-flashcards/commit/d8c764595d34dabb4b836e2eea93e0b869f09cd2))
 
 # [2.19.0](https://github.com/antialias/soroban-abacus-flashcards/compare/abacus-react-v2.18.0...abacus-react-v2.19.0) (2026-01-01)
 
