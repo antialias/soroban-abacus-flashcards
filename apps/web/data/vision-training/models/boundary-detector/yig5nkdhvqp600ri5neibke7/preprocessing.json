@@ -1,0 +1,10 @@
+{
+  "model_type": "heatmap_dsnt",
+  "input_size": 224,
+  "heatmap_size": 56,
+  "num_corners": 4,
+  "corner_order": ["topLeft", "topRight", "bottomLeft", "bottomRight"],
+  "trained_at": "2026-01-09T19:51:24.942133",
+  "training_samples": 229,
+  "final_coord_mae": 0.13326506316661835
+}
