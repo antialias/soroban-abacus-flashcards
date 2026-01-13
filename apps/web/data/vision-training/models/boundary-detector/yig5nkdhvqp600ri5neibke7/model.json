@@ -44,7 +44,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_FLOAT", "tensorShape": { "dim": [{ "size": "128" }] } }
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "128" }] }
+            }
           },
           "dtype": { "type": "DT_FLOAT" }
         }
@@ -62,7 +65,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_INT32", "tensorShape": { "dim": [{ "size": "5" }] } }
+            "tensor": {
+              "dtype": "DT_INT32",
+              "tensorShape": { "dim": [{ "size": "5" }] }
+            }
           },
           "dtype": { "type": "DT_INT32" }
         }
@@ -72,7 +78,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_INT32", "tensorShape": { "dim": [{ "size": "1" }] } }
+            "tensor": {
+              "dtype": "DT_INT32",
+              "tensorShape": { "dim": [{ "size": "1" }] }
+            }
           },
           "dtype": { "type": "DT_INT32" }
         }
@@ -82,7 +91,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_INT32", "tensorShape": { "dim": [{ "size": "1" }] } }
+            "tensor": {
+              "dtype": "DT_INT32",
+              "tensorShape": { "dim": [{ "size": "1" }] }
+            }
           },
           "dtype": { "type": "DT_INT32" }
         }
@@ -92,7 +104,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_INT32", "tensorShape": { "dim": [{ "size": "1" }] } }
+            "tensor": {
+              "dtype": "DT_INT32",
+              "tensorShape": { "dim": [{ "size": "1" }] }
+            }
           },
           "dtype": { "type": "DT_INT32" }
         }
@@ -110,7 +125,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_INT32", "tensorShape": { "dim": [{ "size": "1" }] } }
+            "tensor": {
+              "dtype": "DT_INT32",
+              "tensorShape": { "dim": [{ "size": "1" }] }
+            }
           },
           "dtype": { "type": "DT_INT32" }
         }
@@ -120,7 +138,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_INT32", "tensorShape": { "dim": [{ "size": "1" }] } }
+            "tensor": {
+              "dtype": "DT_INT32",
+              "tensorShape": { "dim": [{ "size": "1" }] }
+            }
           },
           "dtype": { "type": "DT_INT32" }
         }
@@ -130,7 +151,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_INT32", "tensorShape": { "dim": [{ "size": "1" }] } }
+            "tensor": {
+              "dtype": "DT_INT32",
+              "tensorShape": { "dim": [{ "size": "1" }] }
+            }
           },
           "dtype": { "type": "DT_INT32" }
         }
@@ -148,7 +172,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_INT32", "tensorShape": { "dim": [{ "size": "5" }] } }
+            "tensor": {
+              "dtype": "DT_INT32",
+              "tensorShape": { "dim": [{ "size": "5" }] }
+            }
           },
           "dtype": { "type": "DT_INT32" }
         }
@@ -158,7 +185,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_INT32", "tensorShape": { "dim": [{ "size": "1" }] } }
+            "tensor": {
+              "dtype": "DT_INT32",
+              "tensorShape": { "dim": [{ "size": "1" }] }
+            }
           },
           "dtype": { "type": "DT_INT32" }
         }
@@ -168,7 +198,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_INT32", "tensorShape": { "dim": [{ "size": "1" }] } }
+            "tensor": {
+              "dtype": "DT_INT32",
+              "tensorShape": { "dim": [{ "size": "1" }] }
+            }
           },
           "dtype": { "type": "DT_INT32" }
         }
@@ -178,7 +211,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_INT32", "tensorShape": { "dim": [{ "size": "1" }] } }
+            "tensor": {
+              "dtype": "DT_INT32",
+              "tensorShape": { "dim": [{ "size": "1" }] }
+            }
           },
           "dtype": { "type": "DT_INT32" }
         }
@@ -196,7 +232,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_INT32", "tensorShape": { "dim": [{ "size": "1" }] } }
+            "tensor": {
+              "dtype": "DT_INT32",
+              "tensorShape": { "dim": [{ "size": "1" }] }
+            }
           },
           "dtype": { "type": "DT_INT32" }
         }
@@ -206,7 +245,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_INT32", "tensorShape": { "dim": [{ "size": "1" }] } }
+            "tensor": {
+              "dtype": "DT_INT32",
+              "tensorShape": { "dim": [{ "size": "1" }] }
+            }
           },
           "dtype": { "type": "DT_INT32" }
         }
@@ -216,7 +258,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_INT32", "tensorShape": { "dim": [{ "size": "1" }] } }
+            "tensor": {
+              "dtype": "DT_INT32",
+              "tensorShape": { "dim": [{ "size": "1" }] }
+            }
           },
           "dtype": { "type": "DT_INT32" }
         }
@@ -241,7 +286,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_FLOAT", "tensorShape": { "dim": [{ "size": "128" }] } }
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "128" }] }
+            }
           },
           "dtype": { "type": "DT_FLOAT" }
         }
@@ -259,7 +307,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_INT32", "tensorShape": { "dim": [{ "size": "5" }] } }
+            "tensor": {
+              "dtype": "DT_INT32",
+              "tensorShape": { "dim": [{ "size": "5" }] }
+            }
           },
           "dtype": { "type": "DT_INT32" }
         }
@@ -269,7 +320,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_INT32", "tensorShape": { "dim": [{ "size": "1" }] } }
+            "tensor": {
+              "dtype": "DT_INT32",
+              "tensorShape": { "dim": [{ "size": "1" }] }
+            }
           },
           "dtype": { "type": "DT_INT32" }
         }
@@ -279,7 +333,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_INT32", "tensorShape": { "dim": [{ "size": "1" }] } }
+            "tensor": {
+              "dtype": "DT_INT32",
+              "tensorShape": { "dim": [{ "size": "1" }] }
+            }
           },
           "dtype": { "type": "DT_INT32" }
         }
@@ -289,7 +346,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_INT32", "tensorShape": { "dim": [{ "size": "1" }] } }
+            "tensor": {
+              "dtype": "DT_INT32",
+              "tensorShape": { "dim": [{ "size": "1" }] }
+            }
           },
           "dtype": { "type": "DT_INT32" }
         }
@@ -307,7 +367,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_INT32", "tensorShape": { "dim": [{ "size": "1" }] } }
+            "tensor": {
+              "dtype": "DT_INT32",
+              "tensorShape": { "dim": [{ "size": "1" }] }
+            }
           },
           "dtype": { "type": "DT_INT32" }
         }
@@ -317,7 +380,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_INT32", "tensorShape": { "dim": [{ "size": "1" }] } }
+            "tensor": {
+              "dtype": "DT_INT32",
+              "tensorShape": { "dim": [{ "size": "1" }] }
+            }
           },
           "dtype": { "type": "DT_INT32" }
         }
@@ -327,7 +393,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_INT32", "tensorShape": { "dim": [{ "size": "1" }] } }
+            "tensor": {
+              "dtype": "DT_INT32",
+              "tensorShape": { "dim": [{ "size": "1" }] }
+            }
           },
           "dtype": { "type": "DT_INT32" }
         }
@@ -345,7 +414,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_INT32", "tensorShape": { "dim": [{ "size": "5" }] } }
+            "tensor": {
+              "dtype": "DT_INT32",
+              "tensorShape": { "dim": [{ "size": "5" }] }
+            }
           },
           "dtype": { "type": "DT_INT32" }
         }
@@ -355,7 +427,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_INT32", "tensorShape": { "dim": [{ "size": "1" }] } }
+            "tensor": {
+              "dtype": "DT_INT32",
+              "tensorShape": { "dim": [{ "size": "1" }] }
+            }
           },
           "dtype": { "type": "DT_INT32" }
         }
@@ -365,7 +440,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_INT32", "tensorShape": { "dim": [{ "size": "1" }] } }
+            "tensor": {
+              "dtype": "DT_INT32",
+              "tensorShape": { "dim": [{ "size": "1" }] }
+            }
           },
           "dtype": { "type": "DT_INT32" }
         }
@@ -375,7 +453,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_INT32", "tensorShape": { "dim": [{ "size": "1" }] } }
+            "tensor": {
+              "dtype": "DT_INT32",
+              "tensorShape": { "dim": [{ "size": "1" }] }
+            }
           },
           "dtype": { "type": "DT_INT32" }
         }
@@ -393,7 +474,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_INT32", "tensorShape": { "dim": [{ "size": "1" }] } }
+            "tensor": {
+              "dtype": "DT_INT32",
+              "tensorShape": { "dim": [{ "size": "1" }] }
+            }
           },
           "dtype": { "type": "DT_INT32" }
         }
@@ -403,7 +487,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_INT32", "tensorShape": { "dim": [{ "size": "1" }] } }
+            "tensor": {
+              "dtype": "DT_INT32",
+              "tensorShape": { "dim": [{ "size": "1" }] }
+            }
           },
           "dtype": { "type": "DT_INT32" }
         }
@@ -413,7 +500,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_INT32", "tensorShape": { "dim": [{ "size": "1" }] } }
+            "tensor": {
+              "dtype": "DT_INT32",
+              "tensorShape": { "dim": [{ "size": "1" }] }
+            }
           },
           "dtype": { "type": "DT_INT32" }
         }
@@ -423,7 +513,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_FLOAT", "tensorShape": { "dim": [{ "size": "96" }] } }
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "96" }] }
+            }
           },
           "dtype": { "type": "DT_FLOAT" }
         }
@@ -433,7 +526,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_FLOAT", "tensorShape": { "dim": [{ "size": "96" }] } }
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "96" }] }
+            }
           },
           "dtype": { "type": "DT_FLOAT" }
         }
@@ -443,7 +539,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_FLOAT", "tensorShape": { "dim": [{ "size": "64" }] } }
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "64" }] }
+            }
           },
           "dtype": { "type": "DT_FLOAT" }
         }
@@ -453,7 +552,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_FLOAT", "tensorShape": { "dim": [{ "size": "64" }] } }
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "64" }] }
+            }
           },
           "dtype": { "type": "DT_FLOAT" }
         }
@@ -463,7 +565,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_FLOAT", "tensorShape": { "dim": [{ "size": "64" }] } }
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "64" }] }
+            }
           },
           "dtype": { "type": "DT_FLOAT" }
         }
@@ -473,7 +578,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_FLOAT", "tensorShape": { "dim": [{ "size": "32" }] } }
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "32" }] }
+            }
           },
           "dtype": { "type": "DT_FLOAT" }
         }
@@ -483,7 +591,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_FLOAT", "tensorShape": { "dim": [{ "size": "32" }] } }
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "32" }] }
+            }
           },
           "dtype": { "type": "DT_FLOAT" }
         }
@@ -493,7 +604,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_FLOAT", "tensorShape": { "dim": [{ "size": "24" }] } }
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "24" }] }
+            }
           },
           "dtype": { "type": "DT_FLOAT" }
         }
@@ -534,7 +648,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_FLOAT", "tensorShape": { "dim": [{ "size": "32" }] } }
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "32" }] }
+            }
           },
           "dtype": { "type": "DT_FLOAT" }
         }
@@ -559,7 +676,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_FLOAT", "tensorShape": { "dim": [{ "size": "32" }] } }
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "32" }] }
+            }
           },
           "dtype": { "type": "DT_FLOAT" }
         }
@@ -569,7 +689,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_FLOAT", "tensorShape": { "dim": [{ "size": "32" }] } }
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "32" }] }
+            }
           },
           "dtype": { "type": "DT_FLOAT" }
         }
@@ -594,7 +717,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_FLOAT", "tensorShape": { "dim": [{ "size": "16" }] } }
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "16" }] }
+            }
           },
           "dtype": { "type": "DT_FLOAT" }
         }
@@ -619,7 +745,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_FLOAT", "tensorShape": { "dim": [{ "size": "96" }] } }
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "96" }] }
+            }
           },
           "dtype": { "type": "DT_FLOAT" }
         }
@@ -657,7 +786,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_FLOAT", "tensorShape": { "dim": [{ "size": "96" }] } }
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "96" }] }
+            }
           },
           "dtype": { "type": "DT_FLOAT" }
         }
@@ -667,7 +799,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_FLOAT", "tensorShape": { "dim": [{ "size": "96" }] } }
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "96" }] }
+            }
           },
           "dtype": { "type": "DT_FLOAT" }
         }
@@ -692,7 +827,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_FLOAT", "tensorShape": { "dim": [{ "size": "24" }] } }
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "24" }] }
+            }
           },
           "dtype": { "type": "DT_FLOAT" }
         }
@@ -717,7 +855,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_FLOAT", "tensorShape": { "dim": [{ "size": "144" }] } }
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "144" }] }
+            }
           },
           "dtype": { "type": "DT_FLOAT" }
         }
@@ -742,7 +883,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_FLOAT", "tensorShape": { "dim": [{ "size": "144" }] } }
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "144" }] }
+            }
           },
           "dtype": { "type": "DT_FLOAT" }
         }
@@ -752,7 +896,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_FLOAT", "tensorShape": { "dim": [{ "size": "144" }] } }
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "144" }] }
+            }
           },
           "dtype": { "type": "DT_FLOAT" }
         }
@@ -792,7 +939,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_FLOAT", "tensorShape": { "dim": [{ "size": "144" }] } }
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "144" }] }
+            }
           },
           "dtype": { "type": "DT_FLOAT" }
         }
@@ -830,7 +980,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_FLOAT", "tensorShape": { "dim": [{ "size": "144" }] } }
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "144" }] }
+            }
           },
           "dtype": { "type": "DT_FLOAT" }
         }
@@ -840,7 +993,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_FLOAT", "tensorShape": { "dim": [{ "size": "144" }] } }
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "144" }] }
+            }
           },
           "dtype": { "type": "DT_FLOAT" }
         }
@@ -865,7 +1021,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_FLOAT", "tensorShape": { "dim": [{ "size": "32" }] } }
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "32" }] }
+            }
           },
           "dtype": { "type": "DT_FLOAT" }
         }
@@ -890,7 +1049,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_FLOAT", "tensorShape": { "dim": [{ "size": "192" }] } }
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "192" }] }
+            }
           },
           "dtype": { "type": "DT_FLOAT" }
         }
@@ -915,7 +1077,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_FLOAT", "tensorShape": { "dim": [{ "size": "192" }] } }
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "192" }] }
+            }
           },
           "dtype": { "type": "DT_FLOAT" }
         }
@@ -925,7 +1090,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_FLOAT", "tensorShape": { "dim": [{ "size": "192" }] } }
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "192" }] }
+            }
           },
           "dtype": { "type": "DT_FLOAT" }
         }
@@ -965,7 +1133,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_FLOAT", "tensorShape": { "dim": [{ "size": "192" }] } }
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "192" }] }
+            }
           },
           "dtype": { "type": "DT_FLOAT" }
         }
@@ -990,7 +1161,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_FLOAT", "tensorShape": { "dim": [{ "size": "192" }] } }
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "192" }] }
+            }
           },
           "dtype": { "type": "DT_FLOAT" }
         }
@@ -1000,7 +1174,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_FLOAT", "tensorShape": { "dim": [{ "size": "192" }] } }
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "192" }] }
+            }
           },
           "dtype": { "type": "DT_FLOAT" }
         }
@@ -1040,7 +1217,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_FLOAT", "tensorShape": { "dim": [{ "size": "192" }] } }
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "192" }] }
+            }
           },
           "dtype": { "type": "DT_FLOAT" }
         }
@@ -1078,7 +1258,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_FLOAT", "tensorShape": { "dim": [{ "size": "192" }] } }
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "192" }] }
+            }
           },
           "dtype": { "type": "DT_FLOAT" }
         }
@@ -1088,7 +1271,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_FLOAT", "tensorShape": { "dim": [{ "size": "192" }] } }
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "192" }] }
+            }
           },
           "dtype": { "type": "DT_FLOAT" }
         }
@@ -1113,7 +1299,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_FLOAT", "tensorShape": { "dim": [{ "size": "64" }] } }
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "64" }] }
+            }
           },
           "dtype": { "type": "DT_FLOAT" }
         }
@@ -1138,7 +1327,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_FLOAT", "tensorShape": { "dim": [{ "size": "384" }] } }
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "384" }] }
+            }
           },
           "dtype": { "type": "DT_FLOAT" }
         }
@@ -1163,7 +1355,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_FLOAT", "tensorShape": { "dim": [{ "size": "384" }] } }
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "384" }] }
+            }
           },
           "dtype": { "type": "DT_FLOAT" }
         }
@@ -1173,7 +1368,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_FLOAT", "tensorShape": { "dim": [{ "size": "384" }] } }
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "384" }] }
+            }
           },
           "dtype": { "type": "DT_FLOAT" }
         }
@@ -1213,7 +1411,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_FLOAT", "tensorShape": { "dim": [{ "size": "384" }] } }
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "384" }] }
+            }
           },
           "dtype": { "type": "DT_FLOAT" }
         }
@@ -1238,7 +1439,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_FLOAT", "tensorShape": { "dim": [{ "size": "384" }] } }
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "384" }] }
+            }
           },
           "dtype": { "type": "DT_FLOAT" }
         }
@@ -1248,7 +1452,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_FLOAT", "tensorShape": { "dim": [{ "size": "384" }] } }
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "384" }] }
+            }
           },
           "dtype": { "type": "DT_FLOAT" }
         }
@@ -1288,7 +1495,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_FLOAT", "tensorShape": { "dim": [{ "size": "384" }] } }
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "384" }] }
+            }
           },
           "dtype": { "type": "DT_FLOAT" }
         }
@@ -1313,7 +1523,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_FLOAT", "tensorShape": { "dim": [{ "size": "384" }] } }
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "384" }] }
+            }
           },
           "dtype": { "type": "DT_FLOAT" }
         }
@@ -1323,7 +1536,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_FLOAT", "tensorShape": { "dim": [{ "size": "384" }] } }
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "384" }] }
+            }
           },
           "dtype": { "type": "DT_FLOAT" }
         }
@@ -1363,7 +1579,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_FLOAT", "tensorShape": { "dim": [{ "size": "384" }] } }
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "384" }] }
+            }
           },
           "dtype": { "type": "DT_FLOAT" }
         }
@@ -1388,7 +1607,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_FLOAT", "tensorShape": { "dim": [{ "size": "384" }] } }
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "384" }] }
+            }
           },
           "dtype": { "type": "DT_FLOAT" }
         }
@@ -1398,7 +1620,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_FLOAT", "tensorShape": { "dim": [{ "size": "384" }] } }
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "384" }] }
+            }
           },
           "dtype": { "type": "DT_FLOAT" }
         }
@@ -1423,7 +1648,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_FLOAT", "tensorShape": { "dim": [{ "size": "96" }] } }
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "96" }] }
+            }
           },
           "dtype": { "type": "DT_FLOAT" }
         }
@@ -1448,7 +1676,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_FLOAT", "tensorShape": { "dim": [{ "size": "576" }] } }
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "576" }] }
+            }
           },
           "dtype": { "type": "DT_FLOAT" }
         }
@@ -1473,7 +1704,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_FLOAT", "tensorShape": { "dim": [{ "size": "576" }] } }
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "576" }] }
+            }
           },
           "dtype": { "type": "DT_FLOAT" }
         }
@@ -1483,7 +1717,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_FLOAT", "tensorShape": { "dim": [{ "size": "576" }] } }
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "576" }] }
+            }
           },
           "dtype": { "type": "DT_FLOAT" }
         }
@@ -1523,7 +1760,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_FLOAT", "tensorShape": { "dim": [{ "size": "576" }] } }
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "576" }] }
+            }
           },
           "dtype": { "type": "DT_FLOAT" }
         }
@@ -1548,7 +1788,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_FLOAT", "tensorShape": { "dim": [{ "size": "576" }] } }
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "576" }] }
+            }
           },
           "dtype": { "type": "DT_FLOAT" }
         }
@@ -1558,7 +1801,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_FLOAT", "tensorShape": { "dim": [{ "size": "576" }] } }
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "576" }] }
+            }
           },
           "dtype": { "type": "DT_FLOAT" }
         }
@@ -1598,7 +1844,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_FLOAT", "tensorShape": { "dim": [{ "size": "576" }] } }
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "576" }] }
+            }
           },
           "dtype": { "type": "DT_FLOAT" }
         }
@@ -1623,7 +1872,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_FLOAT", "tensorShape": { "dim": [{ "size": "128" }] } }
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "128" }] }
+            }
           },
           "dtype": { "type": "DT_FLOAT" }
         }
@@ -1633,7 +1885,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_INT32", "tensorShape": { "dim": [{ "size": "1" }] } }
+            "tensor": {
+              "dtype": "DT_INT32",
+              "tensorShape": { "dim": [{ "size": "1" }] }
+            }
           },
           "dtype": { "type": "DT_INT32" }
         }
@@ -1643,7 +1898,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_INT32", "tensorShape": { "dim": [{ "size": "1" }] } }
+            "tensor": {
+              "dtype": "DT_INT32",
+              "tensorShape": { "dim": [{ "size": "1" }] }
+            }
           },
           "dtype": { "type": "DT_INT32" }
         }
@@ -1653,7 +1911,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_INT32", "tensorShape": { "dim": [{ "size": "1" }] } }
+            "tensor": {
+              "dtype": "DT_INT32",
+              "tensorShape": { "dim": [{ "size": "1" }] }
+            }
           },
           "dtype": { "type": "DT_INT32" }
         }
@@ -1671,7 +1932,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_INT32", "tensorShape": { "dim": [{ "size": "1" }] } }
+            "tensor": {
+              "dtype": "DT_INT32",
+              "tensorShape": { "dim": [{ "size": "1" }] }
+            }
           },
           "dtype": { "type": "DT_INT32" }
         }
@@ -1681,7 +1945,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_INT32", "tensorShape": { "dim": [{ "size": "1" }] } }
+            "tensor": {
+              "dtype": "DT_INT32",
+              "tensorShape": { "dim": [{ "size": "1" }] }
+            }
           },
           "dtype": { "type": "DT_INT32" }
         }
@@ -1691,7 +1958,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_INT32", "tensorShape": { "dim": [{ "size": "1" }] } }
+            "tensor": {
+              "dtype": "DT_INT32",
+              "tensorShape": { "dim": [{ "size": "1" }] }
+            }
           },
           "dtype": { "type": "DT_INT32" }
         }
@@ -1724,7 +1994,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_FLOAT", "tensorShape": { "dim": [{ "size": "128" }] } }
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "128" }] }
+            }
           },
           "dtype": { "type": "DT_FLOAT" }
         }
@@ -1734,7 +2007,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_INT32", "tensorShape": { "dim": [{ "size": "1" }] } }
+            "tensor": {
+              "dtype": "DT_INT32",
+              "tensorShape": { "dim": [{ "size": "1" }] }
+            }
           },
           "dtype": { "type": "DT_INT32" }
         }
@@ -1744,7 +2020,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_INT32", "tensorShape": { "dim": [{ "size": "1" }] } }
+            "tensor": {
+              "dtype": "DT_INT32",
+              "tensorShape": { "dim": [{ "size": "1" }] }
+            }
           },
           "dtype": { "type": "DT_INT32" }
         }
@@ -1754,7 +2033,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_INT32", "tensorShape": { "dim": [{ "size": "1" }] } }
+            "tensor": {
+              "dtype": "DT_INT32",
+              "tensorShape": { "dim": [{ "size": "1" }] }
+            }
           },
           "dtype": { "type": "DT_INT32" }
         }
@@ -1772,7 +2054,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_INT32", "tensorShape": { "dim": [{ "size": "1" }] } }
+            "tensor": {
+              "dtype": "DT_INT32",
+              "tensorShape": { "dim": [{ "size": "1" }] }
+            }
           },
           "dtype": { "type": "DT_INT32" }
         }
@@ -1782,7 +2067,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_INT32", "tensorShape": { "dim": [{ "size": "1" }] } }
+            "tensor": {
+              "dtype": "DT_INT32",
+              "tensorShape": { "dim": [{ "size": "1" }] }
+            }
           },
           "dtype": { "type": "DT_INT32" }
         }
@@ -1792,7 +2080,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_INT32", "tensorShape": { "dim": [{ "size": "1" }] } }
+            "tensor": {
+              "dtype": "DT_INT32",
+              "tensorShape": { "dim": [{ "size": "1" }] }
+            }
           },
           "dtype": { "type": "DT_INT32" }
         }
@@ -1825,7 +2116,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_FLOAT", "tensorShape": { "dim": [{ "size": "128" }] } }
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "128" }] }
+            }
           },
           "dtype": { "type": "DT_FLOAT" }
         }
@@ -1850,7 +2144,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_FLOAT", "tensorShape": { "dim": [{ "size": "128" }] } }
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "128" }] }
+            }
           },
           "dtype": { "type": "DT_FLOAT" }
         }
@@ -1860,7 +2157,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_FLOAT", "tensorShape": { "dim": [{ "size": "128" }] } }
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "128" }] }
+            }
           },
           "dtype": { "type": "DT_FLOAT" }
         }
@@ -1870,7 +2170,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_FLOAT", "tensorShape": { "dim": [{ "size": "128" }] } }
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "128" }] }
+            }
           },
           "dtype": { "type": "DT_FLOAT" }
         }
@@ -1895,7 +2198,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_FLOAT", "tensorShape": { "dim": [{ "size": "64" }] } }
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "64" }] }
+            }
           },
           "dtype": { "type": "DT_FLOAT" }
         }
@@ -1905,7 +2211,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_FLOAT", "tensorShape": { "dim": [{ "size": "64" }] } }
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "64" }] }
+            }
           },
           "dtype": { "type": "DT_FLOAT" }
         }
@@ -1915,7 +2224,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_FLOAT", "tensorShape": { "dim": [{ "size": "64" }] } }
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "64" }] }
+            }
           },
           "dtype": { "type": "DT_FLOAT" }
         }
@@ -1940,7 +2252,10 @@
         "op": "Const",
         "attr": {
           "value": {
-            "tensor": { "dtype": "DT_FLOAT", "tensorShape": { "dim": [{ "size": "4" }] } }
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "4" }] }
+            }
           },
           "dtype": { "type": "DT_FLOAT" }
         }
@@ -2099,7 +2414,10 @@
           "StatefulPartitionedCall/boundary_detector_1/functional_1/block_1_expand_relu_1/Relu6",
           "StatefulPartitionedCall/boundary_detector_1/functional_1/block_1_pad_1/Const"
         ],
-        "attr": { "Tpaddings": { "type": "DT_INT32" }, "T": { "type": "DT_FLOAT" } }
+        "attr": {
+          "Tpaddings": { "type": "DT_INT32" },
+          "T": { "type": "DT_FLOAT" }
+        }
       },
       {
         "name": "StatefulPartitionedCall/boundary_detector_1/functional_1/block_1_depthwise_1/depthwise",
@@ -2339,7 +2657,10 @@
           "StatefulPartitionedCall/boundary_detector_1/functional_1/block_3_expand_relu_1/Relu6",
           "StatefulPartitionedCall/boundary_detector_1/functional_1/block_3_pad_1/Const"
         ],
-        "attr": { "Tpaddings": { "type": "DT_INT32" }, "T": { "type": "DT_FLOAT" } }
+        "attr": {
+          "Tpaddings": { "type": "DT_INT32" },
+          "T": { "type": "DT_FLOAT" }
+        }
       },
       {
         "name": "StatefulPartitionedCall/boundary_detector_1/functional_1/block_3_depthwise_1/depthwise",
@@ -2690,7 +3011,10 @@
           "StatefulPartitionedCall/boundary_detector_1/functional_1/block_6_expand_relu_1/Relu6",
           "StatefulPartitionedCall/boundary_detector_1/functional_1/block_6_pad_1/Const"
         ],
-        "attr": { "Tpaddings": { "type": "DT_INT32" }, "T": { "type": "DT_FLOAT" } }
+        "attr": {
+          "Tpaddings": { "type": "DT_INT32" },
+          "T": { "type": "DT_FLOAT" }
+        }
       },
       {
         "name": "StatefulPartitionedCall/boundary_detector_1/functional_1/block_6_depthwise_1/depthwise",
@@ -3474,10 +3798,18 @@
         "name": "StatefulPartitionedCall/boundary_detector_1/up_sampling2d_1/Repeat/Shape",
         "op": "Shape",
         "input": ["StatefulPartitionedCall/boundary_detector_1/conv2d_1/Relu"],
-        "attr": { "T": { "type": "DT_FLOAT" }, "out_type": { "type": "DT_INT32" } },
+        "attr": {
+          "T": { "type": "DT_FLOAT" },
+          "out_type": { "type": "DT_INT32" }
+        },
         "experimentalType": {
           "typeId": "TFT_PRODUCT",
-          "args": [{ "typeId": "TFT_SHAPE_TENSOR", "args": [{ "typeId": "TFT_INT32" }] }]
+          "args": [
+            {
+              "typeId": "TFT_SHAPE_TENSOR",
+              "args": [{ "typeId": "TFT_INT32" }]
+            }
+          ]
         }
       },
       {
@@ -3487,7 +3819,10 @@
           "StatefulPartitionedCall/boundary_detector_1/up_sampling2d_1/Repeat/ExpandDims",
           "StatefulPartitionedCall/boundary_detector_1/up_sampling2d_1/Repeat/Tile/multiples"
         ],
-        "attr": { "T": { "type": "DT_FLOAT" }, "Tmultiples": { "type": "DT_INT32" } }
+        "attr": {
+          "T": { "type": "DT_FLOAT" },
+          "Tmultiples": { "type": "DT_INT32" }
+        }
       },
       {
         "name": "StatefulPartitionedCall/boundary_detector_1/up_sampling2d_1/Repeat/strided_slice",
@@ -3582,7 +3917,11 @@
           "StatefulPartitionedCall/boundary_detector_1/up_sampling2d_1/Repeat/strided_slice_2",
           "StatefulPartitionedCall/boundary_detector_1/up_sampling2d_1/Repeat/concat/axis"
         ],
-        "attr": { "N": { "i": "3" }, "Tidx": { "type": "DT_INT32" }, "T": { "type": "DT_INT32" } }
+        "attr": {
+          "N": { "i": "3" },
+          "Tidx": { "type": "DT_INT32" },
+          "T": { "type": "DT_INT32" }
+        }
       },
       {
         "name": "StatefulPartitionedCall/boundary_detector_1/up_sampling2d_1/Repeat/Reshape_1",
@@ -3591,7 +3930,10 @@
           "StatefulPartitionedCall/boundary_detector_1/up_sampling2d_1/Repeat/Tile",
           "StatefulPartitionedCall/boundary_detector_1/up_sampling2d_1/Repeat/concat"
         ],
-        "attr": { "T": { "type": "DT_FLOAT" }, "Tshape": { "type": "DT_INT32" } }
+        "attr": {
+          "T": { "type": "DT_FLOAT" },
+          "Tshape": { "type": "DT_INT32" }
+        }
       },
       {
         "name": "StatefulPartitionedCall/boundary_detector_1/up_sampling2d_1/Repeat_1/ExpandDims",
@@ -3606,10 +3948,18 @@
         "name": "StatefulPartitionedCall/boundary_detector_1/up_sampling2d_1/Repeat_1/Shape",
         "op": "Shape",
         "input": ["StatefulPartitionedCall/boundary_detector_1/up_sampling2d_1/Repeat/Reshape_1"],
-        "attr": { "T": { "type": "DT_FLOAT" }, "out_type": { "type": "DT_INT32" } },
+        "attr": {
+          "T": { "type": "DT_FLOAT" },
+          "out_type": { "type": "DT_INT32" }
+        },
         "experimentalType": {
           "typeId": "TFT_PRODUCT",
-          "args": [{ "typeId": "TFT_SHAPE_TENSOR", "args": [{ "typeId": "TFT_INT32" }] }]
+          "args": [
+            {
+              "typeId": "TFT_SHAPE_TENSOR",
+              "args": [{ "typeId": "TFT_INT32" }]
+            }
+          ]
         }
       },
       {
@@ -3619,7 +3969,10 @@
           "StatefulPartitionedCall/boundary_detector_1/up_sampling2d_1/Repeat_1/ExpandDims",
           "StatefulPartitionedCall/boundary_detector_1/up_sampling2d_1/Repeat_1/Tile/multiples"
         ],
-        "attr": { "T": { "type": "DT_FLOAT" }, "Tmultiples": { "type": "DT_INT32" } }
+        "attr": {
+          "T": { "type": "DT_FLOAT" },
+          "Tmultiples": { "type": "DT_INT32" }
+        }
       },
       {
         "name": "StatefulPartitionedCall/boundary_detector_1/up_sampling2d_1/Repeat_1/strided_slice_2",
@@ -3714,7 +4067,11 @@
           "StatefulPartitionedCall/boundary_detector_1/up_sampling2d_1/Repeat_1/strided_slice_2",
           "StatefulPartitionedCall/boundary_detector_1/up_sampling2d_1/Repeat_1/concat/axis"
         ],
-        "attr": { "N": { "i": "3" }, "T": { "type": "DT_INT32" }, "Tidx": { "type": "DT_INT32" } }
+        "attr": {
+          "N": { "i": "3" },
+          "T": { "type": "DT_INT32" },
+          "Tidx": { "type": "DT_INT32" }
+        }
       },
       {
         "name": "StatefulPartitionedCall/boundary_detector_1/up_sampling2d_1/Repeat_1/Reshape_1",
@@ -3723,7 +4080,10 @@
           "StatefulPartitionedCall/boundary_detector_1/up_sampling2d_1/Repeat_1/Tile",
           "StatefulPartitionedCall/boundary_detector_1/up_sampling2d_1/Repeat_1/concat"
         ],
-        "attr": { "T": { "type": "DT_FLOAT" }, "Tshape": { "type": "DT_INT32" } }
+        "attr": {
+          "T": { "type": "DT_FLOAT" },
+          "Tshape": { "type": "DT_INT32" }
+        }
       },
       {
         "name": "StatefulPartitionedCall/boundary_detector_1/add_1/Add",
@@ -3773,10 +4133,18 @@
         "name": "StatefulPartitionedCall/boundary_detector_1/up_sampling2d_1_2/Repeat/Shape",
         "op": "Shape",
         "input": ["StatefulPartitionedCall/boundary_detector_1/conv2d_2_1/Relu"],
-        "attr": { "T": { "type": "DT_FLOAT" }, "out_type": { "type": "DT_INT32" } },
+        "attr": {
+          "T": { "type": "DT_FLOAT" },
+          "out_type": { "type": "DT_INT32" }
+        },
         "experimentalType": {
           "typeId": "TFT_PRODUCT",
-          "args": [{ "typeId": "TFT_SHAPE_TENSOR", "args": [{ "typeId": "TFT_INT32" }] }]
+          "args": [
+            {
+              "typeId": "TFT_SHAPE_TENSOR",
+              "args": [{ "typeId": "TFT_INT32" }]
+            }
+          ]
         }
       },
       {
@@ -3786,7 +4154,10 @@
           "StatefulPartitionedCall/boundary_detector_1/up_sampling2d_1_2/Repeat/ExpandDims",
           "StatefulPartitionedCall/boundary_detector_1/up_sampling2d_1_2/Repeat/Tile/multiples"
         ],
-        "attr": { "T": { "type": "DT_FLOAT" }, "Tmultiples": { "type": "DT_INT32" } }
+        "attr": {
+          "T": { "type": "DT_FLOAT" },
+          "Tmultiples": { "type": "DT_INT32" }
+        }
       },
       {
         "name": "StatefulPartitionedCall/boundary_detector_1/up_sampling2d_1_2/Repeat/strided_slice",
@@ -3881,7 +4252,11 @@
           "StatefulPartitionedCall/boundary_detector_1/up_sampling2d_1_2/Repeat/strided_slice_2",
           "StatefulPartitionedCall/boundary_detector_1/up_sampling2d_1_2/Repeat/concat/axis"
         ],
-        "attr": { "N": { "i": "3" }, "T": { "type": "DT_INT32" }, "Tidx": { "type": "DT_INT32" } }
+        "attr": {
+          "N": { "i": "3" },
+          "T": { "type": "DT_INT32" },
+          "Tidx": { "type": "DT_INT32" }
+        }
       },
       {
         "name": "StatefulPartitionedCall/boundary_detector_1/up_sampling2d_1_2/Repeat/Reshape_1",
@@ -3890,7 +4265,10 @@
           "StatefulPartitionedCall/boundary_detector_1/up_sampling2d_1_2/Repeat/Tile",
           "StatefulPartitionedCall/boundary_detector_1/up_sampling2d_1_2/Repeat/concat"
         ],
-        "attr": { "T": { "type": "DT_FLOAT" }, "Tshape": { "type": "DT_INT32" } }
+        "attr": {
+          "T": { "type": "DT_FLOAT" },
+          "Tshape": { "type": "DT_INT32" }
+        }
       },
       {
         "name": "StatefulPartitionedCall/boundary_detector_1/up_sampling2d_1_2/Repeat_1/ExpandDims",
@@ -3905,10 +4283,18 @@
         "name": "StatefulPartitionedCall/boundary_detector_1/up_sampling2d_1_2/Repeat_1/Shape",
         "op": "Shape",
         "input": ["StatefulPartitionedCall/boundary_detector_1/up_sampling2d_1_2/Repeat/Reshape_1"],
-        "attr": { "T": { "type": "DT_FLOAT" }, "out_type": { "type": "DT_INT32" } },
+        "attr": {
+          "T": { "type": "DT_FLOAT" },
+          "out_type": { "type": "DT_INT32" }
+        },
         "experimentalType": {
           "typeId": "TFT_PRODUCT",
-          "args": [{ "typeId": "TFT_SHAPE_TENSOR", "args": [{ "typeId": "TFT_INT32" }] }]
+          "args": [
+            {
+              "typeId": "TFT_SHAPE_TENSOR",
+              "args": [{ "typeId": "TFT_INT32" }]
+            }
+          ]
         }
       },
       {
@@ -3918,7 +4304,10 @@
           "StatefulPartitionedCall/boundary_detector_1/up_sampling2d_1_2/Repeat_1/ExpandDims",
           "StatefulPartitionedCall/boundary_detector_1/up_sampling2d_1_2/Repeat_1/Tile/multiples"
         ],
-        "attr": { "T": { "type": "DT_FLOAT" }, "Tmultiples": { "type": "DT_INT32" } }
+        "attr": {
+          "T": { "type": "DT_FLOAT" },
+          "Tmultiples": { "type": "DT_INT32" }
+        }
       },
       {
         "name": "StatefulPartitionedCall/boundary_detector_1/up_sampling2d_1_2/Repeat_1/strided_slice",
@@ -4013,7 +4402,11 @@
           "StatefulPartitionedCall/boundary_detector_1/up_sampling2d_1_2/Repeat_1/strided_slice_2",
           "StatefulPartitionedCall/boundary_detector_1/up_sampling2d_1_2/Repeat_1/concat/axis"
         ],
-        "attr": { "N": { "i": "3" }, "T": { "type": "DT_INT32" }, "Tidx": { "type": "DT_INT32" } }
+        "attr": {
+          "N": { "i": "3" },
+          "T": { "type": "DT_INT32" },
+          "Tidx": { "type": "DT_INT32" }
+        }
       },
       {
         "name": "StatefulPartitionedCall/boundary_detector_1/up_sampling2d_1_2/Repeat_1/Reshape_1",
@@ -4022,7 +4415,10 @@
           "StatefulPartitionedCall/boundary_detector_1/up_sampling2d_1_2/Repeat_1/Tile",
           "StatefulPartitionedCall/boundary_detector_1/up_sampling2d_1_2/Repeat_1/concat"
         ],
-        "attr": { "T": { "type": "DT_FLOAT" }, "Tshape": { "type": "DT_INT32" } }
+        "attr": {
+          "T": { "type": "DT_FLOAT" },
+          "Tshape": { "type": "DT_INT32" }
+        }
       },
       {
         "name": "StatefulPartitionedCall/boundary_detector_1/add_1_2/Add",
