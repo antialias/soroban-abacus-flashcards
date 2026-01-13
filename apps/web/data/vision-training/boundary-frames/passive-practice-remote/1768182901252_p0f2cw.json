@@ -1,0 +1,26 @@
+{
+  "corners": {
+    "topLeft": {
+      "x": 0.6899305555555555,
+      "y": 0.546182386252685
+    },
+    "topRight": {
+      "x": 0.22222222222222224,
+      "y": 0.4868189806678383
+    },
+    "bottomLeft": {
+      "x": 0.8034722222222221,
+      "y": 0.188439757859793
+    },
+    "bottomRight": {
+      "x": 0.34409722222222217,
+      "y": 0.1386447959382933
+    }
+  },
+  "frameWidth": 640,
+  "frameHeight": 1138,
+  "capturedAt": "2026-01-12T01:55:01.252Z",
+  "deviceId": "passive-practice-remote",
+  "sessionId": null,
+  "playerId": null
+}
