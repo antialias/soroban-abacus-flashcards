@@ -7,6 +7,13 @@
  * generates a balanced README with usage examples.
  */
 
+// Stub CSS imports. This script requires the React components under tsx/node to
+// render static SVG examples, and AbacusReact.tsx has a side-effect
+// `import "./Abacus3D.css"`. Without this, Node tries to parse the CSS file as
+// JavaScript and throws `SyntaxError: Unexpected token '.'`. Register a no-op
+// loader so .css imports resolve to an empty module.
+require.extensions[".css"] = () => {};
+
 const fs = require("fs").promises;
 const path = require("path");
 const React = require("react");
