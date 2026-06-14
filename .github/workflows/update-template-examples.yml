@@ -45,7 +45,7 @@ jobs:
       - name: Install pnpm
         uses: pnpm/action-setup@v2
         with:
-          version: latest
+          version: 10
 
       - name: Install dependencies
         run: pnpm install
@@ -190,7 +190,7 @@ jobs:
       - name: Install pnpm
         uses: pnpm/action-setup@v2
         with:
-          version: latest
+          version: 10
 
       - name: Install dependencies
         run: pnpm install
